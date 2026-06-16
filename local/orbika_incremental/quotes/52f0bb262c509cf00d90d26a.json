@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-06-10T00:50:15.092588+00:00",
+  "quote_key": "52f0bb262c509cf00d90d26a",
+  "source": {
+    "message_id": "<305074064.2850.1779294275766@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-20T16:24:35+00:00",
+    "subject": "🆘 IHR165_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "415118",
+    "fecha_aviso": "19/05/26",
+    "marca": "SUZUKI",
+    "linea": "CELERIO",
+    "version": "GLX MT 1000CC 5P AA ABS 2AB",
+    "ano": "2015",
+    "placa": "IHR165",
+    "vin": "MA3FC31SXFA763520",
+    "taller_entrega": "Renomotriz Med",
+    "nombre_comercial": "Renomotriz Med",
+    "nit": "890935228-4",
+    "ciudad": "MEDELLIN",
+    "direccion": "KR 44A # 31-155 SAN DIEGO",
+    "telefono": "2323501",
+    "email": "No disponible",
+    "repuestos_count": 1,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Guardapolvo plastico rh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:55.156642+00:00",
+    "summary": {
+      "parts_total": 1,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    },
+    "parts": [
+      {
+        "part_name": "Guardapolvo plastico rh",
+        "quantity": 1,
+        "best_score_percent": 0
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.235615+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 0
+    },
+    "parts": [
+      {
+        "part_name": "Guardapolvo plastico rh",
+        "top_score_percent": 0
+      }
+    ]
+  }
+}

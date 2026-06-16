@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T14:22:30.148777+00:00",
+  "quote_key": "6cfe89f351fff752fff135c0",
+  "source": {
+    "message_id": "<1521131889.4620.1780086362934@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-29T20:26:02+00:00",
+    "subject": "🆘 ENZ262_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "421411",
+    "fecha_aviso": "21/05/26",
+    "marca": "FORD",
+    "linea": "FIESTA [7]",
+    "version": "SPORTBACK TITANIUM TP 1600CC 4P",
+    "ano": "2018",
+    "placa": "ENZ262",
+    "vin": "JM130868",
+    "taller_entrega": "Novacar Med",
+    "nombre_comercial": "Novacar Med",
+    "nit": "890927351-9",
+    "ciudad": "MEDELLIN",
+    "direccion": "KR 45 # 30-66",
+    "telefono": "2623042",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.159879+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.239339+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

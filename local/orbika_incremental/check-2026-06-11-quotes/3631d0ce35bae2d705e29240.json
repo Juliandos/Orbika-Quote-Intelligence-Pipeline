@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-06-15T23:14:05.944039+00:00",
+  "quote_key": "3631d0ce35bae2d705e29240",
+  "source": {
+    "gmail_id": "19eb83a9afcd3c9a",
+    "message_id": "<285059532.4846.1781207307540@ip-172-16-10-135.ec2.internal>",
+    "internal_date_ms": "1781207307000",
+    "received_at": "2026-06-11T19:48:27+00:00",
+    "sender": "cotizacionesorbika@subocol.com",
+    "subject": "🆘 MIZ497_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url": "https://orbika.subocol.com/web/guest/external/quote?c3Vic2lkaWFyeUlkPTE4MzcmcGllY2VJZD0xNjAzNDg5JnF1b3RhdGlvbklkPTQ1NTcwNjg=",
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "430117",
+    "fecha_aviso": "11/06/26",
+    "marca": "HYUNDAI",
+    "linea": "TUCSON IX 35",
+    "version": "2.0L MT 2000CC 4X2",
+    "ano": "2013",
+    "placa": "MIZ497",
+    "vin": "KMHJT81BADU521476",
+    "taller_entrega": "Team Car",
+    "nombre_comercial": "Team Car",
+    "nit": "901293598-7",
+    "ciudad": "MEDELLIN",
+    "direccion": "CR 43F 17 605",
+    "telefono": "0",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-15T23:14:05.943844+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "partial_matches": 0,
+      "manual_confirmation_only": 0
+    }
+  }
+}

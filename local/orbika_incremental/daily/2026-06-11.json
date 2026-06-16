@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-11",
+  "generated_at": "2026-06-15T21:16:36.083070+00:00",
+  "quotes": [
+    {
+      "quote_key": "1a32d3454e1512d63b143d2b",
+      "aviso_id": null,
+      "placa": null,
+      "subject": "🆘 BZF120_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "3631d0ce35bae2d705e29240",
+      "aviso_id": "430117",
+      "placa": "MIZ497",
+      "subject": "🆘 MIZ497_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    }
+  ],
+  "provider_specs": []
+}

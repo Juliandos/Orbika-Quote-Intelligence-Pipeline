@@ -1,0 +1,351 @@
+{
+  "generated_at": "2026-06-08T02:52:04.735845+00:00",
+  "quote_key": "b5ebbda7aa2024cc77f62680",
+  "source": {
+    "message_id": "<79538912.3645.1780505647541@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-03T16:54:07+00:00",
+    "subject": "🆘 LXM412_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "397682",
+    "fecha_aviso": "16/03/26",
+    "marca": "SUZUKI",
+    "linea": "S-CROSS [2]",
+    "version": "GLX ALL GRIP TP 1400CC T 6AB ABS 4X4 CT",
+    "ano": "2024",
+    "placa": "LXM412",
+    "vin": "TSMYBA2S0RMB05441",
+    "taller_entrega": "Sericar 10 Medellin Movi",
+    "nombre_comercial": "Sericar 10 Medellin Movi",
+    "nit": "900259276-3",
+    "ciudad": "MEDELLIN",
+    "direccion": "Cl. 39 #45-38. Medellin",
+    "telefono": "3166860",
+    "email": "No disponible",
+    "repuestos_count": 6,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Enfocador radiador",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Enfocador radiador",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Extension bocel guardafango delantero izquierdo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guia farola izquierdo de bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Esquinero paral delantero izquierdo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Marco superior radiador",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:59.429802+00:00",
+    "summary": {
+      "parts_total": 6,
+      "parts_with_matches": 4,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "disfal": 1,
+        "impocali": 2,
+        "parrales": 1
+      }
+    },
+    "provider_specs": [
+      {
+        "provider_id": "disfal",
+        "display_name": "Disfal",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "impocali",
+        "display_name": "Impocali",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "parrales",
+        "display_name": "Parrales",
+        "snapshot_date": "2026-06-09-full"
+      }
+    ],
+    "parts": [
+      {
+        "part_name": "Enfocador radiador",
+        "quantity": 1,
+        "best_score_percent": 37,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes organico",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes 50/50 agua glicol",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Enfocador radiador",
+        "quantity": 1,
+        "best_score_percent": 37,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes organico",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes 50/50 agua glicol",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Extension bocel guardafango delantero izquierdo",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Guia farola izquierdo de bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 45,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 45,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/bombillo-h7-led-ultinon-pro-5000-hl-philips/",
+            "product_name": "BOMBILLO H7 LED ULTINON PRO 5000 HL PHILIPS",
+            "sku": "1979094",
+            "brand": "Philips",
+            "category_name": "Bombillos Led",
+            "subcategory_name": "Bombillos Led"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 45,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/bombillo-1pata-12v_24v-led-6000k-moto/",
+            "product_name": "BOMBILLO 1PATA 12V_24V LED 6000K MOTO",
+            "brand": "Narva",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Bombillos Led"
+          }
+        ]
+      },
+      {
+        "part_name": "Esquinero paral delantero izquierdo",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Marco superior radiador",
+        "quantity": 1,
+        "best_score_percent": 38,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "disfal",
+        "matches": [
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "product_name": "Mangueras",
+            "category_name": "Mangueras"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes 50/50 agua glicol especificacion europea",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 35,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          }
+        ]
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.241216+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 6,
+      "parts_with_agentic_matches": 3,
+      "provider_hits": {
+        "disfal": 1,
+        "impocali": 2
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Enfocador radiador",
+        "top_provider_id": "impocali",
+        "top_score_percent": 37,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes organico",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Enfocador radiador",
+        "top_provider_id": "impocali",
+        "top_score_percent": 37,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes organico",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Extension bocel guardafango delantero izquierdo",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Guia farola izquierdo de bomper delantero",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Esquinero paral delantero izquierdo",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Marco superior radiador",
+        "top_provider_id": "disfal",
+        "top_score_percent": 38,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "category_name": "Mangueras",
+            "agentic_comment": "Disfal: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes 50/50 agua glicol especificacion europea",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: validar manual."
+          }
+        ]
+      }
+    ]
+  }
+}

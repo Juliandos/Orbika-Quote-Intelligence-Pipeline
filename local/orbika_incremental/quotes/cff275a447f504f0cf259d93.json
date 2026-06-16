@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-06-11T16:09:04.689674+00:00",
+  "quote_key": "cff275a447f504f0cf259d93",
+  "source": {
+    "message_id": "<1220092721.3506.1781117578373@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-10T18:52:58+00:00",
+    "subject": "🆘 DAC036_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "430018",
+    "fecha_aviso": "10/06/26",
+    "marca": "VOLKSWAGEN",
+    "linea": "CROSSFOX [1]",
+    "version": "1.6L MT 1600CC 5P FE",
+    "ano": "2009",
+    "placa": "DAC036",
+    "vin": "9BWKB15Z894001831",
+    "taller_entrega": "Incoauto Bt",
+    "nombre_comercial": "Incoauto Bt",
+    "nit": "800244955-8",
+    "ciudad": "BOGOTA, D.C.",
+    "direccion": "CR 42 BIS # 17 A 07",
+    "telefono": "3690414",
+    "email": "No disponible",
+    "repuestos_count": 1,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Estribo de lujo derecho",
+        "quantity": 1,
+        "quality": "GENUINO",
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:07.834805+00:00",
+    "summary": {
+      "parts_total": 1,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    },
+    "parts": [
+      {
+        "part_name": "Estribo de lujo derecho",
+        "quantity": 1,
+        "best_score_percent": 0
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.248803+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 0
+    },
+    "parts": [
+      {
+        "part_name": "Estribo de lujo derecho",
+        "top_score_percent": 0
+      }
+    ]
+  }
+}

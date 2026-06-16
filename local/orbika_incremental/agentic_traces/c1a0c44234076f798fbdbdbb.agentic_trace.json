@@ -1,0 +1,105 @@
+{
+  "quote_key": "c1a0c44234076f798fbdbdbb",
+  "generated_at": "2026-06-12T20:33:04.605509+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.605254+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:32:00.248980+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 2,
+      "parts_with_agentic_matches": 1,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Lubricante spray",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "impocali",
+        "top_score_percent": 45,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 45,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Lubricantes para motor",
+            "detail_url": "https://impocali.com/productos/lubricacion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Lubricacion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.605019+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 6
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.605214+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 6,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Duraliner",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.605222+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.605247+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

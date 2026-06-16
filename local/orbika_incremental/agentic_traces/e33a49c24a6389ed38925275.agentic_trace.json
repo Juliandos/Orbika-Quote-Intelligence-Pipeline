@@ -1,0 +1,53 @@
+{
+  "quote_key": "e33a49c24a6389ed38925275",
+  "generated_at": "2026-06-12T20:33:04.633126+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.632991+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:32:18.142202+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 0,
+      "provider_hits": {}
+    },
+    "parts": [
+      {
+        "part_name": "Duraliner",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.632908+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.632982+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

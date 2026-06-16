@@ -1,0 +1,1961 @@
+{
+  "generated_at": "2026-06-08T03:06:47.020695+00:00",
+  "quote_key": "db2e4ac3c45513d17babbf37",
+  "source": {
+    "message_id": "<6138819.5444.1780696238429@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-05T21:50:38+00:00",
+    "subject": "🆘 HHW977_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "428482",
+    "fecha_aviso": "05/06/26",
+    "marca": "KIA",
+    "linea": "sportage [3] [fl]",
+    "version": "revolution tp 2000cc 1ab abs",
+    "ano": "2016",
+    "placa": "HHW977",
+    "vin": "KNAPB81ABF7721560",
+    "taller_entrega": "Team Car Movi",
+    "nombre_comercial": "Team Car Movi",
+    "nit": "901293598-7",
+    "ciudad": "MEDELLIN",
+    "direccion": "Carrera 43F # 17-605, centro automotriz medellin",
+    "telefono": "1111111",
+    "email": "No disponible",
+    "repuestos_count": 38,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Capo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Rodamiento delantero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Base antena",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guia lateral izquierdo bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guia lateral derecho bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Broches insonorizante tapa motor",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Puerta trasero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Amortiguador delantero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bocel estribo derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Absorbedor de impacto central bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Puerta delantero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Direccional guardabarro derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro de aceite",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Aceite 1/4",
+        "quantity": 5,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Liquido refrigerante por galon",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bisagra derecho capo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bisagra izquierdo capo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bocel guardafango derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bocel exploradora derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bomper delantero inferior",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bomper delantero superior",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Marco frontal",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Farola derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guardafango derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guardapolvo plastico delantero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Exploradora derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Base exploradora derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bisagra superior puerta delantero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bisagra inferior puerta delantero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Antena radio electrica",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Espejo exterior electrico derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro circulacion de aire habitaculo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro de aire",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Kit plumillas",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Broches bocel guardafango delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Porta bocin delantero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Parlante derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Tweeters",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:17.903347+00:00",
+    "summary": {
+      "parts_total": 38,
+      "parts_with_matches": 26,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "disfal": 1,
+        "impocali": 2,
+        "parrales": 5,
+        "partcar": 13,
+        "repuestera": 5
+      }
+    },
+    "provider_specs": [
+      {
+        "provider_id": "disfal",
+        "display_name": "Disfal",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "impocali",
+        "display_name": "Impocali",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "parrales",
+        "display_name": "Parrales",
+        "snapshot_date": "2026-06-09-full"
+      },
+      {
+        "provider_id": "partcar",
+        "display_name": "Partcar",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "repuestera",
+        "display_name": "Repuestera",
+        "snapshot_date": "2026-06-09"
+      }
+    ],
+    "parts": [
+      {
+        "part_name": "Capo",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Rodamiento delantero derecho",
+        "quantity": 1,
+        "best_score_percent": 87,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 87,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/rodamiento-de-bolas-6203-zz-c3/",
+            "product_name": "Rodamiento de bolas (6203-ZZ C3)",
+            "reference": "6203-ZZ C3",
+            "category_name": "Repuestos Mecanicos",
+            "subcategory_name": "Rodamientos"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 87,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/rodamiento-de-bolas-62000-2rs-c3/",
+            "product_name": "RODAMIENTO DE BOLAS (62000-2RS C3)",
+            "reference": "62000-2RS C3",
+            "category_name": "Repuestos Mecanicos",
+            "subcategory_name": "Rodamientos"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 87,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/rodamiento-de-bolas-606-2rs-c3/",
+            "product_name": "RODAMIENTO DE BOLAS (606-2RS C3)",
+            "reference": "606-2RS C3",
+            "category_name": "Repuestos Mecanicos",
+            "subcategory_name": "Rodamientos"
+          }
+        ]
+      },
+      {
+        "part_name": "Base antena",
+        "quantity": 1,
+        "best_score_percent": 36,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "disfal",
+        "matches": [
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "category_name": "Poleas, Tensores y Kits de Repartición"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerante base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          }
+        ]
+      },
+      {
+        "part_name": "Guia lateral izquierdo bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2019%E2%80%932022-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2014%E2%80%932016-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2014 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Guia lateral derecho bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2019%E2%80%932022-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2014%E2%80%932016-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2014 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Broches insonorizante tapa motor",
+        "quantity": 1,
+        "best_score_percent": 58,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 58,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/empaque-tapa-valvulas-aveo-1-4-1-6-optra-1-4-1-6-04-12/",
+            "product_name": "EMPAQUE TAPA VALVULAS AVEO 1.4/1.6 OPTRA 1.4/1.6 04-12",
+            "reference": "19315728",
+            "brand": "ACDelco",
+            "category_name": "Partes de motor"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 52,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-grand-i10-vision-picanto-morning-tucson-x35-kona-excite-sephia-hb20-ioniq-h100/",
+            "product_name": "TAPA LLENADO ACEITE GRAND I10/VISION/PICANTO/MORNING/TUCSON/X35/KONA/EXCITE/SEPHIA/HB20/IONIQ/H100",
+            "reference": "26510-26600",
+            "brand": "MOBIS",
+            "category_name": "PARTES DE MOTOR"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 52,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-atos-accent-excel-h100-de-presion/",
+            "product_name": "TAPA LLENADO ACEITE ATOS/ACCENT/EXCEL/H100 (DE PRESION)",
+            "reference": "26510-35000",
+            "brand": "MOBIS",
+            "category_name": "PARTES MOTOR"
+          }
+        ]
+      },
+      {
+        "part_name": "Puerta trasero derecho",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Amortiguador delantero derecho",
+        "quantity": 1,
+        "best_score_percent": 55,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "product_name": "Soportes de amortiguador",
+            "brand": "Shibumi, Febi Bilstein, Nakamoto",
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "product_name": "Amortiguadores",
+            "brand": "Shibumi, Sachs, Tokico Mando",
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/amortiguadores/",
+            "product_name": "Amortiguadores",
+            "category_name": "Amortiguadores"
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel estribo derecho",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "product_name": "Bocel Defensa Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-derecho-fpi",
+            "product_name": "Bocel Defensa Derecho Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2017%E2%80%932019-centro-tyg",
+            "product_name": "Bocel Defensa Centro Para Kia Sportage Modelos 2017 A 2019 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Absorbedor de impacto central bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2019%E2%80%932022-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2014%E2%80%932016-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2014 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Puerta delantero derecho",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Direccional guardabarro derecho",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/direccional-defensa-kia-sportage-2011%E2%80%932016-derecho-sm",
+            "product_name": "Direccional Defensa Derecho Para Kia Sportage Modelos 2011 A 2016 Sm",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/direccional-de-defensa-kia-sportage-2011%E2%80%932016-izquierdo-sm",
+            "product_name": "Direccional De Defensa Izquierdo Para Kia Sportage Modelos 2011 A 2016 Sm",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/direccional-de-defensa-kia-sportage-2011%E2%80%932016-derecho-sm",
+            "product_name": "Direccional De Defensa Derecho Para Kia Sportage Modelos 2011 A 2016 Sm",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aceite",
+        "quantity": 1,
+        "best_score_percent": 88,
+        "best_match_type": "vehicle_compatible",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "vehicle_compatible",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-atos-picanto-morning-rio-i10-getz/",
+            "product_name": "FILTRO ACEITE ATOS/PICANTO MORNING/ RIO/ I10/ GETZ",
+            "reference": "26300-2Y500",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración"
+          }
+        ]
+      },
+      {
+        "part_name": "Aceite 1/4",
+        "quantity": 5,
+        "best_score_percent": 88,
+        "best_match_type": "vehicle_compatible",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "vehicle_compatible",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 82,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/aceite-acdelco-truck-platinum-15w40-ck-4-sn-gal/",
+            "product_name": "ACEITE ACDELCO TRUCK PLATINUM 15W40 CK-4 SN (GAL)",
+            "reference": "98551213",
+            "brand": "Aceites ACDelco",
+            "category_name": "Lubricantes ACDelco"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 81,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-atos-accent-excel-h100-de-presion/",
+            "product_name": "TAPA LLENADO ACEITE ATOS/ACCENT/EXCEL/H100 (DE PRESION)",
+            "reference": "26510-35000",
+            "brand": "MOBIS",
+            "category_name": "PARTES MOTOR"
+          }
+        ]
+      },
+      {
+        "part_name": "Liquido refrigerante por galon",
+        "quantity": 1,
+        "best_score_percent": 55,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerante base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 44,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes organico",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra derecho capo",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Bisagra izquierdo capo",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Bocel guardafango derecho",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "product_name": "Bocel Defensa Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-derecho-fpi",
+            "product_name": "Bocel Defensa Derecho Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2017%E2%80%932019-centro-tyg",
+            "product_name": "Bocel Defensa Centro Para Kia Sportage Modelos 2017 A 2019 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel exploradora derecho",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2017%E2%80%932019-izquierdo%2Fderecho-dlaa",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2017 A 2019 Dlaa",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2011%E2%80%932014-izquierdo%2Fderecho-dlaa",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2011 A 2014 Dlaa",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2009%E2%80%932016-izquierdo%2Fderecho-dlaa",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2009 A 2016 Dlaa",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper delantero inferior",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2019%E2%80%932022-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2014%E2%80%932016-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2014 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper delantero superior",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2019%E2%80%932022-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2014%E2%80%932016-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2014 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Marco frontal",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Farola derecho",
+        "quantity": 1,
+        "best_score_percent": 75,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 75,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/bombillo-h7-led-ultinon-pro-5000-hl-philips/",
+            "product_name": "BOMBILLO H7 LED ULTINON PRO 5000 HL PHILIPS",
+            "sku": "1979094",
+            "brand": "Philips",
+            "category_name": "Bombillos Led",
+            "subcategory_name": "Bombillos Led"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 75,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/bombillo-1pata-12v_24v-led-6000k-moto/",
+            "product_name": "BOMBILLO 1PATA 12V_24V LED 6000K MOTO",
+            "brand": "Narva",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Bombillos Led"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-kia-sportage-2017%E2%80%932021-izquierdo-todo",
+            "product_name": "Farola Izquierdo Para Kia Sportage Modelos 2017 A 2021 Todo",
+            "category_name": "lighting_headlamps"
+          }
+        ]
+      },
+      {
+        "part_name": "Guardafango derecho",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Guardapolvo plastico delantero derecho",
+        "quantity": 1,
+        "best_score_percent": 57,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 57,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/paso-rueda-guardapolvo-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "product_name": "Paso Rueda Guardapolvo Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 57,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/paso-rueda-guardapolvo-kia-sportage-2017%E2%80%932019-izquierdo-fpi",
+            "product_name": "Paso Rueda Guardapolvo Izquierdo Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 57,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/paso-rueda-guardapolvo-kia-sportage-2011%E2%80%932016-izquierdo-fpi",
+            "product_name": "Paso Rueda Guardapolvo Izquierdo Para Kia Sportage Modelos 2011 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Exploradora derecho",
+        "quantity": 1,
+        "best_score_percent": 86,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 86,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-33-pulg/",
+            "product_name": "EXPLORADORA BARRA LED 33 PULG",
+            "reference": "42396-VK",
+            "sku": "42396-VK",
+            "brand": "VEKTRA Ref: 42396-VK Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 86,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-30-pulg/",
+            "product_name": "EXPLORADORA BARRA LED 30 PULG",
+            "reference": "42395-VK 5 modulos",
+            "brand": "VEKTRA Ref: 42395-VK 5 modulos Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 86,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-25-pulg/",
+            "product_name": "EXPLORADORA BARRA LED 25 PULG",
+            "reference": "42394-VK",
+            "sku": "42394-VK",
+            "brand": "VEKTRA Ref: 42394-VK Modulos: 4 Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led"
+          }
+        ]
+      },
+      {
+        "part_name": "Base exploradora derecho",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2017%E2%80%932019-izquierdo%2Fderecho-dlaa",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2017 A 2019 Dlaa",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2011%E2%80%932014-izquierdo%2Fderecho-dlaa",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2011 A 2014 Dlaa",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2009%E2%80%932016-izquierdo%2Fderecho-dlaa",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2009 A 2016 Dlaa",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra superior puerta delantero derecho",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Bisagra inferior puerta delantero derecho",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Antena radio electrica",
+        "quantity": 1,
+        "best_score_percent": 53,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 53,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/switch-de-corneta-de-aire-12v-el-ectrovalvula-pito-pequeno-s-5002/",
+            "product_name": "SWITCH DE CORNETA DE AIRE 12V ELECTROVALVULA",
+            "reference": "S-5002",
+            "brand": "VEKTRA REF: S-5002 APLICACION: PITO PEQUENO VOLTAJE: 12",
+            "category_name": "Miscelanea Electrica",
+            "subcategory_name": "Switches"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 45,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/switch-redondo-pito-3p-rojo-on-of-irs-101-8c01434-01/",
+            "product_name": "SWITCH REDONDO PITO ON/OF ROJO 3 PINES",
+            "reference": "IRS-101-8C",
+            "sku": "IRS-101-8C",
+            "brand": "VEKTRA REF: IRS-101-8C PINES: 3 APLICACION: PITO/ BOCINA COLOR: ROJO NEGRO",
+            "category_name": "Miscelanea Electrica",
+            "subcategory_name": "Switches"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 45,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/switch-pulsador-pito-pbs-26b/",
+            "product_name": "SWITCH PITO",
+            "reference": "PBS-26B",
+            "brand": "VEKTRA REF: PBS-26B FUNCION: PULSADOR",
+            "category_name": "Miscelanea Electrica",
+            "subcategory_name": "Switches"
+          }
+        ]
+      },
+      {
+        "part_name": "Espejo exterior electrico derecho",
+        "quantity": 1,
+        "best_score_percent": 58,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 58,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-kia-sportage-2011%E2%80%932016-derecho-ytm",
+            "product_name": "Luna Espejo Retrovisor Derecho Para Kia Sportage Modelos 2011 A 2016 Ytm",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 58,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/espejo-retrovisor-kia-sportage-2017%E2%80%932019-derecho-yym",
+            "product_name": "Espejo Retrovisor Derecho Para Kia Sportage Modelos 2017 A 2019 Yym",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 58,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/espejo-retrovisor-kia-sportage-2011%E2%80%932016-derecho-ytm",
+            "product_name": "Espejo Retrovisor Derecho Para Kia Sportage Modelos 2011 A 2016 Ytm",
+            "category_name": "mirrors"
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro circulacion de aire habitaculo",
+        "quantity": 1,
+        "best_score_percent": 85,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 85,
+            "match_type": "vehicle_compatible",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 84,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-tucson-ix35-i35-i30-new-elantra-supr/",
+            "product_name": "FILTRO AIRE TUCSON IX35/ I35/ I30/ NEW ELANTRA SUPR",
+            "reference": "28113-2S000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aire",
+        "quantity": 1,
+        "best_score_percent": 88,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-tucson-ix35-i35-i30-new-elantra-supr/",
+            "product_name": "FILTRO AIRE TUCSON IX35/ I35/ I30/ NEW ELANTRA SUPR",
+            "reference": "28113-2S000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "vehicle_compatible",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          }
+        ]
+      },
+      {
+        "part_name": "Kit plumillas",
+        "quantity": 1,
+        "best_score_percent": 88,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-20-pulg-jgox2-copia/",
+            "product_name": "PLUMILLA AEROD. 20 PULG JGOX2",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-18-pulg-jgox2/",
+            "product_name": "PLUMILLA AEROD. 18 PULG JGOX2",
+            "brand": "Hella",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-16-pulg-jgox2/",
+            "product_name": "PLUMILLA AEROD. 16 PULG JGOX2",
+            "brand": "Hella",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          }
+        ]
+      },
+      {
+        "part_name": "Broches bocel guardafango delantero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "product_name": "Bocel Defensa Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-derecho-fpi",
+            "product_name": "Bocel Defensa Derecho Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2017%E2%80%932019-centro-tyg",
+            "product_name": "Bocel Defensa Centro Para Kia Sportage Modelos 2017 A 2019 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Porta bocin delantero derecho",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Parlante derecho",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Tweeters",
+        "quantity": 1,
+        "best_score_percent": 0
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.254028+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 38,
+      "parts_with_agentic_matches": 26,
+      "provider_hits": {
+        "disfal": 1,
+        "impocali": 2,
+        "parrales": 4,
+        "partcar": 14,
+        "repuestera": 5
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Capo",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Rodamiento delantero derecho",
+        "top_provider_id": "parrales",
+        "top_score_percent": 87,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 87,
+            "match_type": "category_only",
+            "product_name": "Rodamiento de bolas (6203-ZZ C3)",
+            "detail_url": "https://parrales.com.co/product/rodamiento-de-bolas-6203-zz-c3/",
+            "reference": "6203-ZZ C3",
+            "category_name": "Repuestos Mecanicos",
+            "agentic_comment": "Parrales: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Base antena",
+        "top_provider_id": "disfal",
+        "top_score_percent": 36,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "agentic_comment": "Disfal: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Guia lateral izquierdo bomper delantero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Guia lateral derecho bomper delantero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Broches insonorizante tapa motor",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 58,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 58,
+            "match_type": "category_only",
+            "product_name": "EMPAQUE TAPA VALVULAS AVEO 1.4/1.6 OPTRA 1.4/1.6 04-12",
+            "detail_url": "https://repuestera.com.co/producto/empaque-tapa-valvulas-aveo-1-4-1-6-optra-1-4-1-6-04-12/",
+            "reference": "19315728",
+            "brand": "ACDelco",
+            "category_name": "Partes de motor",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Puerta trasero derecho",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Amortiguador delantero derecho",
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Soportes de amortiguador",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "brand": "Shibumi, Febi Bilstein, Nakamoto",
+            "category_name": "Suspension y Direccion",
+            "agentic_comment": "Impocali: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Amortiguadores",
+            "detail_url": "https://www.disfal.com/services/amortiguadores/",
+            "category_name": "Amortiguadores",
+            "agentic_comment": "Disfal: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel estribo derecho",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Bocel Defensa Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Absorbedor de impacto central bomper delantero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Puerta delantero derecho",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Direccional guardabarro derecho",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Direccional Defensa Derecho Para Kia Sportage Modelos 2011 A 2016 Sm",
+            "detail_url": "https://www.partcar.com.co/importacion-1/direccional-defensa-kia-sportage-2011%E2%80%932016-derecho-sm",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aceite",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 100,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 100,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Aceite 1/4",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 95,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 95,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Liquido refrigerante por galon",
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra derecho capo",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Bisagra izquierdo capo",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Bocel guardafango derecho",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Bocel Defensa Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel exploradora derecho",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2017 A 2019 Dlaa",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2017%E2%80%932019-izquierdo%2Fderecho-dlaa",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper delantero inferior",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper delantero superior",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Marco frontal",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Farola derecho",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Farola Izquierdo Para Kia Sportage Modelos 2017 A 2021 Todo",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-kia-sportage-2017%E2%80%932021-izquierdo-todo",
+            "category_name": "lighting_headlamps",
+            "agentic_comment": "Partcar: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 63,
+            "match_type": "category_only",
+            "product_name": "BOMBILLO H7 LED ULTINON PRO 5000 HL PHILIPS",
+            "detail_url": "https://parrales.com.co/product/bombillo-h7-led-ultinon-pro-5000-hl-philips/",
+            "brand": "Philips",
+            "category_name": "Bombillos Led",
+            "agentic_comment": "Parrales: alternativa."
+          }
+        ]
+      },
+      {
+        "part_name": "Guardafango derecho",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Guardapolvo plastico delantero derecho",
+        "top_provider_id": "partcar",
+        "top_score_percent": 72,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 72,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Paso Rueda Guardapolvo Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/paso-rueda-guardapolvo-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Exploradora derecho",
+        "top_provider_id": "parrales",
+        "top_score_percent": 86,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 86,
+            "match_type": "category_only",
+            "product_name": "EXPLORADORA BARRA LED 33 PULG",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-33-pulg/",
+            "reference": "42396-VK",
+            "brand": "VEKTRA Ref: 42396-VK Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "agentic_comment": "Parrales: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Base exploradora derecho",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2017 A 2019 Dlaa",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2017%E2%80%932019-izquierdo%2Fderecho-dlaa",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra superior puerta delantero derecho",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Bisagra inferior puerta delantero derecho",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Antena radio electrica",
+        "top_provider_id": "parrales",
+        "top_score_percent": 53,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 53,
+            "match_type": "category_only",
+            "product_name": "SWITCH DE CORNETA DE AIRE 12V ELECTROVALVULA",
+            "detail_url": "https://parrales.com.co/product/switch-de-corneta-de-aire-12v-el-ectrovalvula-pito-pequeno-s-5002/",
+            "reference": "S-5002",
+            "brand": "VEKTRA REF: S-5002 APLICACION: PITO PEQUENO VOLTAJE: 12",
+            "category_name": "Miscelanea Electrica",
+            "agentic_comment": "Parrales: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Espejo exterior electrico derecho",
+        "top_provider_id": "partcar",
+        "top_score_percent": 73,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 73,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Luna Espejo Retrovisor Derecho Para Kia Sportage Modelos 2011 A 2016 Ytm",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-kia-sportage-2011%E2%80%932016-derecho-ytm",
+            "category_name": "mirrors",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro circulacion de aire habitaculo",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 100,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 100,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aire",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 100,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 100,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Kit plumillas",
+        "top_provider_id": "parrales",
+        "top_score_percent": 78,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 78,
+            "match_type": "category_only",
+            "product_name": "PLUMILLA AEROD. 20 PULG JGOX2",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-20-pulg-jgox2-copia/",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "agentic_comment": "Parrales: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Broches bocel guardafango delantero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Bocel Defensa Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Porta bocin delantero derecho",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Parlante derecho",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Tweeters",
+        "top_score_percent": 0
+      }
+    ]
+  }
+}

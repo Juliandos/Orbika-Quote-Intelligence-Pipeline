@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-04",
+  "generated_at": "2026-06-15T21:16:36.084984+00:00",
+  "quotes": [
+    {
+      "quote_key": "e33a49c24a6389ed38925275",
+      "aviso_id": "425213",
+      "placa": "FOR852",
+      "subject": "🆘 FOR852_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 1,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "e5fdd8f96868333e233f0118",
+      "aviso_id": null,
+      "placa": null,
+      "subject": "🤖 FUN845_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    }
+  ],
+  "provider_specs": []
+}

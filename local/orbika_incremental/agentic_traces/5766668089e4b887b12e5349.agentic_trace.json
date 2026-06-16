@@ -1,0 +1,1149 @@
+{
+  "quote_key": "5766668089e4b887b12e5349",
+  "generated_at": "2026-06-12T20:33:04.598979+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.596943+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:31:58.156416+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 24,
+      "parts_with_agentic_matches": 12,
+      "provider_hits": {
+        "disfal": 3,
+        "impocali": 3,
+        "partcar": 2,
+        "repuestera": 4
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Modulo electronico airbag",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.594151+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.594195+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Cinta airbag timon",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.594200+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.594308+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Airbag acompañante",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.594312+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.594337+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Airbag conductor",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.594340+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.594463+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aceite",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 96,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 96,
+            "match_type": "category_only",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "sku": null,
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 63,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de cabina",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Filtracion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.594467+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.594712+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Aceite 1/4",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 82,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 82,
+            "match_type": "category_only",
+            "product_name": "ACEITE ACDELCO TRUCK PLATINUM 15W40 CK-4 SN (GAL)",
+            "detail_url": "https://repuestera.com.co/producto/aceite-acdelco-truck-platinum-15w40-ck-4-sn-gal/",
+            "reference": "98551213",
+            "sku": null,
+            "brand": "Aceites ACDelco",
+            "category_name": "Lubricantes ACDelco",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Aditivos y quimicos",
+            "detail_url": "https://impocali.com/productos/lubricacion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Lubricacion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.594720+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.594976+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Condensador",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "disfal",
+        "top_score_percent": 36,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Mangueras",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes organico",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.594984+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 7
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.595167+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 7,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Radiador de refrigerante",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Mangueras",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.595175+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 7
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.595345+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 7,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Ducto de toma de aire",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "impocali",
+        "top_score_percent": 25,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de aire",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Filtracion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.595351+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.595467+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa plastica gancho de tiro",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.595471+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 1
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.595530+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 1,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper delantero",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.595533+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.595555+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guardafango izquierdo",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.595558+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.595579+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guardapolvo plastico delantero izquierdo",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 72,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 72,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Paso Rueda Guardapolvo Izquierdo Para Nissan March Modelos 2012 A 2021 Sm",
+            "detail_url": "https://www.partcar.com.co/importacion-1/paso-rueda-guardapolvo-nissan-march-2012%E2%80%932021-izquierdo-sm",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.595582+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 1
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.595649+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 1,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte estructural central bomper delantero",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "partcar",
+        "top_score_percent": 66,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 66,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Soporte De Defensa Delantera Para Nissan March Modelos 2012 A 2021 Taiwan",
+            "detail_url": "https://www.partcar.com.co/importacion-1/soporte-de-defensa-nissan-march-2012%E2%80%932021-delantera-taiwan",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 23,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Soporte de caja y motor",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Partes para motor",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.595655+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.595947+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Capo",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.595954+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.595978+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guia lateral izquierdo bomper delantero",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.595982+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.596021+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guia lateral derecho bomper delantero",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.596024+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.596054+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Liquido refrigerante por galon",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Mangueras",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.596057+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.596262+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Pretensor airbag delantero derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "disfal",
+        "top_score_percent": 40,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 40,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.596269+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 2
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.596347+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 2,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Pretensor airbag delantero izquierdo",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "disfal",
+        "top_score_percent": 38,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.596352+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 2
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.596425+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 2,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Rejilla bomper delantero",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.596428+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.596453+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Millare",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.596456+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.596475+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aire",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 96,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 96,
+            "match_type": "category_only",
+            "product_name": "FILTRO AIRE TUCSON IX35/ I35/ I30/ NEW ELANTRA SUPR",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-tucson-ix35-i35-i30-new-elantra-supr/",
+            "reference": "28113-2S000",
+            "sku": null,
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 63,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de cabina",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Filtracion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.596478+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.596705+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro circulacion de aire habitaculo",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 93,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 93,
+            "match_type": "category_only",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "reference": "19315465",
+            "sku": null,
+            "brand": "ACDelco",
+            "category_name": "Filtración",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 63,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de cabina",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Filtracion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.596711+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.596930+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

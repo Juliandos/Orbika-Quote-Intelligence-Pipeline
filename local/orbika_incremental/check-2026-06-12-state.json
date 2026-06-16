@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "created_at": "2026-06-15T23:14:22.912335+00:00",
+  "updated_at": "2026-06-15T23:14:26.024110+00:00",
+  "target_sender": "cotizacionesorbika@subocol.com",
+  "cursor": {
+    "last_completed_internal_date_ms": "1781296562000",
+    "last_completed_gmail_id": "19ebd8c856ea1674"
+  },
+  "current": {
+    "gmail_id": null,
+    "quote_key": null,
+    "stage": "idle",
+    "updated_at": "2026-06-15T23:14:26.023935+00:00"
+  },
+  "messages": {
+    "19ebd5d75caa3160": {
+      "status": "completed",
+      "message_id": "<266656349.4630.1781293477635@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781293477000",
+      "received_at": "2026-06-12T19:44:37+00:00",
+      "subject": "🤖 EIY492_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-15T23:14:26.021574+00:00",
+      "completed_at": "2026-06-15T23:14:26.021787+00:00"
+    },
+    "19ebd8c856ea1674": {
+      "status": "completed",
+      "message_id": "<1497961274.5213.1781296562219@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781296562000",
+      "received_at": "2026-06-12T20:36:02+00:00",
+      "subject": "🤖 DHQ512_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-15T23:14:26.023215+00:00",
+      "completed_at": "2026-06-15T23:14:26.023924+00:00"
+    }
+  },
+  "quotes": {},
+  "last_run": {
+    "finished_at": "2026-06-15T23:14:26.024098+00:00",
+    "messages_seen": 2,
+    "messages_with_quotes": 0,
+    "quotes_processed": 0,
+    "quotes_skipped": 0
+  }
+}

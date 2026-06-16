@@ -1,0 +1,88 @@
+{
+  "quote_key": "46a540e8a981eeb2c9a5651e",
+  "generated_at": "2026-06-12T20:33:04.592798+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.592477+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:31:55.064289+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 1,
+      "provider_hits": {
+        "partcar": 1
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Carga aire/acond. r134",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "partcar",
+        "top_score_percent": 62,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 62,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Consola Central Aire Acondicionado Para Chevrolet Aveo Modelos 2007 A 2013 Sm",
+            "detail_url": "https://www.partcar.com.co/importacion-1/consola-central-aire-acondicionado-chevrolet-aveo-2007%E2%80%932013--sm",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de aire",
+            "detail_url": "https://impocali.com/productos/filtracion-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Filtracion",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.592079+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.592463+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

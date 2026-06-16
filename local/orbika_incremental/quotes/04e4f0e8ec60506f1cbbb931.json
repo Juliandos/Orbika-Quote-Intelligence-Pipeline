@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-06-10T00:48:47.455424+00:00",
+  "quote_key": "04e4f0e8ec60506f1cbbb931",
+  "source": {
+    "message_id": "<37712240.5957.1779224936349@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-19T21:08:56+00:00",
+    "subject": "🆘 JYO016_ Fuiste Seleccionado para cotizar _BOLIVAR"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "419451",
+    "fecha_aviso": "19/05/26",
+    "marca": "VOLKSWAGEN",
+    "linea": "CONSTELLATION",
+    "version": "19.360 [3560mm] MT 8900CC TD 4X2 ABS",
+    "ano": "2022",
+    "placa": "JYO016",
+    "vin": "9536R827XNR042795",
+    "taller_entrega": "Flotas, Camiones Y Soluciones S.a.s Itag...",
+    "nombre_comercial": "Flotas, Camiones Y Soluciones S.a.s Itag...",
+    "nit": "901430235-7",
+    "ciudad": "BOGOTA, D.C.",
+    "direccion": "CL 51 41 63",
+    "telefono": "0",
+    "email": "No disponible",
+    "repuestos_count": 1,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Brazo espejo superior izq.",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:50.541174+00:00",
+    "summary": {
+      "parts_total": 1,
+      "parts_with_matches": 1,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    "provider_specs": [
+      {
+        "provider_id": "impocali",
+        "display_name": "Impocali",
+        "snapshot_date": "2026-06-09"
+      }
+    ],
+    "parts": [
+      {
+        "part_name": "Brazo espejo superior izq.",
+        "quantity": 1,
+        "best_score_percent": 25,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "product_name": "Brazo compensador",
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos"
+          }
+        ]
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.228817+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 1,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Brazo espejo superior izq.",
+        "top_provider_id": "impocali",
+        "top_score_percent": 25,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Brazo compensador",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "category_name": "Suspension y Direccion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      }
+    ]
+  }
+}

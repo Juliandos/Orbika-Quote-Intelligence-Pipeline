@@ -1,0 +1,320 @@
+{
+  "quote_key": "b5ebbda7aa2024cc77f62680",
+  "generated_at": "2026-06-12T20:33:04.604121+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.603380+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:31:59.429802+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 6,
+      "parts_with_agentic_matches": 3,
+      "provider_hits": {
+        "disfal": 1,
+        "impocali": 2
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Enfocador radiador",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "impocali",
+        "top_score_percent": 37,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes organico",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Mangueras",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.602638+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 7
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.602836+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 7,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Enfocador radiador",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "impocali",
+        "top_score_percent": 37,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes organico",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Mangueras",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.602845+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 7
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.603032+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 7,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Extension bocel guardafango delantero izquierdo",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.603039+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.603074+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guia farola izquierdo de bomper delantero",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.603078+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 2
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.603164+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 2,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Esquinero paral delantero izquierdo",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.603167+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.603196+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Marco superior radiador",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "disfal",
+        "top_score_percent": 38,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Mangueras",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes 50/50 agua glicol especificacion europea",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.603200+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 7
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.603369+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 7,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-06-10T14:19:31.986676+00:00",
+  "quote_key": "917d0f6746f5301f1eec97d1",
+  "source": {
+    "message_id": "<2135409766.3080.1779382090475@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-21T16:48:10+00:00",
+    "subject": "🆘 EOU666_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "partial",
+    "retries_used": 0,
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "0",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "Notice ID was not found in the rendered page.",
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.363133+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.240124+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

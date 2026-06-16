@@ -1,0 +1,37 @@
+{
+  "date": "2026-05-21",
+  "generated_at": "2026-06-15T21:16:36.084571+00:00",
+  "quotes": [
+    {
+      "quote_key": "917d0f6746f5301f1eec97d1",
+      "aviso_id": null,
+      "placa": null,
+      "subject": "🆘 EOU666_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "9db0d905161f4cdd3c42c32d",
+      "aviso_id": "417214",
+      "placa": "EOU666",
+      "subject": "🆘 EOU666_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "ca513c6f85a89794118177d8",
+      "aviso_id": "420484",
+      "placa": "PXP962",
+      "subject": "🆘 PXP962_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    }
+  ],
+  "provider_specs": []
+}

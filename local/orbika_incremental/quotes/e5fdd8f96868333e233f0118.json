@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-08T02:53:47.309730+00:00",
+  "quote_key": "e5fdd8f96868333e233f0118",
+  "source": {
+    "message_id": "<395278124.3347.1780594499700@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-04T17:34:59+00:00",
+    "subject": "🤖 FUN845_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/marketplace",
+  "orbika": {
+    "load_status": "failed_after_retries",
+    "retries_used": 2,
+    "repuestos_count": 0,
+    "warnings": [
+      "Notice ID was not found in the rendered page.",
+      "No quote-replacement blocks were found in the rendered page.",
+      "Rendered quote page was still incomplete after retries."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:18.142548+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.255927+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

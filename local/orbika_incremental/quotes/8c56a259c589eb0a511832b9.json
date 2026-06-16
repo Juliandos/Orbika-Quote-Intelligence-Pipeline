@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-08T03:06:09.437574+00:00",
+  "quote_key": "8c56a259c589eb0a511832b9",
+  "source": {
+    "message_id": "<322993555.3136.1780679279717@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-05T17:07:59+00:00",
+    "subject": "🤖 IOR336_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/marketplace",
+  "orbika": {
+    "load_status": "failed_after_retries",
+    "retries_used": 2,
+    "repuestos_count": 0,
+    "warnings": [
+      "Notice ID was not found in the rendered page.",
+      "No quote-replacement blocks were found in the rendered page.",
+      "Rendered quote page was still incomplete after retries."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.363029+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.240054+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

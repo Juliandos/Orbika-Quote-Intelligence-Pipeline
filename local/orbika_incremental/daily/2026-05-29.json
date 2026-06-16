@@ -1,0 +1,37 @@
+{
+  "date": "2026-05-29",
+  "generated_at": "2026-06-15T21:16:36.084057+00:00",
+  "quotes": [
+    {
+      "quote_key": "6cfe89f351fff752fff135c0",
+      "aviso_id": "421411",
+      "placa": "ENZ262",
+      "subject": "🆘 ENZ262_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "9eafa03f4507e4dee9926d49",
+      "aviso_id": null,
+      "placa": null,
+      "subject": "🆘 LYN077_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "f2476bfd224c5d569afb3775",
+      "aviso_id": null,
+      "placa": null,
+      "subject": "🆘 DSV680_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    }
+  ],
+  "provider_specs": []
+}

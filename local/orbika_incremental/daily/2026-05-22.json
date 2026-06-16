@@ -1,0 +1,68 @@
+{
+  "date": "2026-05-22",
+  "generated_at": "2026-06-15T21:16:36.083240+00:00",
+  "quotes": [
+    {
+      "quote_key": "232827cb5c6337da17ee7d9f",
+      "aviso_id": null,
+      "placa": null,
+      "subject": "🆘 ENZ262_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "675f4858cdba016753370980",
+      "aviso_id": "420030",
+      "placa": "EPP809",
+      "subject": "🆘 EPP809_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "8397411f21fbb83ab20c9c43",
+      "aviso_id": "423078",
+      "placa": "DMW269",
+      "subject": "🆘 DMW269_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "parts_total": 1,
+      "parts_with_matches": 1,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    {
+      "quote_key": "c1a0c44234076f798fbdbdbb",
+      "aviso_id": "420908",
+      "placa": "JBN968",
+      "subject": "🆘 JBN968_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 2,
+      "parts_with_matches": 1,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    {
+      "quote_key": "db3c3cc9bea063b892266a7d",
+      "aviso_id": "420908",
+      "placa": "JBN968",
+      "subject": "🆘 JBN968_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    }
+  ],
+  "provider_specs": [
+    {
+      "provider_id": "impocali",
+      "display_name": "Impocali",
+      "website": "https://impocali.com/",
+      "snapshot_date": "2026-06-09"
+    }
+  ]
+}

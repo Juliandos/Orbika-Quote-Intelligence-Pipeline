@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-06-08T02:51:54.129338+00:00",
+  "quote_key": "f8d978c76760630ac1fe1c86",
+  "source": {
+    "message_id": "<676089641.5248.1780435579887@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-02T21:26:19+00:00",
+    "subject": "🆘 JYW004_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "failed_after_retries",
+    "retries_used": 2,
+    "aviso_id": "396825",
+    "fecha_aviso": "05/03/26",
+    "marca": "FORD",
+    "linea": "EDGE [2]",
+    "version": "SEL TP 2000CC T",
+    "ano": "2021",
+    "placa": "JYW004",
+    "vin": "2FMPK3J9XMBA22935",
+    "taller_entrega": "El Roble Motor - Med",
+    "nombre_comercial": "El Roble Motor - Med",
+    "nit": "900006406-9",
+    "ciudad": "MEDELLIN",
+    "direccion": "CL 31 46 28",
+    "telefono": "3549500",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page.",
+      "Rendered quote page was still incomplete after retries."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:18.143031+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.256164+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

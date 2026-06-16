@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-06-10T14:20:06.920228+00:00",
+  "quote_key": "c1a0c44234076f798fbdbdbb",
+  "source": {
+    "message_id": "<2104422783.3286.1779468183523@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-22T16:43:03+00:00",
+    "subject": "🆘 JBN968_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "420908",
+    "fecha_aviso": "21/05/26",
+    "marca": "RENAULT",
+    "linea": "ALASKAN",
+    "version": "INTENS AT 2500CC TD 4X4",
+    "ano": "2017",
+    "placa": "JBN968",
+    "vin": "3BRCD33B8HK590010",
+    "taller_entrega": "Renomotriz Med",
+    "nombre_comercial": "Renomotriz Med",
+    "nit": "890935228-4",
+    "ciudad": "MEDELLIN",
+    "direccion": "KR 44A # 31-155 SAN DIEGO",
+    "telefono": "2323501",
+    "email": "No disponible",
+    "repuestos_count": 2,
+    "total_cotizacion": "$1,606,220.00",
+    "repuestos_cotizados": "1",
+    "parts": [
+      {
+        "name": "Lubricante spray",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Duraliner",
+        "quantity": 1,
+        "quality": "GENUINO",
+        "total_value": "$1,606,220.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:00.248980+00:00",
+    "summary": {
+      "parts_total": 2,
+      "parts_with_matches": 1,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    "provider_specs": [
+      {
+        "provider_id": "impocali",
+        "display_name": "Impocali",
+        "snapshot_date": "2026-06-09"
+      }
+    ],
+    "parts": [
+      {
+        "part_name": "Lubricante spray",
+        "quantity": 1,
+        "best_score_percent": 45,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 45,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/lubricacion/",
+            "product_name": "Lubricantes para motor",
+            "category_name": "Lubricacion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/ubricacion-vehiculo-comercial/",
+            "product_name": "Lubricantes de transmision",
+            "category_name": "Lubricacion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 41,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/lubricacion/",
+            "product_name": "Lubricantes de caja mecanica",
+            "category_name": "Lubricacion",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Duraliner",
+        "quantity": 1,
+        "best_score_percent": 0
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.241977+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 2,
+      "parts_with_agentic_matches": 1,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Lubricante spray",
+        "top_provider_id": "impocali",
+        "top_score_percent": 45,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 45,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Lubricantes para motor",
+            "detail_url": "https://impocali.com/productos/lubricacion/",
+            "category_name": "Lubricacion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Duraliner",
+        "top_score_percent": 0
+      }
+    ]
+  }
+}

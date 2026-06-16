@@ -1,0 +1,63 @@
+{
+  "provider_id": "disfal",
+  "display_name": "Disfal",
+  "website": "https://www.disfal.com/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "verification_scope": "partial_verification_only",
+  "reviewed_pages": [
+    {
+      "id": "home",
+      "name": "Home",
+      "url": "https://www.disfal.com/",
+      "enabled": true
+    },
+    {
+      "id": "amortiguadores",
+      "name": "Amortiguadores",
+      "url": "https://www.disfal.com/services/amortiguadores/",
+      "enabled": true
+    }
+  ],
+  "selectors": {
+    "service_family_links": "a[href*=\"/services/\"]",
+    "brand_links": "a[href*=\"colombia/\"]",
+    "service_heading": "h2"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": false,
+    "stock": false,
+    "prices": false,
+    "product_names": false,
+    "category_names": true,
+    "brand_text_structured": true,
+    "commercial_lines": true,
+    "series_labels": true
+  },
+  "matching": {
+    "allowed_match_types": [
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference",
+      "vehicle_compatible"
+    ],
+    "notes": "Disfal is useful for trusted family and brand verification, but the reviewed public pages do not expose exact part references."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/disfal/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T00:48:35.715624+00:00",
+  "quote_key": "58fc3c32bbaa294c27f04b08",
+  "source": {
+    "message_id": "<289245799.3556.1779209847961@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-19T16:57:27+00:00",
+    "subject": "🆘 EHS700_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "413369",
+    "fecha_aviso": "21/04/26",
+    "marca": "MAZDA",
+    "linea": "CX5 [FL]",
+    "version": "GRAND TOURING LX TP 2500CC 4X4 TC CT",
+    "ano": "2018",
+    "placa": "EHS700",
+    "vin": "JM7KF4WLAJ0124195",
+    "taller_entrega": "Taller Pago En Efectivo Livianos Medelli...",
+    "nombre_comercial": "Taller Pago En Efectivo Livianos Medelli...",
+    "nit": "000000000-0",
+    "ciudad": "MEDELLIN",
+    "direccion": "No despachar",
+    "telefono": "0",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.159496+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.239043+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

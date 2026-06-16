@@ -1,0 +1,27 @@
+{
+  "date": "2026-06-02",
+  "generated_at": "2026-06-15T21:16:36.085067+00:00",
+  "quotes": [
+    {
+      "quote_key": "ea6b8827c6a11de4d020b9be",
+      "aviso_id": null,
+      "placa": null,
+      "subject": "🤖 LXQ591_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "f8d978c76760630ac1fe1c86",
+      "aviso_id": "396825",
+      "placa": "JYW004",
+      "subject": "🆘 JYW004_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    }
+  ],
+  "provider_specs": []
+}

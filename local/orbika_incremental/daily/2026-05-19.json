@@ -1,0 +1,76 @@
+{
+  "date": "2026-05-19",
+  "generated_at": "2026-06-15T21:16:36.082497+00:00",
+  "quotes": [
+    {
+      "quote_key": "02a3e74e7de0de313657709d",
+      "aviso_id": "411451",
+      "placa": "FQY431",
+      "subject": "🆘 FQY431_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "04e4f0e8ec60506f1cbbb931",
+      "aviso_id": "419451",
+      "placa": "JYO016",
+      "subject": "🆘 JYO016_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "parts_total": 1,
+      "parts_with_matches": 1,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    {
+      "quote_key": "58fc3c32bbaa294c27f04b08",
+      "aviso_id": "413369",
+      "placa": "EHS700",
+      "subject": "🆘 EHS700_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "80c2c19b0caa2fbf40fd1b9b",
+      "aviso_id": "413130",
+      "placa": "JPT849",
+      "subject": "🆘 JPT849_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "a746e87104118095b09dc36f",
+      "aviso_id": "351075",
+      "placa": "GWM207",
+      "subject": "🆘 GWM207_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "e0738fb3c6de425fb0326eaf",
+      "aviso_id": "421346",
+      "placa": "KSZ333",
+      "subject": "🆘 KSZ333_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    }
+  ],
+  "provider_specs": [
+    {
+      "provider_id": "impocali",
+      "display_name": "Impocali",
+      "website": "https://impocali.com/",
+      "snapshot_date": "2026-06-09"
+    }
+  ]
+}

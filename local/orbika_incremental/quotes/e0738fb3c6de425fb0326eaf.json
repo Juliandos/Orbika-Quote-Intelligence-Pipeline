@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T00:46:34.173893+00:00",
+  "quote_key": "e0738fb3c6de425fb0326eaf",
+  "source": {
+    "message_id": "<2106706066.702.1779197761031@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-19T13:36:01+00:00",
+    "subject": "🆘 KSZ333_ Fuiste Seleccionado para cotizar _BOLIVAR"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "421346",
+    "fecha_aviso": "15/05/26",
+    "marca": "SUZUKI",
+    "linea": "NEW BALENO",
+    "version": "GL MT 1500CC ABS",
+    "ano": "2023",
+    "placa": "KSZ333",
+    "vin": "MBHWBA3S8PG222837",
+    "taller_entrega": "S.e Mundial De Colisiones B/manga",
+    "nombre_comercial": "S.e Mundial De Colisiones B/manga",
+    "nit": "900834326-1",
+    "ciudad": "BUCARAMANGA",
+    "direccion": "CL 21 # 15-48",
+    "telefono": "6717171",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:17.919131+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.255705+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

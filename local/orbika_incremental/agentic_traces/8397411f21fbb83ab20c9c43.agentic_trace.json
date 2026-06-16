@@ -1,0 +1,88 @@
+{
+  "quote_key": "8397411f21fbb83ab20c9c43",
+  "generated_at": "2026-06-12T20:33:04.601205+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.600918+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:31:58.362302+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 1,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Direccional espejo izquierdo",
+        "requested_reference": "36430M72M01000",
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "impocali",
+        "top_score_percent": 38,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Cajas de direccion",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "MONROE OESpectrum: Serie 37000 – 71000",
+            "detail_url": "https://www.disfal.com/services/amortiguadores/",
+            "reference": "Serie 37000 – 71000",
+            "sku": null,
+            "brand": "MONROE",
+            "category_name": "Amortiguadores",
+            "subcategory_name": "OESpectrum",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.600660+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.600906+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

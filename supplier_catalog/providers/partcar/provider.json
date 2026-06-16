@@ -1,0 +1,56 @@
+{
+  "provider_id": "partcar",
+  "display_name": "Partcar",
+  "website": "https://www.partcar.com.co/",
+  "catalog_root_url": "https://www.partcar.com.co/importacion-1",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "catalog_list_item": "[role=\"listitem\"]._FiCX",
+    "product_link": "a[data-testid=\"linkElement\"]",
+    "product_title": "h2",
+    "product_code": "p",
+    "ui_next_button_note": "#comp-mlpnn4l8 > button > span"
+  },
+  "pagination": {
+    "strategy": "public_dynamic_page_query",
+    "page_pattern": "https://www.partcar.com.co/importacion-1?dynamic_page={page_number}",
+    "detect_next_from_rel_link": true,
+    "notes": "Prefer rel=next or incrementing dynamic_page instead of browser clicking."
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "supplier_catalog_code": true,
+    "vehicle_compatibility": "in_title_only",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true
+  },
+  "matching": {
+    "allowed_match_types": [
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "The visible numeric code is treated as a supplier-side catalog code unless proven equivalent to an external reference."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/partcar/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

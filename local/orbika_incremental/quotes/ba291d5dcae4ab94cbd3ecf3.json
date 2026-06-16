@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-06-10T00:49:53.437964+00:00",
+  "quote_key": "ba291d5dcae4ab94cbd3ecf3",
+  "source": {
+    "message_id": "<539708774.729.1779284512222@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-20T13:41:52+00:00",
+    "subject": "🆘 GHZ034_ Fuiste Seleccionado para cotizar _BOLIVAR"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "421791",
+    "fecha_aviso": "19/05/26",
+    "marca": "CHEVROLET",
+    "linea": "BEAT",
+    "version": "LTZ MT 1200CC 4P AA 2AB ABS",
+    "ano": "2020",
+    "placa": "GHZ034",
+    "vin": "9GACE5CDXLB018857",
+    "taller_entrega": "Colision Express Dj Sas - Medellin",
+    "nombre_comercial": "Colision Express Dj Sas - Medellin",
+    "nit": "900903792-5",
+    "ciudad": "MEDELLIN",
+    "direccion": "CRA 45 # 31-114",
+    "telefono": "2614378",
+    "email": "No disponible",
+    "repuestos_count": 1,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Bocel persiana - la de cromo para la rejilla central grande",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:59.990736+00:00",
+    "summary": {
+      "parts_total": 1,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    },
+    "parts": [
+      {
+        "part_name": "Bocel persiana - la de cromo para la rejilla central grande",
+        "quantity": 1,
+        "best_score_percent": 0
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.241691+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 0
+    },
+    "parts": [
+      {
+        "part_name": "Bocel persiana - la de cromo para la rejilla central grande",
+        "top_score_percent": 0
+      }
+    ]
+  }
+}

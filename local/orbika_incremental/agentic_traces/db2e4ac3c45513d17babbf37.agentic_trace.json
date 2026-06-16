@@ -1,0 +1,1994 @@
+{
+  "quote_key": "db2e4ac3c45513d17babbf37",
+  "generated_at": "2026-06-12T20:33:04.631207+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.626603+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:32:17.903347+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 38,
+      "parts_with_agentic_matches": 26,
+      "provider_hits": {
+        "disfal": 1,
+        "impocali": 2,
+        "parrales": 4,
+        "partcar": 14,
+        "repuestera": 5
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Capo",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.620264+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.620309+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Rodamiento delantero derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 3,
+        "top_provider_id": "parrales",
+        "top_score_percent": 87,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 87,
+            "match_type": "category_only",
+            "product_name": "Rodamiento de bolas (6203-ZZ C3)",
+            "detail_url": "https://parrales.com.co/product/rodamiento-de-bolas-6203-zz-c3/",
+            "reference": "6203-ZZ C3",
+            "sku": "",
+            "brand": null,
+            "category_name": "Repuestos Mecanicos",
+            "subcategory_name": "Rodamientos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Parrales: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 40,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Barra central de direccion",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          },
+          {
+            "rank": 3,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "product_name": "AMORTIGUADORES RANCHO: Serie RS",
+            "detail_url": "https://www.disfal.com/services/amortiguadores/",
+            "reference": "Serie RS",
+            "sku": null,
+            "brand": "RANCHO",
+            "category_name": "Amortiguadores",
+            "subcategory_name": "AMORTIGUADORES RANCHO",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.620316+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.620551+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 3,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Base antena",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "disfal",
+        "top_score_percent": 36,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.620561+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.620670+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guia lateral izquierdo bomper delantero",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.620677+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.620926+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guia lateral derecho bomper delantero",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.620932+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.621187+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Broches insonorizante tapa motor",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 58,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 58,
+            "match_type": "category_only",
+            "product_name": "EMPAQUE TAPA VALVULAS AVEO 1.4/1.6 OPTRA 1.4/1.6 04-12",
+            "detail_url": "https://repuestera.com.co/producto/empaque-tapa-valvulas-aveo-1-4-1-6-optra-1-4-1-6-04-12/",
+            "reference": "19315728",
+            "sku": null,
+            "brand": "ACDelco",
+            "category_name": "Partes de motor",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 52,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Soporte de caja y motor",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Partes para motor",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.621193+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.621444+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Puerta trasero derecho",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.621451+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.621478+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Amortiguador delantero derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Soportes de amortiguador",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "reference": null,
+            "sku": null,
+            "brand": "Shibumi, Febi Bilstein, Nakamoto",
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Amortiguadores",
+            "detail_url": "https://www.disfal.com/services/amortiguadores/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Amortiguadores",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.621482+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.621688+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel estribo derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Bocel Defensa Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.621694+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.621807+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Absorbedor de impacto central bomper delantero",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Líquido de frenos",
+            "detail_url": "https://www.disfal.com/services/liquido-de-frenos-colombia/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Líquido de frenos",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.621812+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 6
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.622001+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 6,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Puerta delantero derecho",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.622006+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.622031+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Direccional guardabarro derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Direccional Defensa Derecho Para Kia Sportage Modelos 2011 A 2016 Sm",
+            "detail_url": "https://www.partcar.com.co/importacion-1/direccional-defensa-kia-sportage-2011%E2%80%932016-derecho-sm",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Cajas de direccion",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.622035+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.622287+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aceite",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 100,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 100,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "sku": null,
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 59,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de combustible",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Filtracion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.622294+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.622567+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Aceite 1/4",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 95,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 95,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "sku": null,
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Aditivos y quimicos",
+            "detail_url": "https://impocali.com/productos/lubricacion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Lubricacion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.622573+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.622834+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Liquido refrigerante por galon",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Mangueras",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.622840+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.623027+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra derecho capo",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.623032+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.623058+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra izquierdo capo",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.623061+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.623085+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel guardafango derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Bocel Defensa Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.623088+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.623217+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel exploradora derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2017 A 2019 Dlaa",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2017%E2%80%932019-izquierdo%2Fderecho-dlaa",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.623223+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.623467+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper delantero inferior",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.623472+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 5
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.623634+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 5,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper delantero superior",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.623638+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 5
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.623795+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 5,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Marco frontal",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.623799+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.623821+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Farola derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Farola Izquierdo Para Kia Sportage Modelos 2017 A 2021 Todo",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-kia-sportage-2017%E2%80%932021-izquierdo-todo",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "lighting_headlamps",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 63,
+            "match_type": "category_only",
+            "product_name": "BOMBILLO H7 LED ULTINON PRO 5000 HL PHILIPS",
+            "detail_url": "https://parrales.com.co/product/bombillo-h7-led-ultinon-pro-5000-hl-philips/",
+            "reference": null,
+            "sku": "1979094",
+            "brand": "Philips",
+            "category_name": "Bombillos Led",
+            "subcategory_name": "Bombillos Led",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Parrales: alternativa secundaria util para comparar."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.623824+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.624060+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guardafango derecho",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.624070+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.624093+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guardapolvo plastico delantero derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 72,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 72,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Paso Rueda Guardapolvo Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/paso-rueda-guardapolvo-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.624096+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 6
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.624345+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 6,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Exploradora derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "parrales",
+        "top_score_percent": 86,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 86,
+            "match_type": "category_only",
+            "product_name": "EXPLORADORA BARRA LED 33 PULG",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-33-pulg/",
+            "reference": "42396-VK",
+            "sku": "42396-VK",
+            "brand": "VEKTRA Ref: 42396-VK Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Parrales: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2017 A 2019 Dlaa",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2017%E2%80%932019-izquierdo%2Fderecho-dlaa",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: alternativa secundaria util para comparar."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.624352+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.624642+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Base exploradora derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Exploradora Izquierdo/Derecho Para Kia Sportage Modelos 2017 A 2019 Dlaa",
+            "detail_url": "https://www.partcar.com.co/importacion-1/exploradora-kia-sportage-2017%E2%80%932019-izquierdo%2Fderecho-dlaa",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.624656+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.624903+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra superior puerta delantero derecho",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.624908+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.624938+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra inferior puerta delantero derecho",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.624941+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.624970+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Antena radio electrica",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 3,
+        "top_provider_id": "parrales",
+        "top_score_percent": 53,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 53,
+            "match_type": "category_only",
+            "product_name": "SWITCH DE CORNETA DE AIRE 12V ELECTROVALVULA",
+            "detail_url": "https://parrales.com.co/product/switch-de-corneta-de-aire-12v-el-ectrovalvula-pito-pequeno-s-5002/",
+            "reference": "S-5002",
+            "sku": "",
+            "brand": "VEKTRA REF: S-5002 APLICACION: PITO PEQUENO VOLTAJE: 12",
+            "category_name": "Miscelanea Electrica",
+            "subcategory_name": "Switches",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Parrales: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Terminales",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Partes electricas",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          },
+          {
+            "rank": 3,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.624973+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.625210+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 3,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Espejo exterior electrico derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 73,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 73,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Luna Espejo Retrovisor Derecho Para Kia Sportage Modelos 2011 A 2016 Ytm",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-kia-sportage-2011%E2%80%932016-derecho-ytm",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "mirrors",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.625218+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.625486+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro circulacion de aire habitaculo",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 100,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 100,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "sku": null,
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 63,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de cabina",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Filtracion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.625493+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.625775+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aire",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 100,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 100,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "sku": null,
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 63,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de cabina",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Filtracion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.625782+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.626043+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Kit plumillas",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "parrales",
+        "top_score_percent": 78,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 78,
+            "match_type": "category_only",
+            "product_name": "PLUMILLA AEROD. 20 PULG JGOX2",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-20-pulg-jgox2-copia/",
+            "reference": null,
+            "sku": "",
+            "brand": null,
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Parrales: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.626050+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.626326+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Broches bocel guardafango delantero",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Bocel Defensa Izquierdo Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/bocel-defensa-kia-sportage-2019%E2%80%932022-izquierdo-fpi",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.626332+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 4
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.626507+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 4,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Porta bocin delantero derecho",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.626513+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.626542+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Parlante derecho",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.626545+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.626568+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Tweeters",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.626571+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.626592+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

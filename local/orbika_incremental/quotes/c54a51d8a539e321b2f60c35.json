@@ -1,0 +1,1966 @@
+{
+  "generated_at": "2026-06-10T00:49:44.156167+00:00",
+  "quote_key": "c54a51d8a539e321b2f60c35",
+  "source": {
+    "message_id": "<195412834.243.1779282396542@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-20T13:06:36+00:00",
+    "subject": "🆘 HAL698_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "421361",
+    "fecha_aviso": "19/05/26",
+    "marca": "FORD",
+    "linea": "FIESTA [7]",
+    "version": "SPORTBACK SE TP 1600CC 4P",
+    "ano": "2014",
+    "placa": "HAL698",
+    "vin": "EM193975",
+    "taller_entrega": "Tobonautos",
+    "nombre_comercial": "Tobonautos",
+    "nit": "890933138-0",
+    "ciudad": "MEDELLIN",
+    "direccion": "CR 46 14 208",
+    "telefono": "2684846",
+    "email": "No disponible",
+    "repuestos_count": 38,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Tapa espejo retrovisor exterior derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Emblema persiana",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Soporte central paragolpes delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Cinturon de seguridad delantero izq",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Cinturon de seguridad delantero der",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guardabarro rh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Portaplaca del identificacion vehiculo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bomper delantero (cambiado)",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bomper trasero (cambiado)",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bisagra capó rh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Farola delantera rh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Persiana",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Farola delantera lh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Tapa espejo retrovisor exterior izq",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Sop. de bomper del. lh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Motor ventilador radiador",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Sensor de impacto lateral",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Sop. de bomper tras. lh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Frontal superior atornillado",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Liquido refrigerante galon",
+        "quantity": 2,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Estribo completo rh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Espejo exterior rh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Espejo exterior lh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Refrigerante",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bocel de persiana",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Tapa motor completa",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bisagra capó lh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Cinta airbag conductor",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bocel bomper trasero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Sop. de bomper del. rh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bocel bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Modulo airbag",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Sop. de bomper tras. rh",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Refuerzo bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Airbag acompañante",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Vidrio parabrisas del. pegado",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Airbag conductor",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Tapa millare",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:07.737993+00:00",
+    "summary": {
+      "parts_total": 38,
+      "parts_with_matches": 29,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "impocali": 2,
+        "parrales": 4,
+        "partcar": 21,
+        "repuestera": 2
+      }
+    },
+    "provider_specs": [
+      {
+        "provider_id": "impocali",
+        "display_name": "Impocali",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "parrales",
+        "display_name": "Parrales",
+        "snapshot_date": "2026-06-09-full"
+      },
+      {
+        "provider_id": "partcar",
+        "display_name": "Partcar",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "repuestera",
+        "display_name": "Repuestera",
+        "snapshot_date": "2026-06-09"
+      }
+    ],
+    "parts": [
+      {
+        "part_name": "Tapa espejo retrovisor exterior derecho",
+        "quantity": 1,
+        "best_score_percent": 60,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 60,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-izquierdo-tyc",
+            "product_name": "Luna Espejo Retrovisor Izquierdo Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 60,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2004%E2%80%932010-izquierdo-tyc",
+            "product_name": "Luna Espejo Retrovisor Izquierdo Para Ford Fiesta Modelos 2004 A 2010 Tyc",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 60,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-tyc",
+            "product_name": "Luna Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "category_name": "mirrors"
+          }
+        ]
+      },
+      {
+        "part_name": "Emblema persiana",
+        "quantity": 1,
+        "best_score_percent": 50,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 50,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-2004%E2%80%932007--tyg",
+            "product_name": "Persiana Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 50,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-1996%E2%80%931999--ratov",
+            "product_name": "Persiana Para Ford Fiesta Modelos 1996 A 1999 Ratov",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "category_name": "Poleas, Tensores y Kits de Repartición"
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte central paragolpes delantero",
+        "quantity": 1,
+        "best_score_percent": 29,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 29,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-26-pulg-soporte-metalico-jgox2/",
+            "product_name": "PLUMILLA AEROD. 26 PULG SOPORTE – METALICO JGOX2",
+            "brand": "Vektra",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 29,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-24-pulg-soporte-metalico-jgox2/",
+            "product_name": "PLUMILLA AEROD. 24 PULG SOPORTE – METALICO JGOX2",
+            "brand": "Vektra",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 29,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-18-pulg-soporte-metalico-jgox2/",
+            "product_name": "PLUMILLA AEROD. 18 PULG SOPORTE – METALICO JGOX2",
+            "brand": "Vektra",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          }
+        ]
+      },
+      {
+        "part_name": "Cinturon de seguridad delantero izq",
+        "quantity": 1,
+        "best_score_percent": 22,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/pito-12v-disco-h42020hz-l350-20hz-92mm-unidad-vkh-502-hjn-502h0709081-vektra/",
+            "product_name": "Pito de Disco Vektra 12V para Moto – Bocina Doble Tono 92mm VKH-502-H",
+            "reference": "VKH-502-H",
+            "brand": "Vektra",
+            "category_name": "Pitos",
+            "subcategory_name": "De Disco"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/pito-12v-60v-reversa-18w-vkh-9101jn-910107090810/",
+            "product_name": "Alarma de Retroceso Vektra Tipo Pollak – Universal 12V-60V 18W",
+            "reference": "VKH-9101",
+            "sku": "JN-9101",
+            "brand": "Vektra",
+            "category_name": "Pitos",
+            "subcategory_name": "De Reversa"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 20,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/pito-24v-corneta-oreja-de-perro-negro-h50020hz-l40020hz-85mm-jgox2-jn-1509-24v0709081081143/",
+            "product_name": "Vektra Bocina 24V Doble Tono – Corneta Eléctrica para Camiones y Vehículos Pesados",
+            "reference": "JN-1509",
+            "sku": "JN-1509",
+            "brand": "Vektra",
+            "category_name": "Pitos",
+            "subcategory_name": "Cornetas"
+          }
+        ]
+      },
+      {
+        "part_name": "Cinturon de seguridad delantero der",
+        "quantity": 1,
+        "best_score_percent": 22,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/pito-12v-disco-h42020hz-l350-20hz-92mm-unidad-vkh-502-hjn-502h0709081-vektra/",
+            "product_name": "Pito de Disco Vektra 12V para Moto – Bocina Doble Tono 92mm VKH-502-H",
+            "reference": "VKH-502-H",
+            "brand": "Vektra",
+            "category_name": "Pitos",
+            "subcategory_name": "De Disco"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/pito-12v-60v-reversa-18w-vkh-9101jn-910107090810/",
+            "product_name": "Alarma de Retroceso Vektra Tipo Pollak – Universal 12V-60V 18W",
+            "reference": "VKH-9101",
+            "sku": "JN-9101",
+            "brand": "Vektra",
+            "category_name": "Pitos",
+            "subcategory_name": "De Reversa"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 20,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/pito-24v-corneta-oreja-de-perro-negro-h50020hz-l40020hz-85mm-jgox2-jn-1509-24v0709081081143/",
+            "product_name": "Vektra Bocina 24V Doble Tono – Corneta Eléctrica para Camiones y Vehículos Pesados",
+            "reference": "JN-1509",
+            "sku": "JN-1509",
+            "brand": "Vektra",
+            "category_name": "Pitos",
+            "subcategory_name": "Cornetas"
+          }
+        ]
+      },
+      {
+        "part_name": "Guardabarro rh",
+        "quantity": 1,
+        "best_score_percent": 58,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 58,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/guardabarro-ford-fiesta-2011%E2%80%932018-derecho-tyg",
+            "product_name": "Guardabarro Derecho Para Ford Fiesta Modelos 2011 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 57,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/guardabarro-ford-fiesta-2011%E2%80%932018-izquierdo-tyg",
+            "product_name": "Guardabarro Izquierdo Para Ford Fiesta Modelos 2011 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 57,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/guardabarro-ford-fiesta-2000%E2%80%932003-izquierdo-taiwan",
+            "product_name": "Guardabarro Izquierdo Para Ford Fiesta Modelos 2000 A 2003 Taiwan",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Portaplaca del identificacion vehiculo",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Bomper delantero (cambiado)",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2014%E2%80%932018-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2014 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2011%E2%80%932013-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2011 A 2013 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper trasero (cambiado)",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2014%E2%80%932018-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2014 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2011%E2%80%932013-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2011 A 2013 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra capó rh",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Farola delantera rh",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2014%E2%80%932019-izquierdo-tyc",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Tyc",
+            "category_name": "lighting_headlamps"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2011%E2%80%932013-izquierdo-tyc",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2011 A 2013 Tyc",
+            "category_name": "lighting_headlamps"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2011%E2%80%932013-izquierdo-depo",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2011 A 2013 Depo",
+            "category_name": "lighting_headlamps"
+          }
+        ]
+      },
+      {
+        "part_name": "Persiana",
+        "quantity": 1,
+        "best_score_percent": 60,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 60,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-2004%E2%80%932007--tyg",
+            "product_name": "Persiana Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 60,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-1996%E2%80%931999--ratov",
+            "product_name": "Persiana Para Ford Fiesta Modelos 1996 A 1999 Ratov",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Farola delantera lh",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2014%E2%80%932019-izquierdo-tyc",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Tyc",
+            "category_name": "lighting_headlamps"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2011%E2%80%932013-izquierdo-tyc",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2011 A 2013 Tyc",
+            "category_name": "lighting_headlamps"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2011%E2%80%932013-izquierdo-depo",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2011 A 2013 Depo",
+            "category_name": "lighting_headlamps"
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa espejo retrovisor exterior izq",
+        "quantity": 1,
+        "best_score_percent": 60,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 60,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-tyc",
+            "product_name": "Luna Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 60,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2004%E2%80%932010-derecho-tyc",
+            "product_name": "Luna Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2004 A 2010 Tyc",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 60,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-yym",
+            "product_name": "Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Yym",
+            "category_name": "mirrors"
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper del. lh",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2014%E2%80%932018-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2014 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2011%E2%80%932013-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2011 A 2013 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Motor ventilador radiador",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/radiador-ford-fiesta-2011%E2%80%932015--isl",
+            "product_name": "Radiador Para Ford Fiesta Modelos 2011 A 2015 Isl",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/radiador-ford-fiesta-2004%E2%80%932010--isaka",
+            "product_name": "Radiador Para Ford Fiesta Modelos 2004 A 2010 Isaka",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/deposito-de-radiador-ford-fiesta-2011%E2%80%932019--lian-tuoh",
+            "product_name": "Deposito De Radiador Para Ford Fiesta Modelos 2011 A 2019 Lian Tuoh",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Sensor de impacto lateral",
+        "quantity": 1,
+        "best_score_percent": 52,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 52,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/sensor-oxigeno-posicion-1-captiva-2-4-2010-2019/",
+            "product_name": "SENSOR OXIGENO POSICION 1 CAPTIVA 2.4 (2010-2019)",
+            "reference": "19379647",
+            "brand": "ACDelco",
+            "category_name": "Partes eléctricas"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "product_name": "Sensores",
+            "category_name": "Partes electricas",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "product_name": "Cables de alta",
+            "category_name": "Partes electricas",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper tras. lh",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2014%E2%80%932018-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2014 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2011%E2%80%932013-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2011 A 2013 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Frontal superior atornillado",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Liquido refrigerante galon",
+        "quantity": 2,
+        "best_score_percent": 55,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerante base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 43,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes organico",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Estribo completo rh",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Espejo exterior rh",
+        "quantity": 1,
+        "best_score_percent": 58,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 58,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-yym",
+            "product_name": "Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Yym",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 58,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-tyc",
+            "product_name": "Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 58,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/espejo-retrovisor-ford-fiesta-2004%E2%80%932010-derecho-tyg",
+            "product_name": "Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2004 A 2010 Tyg",
+            "category_name": "mirrors"
+          }
+        ]
+      },
+      {
+        "part_name": "Espejo exterior lh",
+        "quantity": 1,
+        "best_score_percent": 57,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 57,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-izquierdo-tyc",
+            "product_name": "Luna Espejo Retrovisor Izquierdo Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 57,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2004%E2%80%932010-izquierdo-tyc",
+            "product_name": "Luna Espejo Retrovisor Izquierdo Para Ford Fiesta Modelos 2004 A 2010 Tyc",
+            "category_name": "mirrors"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 57,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-tyc",
+            "product_name": "Luna Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "category_name": "mirrors"
+          }
+        ]
+      },
+      {
+        "part_name": "Refrigerante",
+        "quantity": 1,
+        "best_score_percent": 55,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerante base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 45,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes 50/50",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 44,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes organico",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel de persiana",
+        "quantity": 1,
+        "best_score_percent": 50,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 50,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-2004%E2%80%932007--tyg",
+            "product_name": "Persiana Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 50,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-1996%E2%80%931999--ratov",
+            "product_name": "Persiana Para Ford Fiesta Modelos 1996 A 1999 Ratov",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa motor completa",
+        "quantity": 1,
+        "best_score_percent": 66,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 66,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-atos-accent-excel-h100-de-presion/",
+            "product_name": "TAPA LLENADO ACEITE ATOS/ACCENT/EXCEL/H100 (DE PRESION)",
+            "reference": "26510-35000",
+            "brand": "MOBIS",
+            "category_name": "PARTES MOTOR"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 60,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-grand-i10-vision-picanto-morning-tucson-x35-kona-excite-sephia-hb20-ioniq-h100/",
+            "product_name": "TAPA LLENADO ACEITE GRAND I10/VISION/PICANTO/MORNING/TUCSON/X35/KONA/EXCITE/SEPHIA/HB20/IONIQ/H100",
+            "reference": "26510-26600",
+            "brand": "MOBIS",
+            "category_name": "PARTES DE MOTOR"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 60,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/empaque-tapa-valvulas-aveo-1-4-1-6-optra-1-4-1-6-04-12/",
+            "product_name": "EMPAQUE TAPA VALVULAS AVEO 1.4/1.6 OPTRA 1.4/1.6 04-12",
+            "reference": "19315728",
+            "brand": "ACDelco",
+            "category_name": "Partes de motor"
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra capó lh",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Cinta airbag conductor",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Bocel bomper trasero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2014%E2%80%932018-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2014 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2011%E2%80%932013-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2011 A 2013 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper del. rh",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2014%E2%80%932018-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2014 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2011%E2%80%932013-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2011 A 2013 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2014%E2%80%932018-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2014 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2011%E2%80%932013-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2011 A 2013 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Modulo airbag",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Sop. de bomper tras. rh",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2014%E2%80%932018-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2014 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2011%E2%80%932013-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2011 A 2013 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Refuerzo bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2014%E2%80%932018-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2014 A 2018 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2011%E2%80%932013-delantero-tyg",
+            "product_name": "Defensa Bomper Delantero Para Ford Fiesta Modelos 2011 A 2013 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Airbag acompañante",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Vidrio parabrisas del. pegado",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Airbag conductor",
+        "quantity": 1,
+        "best_score_percent": 22,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/pito-12v-disco-h42020hz-l350-20hz-92mm-unidad-vkh-502-hjn-502h0709081-vektra/",
+            "product_name": "Pito de Disco Vektra 12V para Moto – Bocina Doble Tono 92mm VKH-502-H",
+            "reference": "VKH-502-H",
+            "brand": "Vektra",
+            "category_name": "Pitos",
+            "subcategory_name": "De Disco"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/cable-tipo-duplex-flexible-2x18/",
+            "product_name": "Cable Tipo Duplex Flexible 2X18",
+            "sku": "201528R1101",
+            "category_name": "Cables Electricos",
+            "subcategory_name": "Duplex"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/cable-tipo-duplex-flexible-2x16/",
+            "product_name": "Cable Tipo Duplex Flexible 2X16",
+            "reference": "201529R1101",
+            "brand": "Centelsa Ref: 201529R1101 Clasificacion: Duplex",
+            "category_name": "Cables Electricos",
+            "subcategory_name": "Duplex"
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa millare",
+        "quantity": 1,
+        "best_score_percent": 50,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 50,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/tapa-de-exploradora-ford-fiesta-2014%E2%80%932019-izquierdo-tyg",
+            "product_name": "Tapa De Exploradora Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Tyg",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 50,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/tapa-de-exploradora-ford-fiesta-2014%E2%80%932019-izquierdo-sm",
+            "product_name": "Tapa De Exploradora Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Sm",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 50,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/tapa-de-exploradora-ford-fiesta-2014%E2%80%932019-derecho-tyg",
+            "product_name": "Tapa De Exploradora Derecho Para Ford Fiesta Modelos 2014 A 2019 Tyg",
+            "category_name": "manual_review"
+          }
+        ]
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.247038+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 38,
+      "parts_with_agentic_matches": 25,
+      "provider_hits": {
+        "impocali": 2,
+        "partcar": 21,
+        "repuestera": 2
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Tapa espejo retrovisor exterior derecho",
+        "top_provider_id": "partcar",
+        "top_score_percent": 75,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 75,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Luna Espejo Retrovisor Izquierdo Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-izquierdo-tyc",
+            "category_name": "mirrors",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Emblema persiana",
+        "top_provider_id": "partcar",
+        "top_score_percent": 65,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 65,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Persiana Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-2004%E2%80%932007--tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "agentic_comment": "Disfal: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte central paragolpes delantero",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Cinturon de seguridad delantero izq",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Cinturon de seguridad delantero der",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Guardabarro rh",
+        "top_provider_id": "partcar",
+        "top_score_percent": 73,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 73,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Guardabarro Derecho Para Ford Fiesta Modelos 2011 A 2018 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/guardabarro-ford-fiesta-2011%E2%80%932018-derecho-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Portaplaca del identificacion vehiculo",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Bomper delantero (cambiado)",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper trasero (cambiado)",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra capó rh",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Farola delantera rh",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2014%E2%80%932019-izquierdo-tyc",
+            "category_name": "lighting_headlamps",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Persiana",
+        "top_provider_id": "partcar",
+        "top_score_percent": 75,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 75,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Persiana Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-2004%E2%80%932007--tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Farola delantera lh",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2014%E2%80%932019-izquierdo-tyc",
+            "category_name": "lighting_headlamps",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa espejo retrovisor exterior izq",
+        "top_provider_id": "partcar",
+        "top_score_percent": 75,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 75,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Luna Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-tyc",
+            "category_name": "mirrors",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper del. lh",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Motor ventilador radiador",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Radiador Para Ford Fiesta Modelos 2011 A 2015 Isl",
+            "detail_url": "https://www.partcar.com.co/importacion-1/radiador-ford-fiesta-2011%E2%80%932015--isl",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Sensor de impacto lateral",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 52,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 52,
+            "match_type": "category_only",
+            "product_name": "SENSOR OXIGENO POSICION 1 CAPTIVA 2.4 (2010-2019)",
+            "detail_url": "https://repuestera.com.co/producto/sensor-oxigeno-posicion-1-captiva-2-4-2010-2019/",
+            "reference": "19379647",
+            "brand": "ACDelco",
+            "category_name": "Partes eléctricas",
+            "agentic_comment": "Repuestera: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Sensores",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "category_name": "Partes electricas",
+            "agentic_comment": "Impocali: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper tras. lh",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Frontal superior atornillado",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Liquido refrigerante galon",
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Estribo completo rh",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Espejo exterior rh",
+        "top_provider_id": "partcar",
+        "top_score_percent": 73,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 73,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Yym",
+            "detail_url": "https://www.partcar.com.co/importacion-1/espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-yym",
+            "category_name": "mirrors",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Espejo exterior lh",
+        "top_provider_id": "partcar",
+        "top_score_percent": 72,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 72,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Luna Espejo Retrovisor Izquierdo Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-izquierdo-tyc",
+            "category_name": "mirrors",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Refrigerante",
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel de persiana",
+        "top_provider_id": "partcar",
+        "top_score_percent": 65,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 65,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Persiana Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-2004%E2%80%932007--tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa motor completa",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 66,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 66,
+            "match_type": "category_only",
+            "product_name": "TAPA LLENADO ACEITE ATOS/ACCENT/EXCEL/H100 (DE PRESION)",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-atos-accent-excel-h100-de-presion/",
+            "reference": "26510-35000",
+            "brand": "MOBIS",
+            "category_name": "PARTES MOTOR",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra capó lh",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Cinta airbag conductor",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Bocel bomper trasero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper del. rh",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel bomper delantero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Modulo airbag",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Sop. de bomper tras. rh",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Refuerzo bomper delantero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Airbag acompañante",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Vidrio parabrisas del. pegado",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Airbag conductor",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Tapa millare",
+        "top_provider_id": "partcar",
+        "top_score_percent": 65,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 65,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Tapa De Exploradora Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/tapa-de-exploradora-ford-fiesta-2014%E2%80%932019-izquierdo-tyg",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      }
+    ]
+  }
+}

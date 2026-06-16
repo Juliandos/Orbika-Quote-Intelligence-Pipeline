@@ -1,0 +1,19 @@
+{
+  "quote_key": "9c157e9cc9cd0241f9e241e7",
+  "generated_at": "2026-06-12T20:33:04.601823+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.601765+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:31:58.363219+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0,
+      "provider_hits": {}
+    },
+    "parts": []
+  }
+}

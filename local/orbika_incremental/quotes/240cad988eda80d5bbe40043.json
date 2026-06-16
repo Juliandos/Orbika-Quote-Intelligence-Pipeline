@@ -1,0 +1,1441 @@
+{
+  "generated_at": "2026-06-08T03:06:24.267399+00:00",
+  "quote_key": "240cad988eda80d5bbe40043",
+  "source": {
+    "message_id": "<1586984500.5392.1780696064677@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-05T21:47:44+00:00",
+    "subject": "🆘 IWQ421_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "57310",
+    "fecha_aviso": "05/06/26",
+    "marca": "KIA",
+    "linea": "SPORTAGE [4]",
+    "version": "VIBRANT TP 2000CC 2AB ABS CT",
+    "ano": "2017",
+    "placa": "IWQ421",
+    "vin": "KNAPR81ABH7042222",
+    "taller_entrega": "Team Car Movi",
+    "nombre_comercial": "Team Car Movi",
+    "nit": "901293598-7",
+    "ciudad": "MEDELLIN",
+    "direccion": "Carrera 43F # 17-605, centro automotriz medellin",
+    "telefono": "1111111",
+    "email": "No disponible",
+    "repuestos_count": 25,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Protector motor",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Manija apertura exterior puerta delantero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Babero bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Emblema linea",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Cubierta superior motor",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bandeja portaobjetos",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Sellante lamina",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Aceite 1/4",
+        "quantity": 6,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Broches bomper trasero",
+        "quantity": 10,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Soporte izquierdo bomper trasero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro de aceite",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro de aire",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Soporte derecho bomper trasero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Vidrio panoramico delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Plumilla limpiavidrio panoramico trasero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bujias",
+        "quantity": 4,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Liquido refrigerante por galon",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Kit plumillas",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro de combustible",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro circulacion de aire habitaculo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Sensor cigueñal",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Llave de pernos",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Llanta repuesto",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Exploradora izquierdo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Exploradora derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:54.760957+00:00",
+    "summary": {
+      "parts_total": 25,
+      "parts_with_matches": 19,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "disfal": 1,
+        "impocali": 2,
+        "parrales": 5,
+        "partcar": 4,
+        "repuestera": 7
+      }
+    },
+    "provider_specs": [
+      {
+        "provider_id": "disfal",
+        "display_name": "Disfal",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "impocali",
+        "display_name": "Impocali",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "parrales",
+        "display_name": "Parrales",
+        "snapshot_date": "2026-06-09-full"
+      },
+      {
+        "provider_id": "partcar",
+        "display_name": "Partcar",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "repuestera",
+        "display_name": "Repuestera",
+        "snapshot_date": "2026-06-09"
+      }
+    ],
+    "parts": [
+      {
+        "part_name": "Protector motor",
+        "quantity": 1,
+        "best_score_percent": 57,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 57,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/polea-correa-accesorios-picanto-ion-1-0-50mm-i25/",
+            "product_name": "POLEA CORREA ACCESORIOS PICANTO ION 1.0 (50MM)/ I25",
+            "reference": "25286-04000",
+            "brand": "Mobis",
+            "category_name": "Partes de motor"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "product_name": "Tensores",
+            "category_name": "Partes para motor",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "product_name": "Soporte de caja y motor",
+            "category_name": "Partes para motor",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Manija apertura exterior puerta delantero derecho",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Babero bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2019%E2%80%932022-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2014%E2%80%932016-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2014 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Emblema linea",
+        "quantity": 1,
+        "best_score_percent": 30,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "disfal",
+        "matches": [
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "category_name": "Poleas, Tensores y Kits de Repartición"
+          }
+        ]
+      },
+      {
+        "part_name": "Cubierta superior motor",
+        "quantity": 1,
+        "best_score_percent": 58,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 58,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/polea-correa-accesorios-picanto-ion-1-0-50mm-i25/",
+            "product_name": "POLEA CORREA ACCESORIOS PICANTO ION 1.0 (50MM)/ I25",
+            "reference": "25286-04000",
+            "brand": "Mobis",
+            "category_name": "Partes de motor"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "product_name": "Tensores",
+            "category_name": "Partes para motor",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/partes-para-motor-vehiculo-comercial/",
+            "product_name": "Tapacubos",
+            "category_name": "Partes para motor",
+            "subcategory_name": "carga_y_pasajeros"
+          }
+        ]
+      },
+      {
+        "part_name": "Bandeja portaobjetos",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Sellante lamina",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Aceite 1/4",
+        "quantity": 6,
+        "best_score_percent": 88,
+        "best_match_type": "vehicle_compatible",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "vehicle_compatible",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 82,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/aceite-acdelco-truck-platinum-15w40-ck-4-sn-gal/",
+            "product_name": "ACEITE ACDELCO TRUCK PLATINUM 15W40 CK-4 SN (GAL)",
+            "reference": "98551213",
+            "brand": "Aceites ACDelco",
+            "category_name": "Lubricantes ACDelco"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 81,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-atos-accent-excel-h100-de-presion/",
+            "product_name": "TAPA LLENADO ACEITE ATOS/ACCENT/EXCEL/H100 (DE PRESION)",
+            "reference": "26510-35000",
+            "brand": "MOBIS",
+            "category_name": "PARTES MOTOR"
+          }
+        ]
+      },
+      {
+        "part_name": "Broches bomper trasero",
+        "quantity": 10,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2019%E2%80%932022-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2014%E2%80%932016-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2014 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte izquierdo bomper trasero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2019%E2%80%932022-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2014%E2%80%932016-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2014 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aceite",
+        "quantity": 1,
+        "best_score_percent": 88,
+        "best_match_type": "vehicle_compatible",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "vehicle_compatible",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-atos-picanto-morning-rio-i10-getz/",
+            "product_name": "FILTRO ACEITE ATOS/PICANTO MORNING/ RIO/ I10/ GETZ",
+            "reference": "26300-2Y500",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración"
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aire",
+        "quantity": 1,
+        "best_score_percent": 88,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-tucson-ix35-i35-i30-new-elantra-supr/",
+            "product_name": "FILTRO AIRE TUCSON IX35/ I35/ I30/ NEW ELANTRA SUPR",
+            "reference": "28113-2S000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "vehicle_compatible",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte derecho bomper trasero",
+        "quantity": 1,
+        "best_score_percent": 68,
+        "best_match_type": "category_only",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2019%E2%80%932022-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2019 A 2022 Fpi",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 68,
+            "match_type": "category_only",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2014%E2%80%932016-delantero-fpi",
+            "product_name": "Defensa Bomper Delantero Para Kia Sportage Modelos 2014 A 2016 Fpi",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Vidrio panoramico delantero",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Plumilla limpiavidrio panoramico trasero",
+        "quantity": 1,
+        "best_score_percent": 79,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 79,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-12-pulg-soporte-metalico-unidad/",
+            "product_name": "PLUMILLA AEROD. 12 PULG SOPORTE – METALICO UNIDAD",
+            "brand": "Vektra",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 78,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/plumilla-20-pulg-aerodinamica-co-n-8-adaptadores-1pcs/",
+            "product_name": "PLUMILLA 20 PULG AERODINAMICA CO- N 8 ADAPTADORES 1PCS",
+            "brand": "KTC",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 78,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/plumilla-18-pulg-aerodinamica-co-n-8-adaptadores-1pcs/",
+            "product_name": "PLUMILLA 18 PULG AERODINAMICA CO- N 8 ADAPTADORES 1PCS",
+            "brand": "KTC",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          }
+        ]
+      },
+      {
+        "part_name": "Bujias",
+        "quantity": 4,
+        "best_score_percent": 88,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/bujia-encendido-bm6a/",
+            "product_name": "BUJIA ENCENDIDO (BM6A)",
+            "reference": "BM6A",
+            "sku": "8EH 197 025-281",
+            "category_name": "Repuestos Electricos",
+            "subcategory_name": "Bujias"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "product_name": "Bujias",
+            "category_name": "Partes electricas",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/bujias/",
+            "product_name": "Bujías",
+            "category_name": "Bujías"
+          }
+        ]
+      },
+      {
+        "part_name": "Liquido refrigerante por galon",
+        "quantity": 1,
+        "best_score_percent": 55,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerante base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 44,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes organico",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Kit plumillas",
+        "quantity": 1,
+        "best_score_percent": 88,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-20-pulg-jgox2-copia/",
+            "product_name": "PLUMILLA AEROD. 20 PULG JGOX2",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-18-pulg-jgox2/",
+            "product_name": "PLUMILLA AEROD. 18 PULG JGOX2",
+            "brand": "Hella",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-16-pulg-jgox2/",
+            "product_name": "PLUMILLA AEROD. 16 PULG JGOX2",
+            "brand": "Hella",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de combustible",
+        "quantity": 1,
+        "best_score_percent": 55,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "product_name": "Filtros de combustible",
+            "category_name": "Filtracion",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro circulacion de aire habitaculo",
+        "quantity": 1,
+        "best_score_percent": 85,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 85,
+            "match_type": "vehicle_compatible",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 84,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-tucson-ix35-i35-i30-new-elantra-supr/",
+            "product_name": "FILTRO AIRE TUCSON IX35/ I35/ I30/ NEW ELANTRA SUPR",
+            "reference": "28113-2S000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          }
+        ]
+      },
+      {
+        "part_name": "Sensor cigueñal",
+        "quantity": 1,
+        "best_score_percent": 59,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 59,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/sensor-oxigeno-posicion-1-captiva-2-4-2010-2019/",
+            "product_name": "SENSOR OXIGENO POSICION 1 CAPTIVA 2.4 (2010-2019)",
+            "reference": "19379647",
+            "brand": "ACDelco",
+            "category_name": "Partes eléctricas"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "product_name": "Sensores",
+            "category_name": "Partes electricas",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 40,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "product_name": "Terminales",
+            "category_name": "Partes electricas",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Llave de pernos",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Llanta repuesto",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Exploradora izquierdo",
+        "quantity": 1,
+        "best_score_percent": 85,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-33-pulg/",
+            "product_name": "EXPLORADORA BARRA LED 33 PULG",
+            "reference": "42396-VK",
+            "sku": "42396-VK",
+            "brand": "VEKTRA Ref: 42396-VK Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-30-pulg/",
+            "product_name": "EXPLORADORA BARRA LED 30 PULG",
+            "reference": "42395-VK 5 modulos",
+            "brand": "VEKTRA Ref: 42395-VK 5 modulos Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-25-pulg/",
+            "product_name": "EXPLORADORA BARRA LED 25 PULG",
+            "reference": "42394-VK",
+            "sku": "42394-VK",
+            "brand": "VEKTRA Ref: 42394-VK Modulos: 4 Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led"
+          }
+        ]
+      },
+      {
+        "part_name": "Exploradora derecho",
+        "quantity": 1,
+        "best_score_percent": 86,
+        "best_match_type": "category_only",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 86,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-33-pulg/",
+            "product_name": "EXPLORADORA BARRA LED 33 PULG",
+            "reference": "42396-VK",
+            "sku": "42396-VK",
+            "brand": "VEKTRA Ref: 42396-VK Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 86,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-30-pulg/",
+            "product_name": "EXPLORADORA BARRA LED 30 PULG",
+            "reference": "42395-VK 5 modulos",
+            "brand": "VEKTRA Ref: 42395-VK 5 modulos Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 86,
+            "match_type": "category_only",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-25-pulg/",
+            "product_name": "EXPLORADORA BARRA LED 25 PULG",
+            "reference": "42394-VK",
+            "sku": "42394-VK",
+            "brand": "VEKTRA Ref: 42394-VK Modulos: 4 Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "subcategory_name": "Barras Led"
+          }
+        ]
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.233354+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 25,
+      "parts_with_agentic_matches": 19,
+      "provider_hits": {
+        "disfal": 1,
+        "impocali": 2,
+        "parrales": 5,
+        "partcar": 4,
+        "repuestera": 7
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Protector motor",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 57,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 57,
+            "match_type": "category_only",
+            "product_name": "POLEA CORREA ACCESORIOS PICANTO ION 1.0 (50MM)/ I25",
+            "detail_url": "https://repuestera.com.co/producto/polea-correa-accesorios-picanto-ion-1-0-50mm-i25/",
+            "reference": "25286-04000",
+            "brand": "Mobis",
+            "category_name": "Partes de motor",
+            "agentic_comment": "Repuestera: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Tensores",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "category_name": "Partes para motor",
+            "agentic_comment": "Impocali: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Manija apertura exterior puerta delantero derecho",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Babero bomper delantero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Emblema linea",
+        "top_provider_id": "disfal",
+        "top_score_percent": 30,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "agentic_comment": "Disfal: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Cubierta superior motor",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 58,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 58,
+            "match_type": "category_only",
+            "product_name": "POLEA CORREA ACCESORIOS PICANTO ION 1.0 (50MM)/ I25",
+            "detail_url": "https://repuestera.com.co/producto/polea-correa-accesorios-picanto-ion-1-0-50mm-i25/",
+            "reference": "25286-04000",
+            "brand": "Mobis",
+            "category_name": "Partes de motor",
+            "agentic_comment": "Repuestera: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Tensores",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "category_name": "Partes para motor",
+            "agentic_comment": "Impocali: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Bandeja portaobjetos",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Sellante lamina",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Aceite 1/4",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 95,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 95,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Broches bomper trasero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte izquierdo bomper trasero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aceite",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 100,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 100,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aire",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 100,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 100,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte derecho bomper trasero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Kia Sportage Modelos 2017 A 2019 Fpi",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-kia-sportage-2017%E2%80%932019-trasero-fpi",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Vidrio panoramico delantero",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Plumilla limpiavidrio panoramico trasero",
+        "top_provider_id": "parrales",
+        "top_score_percent": 87,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 87,
+            "match_type": "category_only",
+            "product_name": "PLUMILLA AEROD. 12 PULG SOPORTE – METALICO UNIDAD",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-12-pulg-soporte-metalico-unidad/",
+            "brand": "Vektra",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "agentic_comment": "Parrales: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Bujias",
+        "top_provider_id": "parrales",
+        "top_score_percent": 96,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 96,
+            "match_type": "category_only",
+            "product_name": "BUJIA ENCENDIDO (BM6A)",
+            "detail_url": "https://parrales.com.co/product/bujia-encendido-bm6a/",
+            "reference": "BM6A",
+            "category_name": "Repuestos Electricos",
+            "agentic_comment": "Parrales: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 63,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Bujias",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "category_name": "Partes electricas",
+            "agentic_comment": "Impocali: validar manual."
+          },
+          {
+            "rank": 3,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 63,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Bujías",
+            "detail_url": "https://www.disfal.com/services/bujias/",
+            "category_name": "Bujías",
+            "agentic_comment": "Disfal: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Liquido refrigerante por galon",
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Kit plumillas",
+        "top_provider_id": "parrales",
+        "top_score_percent": 78,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 78,
+            "match_type": "category_only",
+            "product_name": "PLUMILLA AEROD. 20 PULG JGOX2",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-20-pulg-jgox2-copia/",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "agentic_comment": "Parrales: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de combustible",
+        "top_provider_id": "impocali",
+        "top_score_percent": 63,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 63,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de combustible",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "category_name": "Filtracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro circulacion de aire habitaculo",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 100,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 100,
+            "match_type": "vehicle_compatible",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Sensor cigueñal",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 59,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 59,
+            "match_type": "category_only",
+            "product_name": "SENSOR OXIGENO POSICION 1 CAPTIVA 2.4 (2010-2019)",
+            "detail_url": "https://repuestera.com.co/producto/sensor-oxigeno-posicion-1-captiva-2-4-2010-2019/",
+            "reference": "19379647",
+            "brand": "ACDelco",
+            "category_name": "Partes eléctricas",
+            "agentic_comment": "Repuestera: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Sensores",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "category_name": "Partes electricas",
+            "agentic_comment": "Impocali: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Llave de pernos",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Llanta repuesto",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Exploradora izquierdo",
+        "top_provider_id": "parrales",
+        "top_score_percent": 85,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "product_name": "EXPLORADORA BARRA LED 33 PULG",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-33-pulg/",
+            "reference": "42396-VK",
+            "brand": "VEKTRA Ref: 42396-VK Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "agentic_comment": "Parrales: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Exploradora derecho",
+        "top_provider_id": "parrales",
+        "top_score_percent": 86,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 86,
+            "match_type": "category_only",
+            "product_name": "EXPLORADORA BARRA LED 33 PULG",
+            "detail_url": "https://parrales.com.co/product/exploradora-barra-led-33-pulg/",
+            "reference": "42396-VK",
+            "brand": "VEKTRA Ref: 42396-VK Origen: China Garantia: 1 año Potencia luminica: 1200 LM Color de luz: Blanco Voltaje: 10-30v",
+            "category_name": "Iluminacion",
+            "agentic_comment": "Parrales: mejor opcion."
+          }
+        ]
+      }
+    ]
+  }
+}

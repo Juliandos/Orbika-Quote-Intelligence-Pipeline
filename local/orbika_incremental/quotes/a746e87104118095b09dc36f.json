@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T00:49:27.723836+00:00",
+  "quote_key": "a746e87104118095b09dc36f",
+  "source": {
+    "message_id": "<1112157744.6188.1779226709176@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-19T21:38:29+00:00",
+    "subject": "🆘 GWM207_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "351075",
+    "fecha_aviso": "30/10/25",
+    "marca": "VOLKSWAGEN",
+    "linea": "AMAROK [FL]",
+    "version": "COMFORTLINE TP 2000CC 4X4 2AB ABS R17",
+    "ano": "2021",
+    "placa": "GWM207",
+    "vin": "WV1ZZZ2HZMA009544",
+    "taller_entrega": "Taller Pago En Efectivo Livianos Medelli...",
+    "nombre_comercial": "Taller Pago En Efectivo Livianos Medelli...",
+    "nit": "000000000-0",
+    "ciudad": "MEDELLIN",
+    "direccion": "No despachar",
+    "telefono": "0",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.363546+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.240449+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

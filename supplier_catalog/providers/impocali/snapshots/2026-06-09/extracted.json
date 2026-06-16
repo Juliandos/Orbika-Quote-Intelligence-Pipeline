@@ -1,0 +1,463 @@
+{
+  "provider_id": "impocali",
+  "provider_name": "Impocali",
+  "snapshot_date": "2026-06-09",
+  "timezone": "America/Bogota",
+  "extraction_mode": "manual_initial_snapshot_from_public_pages",
+  "access": {
+    "requires_login": false,
+    "read_only": true
+  },
+  "precision": {
+    "match_type": "category_only",
+    "requires_manual_confirmation": true,
+    "reference_codes_available": false,
+    "vehicle_compatibility_available": false,
+    "stock_available": false,
+    "price_available": false
+  },
+  "notes": [
+    "Impocali exposes public category and product-family names, not exact part references.",
+    "This snapshot must be used as a supplier capability map, not as proof that a specific OEM/reference code is available.",
+    "All matches against Orbika quote items require manual confirmation by phone or direct supplier contact.",
+    "The Motos segment is intentionally excluded from this workflow.",
+    "Brand data was added where logos were visually identifiable from the reviewed product cards. These brand values must be treated as image-derived unless later confirmed by structured HTML extraction."
+  ],
+  "segments": [
+    {
+      "segment_id": "autos",
+      "segment_name": "Autos",
+      "source_url": "https://impocali.com/productos_impocali/autos/",
+      "enabled": true,
+      "visible_category_count": 8
+    },
+    {
+      "segment_id": "carga_y_pasajeros",
+      "segment_name": "Carga y pasajeros",
+      "source_url": "https://impocali.com/productos_impocali/carga-y-pasajeros/",
+      "enabled": true,
+      "visible_category_count": 8,
+      "notes": [
+        "The public listing shows a duplicated 'Partes para motor' entry and does not expose a separate electric-parts category in the text snapshot reviewed."
+      ]
+    }
+  ],
+  "products": [
+    {
+      "segment": "autos",
+      "category_name": "Suspension y Direccion",
+      "category_url": "https://impocali.com/productos/suspension-y-direccion/",
+      "taxonomy": "suspension_steering",
+      "product_names": [
+        "Amortiguadores",
+        "Puntas de eje",
+        "Rotulas",
+        "Terminales",
+        "Tijeras",
+        "Soportes de amortiguador",
+        "Semiejes",
+        "Brazos axial",
+        "Lagrimas",
+        "Cajas de direccion",
+        "Brazo compensador",
+        "Bujes de suspension",
+        "Barra central de direccion",
+        "Bombas de direccion"
+      ],
+      "brands_by_product": {
+        "Amortiguadores": [
+          {
+            "name": "Shibumi",
+            "source": "image",
+            "confidence": "high"
+          },
+          {
+            "name": "Sachs",
+            "source": "image",
+            "confidence": "high"
+          },
+          {
+            "name": "Tokico Mando",
+            "source": "image",
+            "confidence": "medium"
+          }
+        ],
+        "Puntas de eje": [
+          {
+            "name": "Shibumi",
+            "source": "image",
+            "confidence": "high"
+          }
+        ],
+        "Rotulas": [
+          {
+            "name": "Shibumi",
+            "source": "image",
+            "confidence": "high"
+          },
+          {
+            "name": "Febi Bilstein",
+            "source": "image",
+            "confidence": "high"
+          }
+        ],
+        "Terminales": [
+          {
+            "name": "Shibumi",
+            "source": "image",
+            "confidence": "high"
+          },
+          {
+            "name": "Febi Bilstein",
+            "source": "image",
+            "confidence": "high"
+          }
+        ],
+        "Tijeras": [
+          {
+            "name": "Shibumi",
+            "source": "image",
+            "confidence": "high"
+          },
+          {
+            "name": "Febi Bilstein",
+            "source": "image",
+            "confidence": "high"
+          },
+          {
+            "name": "Nakamoto",
+            "source": "image",
+            "confidence": "high"
+          }
+        ],
+        "Soportes de amortiguador": [
+          {
+            "name": "Shibumi",
+            "source": "image",
+            "confidence": "high"
+          },
+          {
+            "name": "Febi Bilstein",
+            "source": "image",
+            "confidence": "high"
+          },
+          {
+            "name": "Nakamoto",
+            "source": "image",
+            "confidence": "high"
+          }
+        ]
+      },
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "autos",
+      "category_name": "Refrigeracion",
+      "category_url": "https://impocali.com/productos/refrigeracion/",
+      "taxonomy": "cooling",
+      "product_names": [
+        "Refrigerantes base agua",
+        "Refrigerantes 50/50 agua glicol",
+        "Refrigerantes 50/50 agua glicol especificacion europea"
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "autos",
+      "category_name": "Filtracion",
+      "category_url": "https://impocali.com/productos/filtracion/",
+      "taxonomy": "filters",
+      "product_names": [
+        "Filtros de aire",
+        "Filtros de aceite",
+        "Filtros de cabina",
+        "Filtros de combustible"
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "autos",
+      "category_name": "Lubricacion",
+      "category_url": "https://impocali.com/productos/lubricacion/",
+      "taxonomy": "lubricants_fluids",
+      "product_names": [
+        "Lubricantes para motor",
+        "Lubricantes de caja mecanica",
+        "Aditivos y quimicos",
+        "Grasas"
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "autos",
+      "category_name": "Visibilidad",
+      "category_url": "https://impocali.com/productos/visibilidad/",
+      "taxonomy": "lighting_visibility",
+      "product_names": [
+        "Bombillos",
+        "Rotulas"
+      ],
+      "product_details": {
+        "Bombillos": [
+          "Halogenos H1 H3 H4 H7 H8 H11 H13 H16 H27 HB3 HB4",
+          "Senalizacion P21/5W P21W W5W W16W",
+          "Xenon D1 D2 D3 D4 D5",
+          "Led H1 H4 H7 H8 H11 H16 HB3 HB4",
+          "Senalizacion LED P21/5W LED rojo W5W LED P21W LED"
+        ],
+        "Rotulas": [
+          "Metalica",
+          "Aerodinamica",
+          "Multiconector",
+          "Hibrida",
+          "Trasera"
+        ]
+      },
+      "notes": [
+        "The page text shows 'Rotulas' under Visibilidad. Preserve the visible text until the automated extractor verifies whether this is a site content issue."
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "autos",
+      "category_name": "Partes electricas",
+      "category_url": "https://impocali.com/productos/partes-electricas/",
+      "taxonomy": "electrical",
+      "product_names": [
+        "Bobinas",
+        "Bujias",
+        "Terminales",
+        "Sensores",
+        "Cables de alta"
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "autos",
+      "category_name": "Friccion e hidraulicos",
+      "category_url": "https://impocali.com/productos/frenos-auto/",
+      "taxonomy": "brakes_hydraulics",
+      "product_groups": [
+        {
+          "group_name": "Rodamientos",
+          "product_names": [
+            "Rodamientos",
+            "Bocines de rueda",
+            "Crucetas"
+          ]
+        },
+        {
+          "group_name": "Frenos",
+          "product_names": [
+            "Disco de freno",
+            "Pastillas de frenos",
+            "Liquido de frenos",
+            "Preparaciones de freno"
+          ]
+        },
+        {
+          "group_name": "Embragues",
+          "product_names": [
+            "Embragues",
+            "Bombas de clutch",
+            "Volantes motor"
+          ]
+        }
+      ],
+      "product_details": {
+        "Bocines de rueda": [
+          "Bocina de primera generacion",
+          "Bocinas de segunda generacion",
+          "Bocina de tercera generacion"
+        ],
+        "Disco de freno": [
+          "Semi-metalica",
+          "Ceramica carbon ceramico",
+          "Low metal"
+        ],
+        "Pastillas de frenos": [
+          "Semi-metalica",
+          "Ceramica carbon ceramico",
+          "Low metal"
+        ],
+        "Preparaciones de freno": [
+          "Lamina antiruidos",
+          "Pistones de mordaza",
+          "Kit de mordaza",
+          "Columna de mordaza",
+          "Tornillos de caliper",
+          "Guardapolvos"
+        ]
+      },
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "autos",
+      "category_name": "Partes para motor",
+      "category_url": "https://web.impocali.com/partes-para-motor/",
+      "taxonomy": "engine",
+      "product_names": [
+        "Soporte de caja y motor",
+        "Pistones",
+        "Anillos",
+        "Valvulas",
+        "Bombas de agua",
+        "Bombas de aceite",
+        "Kits de distribucion con correa",
+        "Kits de distribucion con cadena",
+        "Tensores",
+        "Correas",
+        "Culatas",
+        "Turbos",
+        "Retenes",
+        "Sellos de valvula"
+      ],
+      "notes": [
+        "The impocali.com detail URL for this category could not be fetched reliably during the initial review; the public web.impocali.com mirror was used as the source for the initial product list."
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "carga_y_pasajeros",
+      "category_name": "Suspension y direccion",
+      "category_url": "https://impocali.com/productos/suspension-y-direccion-vehiculo-comercial/",
+      "taxonomy": "suspension_steering",
+      "vehicle_scope": "commercial_heavy_duty",
+      "product_names": [
+        "Amortiguadores",
+        "Rotulas",
+        "Terminales"
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "carga_y_pasajeros",
+      "category_name": "Refrigeracion",
+      "category_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+      "taxonomy": "cooling",
+      "vehicle_scope": "commercial_heavy_duty",
+      "product_names": [
+        "Refrigerante base agua",
+        "Refrigerantes 50/50",
+        "Refrigerantes organico"
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "carga_y_pasajeros",
+      "category_name": "Filtracion",
+      "category_url": "https://impocali.com/productos/filtracion-vehiculo-comercial/",
+      "taxonomy": "filters",
+      "vehicle_scope": "commercial_heavy_duty",
+      "product_names": [
+        "Filtros de aire",
+        "Filtros de aceite",
+        "Filtros de combustible"
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "carga_y_pasajeros",
+      "category_name": "Lubricacion",
+      "category_url": "https://impocali.com/productos/ubricacion-vehiculo-comercial/",
+      "taxonomy": "lubricants_fluids",
+      "vehicle_scope": "commercial_heavy_duty",
+      "product_names": [
+        "Lubricantes para motor",
+        "Lubricantes de transmision",
+        "Lubricantes para el sistema hidraulico"
+      ],
+      "notes": [
+        "The public URL is spelled 'ubricacion-vehiculo-comercial' on the reviewed site."
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "carga_y_pasajeros",
+      "category_name": "Visibilidad",
+      "category_url": "https://impocali.com/productos/visibilidad-vehiculo-comercial/",
+      "taxonomy": "lighting_visibility",
+      "vehicle_scope": "commercial_heavy_duty",
+      "product_names": [
+        "Plumillas",
+        "Bombillos"
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "carga_y_pasajeros",
+      "category_name": "Partes para motor",
+      "category_url": "https://impocali.com/productos/partes-para-motor-vehiculo-comercial/",
+      "taxonomy": "engine",
+      "vehicle_scope": "commercial_heavy_duty",
+      "product_names": [
+        "Correas",
+        "Radiadores e intercooler",
+        "Tapacubos",
+        "Retenes"
+      ],
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "segment": "carga_y_pasajeros",
+      "category_name": "Friccion",
+      "category_url": "https://impocali.com/productos/frenos-vehiculo-comercial/",
+      "taxonomy": "brakes_hydraulics",
+      "vehicle_scope": "commercial_heavy_duty",
+      "product_names": [
+        "Rodamientos",
+        "Pastillas de freno",
+        "Discos de freno",
+        "Embragues",
+        "Crucetas",
+        "Liquido de frenos",
+        "Pulmones de freno y rachet"
+      ],
+      "product_details": {
+        "Rodamientos": [
+          "Rodamientos de rueda",
+          "Rodamientos serie 6000",
+          "Rodamientos de clutch"
+        ],
+        "Pastillas de freno": [
+          "HD Series"
+        ],
+        "Discos de freno": [
+          "Geomet 360 High carbon"
+        ],
+        "Crucetas": [
+          "Crucetas o uniones",
+          "U-JOINTS"
+        ],
+        "Liquido de frenos": [
+          "DOT 3",
+          "DOT 4",
+          "DOT 5.1"
+        ]
+      },
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    }
+  ],
+  "summary": {
+    "segments_included": 2,
+    "category_records": 15,
+    "flat_product_name_count": 89,
+    "automated_daily_refresh_target": "07:00 America/Bogota",
+    "next_step": "Implement the Impocali adapter to reproduce this snapshot automatically and generate daily diffs."
+  }
+}

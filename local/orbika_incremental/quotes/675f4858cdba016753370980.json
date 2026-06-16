@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T14:20:30.567268+00:00",
+  "quote_key": "675f4858cdba016753370980",
+  "source": {
+    "message_id": "<1968888073.4557.1779477284898@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-22T19:14:44+00:00",
+    "subject": "🆘 EPP809_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "420030",
+    "fecha_aviso": "15/05/26",
+    "marca": "VOLKSWAGEN",
+    "linea": "GOL [7]",
+    "version": "COMFORTLINE MT 1600CC R15",
+    "ano": "2019",
+    "placa": "EPP809",
+    "vin": "9BWAB45U4KT000026",
+    "taller_entrega": "Autos Muriel Sas Medellin",
+    "nombre_comercial": "Autos Muriel Sas Medellin",
+    "nit": "900564745-3",
+    "ciudad": "MEDELLIN",
+    "direccion": "KR 44 # 28-15",
+    "telefono": "2322412",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.159649+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.239150+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

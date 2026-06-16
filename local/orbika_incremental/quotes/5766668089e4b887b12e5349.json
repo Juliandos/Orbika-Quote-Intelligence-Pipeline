@@ -1,0 +1,1119 @@
+{
+  "generated_at": "2026-06-08T03:06:34.015481+00:00",
+  "quote_key": "5766668089e4b887b12e5349",
+  "source": {
+    "message_id": "<1849907678.5411.1780696142187@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-05T21:49:02+00:00",
+    "subject": "🆘 JPX355_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "428604",
+    "fecha_aviso": "05/06/26",
+    "marca": "NISSAN",
+    "linea": "MARCH",
+    "version": "ACTIVE MT 1600CC AA 2AB ABS",
+    "ano": "2021",
+    "placa": "JPX355",
+    "vin": "3N1CK3CD8ZL409583",
+    "taller_entrega": "Team Car Movi",
+    "nombre_comercial": "Team Car Movi",
+    "nit": "901293598-7",
+    "ciudad": "MEDELLIN",
+    "direccion": "Carrera 43F # 17-605, centro automotriz medellin",
+    "telefono": "1111111",
+    "email": "No disponible",
+    "repuestos_count": 24,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Modulo electronico airbag",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Cinta airbag timon",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Airbag acompañante",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Airbag conductor",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro de aceite",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Aceite 1/4",
+        "quantity": 5,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Condensador",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Radiador de refrigerante",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Ducto de toma de aire",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Tapa plastica gancho de tiro",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guardafango izquierdo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guardapolvo plastico delantero izquierdo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Soporte estructural central bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Capo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guia lateral izquierdo bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Guia lateral derecho bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Liquido refrigerante por galon",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Pretensor airbag delantero derecho",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Pretensor airbag delantero izquierdo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Rejilla bomper delantero",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Millare",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro de aire",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Filtro circulacion de aire habitaculo",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.156416+00:00",
+    "summary": {
+      "parts_total": 24,
+      "parts_with_matches": 15,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "disfal": 3,
+        "impocali": 3,
+        "parrales": 2,
+        "partcar": 2,
+        "repuestera": 5
+      }
+    },
+    "provider_specs": [
+      {
+        "provider_id": "disfal",
+        "display_name": "Disfal",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "impocali",
+        "display_name": "Impocali",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "parrales",
+        "display_name": "Parrales",
+        "snapshot_date": "2026-06-09-full"
+      },
+      {
+        "provider_id": "partcar",
+        "display_name": "Partcar",
+        "snapshot_date": "2026-06-09"
+      },
+      {
+        "provider_id": "repuestera",
+        "display_name": "Repuestera",
+        "snapshot_date": "2026-06-09"
+      }
+    ],
+    "parts": [
+      {
+        "part_name": "Modulo electronico airbag",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Cinta airbag timon",
+        "quantity": 1,
+        "best_score_percent": 21,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 21,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/forro-para-timon-negro-rojo-swc06/",
+            "product_name": "FORRO PARA TIMON NEGRO ROJO (SWC06)",
+            "reference": "SWC06",
+            "category_name": "Lujos Y Accesorios",
+            "subcategory_name": "Forros"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 21,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/forro-para-timon-negro-gris-swc07/",
+            "product_name": "FORRO PARA TIMON NEGRO GRIS (SWC07)",
+            "reference": "SWC07",
+            "category_name": "Lujos Y Accesorios",
+            "subcategory_name": "Forros"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 21,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/forro-para-timon-negro-azul-swc08/",
+            "product_name": "FORRO PARA TIMON NEGRO AZUL (SWC08)",
+            "reference": "SWC08",
+            "category_name": "Lujos Y Accesorios",
+            "subcategory_name": "Forros"
+          }
+        ]
+      },
+      {
+        "part_name": "Airbag acompañante",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Airbag conductor",
+        "quantity": 1,
+        "best_score_percent": 22,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "parrales",
+        "matches": [
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/pito-12v-disco-h42020hz-l350-20hz-92mm-unidad-vkh-502-hjn-502h0709081-vektra/",
+            "product_name": "Pito de Disco Vektra 12V para Moto – Bocina Doble Tono 92mm VKH-502-H",
+            "reference": "VKH-502-H",
+            "brand": "Vektra",
+            "category_name": "Pitos",
+            "subcategory_name": "De Disco"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/cable-tipo-duplex-flexible-2x18/",
+            "product_name": "Cable Tipo Duplex Flexible 2X18",
+            "sku": "201528R1101",
+            "category_name": "Cables Electricos",
+            "subcategory_name": "Duplex"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/cable-tipo-duplex-flexible-2x16/",
+            "product_name": "Cable Tipo Duplex Flexible 2X16",
+            "reference": "201529R1101",
+            "brand": "Centelsa Ref: 201529R1101 Clasificacion: Duplex",
+            "category_name": "Cables Electricos",
+            "subcategory_name": "Duplex"
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro de aceite",
+        "quantity": 1,
+        "best_score_percent": 88,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-atos-picanto-morning-rio-i10-getz/",
+            "product_name": "FILTRO ACEITE ATOS/PICANTO MORNING/ RIO/ I10/ GETZ",
+            "reference": "26300-2Y500",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración"
+          }
+        ]
+      },
+      {
+        "part_name": "Aceite 1/4",
+        "quantity": 5,
+        "best_score_percent": 82,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 82,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/aceite-acdelco-truck-platinum-15w40-ck-4-sn-gal/",
+            "product_name": "ACEITE ACDELCO TRUCK PLATINUM 15W40 CK-4 SN (GAL)",
+            "reference": "98551213",
+            "brand": "Aceites ACDelco",
+            "category_name": "Lubricantes ACDelco"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 81,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-atos-accent-excel-h100-de-presion/",
+            "product_name": "TAPA LLENADO ACEITE ATOS/ACCENT/EXCEL/H100 (DE PRESION)",
+            "reference": "26510-35000",
+            "brand": "MOBIS",
+            "category_name": "PARTES MOTOR"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 81,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-atos-picanto-morning-rio-i10-getz/",
+            "product_name": "FILTRO ACEITE ATOS/PICANTO MORNING/ RIO/ I10/ GETZ",
+            "reference": "26300-2Y500",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          }
+        ]
+      },
+      {
+        "part_name": "Condensador",
+        "quantity": 1,
+        "best_score_percent": 36,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "disfal",
+        "matches": [
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "product_name": "Mangueras",
+            "category_name": "Mangueras"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes organico",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Radiador de refrigerante",
+        "quantity": 1,
+        "best_score_percent": 55,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerante base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 41,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes 50/50",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 40,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes organico",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          }
+        ]
+      },
+      {
+        "part_name": "Ducto de toma de aire",
+        "quantity": 1,
+        "best_score_percent": 25,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "product_name": "Filtros de aire",
+            "category_name": "Filtracion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 24,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/switch-de-corneta-de-aire-12v-el-ectrovalvula-pito-pequeno-s-5002/",
+            "product_name": "SWITCH DE CORNETA DE AIRE 12V ELECTROVALVULA",
+            "reference": "S-5002",
+            "brand": "VEKTRA REF: S-5002 APLICACION: PITO PEQUENO VOLTAJE: 12",
+            "category_name": "Miscelanea Electrica",
+            "subcategory_name": "Switches"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 21,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/pito-corneta-de-aire-doble-125165mm-con-valvula-12v-24v-1pcs-309-100/",
+            "product_name": "PITO CORNETA DE AIRE DOBLE 125*165MM CON VALVULA 12V/24V 1PCS 309-100",
+            "category_name": "Pitos",
+            "subcategory_name": "Cornetas"
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa plastica gancho de tiro",
+        "quantity": 1,
+        "best_score_percent": 20,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 20,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-atos-accent-excel-h100-de-presion/",
+            "product_name": "TAPA LLENADO ACEITE ATOS/ACCENT/EXCEL/H100 (DE PRESION)",
+            "reference": "26510-35000",
+            "brand": "MOBIS",
+            "category_name": "PARTES MOTOR"
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Guardafango izquierdo",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Guardapolvo plastico delantero izquierdo",
+        "quantity": 1,
+        "best_score_percent": 57,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 57,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/paso-rueda-guardapolvo-nissan-march-2012%E2%80%932021-izquierdo-sm",
+            "product_name": "Paso Rueda Guardapolvo Izquierdo Para Nissan March Modelos 2012 A 2021 Sm",
+            "category_name": "manual_review"
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte estructural central bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 51,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 51,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/soporte-de-defensa-nissan-march-2012%E2%80%932021-delantera-taiwan",
+            "product_name": "Soporte De Defensa Delantera Para Nissan March Modelos 2012 A 2021 Taiwan",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 23,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "product_name": "Soporte de caja y motor",
+            "category_name": "Partes para motor",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "parrales",
+            "provider_name": "Parrales",
+            "score_percent": 22,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://parrales.com.co/product/plumilla-aerod-12-pulg-soporte-metalico-unidad/",
+            "product_name": "PLUMILLA AEROD. 12 PULG SOPORTE – METALICO UNIDAD",
+            "brand": "Vektra",
+            "category_name": "Plumillas Limpiaparabrisas",
+            "subcategory_name": "Aerodinamicas"
+          }
+        ]
+      },
+      {
+        "part_name": "Capo",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Guia lateral izquierdo bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Guia lateral derecho bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Liquido refrigerante por galon",
+        "quantity": 1,
+        "best_score_percent": 55,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerante base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 44,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "product_name": "Refrigerantes organico",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 42,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/refrigeracion/",
+            "product_name": "Refrigerantes base agua",
+            "category_name": "Refrigeracion",
+            "subcategory_name": "autos"
+          }
+        ]
+      },
+      {
+        "part_name": "Pretensor airbag delantero derecho",
+        "quantity": 1,
+        "best_score_percent": 40,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "disfal",
+        "matches": [
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 40,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "category_name": "Poleas, Tensores y Kits de Repartición"
+          },
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/correas/",
+            "product_name": "Correas",
+            "category_name": "Correas"
+          }
+        ]
+      },
+      {
+        "part_name": "Pretensor airbag delantero izquierdo",
+        "quantity": 1,
+        "best_score_percent": 38,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "disfal",
+        "matches": [
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "category_name": "Poleas, Tensores y Kits de Repartición"
+          },
+          {
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.disfal.com/services/correas/",
+            "product_name": "Correas",
+            "category_name": "Correas"
+          }
+        ]
+      },
+      {
+        "part_name": "Rejilla bomper delantero",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Millare",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Filtro de aire",
+        "quantity": 1,
+        "best_score_percent": 88,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-tucson-ix35-i35-i30-new-elantra-supr/",
+            "product_name": "FILTRO AIRE TUCSON IX35/ I35/ I30/ NEW ELANTRA SUPR",
+            "reference": "28113-2S000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 88,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-atos-picanto-morning-rio-i10-getz/",
+            "product_name": "FILTRO ACEITE ATOS/PICANTO MORNING/ RIO/ I10/ GETZ",
+            "reference": "26300-2Y500",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro circulacion de aire habitaculo",
+        "quantity": 1,
+        "best_score_percent": 85,
+        "best_match_type": "category_only",
+        "best_provider_id": "repuestera",
+        "matches": [
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 85,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 84,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-tucson-ix35-i35-i30-new-elantra-supr/",
+            "product_name": "FILTRO AIRE TUCSON IX35/ I35/ I30/ NEW ELANTRA SUPR",
+            "reference": "28113-2S000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          },
+          {
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 73,
+            "match_type": "category_only",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-atos-picanto-morning-rio-i10-getz/",
+            "product_name": "FILTRO ACEITE ATOS/PICANTO MORNING/ RIO/ I10/ GETZ",
+            "reference": "26300-2Y500",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN"
+          }
+        ]
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.238215+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 24,
+      "parts_with_agentic_matches": 12,
+      "provider_hits": {
+        "disfal": 3,
+        "impocali": 3,
+        "partcar": 2,
+        "repuestera": 4
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Modulo electronico airbag",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Cinta airbag timon",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Airbag acompañante",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Airbag conductor",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Filtro de aceite",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 96,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 96,
+            "match_type": "category_only",
+            "product_name": "FILTRO ACEITE SPORTAGE REV./TUCSON IX35 DIESEL/SANTAFE/SORENTO XM (26320-2F100)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aceite-sportage-rev-tucson-ix35-diesel-santafe-sorento-xm-26320-2f100/",
+            "reference": "26320-2F000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Aceite 1/4",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 82,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 82,
+            "match_type": "category_only",
+            "product_name": "ACEITE ACDELCO TRUCK PLATINUM 15W40 CK-4 SN (GAL)",
+            "detail_url": "https://repuestera.com.co/producto/aceite-acdelco-truck-platinum-15w40-ck-4-sn-gal/",
+            "reference": "98551213",
+            "brand": "Aceites ACDelco",
+            "category_name": "Lubricantes ACDelco",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Condensador",
+        "top_provider_id": "disfal",
+        "top_score_percent": 36,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "category_name": "Mangueras",
+            "agentic_comment": "Disfal: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerantes organico",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Radiador de refrigerante",
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Ducto de toma de aire",
+        "top_provider_id": "impocali",
+        "top_score_percent": 25,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Filtros de aire",
+            "detail_url": "https://impocali.com/productos/filtracion/",
+            "category_name": "Filtracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa plastica gancho de tiro",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Bomper delantero",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Guardafango izquierdo",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Guardapolvo plastico delantero izquierdo",
+        "top_provider_id": "partcar",
+        "top_score_percent": 72,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 72,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Paso Rueda Guardapolvo Izquierdo Para Nissan March Modelos 2012 A 2021 Sm",
+            "detail_url": "https://www.partcar.com.co/importacion-1/paso-rueda-guardapolvo-nissan-march-2012%E2%80%932021-izquierdo-sm",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte estructural central bomper delantero",
+        "top_provider_id": "partcar",
+        "top_score_percent": 66,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 66,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Soporte De Defensa Delantera Para Nissan March Modelos 2012 A 2021 Taiwan",
+            "detail_url": "https://www.partcar.com.co/importacion-1/soporte-de-defensa-nissan-march-2012%E2%80%932021-delantera-taiwan",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 23,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Soporte de caja y motor",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "category_name": "Partes para motor",
+            "agentic_comment": "Impocali: validar manual."
+          }
+        ]
+      },
+      {
+        "part_name": "Capo",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Guia lateral izquierdo bomper delantero",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Guia lateral derecho bomper delantero",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Liquido refrigerante por galon",
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "category_name": "Refrigeracion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Pretensor airbag delantero derecho",
+        "top_provider_id": "disfal",
+        "top_score_percent": 40,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 40,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "agentic_comment": "Disfal: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Pretensor airbag delantero izquierdo",
+        "top_provider_id": "disfal",
+        "top_score_percent": 38,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "agentic_comment": "Disfal: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Rejilla bomper delantero",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Millare",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Filtro de aire",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 96,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 96,
+            "match_type": "category_only",
+            "product_name": "FILTRO AIRE TUCSON IX35/ I35/ I30/ NEW ELANTRA SUPR",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-tucson-ix35-i35-i30-new-elantra-supr/",
+            "reference": "28113-2S000",
+            "brand": "MOBIS",
+            "category_name": "FILTRACIÓN",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      },
+      {
+        "part_name": "Filtro circulacion de aire habitaculo",
+        "top_provider_id": "repuestera",
+        "top_score_percent": 93,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 93,
+            "match_type": "category_only",
+            "product_name": "FILTRO AIRE DMAX RT50 2.5 DIESEL (TODAS)",
+            "detail_url": "https://repuestera.com.co/producto/filtro-aire-dmax-rt50-2-5-diesel/",
+            "reference": "19315465",
+            "brand": "ACDelco",
+            "category_name": "Filtración",
+            "agentic_comment": "Repuestera: mejor opcion."
+          }
+        ]
+      }
+    ]
+  }
+}

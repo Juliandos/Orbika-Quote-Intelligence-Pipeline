@@ -1,0 +1,191 @@
+{
+  "provider_id": "parrales",
+  "provider_name": "Parrales",
+  "snapshot_date": "2026-06-09",
+  "timezone": "America/Bogota",
+  "extraction_mode": "manual_initial_catalog_assessment_from_public_pages",
+  "access": {
+    "requires_login": false,
+    "read_only": true
+  },
+  "catalog_overview": {
+    "root_url": "https://parrales.com.co/tienda/",
+    "listing_total_observed": 109,
+    "pagination_observed": true,
+    "detail_pages_observed": true
+  },
+  "category_tree": [
+    {
+      "category": "Cables electricos",
+      "count": 10,
+      "subcategories": [
+        "AWG",
+        "Bateria",
+        "Cables de desvare",
+        "Duplex",
+        "Encauchetado"
+      ]
+    },
+    {
+      "category": "Iluminacion",
+      "count": 10,
+      "subcategories": [
+        "Barras Led",
+        "Bombillos Led",
+        "Exploradoras",
+        "Luz halogena"
+      ]
+    },
+    {
+      "category": "Lujos y accesorios",
+      "count": 9,
+      "subcategories": [
+        "Forros",
+        "Tapetes"
+      ]
+    },
+    {
+      "category": "Miscelanea electrica",
+      "count": 3,
+      "subcategories": [
+        "Elevavidrios",
+        "Medidores",
+        "Peras",
+        "Sensores",
+        "Switches",
+        "Terminales"
+      ]
+    },
+    {
+      "category": "Pitos",
+      "count": 41,
+      "subcategories": [
+        "Cornetas",
+        "De disco",
+        "De reversa",
+        "Oreja de perro",
+        "Sirenas"
+      ]
+    },
+    {
+      "category": "Plumillas limpiaparabrisas",
+      "count": 16,
+      "subcategories": [
+        "Aerodinamicas",
+        "Hibridas",
+        "Metalicas",
+        "Trasera"
+      ]
+    },
+    {
+      "category": "Repuestos electricos",
+      "count": 9,
+      "subcategories": [
+        "Alternadores",
+        "Arranques",
+        "Bobinas",
+        "Bujias",
+        "Reguladores"
+      ]
+    },
+    {
+      "category": "Repuestos mecanicos",
+      "count": 11,
+      "subcategories": [
+        "Amortiguadores",
+        "Rodamientos"
+      ]
+    }
+  ],
+  "product_schema": {
+    "granularity": "individual_product",
+    "fields": [
+      "product_name",
+      "product_url",
+      "image_url",
+      "price_current",
+      "price_original",
+      "on_sale",
+      "currency",
+      "brand",
+      "reference",
+      "sku",
+      "category",
+      "subcategory",
+      "description",
+      "technical_attributes",
+      "match_type",
+      "match_confidence",
+      "requires_manual_confirmation"
+    ]
+  },
+  "sample_products": [
+    {
+      "product_name": "Alarma de Retroceso Vektra Tipo Pollak - Universal 12V-60V 18W",
+      "product_url": "https://parrales.com.co/product/pito-12v-60v-reversa-18w-vkh-9101jn-910107090810/",
+      "price_current": 35000,
+      "price_original": 50000,
+      "on_sale": true,
+      "currency": "COP",
+      "brand": "Vektra",
+      "reference": "VKH-9101",
+      "sku": "JN-9101",
+      "category": "Pitos",
+      "subcategory": "De reversa",
+      "technical_attributes": {
+        "watts": "18W",
+        "voltage": "12V-60V",
+        "type": "Pollak"
+      },
+      "vehicle_scope": [
+        "autos",
+        "buses",
+        "camiones",
+        "maquinaria agricola o industrial"
+      ],
+      "match_type": "exact_reference",
+      "match_confidence": "high",
+      "requires_manual_confirmation": false
+    },
+    {
+      "product_name": "AMORTIGUADOR CHEVROLET DELANTERO DERECHO (JGM5125SR)",
+      "product_url": "https://parrales.com.co/product/amortiguador-chevrolet-delantero-derecho-jgm5125sr/",
+      "price_current": 110392,
+      "on_sale": false,
+      "currency": "COP",
+      "reference": "JGM5125SR",
+      "category": "Repuestos mecanicos",
+      "subcategory": "Amortiguadores",
+      "match_type": "exact_reference",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": false,
+      "notes": [
+        "The product detail page URL pattern is visible from the listing, but the detail page content was not fully retrievable in the initial review session."
+      ]
+    },
+    {
+      "product_name": "BUJIA ENCENDIDO (BKR5ES)",
+      "product_url": "https://parrales.com.co/product/bujia-encendido-bkr5es/",
+      "price_current": 22000,
+      "price_original": 23000,
+      "on_sale": true,
+      "currency": "COP",
+      "reference": "BKR5ES",
+      "category": "Repuestos electricos",
+      "subcategory": "Bujias",
+      "match_type": "exact_reference",
+      "match_confidence": "high",
+      "requires_manual_confirmation": false
+    }
+  ],
+  "notes": [
+    "Parrales is suitable for product-by-product extraction.",
+    "The filter tree provides a strong catalog taxonomy and should be captured on every daily refresh.",
+    "The initial snapshot confirms that both listing cards and at least some detail pages expose exact matching signals such as brand, REF, and SKU."
+  ],
+  "summary": {
+    "provider_strength": "product_level_catalog",
+    "supports_individual_product_extraction": true,
+    "next_step": "Implement the Parrales adapter to walk all pages, visit each product detail page, and build the full daily product snapshot."
+  }
+}

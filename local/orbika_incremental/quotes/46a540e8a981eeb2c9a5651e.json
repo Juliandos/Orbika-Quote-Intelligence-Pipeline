@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-06-10T00:50:06.211238+00:00",
+  "quote_key": "46a540e8a981eeb2c9a5651e",
+  "source": {
+    "message_id": "<703976884.2807.1779293962723@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-20T16:19:22+00:00",
+    "subject": "🆘 MUL831_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "422644",
+    "fecha_aviso": "19/05/26",
+    "marca": "CHEVROLET",
+    "linea": "AVEO EMOTION",
+    "version": "GT MT 1600CC 5P AA 1AB",
+    "ano": "2013",
+    "placa": "MUL831",
+    "vin": "9GATJ6365DB012713",
+    "taller_entrega": "Novacar Med",
+    "nombre_comercial": "Novacar Med",
+    "nit": "890927351-9",
+    "ciudad": "MEDELLIN",
+    "direccion": "KR 45 # 30-66",
+    "telefono": "2623042",
+    "email": "No disponible",
+    "repuestos_count": 1,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Carga aire/acond. r134",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:55.064289+00:00",
+    "summary": {
+      "parts_total": 1,
+      "parts_with_matches": 1,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "partcar": 1
+      }
+    },
+    "provider_specs": [
+      {
+        "provider_id": "partcar",
+        "display_name": "Partcar",
+        "snapshot_date": "2026-06-09"
+      }
+    ],
+    "parts": [
+      {
+        "part_name": "Carga aire/acond. r134",
+        "quantity": 1,
+        "best_score_percent": 47,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "partcar",
+        "matches": [
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 47,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/consola-central-aire-acondicionado-chevrolet-aveo-2007%E2%80%932013--sm",
+            "product_name": "Consola Central Aire Acondicionado Para Chevrolet Aveo Modelos 2007 A 2013 Sm",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 47,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/condensador-aire-acondicionado-chevrolet-aveo-2009%E2%80%932014--tyc",
+            "product_name": "Condensador Aire Acondicionado Para Chevrolet Aveo Modelos 2009 A 2014 Tyc",
+            "category_name": "manual_review"
+          },
+          {
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 47,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://www.partcar.com.co/importacion-1/condensador-aire-acondicionado-chevrolet-aveo-2006%E2%80%932014--tyc",
+            "product_name": "Condensador Aire Acondicionado Para Chevrolet Aveo Modelos 2006 A 2014 Tyc",
+            "category_name": "manual_review"
+          }
+        ]
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.235390+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 1,
+      "provider_hits": {
+        "partcar": 1
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Carga aire/acond. r134",
+        "top_provider_id": "partcar",
+        "top_score_percent": 62,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 62,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Consola Central Aire Acondicionado Para Chevrolet Aveo Modelos 2007 A 2013 Sm",
+            "detail_url": "https://www.partcar.com.co/importacion-1/consola-central-aire-acondicionado-chevrolet-aveo-2007%E2%80%932013--sm",
+            "category_name": "manual_review",
+            "agentic_comment": "Partcar: mejor opcion."
+          }
+        ]
+      }
+    ]
+  }
+}

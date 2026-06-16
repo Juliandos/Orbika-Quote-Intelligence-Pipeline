@@ -1,0 +1,1372 @@
+{
+  "version": 2,
+  "created_at": "2026-06-08T02:47:31.559906+00:00",
+  "updated_at": "2026-06-15T21:16:36.067467+00:00",
+  "target_sender": "cotizacionesorbika@subocol.com",
+  "cursor": {
+    "last_completed_internal_date_ms": "1781296562000",
+    "last_completed_gmail_id": "19ebd8c856ea1674"
+  },
+  "current": {
+    "gmail_id": null,
+    "quote_key": null,
+    "stage": "idle",
+    "updated_at": "2026-06-15T21:16:36.066739+00:00"
+  },
+  "messages": {
+    "19e792144a4f5baa": {
+      "status": "completed",
+      "message_id": "<1355015782.71.1780148682882@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780148682000",
+      "received_at": "2026-05-30T13:44:42+00:00",
+      "subject": "🆘 KOW549_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "83de17d230dd053a11d86dc6"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T02:47:34.823719+00:00",
+      "completed_at": "2026-06-08T02:49:02.590230+00:00"
+    },
+    "19e89ab8e3db3ed9": {
+      "status": "completed",
+      "message_id": "<455801414.3405.1780426181670@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780426181000",
+      "received_at": "2026-06-02T18:49:41+00:00",
+      "subject": "🤖 LXQ591_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "ea6b8827c6a11de4d020b9be"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T02:49:02.591857+00:00",
+      "completed_at": "2026-06-08T02:50:50.010710+00:00"
+    },
+    "19e8a3af8498fd1d": {
+      "status": "completed",
+      "message_id": "<676089641.5248.1780435579887@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780435579000",
+      "received_at": "2026-06-02T21:26:19+00:00",
+      "subject": "🆘 JYW004_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "f8d978c76760630ac1fe1c86"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T02:50:50.012597+00:00",
+      "completed_at": "2026-06-08T02:51:54.129648+00:00"
+    },
+    "19e8e6821fdd5f14": {
+      "status": "completed",
+      "message_id": "<79538912.3645.1780505647541@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780505647000",
+      "received_at": "2026-06-03T16:54:07+00:00",
+      "subject": "🆘 LXM412_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "b5ebbda7aa2024cc77f62680"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T02:51:54.132138+00:00",
+      "completed_at": "2026-06-08T02:52:04.736586+00:00"
+    },
+    "19e93b3e765ae723": {
+      "status": "completed",
+      "message_id": "<395278124.3347.1780594499700@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780594499000",
+      "received_at": "2026-06-04T17:34:59+00:00",
+      "subject": "🤖 FUN845_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "e5fdd8f96868333e233f0118"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T02:52:04.738170+00:00",
+      "completed_at": "2026-06-08T02:53:47.310110+00:00"
+    },
+    "19e94302bb41d038": {
+      "status": "completed",
+      "message_id": "<342565200.4692.1780602644576@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780602644000",
+      "received_at": "2026-06-04T19:50:44+00:00",
+      "subject": "🆘 FOR852_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "e33a49c24a6389ed38925275"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T02:53:47.311991+00:00",
+      "completed_at": "2026-06-08T02:53:58.413695+00:00"
+    },
+    "19e98c1871bae6e1": {
+      "status": "completed",
+      "message_id": "<322993555.3136.1780679279717@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780679279000",
+      "received_at": "2026-06-05T17:07:59+00:00",
+      "subject": "🤖 IOR336_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "8c56a259c589eb0a511832b9"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T03:04:20.188754+00:00",
+      "completed_at": "2026-06-08T03:06:09.438598+00:00"
+    },
+    "19e99c1a49fa9d8f": {
+      "status": "completed",
+      "message_id": "<1586984500.5392.1780696064677@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780696064000",
+      "received_at": "2026-06-05T21:47:44+00:00",
+      "subject": "🆘 IWQ421_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "240cad988eda80d5bbe40043"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T03:06:09.440630+00:00",
+      "completed_at": "2026-06-08T03:06:24.268478+00:00"
+    },
+    "19e99c2d50365f86": {
+      "status": "completed",
+      "message_id": "<1849907678.5411.1780696142187@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780696142000",
+      "received_at": "2026-06-05T21:49:02+00:00",
+      "subject": "🆘 JPX355_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "5766668089e4b887b12e5349"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T03:06:24.270112+00:00",
+      "completed_at": "2026-06-08T03:06:34.016378+00:00"
+    },
+    "19e99c44f9c39fb7": {
+      "status": "completed",
+      "message_id": "<6138819.5444.1780696238429@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780696238000",
+      "received_at": "2026-06-05T21:50:38+00:00",
+      "subject": "🆘 HHW977_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "db2e4ac3c45513d17babbf37"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-08T03:06:34.018420+00:00",
+      "completed_at": "2026-06-08T03:06:47.021852+00:00"
+    },
+    "19eac8a0caa5c8d1": {
+      "status": "completed",
+      "message_id": "<1776667746.576.1781011188310@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781011188000",
+      "received_at": "2026-06-09T13:19:48+00:00",
+      "subject": "🆘 LRX263_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "796e39bcbeca9c36e15bb48f"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:22:30.153227+00:00",
+      "completed_at": "2026-06-10T14:22:41.757108+00:00"
+    },
+    "19e40735ad05032d": {
+      "status": "completed",
+      "message_id": "<2106706066.702.1779197761031@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779197761000",
+      "received_at": "2026-05-19T13:36:01+00:00",
+      "subject": "🆘 KSZ333_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "e0738fb3c6de425fb0326eaf"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:45:50.519372+00:00",
+      "completed_at": "2026-06-10T00:46:34.175157+00:00"
+    },
+    "19e4113046016fc9": {
+      "status": "completed",
+      "message_id": "<1650791400.3321.1779208224254@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779208224000",
+      "received_at": "2026-05-19T16:30:24+00:00",
+      "subject": "🆘 JPT849_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "80c2c19b0caa2fbf40fd1b9b"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:46:34.177481+00:00",
+      "completed_at": "2026-06-10T00:47:11.563137+00:00"
+    },
+    "19e412a9d1db1194": {
+      "status": "completed",
+      "message_id": "<1933213313.3510.1779209770459@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779209770000",
+      "received_at": "2026-05-19T16:56:10+00:00",
+      "subject": "🆘 FQY431_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "02a3e74e7de0de313657709d"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:47:11.565277+00:00",
+      "completed_at": "2026-06-10T00:47:52.853395+00:00"
+    },
+    "19e412bc9600d987": {
+      "status": "completed",
+      "message_id": "<289245799.3556.1779209847961@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779209847000",
+      "received_at": "2026-05-19T16:57:27+00:00",
+      "subject": "🆘 EHS700_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "58fc3c32bbaa294c27f04b08"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:47:52.855136+00:00",
+      "completed_at": "2026-06-10T00:48:35.716158+00:00"
+    },
+    "19e421205172d805": {
+      "status": "completed",
+      "message_id": "<37712240.5957.1779224936349@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779224936000",
+      "received_at": "2026-05-19T21:08:56+00:00",
+      "subject": "🆘 JYO016_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "04e4f0e8ec60506f1cbbb931"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:48:35.718005+00:00",
+      "completed_at": "2026-06-10T00:48:47.456028+00:00"
+    },
+    "19e422d11bfa3fa8": {
+      "status": "completed",
+      "message_id": "<1112157744.6188.1779226709176@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779226709000",
+      "received_at": "2026-05-19T21:38:29+00:00",
+      "subject": "🆘 GWM207_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "a746e87104118095b09dc36f"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:48:47.458207+00:00",
+      "completed_at": "2026-06-10T00:49:27.724458+00:00"
+    },
+    "19e457ecb6b23bc6": {
+      "status": "completed",
+      "message_id": "<195412834.243.1779282396542@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779282396000",
+      "received_at": "2026-05-20T13:06:36+00:00",
+      "subject": "🆘 HAL698_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "c54a51d8a539e321b2f60c35"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:49:27.726060+00:00",
+      "completed_at": "2026-06-10T00:49:44.157311+00:00"
+    },
+    "19e459f103ebbc30": {
+      "status": "completed",
+      "message_id": "<539708774.729.1779284512222@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779284512000",
+      "received_at": "2026-05-20T13:41:52+00:00",
+      "subject": "🆘 GHZ034_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "ba291d5dcae4ab94cbd3ecf3"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:49:44.159035+00:00",
+      "completed_at": "2026-06-10T00:49:53.438437+00:00"
+    },
+    "19e462f4599fbcf0": {
+      "status": "completed",
+      "message_id": "<703976884.2807.1779293962723@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779293962000",
+      "received_at": "2026-05-20T16:19:22+00:00",
+      "subject": "🆘 MUL831_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "46a540e8a981eeb2c9a5651e"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:49:53.440277+00:00",
+      "completed_at": "2026-06-10T00:50:06.211700+00:00"
+    },
+    "19e46340b7fa4768": {
+      "status": "completed",
+      "message_id": "<305074064.2850.1779294275766@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779294275000",
+      "received_at": "2026-05-20T16:24:35+00:00",
+      "subject": "🆘 IHR165_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "52f0bb262c509cf00d90d26a"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T00:50:06.213987+00:00",
+      "completed_at": "2026-06-10T00:50:15.093417+00:00"
+    },
+    "19e47043e8664732": {
+      "status": "completed",
+      "message_id": "<1450572480.4787.1779307920130@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779307920000",
+      "received_at": "2026-05-20T20:12:00+00:00",
+      "subject": "🤖 KYU871_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-10T13:42:59.127532+00:00",
+      "completed_at": "2026-06-10T13:42:59.128281+00:00"
+    },
+    "19e4729a27ac159f": {
+      "status": "completed",
+      "message_id": "<80285813.5314.1779310370211@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779310370000",
+      "received_at": "2026-05-20T20:52:50+00:00",
+      "subject": "🆘 MNQ268_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "e694d773fc960d298722a6e8"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:18:55.296548+00:00",
+      "completed_at": "2026-06-10T14:19:09.246042+00:00"
+    },
+    "19e475e01aa30601": {
+      "status": "completed",
+      "message_id": "<101212951.6011.1779313802033@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779313802000",
+      "received_at": "2026-05-20T21:50:02+00:00",
+      "subject": "🤖 LRW595_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-10T14:19:09.247913+00:00",
+      "completed_at": "2026-06-10T14:19:09.248332+00:00"
+    },
+    "19e4a49fdaae4fa9": {
+      "status": "completed",
+      "message_id": "<1330699647.49.1779362822097@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779362822000",
+      "received_at": "2026-05-21T11:27:02+00:00",
+      "subject": "🤖 LKT461_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-10T14:19:09.251256+00:00",
+      "completed_at": "2026-06-10T14:19:09.251877+00:00"
+    },
+    "19e4b5c9e110913b": {
+      "status": "completed",
+      "message_id": "<1286355264.2726.1779380820235@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779380820000",
+      "received_at": "2026-05-21T16:27:00+00:00",
+      "subject": "🤖 LTO593_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-10T14:19:09.253745+00:00",
+      "completed_at": "2026-06-10T14:19:09.254139+00:00"
+    },
+    "19e4b69cf137a734": {
+      "status": "completed",
+      "message_id": "<469130609.3018.1779381685264@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779381685000",
+      "received_at": "2026-05-21T16:41:25+00:00",
+      "subject": "🆘 EOU666_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "9db0d905161f4cdd3c42c32d"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:19:09.256009+00:00",
+      "completed_at": "2026-06-10T14:19:20.575381+00:00"
+    },
+    "19e4b7001aba636b": {
+      "status": "completed",
+      "message_id": "<2135409766.3080.1779382090475@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779382090000",
+      "received_at": "2026-05-21T16:48:10+00:00",
+      "subject": "🆘 EOU666_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "917d0f6746f5301f1eec97d1"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:19:20.577532+00:00",
+      "completed_at": "2026-06-10T14:19:31.987229+00:00"
+    },
+    "19e4b7610b0018a4": {
+      "status": "completed",
+      "message_id": "<689969254.3135.1779382487809@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779382487000",
+      "received_at": "2026-05-21T16:54:47+00:00",
+      "subject": "🆘 PXP962_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "ca513c6f85a89794118177d8"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:19:31.989006+00:00",
+      "completed_at": "2026-06-10T14:19:43.914477+00:00"
+    },
+    "19e5009e211bb5e7": {
+      "status": "completed",
+      "message_id": "<237665552.1493.1779459284967@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779459284000",
+      "received_at": "2026-05-22T14:14:44+00:00",
+      "subject": "🆘 DMW269_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "8397411f21fbb83ab20c9c43"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:19:43.916653+00:00",
+      "completed_at": "2026-06-10T14:19:55.542831+00:00"
+    },
+    "19e5091abcdb3618": {
+      "status": "completed",
+      "message_id": "<2104422783.3286.1779468183523@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779468183000",
+      "received_at": "2026-05-22T16:43:03+00:00",
+      "subject": "🆘 JBN968_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "c1a0c44234076f798fbdbdbb"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:19:55.544655+00:00",
+      "completed_at": "2026-06-10T14:20:06.921051+00:00"
+    },
+    "19e5099337afca16": {
+      "status": "completed",
+      "message_id": "<26150160.3400.1779468676567@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779468676000",
+      "received_at": "2026-05-22T16:51:16+00:00",
+      "subject": "🆘 JBN968_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "db3c3cc9bea063b892266a7d"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:20:06.923324+00:00",
+      "completed_at": "2026-06-10T14:20:19.239202+00:00"
+    },
+    "19e511c8ddffb67a": {
+      "status": "completed",
+      "message_id": "<1968888073.4557.1779477284898@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779477284000",
+      "received_at": "2026-05-22T19:14:44+00:00",
+      "subject": "🆘 EPP809_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "675f4858cdba016753370980"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:20:19.241060+00:00",
+      "completed_at": "2026-06-10T14:20:30.567832+00:00"
+    },
+    "19e512ea5086e416": {
+      "status": "completed",
+      "message_id": "<1897495412.4646.1779478471057@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779478471000",
+      "received_at": "2026-05-22T19:34:31+00:00",
+      "subject": "🆘 ENZ262_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "232827cb5c6337da17ee7d9f"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:20:30.569714+00:00",
+      "completed_at": "2026-06-10T14:20:48.033924+00:00"
+    },
+    "19e5f2f95b5d24d5": {
+      "status": "completed",
+      "message_id": "<1371028695.235.1779713412395@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779713412000",
+      "received_at": "2026-05-25T12:50:12+00:00",
+      "subject": "🆘 JHO831_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "9c157e9cc9cd0241f9e241e7"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:20:48.035620+00:00",
+      "completed_at": "2026-06-10T14:20:59.438033+00:00"
+    },
+    "19e5f391834e34a6": {
+      "status": "completed",
+      "message_id": "<1238776422.294.1779714035434@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779714035000",
+      "received_at": "2026-05-25T13:00:35+00:00",
+      "subject": "🆘 ENZ262_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "c1dc5684d019030e84c2d188"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:20:59.441279+00:00",
+      "completed_at": "2026-06-10T14:21:10.777855+00:00"
+    },
+    "19e60854d7f3c23c": {
+      "status": "completed",
+      "message_id": "<1485682527.5092.1779735808309@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779735808000",
+      "received_at": "2026-05-25T19:03:28+00:00",
+      "subject": "🆘 EJM058_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "da6b29ca0a6bd65d1b68dfae"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:21:10.779604+00:00",
+      "completed_at": "2026-06-10T14:21:22.244864+00:00"
+    },
+    "19e60e59561a773e": {
+      "status": "completed",
+      "message_id": "<1014713744.6400.1779742117356@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779742117000",
+      "received_at": "2026-05-25T20:48:37+00:00",
+      "subject": "🤖 GST066_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-10T14:21:22.246716+00:00",
+      "completed_at": "2026-06-10T14:21:22.247360+00:00"
+    },
+    "19e6505118ceb9db": {
+      "status": "completed",
+      "message_id": "<1494814153.3088.1779811284965@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779811284000",
+      "received_at": "2026-05-26T16:01:24+00:00",
+      "subject": "🆘 EOU666_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "6992edfcd14a52e605a1e11f"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:21:22.249767+00:00",
+      "completed_at": "2026-06-10T14:21:33.567587+00:00"
+    },
+    "19e65f80332518dc": {
+      "status": "completed",
+      "message_id": "<1397621721.5338.1779827212097@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779827212000",
+      "received_at": "2026-05-26T20:26:52+00:00",
+      "subject": "🤖 IRS129_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-10T14:21:33.569529+00:00",
+      "completed_at": "2026-06-10T14:21:33.569988+00:00"
+    },
+    "19e69b689bb90a25": {
+      "status": "completed",
+      "message_id": "<430133888.1177.1779890029865@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779890029000",
+      "received_at": "2026-05-27T13:53:49+00:00",
+      "subject": "🆘 IHR581_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "459a46fe5c6c6136fe0cbf51"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:21:33.572892+00:00",
+      "completed_at": "2026-06-10T14:21:44.948575+00:00"
+    },
+    "19e69cd464c8343a": {
+      "status": "completed",
+      "message_id": "<668116275.1329.1779891519826@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779891519000",
+      "received_at": "2026-05-27T14:18:39+00:00",
+      "subject": "🆘 LFP715_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "cc6e44b74661ae18f97dcfe1"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:21:44.950440+00:00",
+      "completed_at": "2026-06-10T14:21:56.267624+00:00"
+    },
+    "19e6c0c6f181507f": {
+      "status": "completed",
+      "message_id": "<1710613800.7279.1779929214263@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779929214000",
+      "received_at": "2026-05-28T00:46:54+00:00",
+      "subject": "🤖 GRS420_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-10T14:21:56.269507+00:00",
+      "completed_at": "2026-06-10T14:21:56.270184+00:00"
+    },
+    "19e6fb289823de52": {
+      "status": "completed",
+      "message_id": "<549254479.3901.1779990430538@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1779990430000",
+      "received_at": "2026-05-28T17:47:10+00:00",
+      "subject": "🆘 JBN968_ Has ganado un Pedido  _SURA_Aviso: 420908",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "No anchor with visible text 'Cotizar aviso' was found in the email HTML.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-10T14:21:56.271363+00:00",
+      "completed_at": "2026-06-10T14:21:56.271859+00:00"
+    },
+    "19e73fd2537823d5": {
+      "status": "completed",
+      "message_id": "<1917159943.565.1780062429389@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780062429000",
+      "received_at": "2026-05-29T13:47:09+00:00",
+      "subject": "🆘 LYN077_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "9eafa03f4507e4dee9926d49"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:21:56.273724+00:00",
+      "completed_at": "2026-06-10T14:22:07.764898+00:00"
+    },
+    "19e7552dc8423642": {
+      "status": "completed",
+      "message_id": "<493098696.4390.1780084824280@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780084824000",
+      "received_at": "2026-05-29T20:00:24+00:00",
+      "subject": "🆘 DSV680_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "f2476bfd224c5d569afb3775"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:22:07.766867+00:00",
+      "completed_at": "2026-06-10T14:22:19.073665+00:00"
+    },
+    "19e756a598d80cee": {
+      "status": "completed",
+      "message_id": "<1521131889.4620.1780086362934@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780086362000",
+      "received_at": "2026-05-29T20:26:02+00:00",
+      "subject": "🆘 ENZ262_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "6cfe89f351fff752fff135c0"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:22:19.075409+00:00",
+      "completed_at": "2026-06-10T14:22:30.149522+00:00"
+    },
+    "19e75a360ebfbc50": {
+      "status": "completed",
+      "message_id": "<210997394.5257.1780090101268@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1780090101000",
+      "received_at": "2026-05-29T21:28:21+00:00",
+      "subject": "🆘 DSV680_ Has ganado un Pedido  _SURA_Aviso: 388301",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "No anchor with visible text 'Cotizar aviso' was found in the email HTML.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-10T14:22:30.150348+00:00",
+      "completed_at": "2026-06-10T14:22:30.151237+00:00"
+    },
+    "19eaceafe7f6ba56": {
+      "status": "completed",
+      "message_id": "<550527421.1690.1781017540653@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781017540000",
+      "received_at": "2026-06-09T15:05:40+00:00",
+      "subject": "🆘 NUM672_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "a48b8246f45c220e00e71695"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:22:41.759432+00:00",
+      "completed_at": "2026-06-10T14:22:52.688406+00:00"
+    },
+    "19eae51ff30bf936": {
+      "status": "completed",
+      "message_id": "<1869792490.5809.1781041068732@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781041068000",
+      "received_at": "2026-06-09T21:37:48+00:00",
+      "subject": "🆘 LKQ799_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "7e3e7c43474e6a3fb3691964"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-10T14:22:52.690765+00:00",
+      "completed_at": "2026-06-10T14:23:04.062084+00:00"
+    },
+    "19eb2cbaf0282ef0": {
+      "status": "completed",
+      "message_id": "<462500988.3216.1781116152461@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781116152000",
+      "received_at": "2026-06-10T18:29:12+00:00",
+      "subject": "🆘 STZ550_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "10c1fcd5511a47aeea475f17"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-11T16:08:36.741596+00:00",
+      "completed_at": "2026-06-11T16:08:52.791431+00:00"
+    },
+    "19eb2e16f81908c0": {
+      "status": "completed",
+      "message_id": "<1220092721.3506.1781117578373@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781117578000",
+      "received_at": "2026-06-10T18:52:58+00:00",
+      "subject": "🆘 DAC036_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "cff275a447f504f0cf259d93"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-11T16:08:52.793799+00:00",
+      "completed_at": "2026-06-11T16:09:04.691278+00:00"
+    },
+    "19eb35d509305834": {
+      "status": "completed",
+      "message_id": "<7768327.4939.1781125696081@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781125696000",
+      "received_at": "2026-06-10T21:08:16+00:00",
+      "subject": "🆘 INN371_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "b8e519178a231fd37f484fb9"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-11T16:09:04.693404+00:00",
+      "completed_at": "2026-06-11T16:09:20.021485+00:00"
+    },
+    "19eb361393f305a1": {
+      "status": "completed",
+      "message_id": "<300210381.5109.1781125952606@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781125952000",
+      "received_at": "2026-06-10T21:12:32+00:00",
+      "subject": "🤖 JUS325_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-11T16:09:20.024683+00:00",
+      "completed_at": "2026-06-11T16:09:20.025777+00:00"
+    },
+    "19eb7707616a2691": {
+      "status": "completed",
+      "message_id": "<26273395.2875.1781194060247@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781194060000",
+      "received_at": "2026-06-11T16:07:40+00:00",
+      "subject": "🆘 BZF120_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "1a32d3454e1512d63b143d2b"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-11T16:09:20.028900+00:00",
+      "completed_at": "2026-06-11T16:09:38.436729+00:00"
+    },
+    "19eb83a9afcd3c9a": {
+      "status": "completed",
+      "message_id": "<285059532.4846.1781207307540@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781207307000",
+      "received_at": "2026-06-11T19:48:27+00:00",
+      "subject": "🆘 MIZ497_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "extracted",
+      "quote_keys": [
+        "3631d0ce35bae2d705e29240"
+      ],
+      "warnings": [],
+      "processed_at": "2026-06-12T19:00:40.502961+00:00",
+      "completed_at": "2026-06-12T19:00:59.463980+00:00"
+    },
+    "19ebd5d75caa3160": {
+      "status": "completed",
+      "message_id": "<266656349.4630.1781293477635@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781293477000",
+      "received_at": "2026-06-12T19:44:37+00:00",
+      "subject": "🤖 EIY492_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-12T20:31:21.730120+00:00",
+      "completed_at": "2026-06-12T20:31:21.731143+00:00"
+    },
+    "19ebd8c856ea1674": {
+      "status": "completed",
+      "message_id": "<1497961274.5213.1781296562219@ip-172-16-10-135.ec2.internal>",
+      "internal_date_ms": "1781296562000",
+      "received_at": "2026-06-12T20:36:02+00:00",
+      "subject": "🤖 DHQ512_ Fuiste Seleccionado para cotizar _SURA",
+      "extraction_status": "link_not_found",
+      "quote_keys": [],
+      "warnings": [
+        "Found 'Cotizar aviso' anchor(s) pointing to Orbika marketplace instead of external quote.",
+        "Browser or Gmail selector fallback was not executed in phase 1; observed selector retained for manual fallback: #avWBGd-182 > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > table > tbody > tr > td > div > table > tbody > tr > td > table > tbody > tr > td > a"
+      ],
+      "processed_at": "2026-06-15T21:16:36.064702+00:00",
+      "completed_at": "2026-06-15T21:16:36.066728+00:00"
+    }
+  },
+  "quotes": {
+    "83de17d230dd053a11d86dc6": {
+      "status": "processed",
+      "gmail_id": "19e792144a4f5baa",
+      "message_id": "<1355015782.71.1780148682882@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/83de17d230dd053a11d86dc6.json",
+      "load_status": "failed_after_retries",
+      "aviso_id": "425811",
+      "processed_at": "2026-06-08T02:49:02.589811+00:00"
+    },
+    "ea6b8827c6a11de4d020b9be": {
+      "status": "processed",
+      "gmail_id": "19e89ab8e3db3ed9",
+      "message_id": "<455801414.3405.1780426181670@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/marketplace",
+      "output_path": "local/orbika_incremental/quotes/ea6b8827c6a11de4d020b9be.json",
+      "load_status": "failed_after_retries",
+      "aviso_id": null,
+      "processed_at": "2026-06-08T02:50:50.010300+00:00"
+    },
+    "f8d978c76760630ac1fe1c86": {
+      "status": "processed",
+      "gmail_id": "19e8a3af8498fd1d",
+      "message_id": "<676089641.5248.1780435579887@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/f8d978c76760630ac1fe1c86.json",
+      "load_status": "failed_after_retries",
+      "aviso_id": "396825",
+      "processed_at": "2026-06-08T02:51:54.129474+00:00"
+    },
+    "b5ebbda7aa2024cc77f62680": {
+      "status": "processed",
+      "gmail_id": "19e8e6821fdd5f14",
+      "message_id": "<79538912.3645.1780505647541@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/b5ebbda7aa2024cc77f62680.json",
+      "load_status": "loaded",
+      "aviso_id": "397682",
+      "processed_at": "2026-06-08T02:52:04.736100+00:00"
+    },
+    "e5fdd8f96868333e233f0118": {
+      "status": "processed",
+      "gmail_id": "19e93b3e765ae723",
+      "message_id": "<395278124.3347.1780594499700@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/marketplace",
+      "output_path": "local/orbika_incremental/quotes/e5fdd8f96868333e233f0118.json",
+      "load_status": "failed_after_retries",
+      "aviso_id": null,
+      "processed_at": "2026-06-08T02:53:47.309937+00:00"
+    },
+    "e33a49c24a6389ed38925275": {
+      "status": "processed",
+      "gmail_id": "19e94302bb41d038",
+      "message_id": "<342565200.4692.1780602644576@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/e33a49c24a6389ed38925275.json",
+      "load_status": "loaded",
+      "aviso_id": "425213",
+      "processed_at": "2026-06-08T02:53:58.413208+00:00"
+    },
+    "8c56a259c589eb0a511832b9": {
+      "status": "processed",
+      "gmail_id": "19e98c1871bae6e1",
+      "message_id": "<322993555.3136.1780679279717@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/marketplace",
+      "output_path": "local/orbika_incremental/quotes/8c56a259c589eb0a511832b9.json",
+      "load_status": "failed_after_retries",
+      "aviso_id": null,
+      "processed_at": "2026-06-08T03:06:09.438315+00:00"
+    },
+    "240cad988eda80d5bbe40043": {
+      "status": "processed",
+      "gmail_id": "19e99c1a49fa9d8f",
+      "message_id": "<1586984500.5392.1780696064677@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/240cad988eda80d5bbe40043.json",
+      "load_status": "loaded",
+      "aviso_id": "57310",
+      "processed_at": "2026-06-08T03:06:24.267964+00:00"
+    },
+    "5766668089e4b887b12e5349": {
+      "status": "processed",
+      "gmail_id": "19e99c2d50365f86",
+      "message_id": "<1849907678.5411.1780696142187@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/5766668089e4b887b12e5349.json",
+      "load_status": "loaded",
+      "aviso_id": "428604",
+      "processed_at": "2026-06-08T03:06:34.016131+00:00"
+    },
+    "db2e4ac3c45513d17babbf37": {
+      "status": "processed",
+      "gmail_id": "19e99c44f9c39fb7",
+      "message_id": "<6138819.5444.1780696238429@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/db2e4ac3c45513d17babbf37.json",
+      "load_status": "loaded",
+      "aviso_id": "428482",
+      "processed_at": "2026-06-08T03:06:47.021601+00:00"
+    },
+    "796e39bcbeca9c36e15bb48f": {
+      "status": "processed",
+      "gmail_id": "19eac8a0caa5c8d1",
+      "message_id": "<1776667746.576.1781011188310@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/796e39bcbeca9c36e15bb48f.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:22:41.755709+00:00"
+    },
+    "e0738fb3c6de425fb0326eaf": {
+      "status": "processed",
+      "gmail_id": "19e40735ad05032d",
+      "message_id": "<2106706066.702.1779197761031@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/e0738fb3c6de425fb0326eaf.json",
+      "load_status": "loaded",
+      "aviso_id": "421346",
+      "processed_at": "2026-06-10T00:46:34.174583+00:00"
+    },
+    "80c2c19b0caa2fbf40fd1b9b": {
+      "status": "processed",
+      "gmail_id": "19e4113046016fc9",
+      "message_id": "<1650791400.3321.1779208224254@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/80c2c19b0caa2fbf40fd1b9b.json",
+      "load_status": "loaded",
+      "aviso_id": "413130",
+      "processed_at": "2026-06-10T00:47:11.562606+00:00"
+    },
+    "02a3e74e7de0de313657709d": {
+      "status": "processed",
+      "gmail_id": "19e412a9d1db1194",
+      "message_id": "<1933213313.3510.1779209770459@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/02a3e74e7de0de313657709d.json",
+      "load_status": "loaded",
+      "aviso_id": "411451",
+      "processed_at": "2026-06-10T00:47:52.852808+00:00"
+    },
+    "58fc3c32bbaa294c27f04b08": {
+      "status": "processed",
+      "gmail_id": "19e412bc9600d987",
+      "message_id": "<289245799.3556.1779209847961@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/58fc3c32bbaa294c27f04b08.json",
+      "load_status": "loaded",
+      "aviso_id": "413369",
+      "processed_at": "2026-06-10T00:48:35.715763+00:00"
+    },
+    "04e4f0e8ec60506f1cbbb931": {
+      "status": "processed",
+      "gmail_id": "19e421205172d805",
+      "message_id": "<37712240.5957.1779224936349@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/04e4f0e8ec60506f1cbbb931.json",
+      "load_status": "loaded",
+      "aviso_id": "419451",
+      "processed_at": "2026-06-10T00:48:47.455594+00:00"
+    },
+    "a746e87104118095b09dc36f": {
+      "status": "processed",
+      "gmail_id": "19e422d11bfa3fa8",
+      "message_id": "<1112157744.6188.1779226709176@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/a746e87104118095b09dc36f.json",
+      "load_status": "loaded",
+      "aviso_id": "351075",
+      "processed_at": "2026-06-10T00:49:27.724029+00:00"
+    },
+    "c54a51d8a539e321b2f60c35": {
+      "status": "processed",
+      "gmail_id": "19e457ecb6b23bc6",
+      "message_id": "<195412834.243.1779282396542@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/c54a51d8a539e321b2f60c35.json",
+      "load_status": "loaded",
+      "aviso_id": "421361",
+      "processed_at": "2026-06-10T00:49:44.156988+00:00"
+    },
+    "ba291d5dcae4ab94cbd3ecf3": {
+      "status": "processed",
+      "gmail_id": "19e459f103ebbc30",
+      "message_id": "<539708774.729.1779284512222@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/ba291d5dcae4ab94cbd3ecf3.json",
+      "load_status": "loaded",
+      "aviso_id": "421791",
+      "processed_at": "2026-06-10T00:49:53.438119+00:00"
+    },
+    "46a540e8a981eeb2c9a5651e": {
+      "status": "processed",
+      "gmail_id": "19e462f4599fbcf0",
+      "message_id": "<703976884.2807.1779293962723@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/46a540e8a981eeb2c9a5651e.json",
+      "load_status": "loaded",
+      "aviso_id": "422644",
+      "processed_at": "2026-06-10T00:50:06.211389+00:00"
+    },
+    "52f0bb262c509cf00d90d26a": {
+      "status": "processed",
+      "gmail_id": "19e46340b7fa4768",
+      "message_id": "<305074064.2850.1779294275766@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/52f0bb262c509cf00d90d26a.json",
+      "load_status": "loaded",
+      "aviso_id": "415118",
+      "processed_at": "2026-06-10T00:50:15.092745+00:00"
+    },
+    "ec0097411624cdb466be8470": {
+      "status": "invalid_quote_url",
+      "gmail_id": "19e47043e8664732",
+      "message_id": "<1450572480.4787.1779307920130@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/marketplace",
+      "started_at": "2026-06-10T13:26:51.340455+00:00",
+      "last_error": "Stored quote URL resolved to Orbika marketplace instead of external quote.",
+      "last_error_at": "2026-06-10T13:42:44.912179+00:00"
+    },
+    "e694d773fc960d298722a6e8": {
+      "status": "processed",
+      "gmail_id": "19e4729a27ac159f",
+      "message_id": "<80285813.5314.1779310370211@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/e694d773fc960d298722a6e8.json",
+      "load_status": "loaded",
+      "aviso_id": "417375",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:19:09.245634+00:00"
+    },
+    "9db0d905161f4cdd3c42c32d": {
+      "status": "processed",
+      "gmail_id": "19e4b69cf137a734",
+      "message_id": "<469130609.3018.1779381685264@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/9db0d905161f4cdd3c42c32d.json",
+      "load_status": "loaded",
+      "aviso_id": "417214",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:19:20.574951+00:00"
+    },
+    "917d0f6746f5301f1eec97d1": {
+      "status": "processed",
+      "gmail_id": "19e4b7001aba636b",
+      "message_id": "<2135409766.3080.1779382090475@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/917d0f6746f5301f1eec97d1.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:19:31.986796+00:00"
+    },
+    "ca513c6f85a89794118177d8": {
+      "status": "processed",
+      "gmail_id": "19e4b7610b0018a4",
+      "message_id": "<689969254.3135.1779382487809@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/ca513c6f85a89794118177d8.json",
+      "load_status": "loaded",
+      "aviso_id": "420484",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:19:43.914023+00:00"
+    },
+    "8397411f21fbb83ab20c9c43": {
+      "status": "processed",
+      "gmail_id": "19e5009e211bb5e7",
+      "message_id": "<237665552.1493.1779459284967@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/8397411f21fbb83ab20c9c43.json",
+      "load_status": "loaded",
+      "aviso_id": "423078",
+      "matching_parts_with_hits": 1,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:19:55.542413+00:00"
+    },
+    "c1a0c44234076f798fbdbdbb": {
+      "status": "processed",
+      "gmail_id": "19e5091abcdb3618",
+      "message_id": "<2104422783.3286.1779468183523@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/c1a0c44234076f798fbdbdbb.json",
+      "load_status": "loaded",
+      "aviso_id": "420908",
+      "matching_parts_with_hits": 1,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:20:06.920600+00:00"
+    },
+    "db3c3cc9bea063b892266a7d": {
+      "status": "processed",
+      "gmail_id": "19e5099337afca16",
+      "message_id": "<26150160.3400.1779468676567@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/db3c3cc9bea063b892266a7d.json",
+      "load_status": "loaded",
+      "aviso_id": "420908",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:20:19.238789+00:00"
+    },
+    "675f4858cdba016753370980": {
+      "status": "processed",
+      "gmail_id": "19e511c8ddffb67a",
+      "message_id": "<1968888073.4557.1779477284898@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/675f4858cdba016753370980.json",
+      "load_status": "loaded",
+      "aviso_id": "420030",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:20:30.567395+00:00"
+    },
+    "232827cb5c6337da17ee7d9f": {
+      "status": "processed",
+      "gmail_id": "19e512ea5086e416",
+      "message_id": "<1897495412.4646.1779478471057@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/232827cb5c6337da17ee7d9f.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:20:48.033498+00:00"
+    },
+    "9c157e9cc9cd0241f9e241e7": {
+      "status": "processed",
+      "gmail_id": "19e5f2f95b5d24d5",
+      "message_id": "<1371028695.235.1779713412395@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/9c157e9cc9cd0241f9e241e7.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:20:59.436482+00:00"
+    },
+    "c1dc5684d019030e84c2d188": {
+      "status": "processed",
+      "gmail_id": "19e5f391834e34a6",
+      "message_id": "<1238776422.294.1779714035434@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/c1dc5684d019030e84c2d188.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:21:10.777046+00:00"
+    },
+    "da6b29ca0a6bd65d1b68dfae": {
+      "status": "processed",
+      "gmail_id": "19e60854d7f3c23c",
+      "message_id": "<1485682527.5092.1779735808309@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/da6b29ca0a6bd65d1b68dfae.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:21:22.244314+00:00"
+    },
+    "6992edfcd14a52e605a1e11f": {
+      "status": "processed",
+      "gmail_id": "19e6505118ceb9db",
+      "message_id": "<1494814153.3088.1779811284965@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/6992edfcd14a52e605a1e11f.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:21:33.566666+00:00"
+    },
+    "459a46fe5c6c6136fe0cbf51": {
+      "status": "processed",
+      "gmail_id": "19e69b689bb90a25",
+      "message_id": "<430133888.1177.1779890029865@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/459a46fe5c6c6136fe0cbf51.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:21:44.947815+00:00"
+    },
+    "cc6e44b74661ae18f97dcfe1": {
+      "status": "processed",
+      "gmail_id": "19e69cd464c8343a",
+      "message_id": "<668116275.1329.1779891519826@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/cc6e44b74661ae18f97dcfe1.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:21:56.266687+00:00"
+    },
+    "9eafa03f4507e4dee9926d49": {
+      "status": "processed",
+      "gmail_id": "19e73fd2537823d5",
+      "message_id": "<1917159943.565.1780062429389@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/9eafa03f4507e4dee9926d49.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:22:07.764278+00:00"
+    },
+    "f2476bfd224c5d569afb3775": {
+      "status": "processed",
+      "gmail_id": "19e7552dc8423642",
+      "message_id": "<493098696.4390.1780084824280@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/f2476bfd224c5d569afb3775.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:22:19.072712+00:00"
+    },
+    "6cfe89f351fff752fff135c0": {
+      "status": "processed",
+      "gmail_id": "19e756a598d80cee",
+      "message_id": "<1521131889.4620.1780086362934@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/6cfe89f351fff752fff135c0.json",
+      "load_status": "loaded",
+      "aviso_id": "421411",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:22:30.148908+00:00"
+    },
+    "a48b8246f45c220e00e71695": {
+      "status": "processed",
+      "gmail_id": "19eaceafe7f6ba56",
+      "message_id": "<550527421.1690.1781017540653@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/a48b8246f45c220e00e71695.json",
+      "load_status": "loaded",
+      "aviso_id": "429852",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:22:52.687746+00:00"
+    },
+    "7e3e7c43474e6a3fb3691964": {
+      "status": "processed",
+      "gmail_id": "19eae51ff30bf936",
+      "message_id": "<1869792490.5809.1781041068732@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/7e3e7c43474e6a3fb3691964.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-10T14:23:04.061518+00:00"
+    },
+    "10c1fcd5511a47aeea475f17": {
+      "status": "processed",
+      "gmail_id": "19eb2cbaf0282ef0",
+      "message_id": "<462500988.3216.1781116152461@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/10c1fcd5511a47aeea475f17.json",
+      "load_status": "loaded",
+      "aviso_id": "430161",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-11T16:08:52.790098+00:00"
+    },
+    "cff275a447f504f0cf259d93": {
+      "status": "processed",
+      "gmail_id": "19eb2e16f81908c0",
+      "message_id": "<1220092721.3506.1781117578373@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/cff275a447f504f0cf259d93.json",
+      "load_status": "loaded",
+      "aviso_id": "430018",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-11T16:09:04.689858+00:00"
+    },
+    "b8e519178a231fd37f484fb9": {
+      "status": "processed",
+      "gmail_id": "19eb35d509305834",
+      "message_id": "<7768327.4939.1781125696081@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/b8e519178a231fd37f484fb9.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-11T16:09:20.020094+00:00"
+    },
+    "1a32d3454e1512d63b143d2b": {
+      "status": "processed",
+      "gmail_id": "19eb7707616a2691",
+      "message_id": "<26273395.2875.1781194060247@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/1a32d3454e1512d63b143d2b.json",
+      "load_status": "partial",
+      "aviso_id": null,
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-11T16:09:38.435923+00:00"
+    },
+    "3631d0ce35bae2d705e29240": {
+      "status": "processed",
+      "gmail_id": "19eb83a9afcd3c9a",
+      "message_id": "<285059532.4846.1781207307540@ip-172-16-10-135.ec2.internal>",
+      "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+      "output_path": "local/orbika_incremental/quotes/3631d0ce35bae2d705e29240.json",
+      "load_status": "loaded",
+      "aviso_id": "430117",
+      "matching_parts_with_hits": 0,
+      "matching_exact_reference_hits": 0,
+      "processed_at": "2026-06-12T19:00:59.462528+00:00"
+    }
+  },
+  "last_run": {
+    "finished_at": "2026-06-15T21:16:36.067447+00:00",
+    "messages_seen": 1,
+    "messages_with_quotes": 0,
+    "quotes_processed": 0,
+    "quotes_skipped": 0
+  }
+}

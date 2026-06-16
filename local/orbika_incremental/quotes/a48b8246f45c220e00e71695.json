@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T14:22:52.687622+00:00",
+  "quote_key": "a48b8246f45c220e00e71695",
+  "source": {
+    "message_id": "<550527421.1690.1781017540653@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-09T15:05:40+00:00",
+    "subject": "🆘 NUM672_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "429852",
+    "fecha_aviso": "08/06/26",
+    "marca": "MAZDA",
+    "linea": "CX30",
+    "version": "GRAND TOURING LX HYBRID TP 2000CC 7AB R18 TC CT 4X2",
+    "ano": "2025",
+    "placa": "NUM672",
+    "vin": "3MVDM2W7ASL306010",
+    "taller_entrega": "Taller Pago En Efectivo Livianos Medelli...",
+    "nombre_comercial": "Taller Pago En Efectivo Livianos Medelli...",
+    "nit": "000000000-0",
+    "ciudad": "MEDELLIN",
+    "direccion": "No despachar",
+    "telefono": "0",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.363468+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.240382+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

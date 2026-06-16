@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-06-15T23:13:27.362862+00:00",
+  "quote_key": "1a32d3454e1512d63b143d2b",
+  "source": {
+    "gmail_id": "19eb7707616a2691",
+    "message_id": "<26273395.2875.1781194060247@ip-172-16-10-135.ec2.internal>",
+    "internal_date_ms": "1781194060000",
+    "received_at": "2026-06-11T16:07:40+00:00",
+    "sender": "cotizacionesorbika@subocol.com",
+    "subject": "🆘 BZF120_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url": "https://orbika.subocol.com/web/guest/external/quote?c3Vic2lkaWFyeUlkPTE4MzcmcGllY2VJZD0xNTk3Nzg1JnF1b3RhdGlvbklkPTQ1NTU0MDk=",
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "414409",
+    "fecha_aviso": "05/05/26",
+    "marca": "CHEVROLET",
+    "linea": "AVEO",
+    "version": "SD MT 1400CC 4P AA",
+    "ano": "2007",
+    "placa": "BZF120",
+    "vin": "8Z1TJ59757V303124",
+    "taller_entrega": "Homaz S.a.s Caminos Multimarca",
+    "nombre_comercial": "Homaz S.a.s Caminos Multimarca",
+    "nit": "816003186-5",
+    "ciudad": "PEREIRA",
+    "direccion": "Av. 30 de Agosto No 94-165",
+    "telefono": "3135000",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-15T23:13:27.362551+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "partial_matches": 0,
+      "manual_confirmation_only": 0
+    }
+  }
+}

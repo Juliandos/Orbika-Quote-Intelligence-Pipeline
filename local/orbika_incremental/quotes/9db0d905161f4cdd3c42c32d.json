@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T14:19:20.574833+00:00",
+  "quote_key": "9db0d905161f4cdd3c42c32d",
+  "source": {
+    "message_id": "<469130609.3018.1779381685264@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-21T16:41:25+00:00",
+    "subject": "🆘 EOU666_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "417214",
+    "fecha_aviso": "01/05/26",
+    "marca": "KIA",
+    "linea": "PICANTO [3]",
+    "version": "GT LINE MT 1250 CC 2AB ABS AA R15",
+    "ano": "2019",
+    "placa": "EOU666",
+    "vin": "KNAB3512BKT217708",
+    "taller_entrega": "Team Car Movi",
+    "nombre_comercial": "Team Car Movi",
+    "nit": "901293598-7",
+    "ciudad": "MEDELLIN",
+    "direccion": "Carrera 43F # 17-605, centro automotriz medellin",
+    "telefono": "1111111",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.363311+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.240252+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

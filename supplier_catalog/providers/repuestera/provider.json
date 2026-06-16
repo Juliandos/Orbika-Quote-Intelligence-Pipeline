@@ -1,0 +1,51 @@
+{
+  "provider_id": "repuestera",
+  "display_name": "Repuestera",
+  "website": "https://repuestera.com.co/",
+  "catalog_root_url": "https://repuestera.com.co/shop/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "category_carousel_item": ".jet-woo-categories__item",
+    "category_title_link": ".jet-woo-category-title__link",
+    "product_grid_id": "#productos",
+    "product_card": ".jet-listing-grid__item",
+    "product_reference": ".jet-listing-dynamic-field__content:first-occurrence",
+    "product_name": ".jet-listing-dynamic-field__content:second-occurrence",
+    "product_brand": ".jet-listing-dynamic-terms__link:first-occurrence",
+    "product_category": ".jet-listing-dynamic-terms__link:second-occurrence",
+    "product_detail_button_text": "Ver detalles"
+  },
+  "data_precision": {
+    "reference_codes": true,
+    "vehicle_compatibility": false,
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "category_names": true,
+    "brand_text_structured": true
+  },
+  "matching": {
+    "allowed_match_types": [
+      "exact_reference",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "notes": "Prefer exact reference matching when the visible card exposes a direct part reference."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/repuestera/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

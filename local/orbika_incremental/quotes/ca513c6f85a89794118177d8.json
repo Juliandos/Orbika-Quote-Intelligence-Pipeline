@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T14:19:43.913903+00:00",
+  "quote_key": "ca513c6f85a89794118177d8",
+  "source": {
+    "message_id": "<689969254.3135.1779382487809@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-21T16:54:47+00:00",
+    "subject": "🆘 PXP962_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "420484",
+    "fecha_aviso": "15/05/26",
+    "marca": "SUZUKI",
+    "linea": "DZIRE",
+    "version": "GL MHEV MT 1200CC 4X2 6AB",
+    "ano": "2026",
+    "placa": "PXP962",
+    "vin": "MA3ZFEFS0TA353524",
+    "taller_entrega": "Sanautos B/meja",
+    "nombre_comercial": "Sanautos B/meja",
+    "nit": "890200179-7",
+    "ciudad": "BARRANCABERMEJA",
+    "direccion": "CL 48 # 22-42",
+    "telefono": "6224291",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:07.742616+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.248557+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

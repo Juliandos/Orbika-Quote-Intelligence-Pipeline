@@ -1,0 +1,84 @@
+{
+  "generated_at": "2026-06-11T16:08:52.789885+00:00",
+  "quote_key": "10c1fcd5511a47aeea475f17",
+  "source": {
+    "message_id": "<462500988.3216.1781116152461@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-10T18:29:12+00:00",
+    "subject": "🆘 STZ550_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "430161",
+    "fecha_aviso": "09/06/26",
+    "marca": "NISSAN",
+    "linea": "NP 300 FRONTIER",
+    "version": "2.4L [ASL] MT 2400CC 4X2",
+    "ano": "2012",
+    "placa": "STZ550",
+    "vin": "3N6DD25T2ZK879847",
+    "taller_entrega": "Talleres Autorizados Sa Medellin",
+    "nombre_comercial": "Talleres Autorizados Sa Medellin",
+    "nit": "860519235-3",
+    "ciudad": "MEDELLIN",
+    "direccion": "KR 42 AU SUR # 32-50 ITAGUI",
+    "telefono": "5203290",
+    "email": "No disponible",
+    "repuestos_count": 2,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Protector de carter plastico",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      },
+      {
+        "name": "Refuerzo sup del gpolvo metalico del der",
+        "quantity": 1,
+        "total_value": "$0.00",
+        "raw_status": "partial_missing_reference"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:50.829701+00:00",
+    "summary": {
+      "parts_total": 2,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    },
+    "parts": [
+      {
+        "part_name": "Protector de carter plastico",
+        "quantity": 1,
+        "best_score_percent": 0
+      },
+      {
+        "part_name": "Refuerzo sup del gpolvo metalico del der",
+        "quantity": 1,
+        "best_score_percent": 0
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.229190+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 2,
+      "parts_with_agentic_matches": 0
+    },
+    "parts": [
+      {
+        "part_name": "Protector de carter plastico",
+        "top_score_percent": 0
+      },
+      {
+        "part_name": "Refuerzo sup del gpolvo metalico del der",
+        "top_score_percent": 0
+      }
+    ]
+  }
+}

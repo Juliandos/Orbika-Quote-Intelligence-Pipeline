@@ -1,0 +1,43 @@
+{
+  "previous_snapshot": null,
+  "added_family_urls": [
+    "https://www.disfal.com/services/amortiguadores/",
+    "https://www.disfal.com/services/correas/",
+    "https://www.disfal.com/services/mangueras/",
+    "https://www.disfal.com/services/tensores-poleas/",
+    "https://www.disfal.com/services/sistemas-de-escape-colombia/",
+    "https://www.disfal.com/services/suspension/",
+    "https://www.disfal.com/services/bujias/",
+    "https://www.disfal.com/services/bomba-de-combustible/",
+    "https://www.disfal.com/services/liquido-de-frenos-colombia/",
+    "https://www.disfal.com/services/crucetas-colombia/"
+  ],
+  "removed_family_urls": [],
+  "added_brand_urls": [
+    "https://www.disfal.com/amortiguadores-paxis-en-colombia/",
+    "https://www.disfal.com/repuestos-monroe-colombia/",
+    "https://www.disfal.com/bombas-de-combustible-facet-colombia/",
+    "https://www.disfal.com/repuestos-dayco-colombia/",
+    "https://www.disfal.com/correas-drb-colombia/",
+    "https://www.disfal.com/repuestos-walker-colombia/",
+    "https://www.disfal.com/bujias-champion-en-colombia/",
+    "https://www.disfal.com/crucetas-moog-colombia/"
+  ],
+  "removed_brand_urls": [],
+  "added_series_entries": [
+    "PAXIS",
+    "MONROE MONRO-MATIC PLUS: Serie 31000 – 32000 – 33000",
+    "MONROE GAS MAGNUM: Serie 34000",
+    "MONROE REFLEX: Serie 911000 – 931000",
+    "MONROE OESpectrum: Serie 37000 – 71000",
+    "MONROE SENSA-TRAC: Serie 58000 Con Espiral",
+    "MONROE GAS-MAGNUM 60: Serie 66000",
+    "MONROE GAS-MAGNUM 65: Serie 65000",
+    "MONROE MONRO-MAGNUM 70: Serie 74000",
+    "MONROE GAS-MAGNUM CABINA: Serie 66100",
+    "MONROE MAGNUM STEERING STABILIZERS: Serie SC",
+    "AMORTIGUADORES RANCHO: Serie RS",
+    "MONROE DAKAR: Serie 5LD"
+  ],
+  "removed_series_entries": []
+}

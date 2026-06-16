@@ -1,0 +1,680 @@
+{
+  "Plumilla limpiavidrio panoramico trasero": [
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 79,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-12-pulg-soporte-metalico-unidad/",
+      "product_name": "PLUMILLA AEROD. 12 PULG SOPORTE – METALICO UNIDAD",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Vektra",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (79%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 24 points.",
+        "Part-name token overlap contributes 15 points.",
+        "Product-name similarity contributes 10 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 78,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-20-pulg-aerodinamica-co-n-8-adaptadores-1pcs/",
+      "product_name": "PLUMILLA 20 PULG AERODINAMICA CO- N 8 ADAPTADORES 1PCS",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "KTC",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (78%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 24 points.",
+        "Part-name token overlap contributes 15 points.",
+        "Product-name similarity contributes 9 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 78,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-18-pulg-aerodinamica-co-n-8-adaptadores-1pcs/",
+      "product_name": "PLUMILLA 18 PULG AERODINAMICA CO- N 8 ADAPTADORES 1PCS",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "KTC",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (78%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 24 points.",
+        "Part-name token overlap contributes 15 points.",
+        "Product-name similarity contributes 9 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 77,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-28-pulg/",
+      "product_name": "PLUMILLA AEROD. 28 PULG",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Hella",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (77%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 24 points.",
+        "Part-name token overlap contributes 15 points.",
+        "Product-name similarity contributes 8 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 75,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-26-pulg-soporte-metalico-jgox2/",
+      "product_name": "PLUMILLA AEROD. 26 PULG SOPORTE – METALICO JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Vektra",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (75%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 20 points.",
+        "Part-name token overlap contributes 15 points.",
+        "Product-name similarity contributes 10 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 75,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-24-pulg-soporte-metalico-jgox2/",
+      "product_name": "PLUMILLA AEROD. 24 PULG SOPORTE – METALICO JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Vektra",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (75%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 20 points.",
+        "Part-name token overlap contributes 15 points.",
+        "Product-name similarity contributes 10 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 75,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-18-pulg-soporte-metalico-jgox2/",
+      "product_name": "PLUMILLA AEROD. 18 PULG SOPORTE – METALICO JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Vektra",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (75%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 20 points.",
+        "Part-name token overlap contributes 15 points.",
+        "Product-name similarity contributes 10 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 75,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-14-pulg-soporte-metalico-jgox2/",
+      "product_name": "PLUMILLA AEROD. 14 PULG SOPORTE – METALICO JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Vektra",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (75%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 20 points.",
+        "Part-name token overlap contributes 15 points.",
+        "Product-name similarity contributes 10 points."
+      ]
+    }
+  ],
+  "Bujias": [
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 88,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/bujia-encendido-bm6a/",
+      "product_name": "BUJIA ENCENDIDO (BM6A)",
+      "reference": "BM6A",
+      "sku": "8EH 197 025-281",
+      "supplier_item_code": null,
+      "brand": null,
+      "category_name": "Repuestos Electricos",
+      "subcategory_name": "Bujias",
+      "taxonomy_labels": [
+        "ignition_electrical"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (88%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 45 points.",
+        "Product-name similarity contributes 8 points."
+      ]
+    },
+    {
+      "provider_id": "impocali",
+      "provider_name": "Impocali",
+      "score_percent": 55,
+      "match_type": "manual_confirmation_required",
+      "detail_url": "https://impocali.com/productos/partes-electricas/",
+      "product_name": "Bujias",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "brand": null,
+      "category_name": "Partes electricas",
+      "subcategory_name": "autos",
+      "taxonomy_labels": [
+        "electrical",
+        "ignition_electrical"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Impocali no expone referencia exacta publica; la coincidencia es por familia/categoria (55%).",
+      "notes": [
+        "No hay referencias exactas publicas; Impocali probablemente maneja esta familia, pero requiere confirmacion manual.",
+        "Impocali currently exposes category/product names only. Do not treat these records as exact part matches.",
+        "Impocali exposes public category and product-family names, not exact part references.",
+        "This snapshot must be used as a supplier capability map, not as proof that a specific OEM/reference code is available.",
+        "All matches against Orbika quote items require manual confirmation by phone or direct supplier contact.",
+        "The Motos segment is intentionally excluded from this workflow.",
+        "Brand data was added where logos were visually identifiable from the reviewed product cards. These brand values must be treated as image-derived unless later confirmed by structured HTML extraction."
+      ],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 45 points.",
+        "Product-name similarity contributes 20 points."
+      ]
+    },
+    {
+      "provider_id": "disfal",
+      "provider_name": "Disfal",
+      "score_percent": 55,
+      "match_type": "manual_confirmation_required",
+      "detail_url": "https://www.disfal.com/services/bujias/",
+      "product_name": "Bujías",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "brand": null,
+      "category_name": "Bujías",
+      "subcategory_name": null,
+      "taxonomy_labels": [
+        "ignition_electrical"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Disfal no expone referencia exacta publica; la coincidencia es por familia/categoria (55%).",
+      "notes": [
+        "No hay referencias exactas publicas; Disfal parece relevante por familia o marca, pero requiere confirmacion manual.",
+        "Disfal is useful for trusted family and brand verification, but the reviewed public pages do not expose exact part references."
+      ],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 45 points.",
+        "Product-name similarity contributes 20 points."
+      ]
+    },
+    {
+      "provider_id": "impocali",
+      "provider_name": "Impocali",
+      "score_percent": 42,
+      "match_type": "manual_confirmation_required",
+      "detail_url": "https://impocali.com/productos/partes-electricas/",
+      "product_name": "Bobinas",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "brand": null,
+      "category_name": "Partes electricas",
+      "subcategory_name": "autos",
+      "taxonomy_labels": [
+        "electrical",
+        "ignition_electrical"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Impocali no expone referencia exacta publica; la coincidencia es por familia/categoria (42%).",
+      "notes": [
+        "No hay referencias exactas publicas; Impocali probablemente maneja esta familia, pero requiere confirmacion manual.",
+        "Impocali currently exposes category/product names only. Do not treat these records as exact part matches.",
+        "Impocali exposes public category and product-family names, not exact part references.",
+        "This snapshot must be used as a supplier capability map, not as proof that a specific OEM/reference code is available.",
+        "All matches against Orbika quote items require manual confirmation by phone or direct supplier contact.",
+        "The Motos segment is intentionally excluded from this workflow.",
+        "Brand data was added where logos were visually identifiable from the reviewed product cards. These brand values must be treated as image-derived unless later confirmed by structured HTML extraction."
+      ],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Product-name similarity contributes 12 points."
+      ]
+    },
+    {
+      "provider_id": "impocali",
+      "provider_name": "Impocali",
+      "score_percent": 38,
+      "match_type": "manual_confirmation_required",
+      "detail_url": "https://impocali.com/productos/partes-electricas/",
+      "product_name": "Terminales",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "brand": null,
+      "category_name": "Partes electricas",
+      "subcategory_name": "autos",
+      "taxonomy_labels": [
+        "electrical",
+        "ignition_electrical"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Impocali no expone referencia exacta publica; la coincidencia es por familia/categoria (38%).",
+      "notes": [
+        "No hay referencias exactas publicas; Impocali probablemente maneja esta familia, pero requiere confirmacion manual.",
+        "Impocali currently exposes category/product names only. Do not treat these records as exact part matches.",
+        "Impocali exposes public category and product-family names, not exact part references.",
+        "This snapshot must be used as a supplier capability map, not as proof that a specific OEM/reference code is available.",
+        "All matches against Orbika quote items require manual confirmation by phone or direct supplier contact.",
+        "The Motos segment is intentionally excluded from this workflow.",
+        "Brand data was added where logos were visually identifiable from the reviewed product cards. These brand values must be treated as image-derived unless later confirmed by structured HTML extraction."
+      ],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Product-name similarity contributes 8 points."
+      ]
+    },
+    {
+      "provider_id": "impocali",
+      "provider_name": "Impocali",
+      "score_percent": 30,
+      "match_type": "manual_confirmation_required",
+      "detail_url": "https://impocali.com/productos/partes-electricas/",
+      "product_name": "Sensores",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "brand": null,
+      "category_name": "Partes electricas",
+      "subcategory_name": "autos",
+      "taxonomy_labels": [
+        "electrical",
+        "ignition_electrical"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Impocali no expone referencia exacta publica; la coincidencia es por familia/categoria (30%).",
+      "notes": [
+        "No hay referencias exactas publicas; Impocali probablemente maneja esta familia, pero requiere confirmacion manual.",
+        "Impocali currently exposes category/product names only. Do not treat these records as exact part matches.",
+        "Impocali exposes public category and product-family names, not exact part references.",
+        "This snapshot must be used as a supplier capability map, not as proof that a specific OEM/reference code is available.",
+        "All matches against Orbika quote items require manual confirmation by phone or direct supplier contact.",
+        "The Motos segment is intentionally excluded from this workflow.",
+        "Brand data was added where logos were visually identifiable from the reviewed product cards. These brand values must be treated as image-derived unless later confirmed by structured HTML extraction."
+      ],
+      "reasons": [
+        "Taxonomy/family looks compatible."
+      ]
+    },
+    {
+      "provider_id": "impocali",
+      "provider_name": "Impocali",
+      "score_percent": 30,
+      "match_type": "manual_confirmation_required",
+      "detail_url": "https://impocali.com/productos/partes-electricas/",
+      "product_name": "Cables de alta",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "brand": null,
+      "category_name": "Partes electricas",
+      "subcategory_name": "autos",
+      "taxonomy_labels": [
+        "electrical",
+        "ignition_electrical"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Impocali no expone referencia exacta publica; la coincidencia es por familia/categoria (30%).",
+      "notes": [
+        "No hay referencias exactas publicas; Impocali probablemente maneja esta familia, pero requiere confirmacion manual.",
+        "Impocali currently exposes category/product names only. Do not treat these records as exact part matches.",
+        "Impocali exposes public category and product-family names, not exact part references.",
+        "This snapshot must be used as a supplier capability map, not as proof that a specific OEM/reference code is available.",
+        "All matches against Orbika quote items require manual confirmation by phone or direct supplier contact.",
+        "The Motos segment is intentionally excluded from this workflow.",
+        "Brand data was added where logos were visually identifiable from the reviewed product cards. These brand values must be treated as image-derived unless later confirmed by structured HTML extraction."
+      ],
+      "reasons": [
+        "Taxonomy/family looks compatible."
+      ]
+    }
+  ],
+  "Kit plumillas": [
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 88,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-20-pulg-jgox2-copia/",
+      "product_name": "PLUMILLA AEROD. 20 PULG JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": null,
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (88%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 22 points.",
+        "Product-name similarity contributes 8 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 88,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-18-pulg-jgox2/",
+      "product_name": "PLUMILLA AEROD. 18 PULG JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Hella",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (88%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 22 points.",
+        "Product-name similarity contributes 8 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 88,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-16-pulg-jgox2/",
+      "product_name": "PLUMILLA AEROD. 16 PULG JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Hella",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (88%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 22 points.",
+        "Product-name similarity contributes 8 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 88,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-14pulg-jgo-x-2/",
+      "product_name": "PLUMILLA AEROD. 14PULG JGO X 2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Hella",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (88%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 22 points.",
+        "Product-name similarity contributes 8 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 87,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-22-pulg-metalica-jgox2/",
+      "product_name": "PLUMILLA 22 PULG METALICA JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Hella",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Metalicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (87%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 22 points.",
+        "Product-name similarity contributes 7 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 87,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-16-pulg-metalica-jgox2/",
+      "product_name": "PLUMILLA 16 PULG METALICA JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Hella",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Metalicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (87%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 22 points.",
+        "Product-name similarity contributes 7 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 87,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-11-pulg-metalica-jgox2/",
+      "product_name": "PLUMILLA 11 PULG METALICA JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Hella",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Metalicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (87%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 22 points.",
+        "Product-name similarity contributes 7 points."
+      ]
+    },
+    {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "score_percent": 86,
+      "match_type": "category_only",
+      "detail_url": "https://parrales.com.co/product/plumilla-aerod-26-pulg-soporte-metalico-jgox2/",
+      "product_name": "PLUMILLA AEROD. 26 PULG SOPORTE – METALICO JGOX2",
+      "reference": null,
+      "sku": "",
+      "supplier_item_code": null,
+      "brand": "Vektra",
+      "category_name": "Plumillas Limpiaparabrisas",
+      "subcategory_name": "Aerodinamicas",
+      "taxonomy_labels": [
+        "wipers_visibility"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Parrales ofrece una coincidencia parcial por nombre/categoria (86%).",
+      "notes": [],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 22 points.",
+        "Product-name similarity contributes 6 points."
+      ]
+    }
+  ],
+  "Filtro de combustible": [
+    {
+      "provider_id": "impocali",
+      "provider_name": "Impocali",
+      "score_percent": 55,
+      "match_type": "manual_confirmation_required",
+      "detail_url": "https://impocali.com/productos/filtracion/",
+      "product_name": "Filtros de combustible",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "brand": null,
+      "category_name": "Filtracion",
+      "subcategory_name": "autos",
+      "taxonomy_labels": [
+        "filters"
+      ],
+      "requires_manual_confirmation": true,
+      "summary": "Impocali no expone referencia exacta publica; la coincidencia es por familia/categoria (55%).",
+      "notes": [
+        "No hay referencias exactas publicas; Impocali probablemente maneja esta familia, pero requiere confirmacion manual.",
+        "Impocali currently exposes category/product names only. Do not treat these records as exact part matches.",
+        "Impocali exposes public category and product-family names, not exact part references.",
+        "This snapshot must be used as a supplier capability map, not as proof that a specific OEM/reference code is available.",
+        "All matches against Orbika quote items require manual confirmation by phone or direct supplier contact.",
+        "The Motos segment is intentionally excluded from this workflow.",
+        "Brand data was added where logos were visually identifiable from the reviewed product cards. These brand values must be treated as image-derived unless later confirmed by structured HTML extraction."
+      ],
+      "reasons": [
+        "Taxonomy/family looks compatible.",
+        "Part-type compatibility contributes 28 points.",
+        "Part-name token overlap contributes 22 points.",
+        "Product-name similarity contributes 20 points."
+      ]
+    }
+  ]
+}

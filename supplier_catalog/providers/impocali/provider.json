@@ -1,0 +1,76 @@
+{
+  "provider_id": "impocali",
+  "display_name": "Impocali",
+  "website": "https://impocali.com/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "segments": [
+    {
+      "id": "autos",
+      "name": "Autos",
+      "url": "https://impocali.com/productos_impocali/autos/",
+      "enabled": true
+    },
+    {
+      "id": "carga_y_pasajeros",
+      "name": "Carga y pasajeros",
+      "url": "https://impocali.com/productos_impocali/carga-y-pasajeros/",
+      "enabled": true
+    },
+    {
+      "id": "motos",
+      "name": "Motos",
+      "enabled": false,
+      "reason": "Not relevant for the current Orbika quote workflow."
+    }
+  ],
+  "selectors": {
+    "primary_product_container": "#main > section > div > div.post-product > div:nth-child(2) > div > div > div",
+    "fallback_strategy": "Extract visible product/category cards and links from the active segment page."
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": false,
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "category_names": true,
+    "brand_logos": true,
+    "brand_text_structured": "partial_or_unknown"
+  },
+  "brand_extraction": {
+    "enabled": true,
+    "priority": [
+      "structured_text_or_attributes",
+      "image_url_or_asset_name",
+      "ocr_or_visual_logo_recognition"
+    ],
+    "store_confidence": true,
+    "notes": "Brand data may appear only as logos inside product cards. Store provenance and confidence for every detected brand."
+  },
+  "matching": {
+    "allowed_match_types": [
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference",
+      "vehicle_compatible"
+    ],
+    "notes": "Impocali currently exposes category/product names only. Do not treat these records as exact part matches."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/impocali/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

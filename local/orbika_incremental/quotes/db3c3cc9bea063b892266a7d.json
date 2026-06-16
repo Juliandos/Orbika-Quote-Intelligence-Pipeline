@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-10T14:20:19.238673+00:00",
+  "quote_key": "db3c3cc9bea063b892266a7d",
+  "source": {
+    "message_id": "<26150160.3400.1779468676567@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-22T16:51:16+00:00",
+    "subject": "🆘 JBN968_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "420908",
+    "fecha_aviso": "21/05/26",
+    "marca": "RENAULT",
+    "linea": "ALASKAN",
+    "version": "INTENS AT 2500CC TD 4X4",
+    "ano": "2017",
+    "placa": "JBN968",
+    "vin": "3BRCD33B8HK590010",
+    "taller_entrega": "Renomotriz Med",
+    "nombre_comercial": "Renomotriz Med",
+    "nit": "890935228-4",
+    "ciudad": "MEDELLIN",
+    "direccion": "KR 44A # 31-155 SAN DIEGO",
+    "telefono": "2323501",
+    "email": "No disponible",
+    "repuestos_count": 0,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "warnings": [
+      "No quote-replacement blocks were found in the rendered page."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:17.918968+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.255597+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

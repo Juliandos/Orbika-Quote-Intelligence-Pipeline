@@ -1,0 +1,40 @@
+{
+  "date": "2026-06-03",
+  "generated_at": "2026-06-15T21:16:36.084837+00:00",
+  "quotes": [
+    {
+      "quote_key": "b5ebbda7aa2024cc77f62680",
+      "aviso_id": "397682",
+      "placa": "LXM412",
+      "subject": "🆘 LXM412_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 6,
+      "parts_with_matches": 4,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "disfal": 1,
+        "impocali": 2,
+        "parrales": 1
+      }
+    }
+  ],
+  "provider_specs": [
+    {
+      "provider_id": "disfal",
+      "display_name": "Disfal",
+      "website": "https://www.disfal.com/",
+      "snapshot_date": "2026-06-09"
+    },
+    {
+      "provider_id": "impocali",
+      "display_name": "Impocali",
+      "website": "https://impocali.com/",
+      "snapshot_date": "2026-06-09"
+    },
+    {
+      "provider_id": "parrales",
+      "display_name": "Parrales",
+      "website": "https://parrales.com.co/tienda/",
+      "snapshot_date": "2026-06-09-full"
+    }
+  ]
+}

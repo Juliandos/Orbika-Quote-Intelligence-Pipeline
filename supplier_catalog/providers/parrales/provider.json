@@ -1,0 +1,74 @@
+{
+  "provider_id": "parrales",
+  "display_name": "Parrales",
+  "website": "https://parrales.com.co/tienda/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "catalog": {
+    "root_url": "https://parrales.com.co/tienda/",
+    "pagination": {
+      "type": "path_page_number",
+      "pattern": "https://parrales.com.co/tienda/page/{page}/"
+    },
+    "listing_total_observed": 109
+  },
+  "taxonomy": {
+    "top_level_categories": [
+      "Cables electricos",
+      "Iluminacion",
+      "Lujos y accesorios",
+      "Miscelanea electrica",
+      "Pitos",
+      "Plumillas limpiaparabrisas",
+      "Repuestos electricos",
+      "Repuestos mecanicos"
+    ]
+  },
+  "selectors": {
+    "filter_panel": "sidebar catalog filter block",
+    "product_card": "store listing card",
+    "product_title": "listing product title link",
+    "price_current": "listing current price",
+    "price_original": "listing original price when on sale",
+    "product_detail": "single product detail page"
+  },
+  "data_precision": {
+    "product_level_catalog": true,
+    "reference_codes": true,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": true,
+    "brand_text_structured": true,
+    "sku": true
+  },
+  "matching": {
+    "allowed_match_types": [
+      "exact_reference",
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "priority": [
+      "reference",
+      "sku",
+      "product_name_reference_token",
+      "vehicle_compatibility",
+      "brand_plus_type",
+      "category"
+    ]
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/parrales/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

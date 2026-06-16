@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-06-10T14:19:55.542132+00:00",
+  "quote_key": "8397411f21fbb83ab20c9c43",
+  "source": {
+    "message_id": "<237665552.1493.1779459284967@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-05-22T14:14:44+00:00",
+    "subject": "🆘 DMW269_ Fuiste Seleccionado para cotizar _BOLIVAR"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/external/quote?<redacted>",
+  "orbika": {
+    "load_status": "loaded",
+    "retries_used": 0,
+    "aviso_id": "423078",
+    "fecha_aviso": "21/05/26",
+    "marca": "SUZUKI",
+    "linea": "ERTIGA",
+    "version": "MPV MT 1400CC 5P 4X2",
+    "ano": "2017",
+    "placa": "DMW269",
+    "vin": "MA3ZE81S3H0378619",
+    "taller_entrega": "Car Euro Sas Cll 75",
+    "nombre_comercial": "Car Euro Sas Cll 75",
+    "nit": "901734873-1",
+    "ciudad": "BOGOTA, D.C.",
+    "direccion": "CRA. 28A # 75A-17",
+    "telefono": "3148288",
+    "email": "No disponible",
+    "repuestos_count": 1,
+    "total_cotizacion": "$0.00",
+    "repuestos_cotizados": "0",
+    "parts": [
+      {
+        "name": "Direccional espejo izquierdo",
+        "reference": "36430M72M01000",
+        "quantity": 1,
+        "quality": "GENUINO",
+        "total_value": "$0.00",
+        "reference_validation_text": "Código de referencia validado con éxito.",
+        "raw_status": "loaded"
+      }
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:31:58.362302+00:00",
+    "summary": {
+      "parts_total": 1,
+      "parts_with_matches": 1,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    "provider_specs": [
+      {
+        "provider_id": "impocali",
+        "display_name": "Impocali",
+        "snapshot_date": "2026-06-09"
+      }
+    ],
+    "parts": [
+      {
+        "part_name": "Direccional espejo izquierdo",
+        "requested_reference": "36430M72M01000",
+        "quantity": 1,
+        "best_score_percent": 38,
+        "best_match_type": "manual_confirmation_required",
+        "best_provider_id": "impocali",
+        "matches": [
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "product_name": "Cajas de direccion",
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "product_name": "Bombas de direccion",
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos"
+          },
+          {
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 37,
+            "match_type": "manual_confirmation_required",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "product_name": "Soportes de amortiguador",
+            "brand": "Shibumi, Febi Bilstein, Nakamoto",
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos"
+          }
+        ]
+      }
+    ]
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.239797+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 1,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Direccional espejo izquierdo",
+        "requested_reference": "36430M72M01000",
+        "top_provider_id": "impocali",
+        "top_score_percent": 38,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Cajas de direccion",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "category_name": "Suspension y Direccion",
+            "agentic_comment": "Impocali: mejor opcion."
+          }
+        ]
+      }
+    ]
+  }
+}

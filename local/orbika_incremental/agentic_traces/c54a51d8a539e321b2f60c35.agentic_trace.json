@@ -1,0 +1,1848 @@
+{
+  "quote_key": "c54a51d8a539e321b2f60c35",
+  "generated_at": "2026-06-12T20:33:04.616573+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.612803+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:32:07.737993+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 38,
+      "parts_with_agentic_matches": 26,
+      "provider_hits": {
+        "impocali": 3,
+        "partcar": 21,
+        "repuestera": 2
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Tapa espejo retrovisor exterior derecho",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 75,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 75,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Luna Espejo Retrovisor Izquierdo Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-izquierdo-tyc",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "mirrors",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.607437+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.607724+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Emblema persiana",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "partcar",
+        "top_score_percent": 65,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 65,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Persiana Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-2004%E2%80%932007--tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 36,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Poleas, Tensores y Kits de Repartición",
+            "detail_url": "https://www.disfal.com/services/tensores-poleas/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Poleas, Tensores y Kits de Repartición",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.607732+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.607856+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Soporte central paragolpes delantero",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "impocali",
+        "top_score_percent": 25,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Soporte de caja y motor",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Partes para motor",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.607863+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 7
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.608146+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 7,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Cinturon de seguridad delantero izq",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.608153+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.608330+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Cinturon de seguridad delantero der",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.608336+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.608474+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Guardabarro rh",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 73,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 73,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Guardabarro Derecho Para Ford Fiesta Modelos 2011 A 2018 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/guardabarro-ford-fiesta-2011%E2%80%932018-derecho-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.608478+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 6
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.608680+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 6,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Portaplaca del identificacion vehiculo",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.608686+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.608715+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper delantero (cambiado)",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.608718+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.608830+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bomper trasero (cambiado)",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.608835+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.608944+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra capó rh",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.608948+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.608972+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Farola delantera rh",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2014%E2%80%932019-izquierdo-tyc",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "lighting_headlamps",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.608975+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.609219+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Persiana",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 75,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 75,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Persiana Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-2004%E2%80%932007--tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.609225+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 2
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.609302+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 2,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Farola delantera lh",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Farola Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/farola-ford-fiesta-2014%E2%80%932019-izquierdo-tyc",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "lighting_headlamps",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.609306+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.609532+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa espejo retrovisor exterior izq",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 75,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 75,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Luna Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-tyc",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "mirrors",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.609537+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.609771+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper del. lh",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.609776+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.609887+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Motor ventilador radiador",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 3,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Radiador Para Ford Fiesta Modelos 2011 A 2015 Isl",
+            "detail_url": "https://www.partcar.com.co/importacion-1/radiador-ford-fiesta-2011%E2%80%932015--isl",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 52,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Radiadores e intercooler",
+            "detail_url": "https://impocali.com/productos/partes-para-motor-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Partes para motor",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          },
+          {
+            "rank": 3,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 50,
+            "match_type": "category_only",
+            "product_name": "VALVULA PCV ATOS/EON/I10//GRAN I10/PICANTO ION 1.0/RIO SPICE 1.2",
+            "detail_url": "https://repuestera.com.co/producto/valvula-pcv-atos-eon-i10-gran-i10-picanto-ion-1-0-rio-spice-1-2/",
+            "reference": "26740-03000",
+            "sku": null,
+            "brand": "MOBIS",
+            "category_name": "PARTES MOTOR",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: alternativa secundaria util para comparar."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.609892+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.610139+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 3,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Sensor de impacto lateral",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 3,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 52,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 52,
+            "match_type": "category_only",
+            "product_name": "SENSOR OXIGENO POSICION 1 CAPTIVA 2.4 (2010-2019)",
+            "detail_url": "https://repuestera.com.co/producto/sensor-oxigeno-posicion-1-captiva-2-4-2010-2019/",
+            "reference": "19379647",
+            "sku": null,
+            "brand": "ACDelco",
+            "category_name": "Partes eléctricas",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Sensores",
+            "detail_url": "https://impocali.com/productos/partes-electricas/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Partes electricas",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          },
+          {
+            "rank": 3,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Bujías",
+            "detail_url": "https://www.disfal.com/services/bujias/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Bujías",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.610158+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 7
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.610330+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 7,
+              "selected": 3,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper tras. lh",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.610338+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.610454+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Frontal superior atornillado",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.610459+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.610484+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Liquido refrigerante galon",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 30,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Mangueras",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.610488+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.610672+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Estribo completo rh",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.610678+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.610701+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Espejo exterior rh",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 73,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 73,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Espejo Retrovisor Derecho Para Ford Fiesta Modelos 2011 A 2019 Yym",
+            "detail_url": "https://www.partcar.com.co/importacion-1/espejo-retrovisor-ford-fiesta-2011%E2%80%932019-derecho-yym",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "mirrors",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.610705+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.610935+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Espejo exterior lh",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 72,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 72,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Luna Espejo Retrovisor Izquierdo Para Ford Fiesta Modelos 2011 A 2019 Tyc",
+            "detail_url": "https://www.partcar.com.co/importacion-1/luna-espejo-retrovisor-ford-fiesta-2011%E2%80%932019-izquierdo-tyc",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "mirrors",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.610940+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.611188+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Refrigerante",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "impocali",
+        "top_score_percent": 55,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 55,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Refrigerante base agua",
+            "detail_url": "https://impocali.com/productos/refrigeracion-vehiculo-comercial/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Refrigeracion",
+            "subcategory_name": "carga_y_pasajeros",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "disfal",
+            "provider_name": "Disfal",
+            "score_percent": 38,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Mangueras",
+            "detail_url": "https://www.disfal.com/services/mangueras/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Mangueras",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Disfal: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.611194+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 7
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.611355+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 7,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel de persiana",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 65,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 65,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Persiana Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/persiana-ford-fiesta-2004%E2%80%932007--tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.611361+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 2
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.611441+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 2,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa motor completa",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 2,
+        "top_provider_id": "repuestera",
+        "top_score_percent": 66,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "repuestera",
+            "provider_name": "Repuestera",
+            "score_percent": 66,
+            "match_type": "category_only",
+            "product_name": "TAPA LLENADO ACEITE ATOS/ACCENT/EXCEL/H100 (DE PRESION)",
+            "detail_url": "https://repuestera.com.co/producto/tapa-llenado-aceite-atos-accent-excel-h100-de-presion/",
+            "reference": "26510-35000",
+            "sku": null,
+            "brand": "MOBIS",
+            "category_name": "PARTES MOTOR",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Repuestera: mejor opcion disponible por tipo de pieza y compatibilidad."
+          },
+          {
+            "rank": 2,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 54,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Soporte de caja y motor",
+            "detail_url": "https://web.impocali.com/partes-para-motor/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Partes para motor",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: opcion parcial por familia; requiere confirmacion manual."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.611446+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 8
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.611677+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 8,
+              "selected": 2,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bisagra capó lh",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.611683+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.611708+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Cinta airbag conductor",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.611711+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.611733+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel bomper trasero",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.611736+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.611850+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper del. rh",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.611855+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.611965+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Bocel bomper delantero",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.611970+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.612077+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Modulo airbag",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.612081+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.612103+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Sop. de bomper tras. rh",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.612105+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.612254+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Refuerzo bomper delantero",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 83,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 83,
+            "match_type": "category_only",
+            "product_name": "Defensa Bomper Trasero Para Ford Fiesta Modelos 2004 A 2007 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/defensa-bomper-ford-fiesta-2004%E2%80%932007-trasero-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.612260+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.612374+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Airbag acompañante",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.612378+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.612403+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Vidrio parabrisas del. pegado",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.612406+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 0
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.612431+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 0,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Airbag conductor",
+        "requested_reference": null,
+        "review_status": "no_agentic_selection",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 0,
+        "top_provider_id": null,
+        "top_score_percent": 0,
+        "selected_matches": [],
+        "notes": [
+          "Agentic review did not keep any candidate above the acceptance threshold."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.612433+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 3
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.612547+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 3,
+              "selected": 0,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      },
+      {
+        "part_name": "Tapa millare",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "partcar",
+        "top_score_percent": 65,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "partcar",
+            "provider_name": "Partcar",
+            "score_percent": 65,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Tapa De Exploradora Izquierdo Para Ford Fiesta Modelos 2014 A 2019 Tyg",
+            "detail_url": "https://www.partcar.com.co/importacion-1/tapa-de-exploradora-ford-fiesta-2014%E2%80%932019-izquierdo-tyg",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "manual_review",
+            "subcategory_name": null,
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Partcar: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.612551+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 7
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.612791+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 7,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "provider_id": "disfal",
+  "provider_name": "Disfal",
+  "snapshot_date": "2026-06-09",
+  "timezone": "America/Bogota",
+  "verification_scope": "partial_verification_only",
+  "website": "https://www.disfal.com/",
+  "reviewed_service_page": "https://www.disfal.com/services/amortiguadores/",
+  "service_families": [
+    {
+      "family_name": "Amortiguadores",
+      "family_slug": "amortiguadores",
+      "family_url": "https://www.disfal.com/services/amortiguadores/",
+      "taxonomy_label": "suspension_steering",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "family_name": "Correas",
+      "family_slug": "correas",
+      "family_url": "https://www.disfal.com/services/correas/",
+      "taxonomy_label": "belts_tensioners",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "family_name": "Mangueras",
+      "family_slug": "mangueras",
+      "family_url": "https://www.disfal.com/services/mangueras/",
+      "taxonomy_label": "hoses_fluids",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "family_name": "Poleas, Tensores y Kits de Repartición",
+      "family_slug": "tensores-poleas",
+      "family_url": "https://www.disfal.com/services/tensores-poleas/",
+      "taxonomy_label": "belts_tensioners",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "family_name": "Sistemas de Escape",
+      "family_slug": "sistemas-de-escape",
+      "family_url": "https://www.disfal.com/services/sistemas-de-escape-colombia/",
+      "taxonomy_label": "exhaust",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "family_name": "Suspensión",
+      "family_slug": "suspension",
+      "family_url": "https://www.disfal.com/services/suspension/",
+      "taxonomy_label": "suspension_steering",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "family_name": "Bujías",
+      "family_slug": "bujias",
+      "family_url": "https://www.disfal.com/services/bujias/",
+      "taxonomy_label": "ignition_electrical",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "family_name": "Bomba de combustible",
+      "family_slug": "bomba-de-combustible",
+      "family_url": "https://www.disfal.com/services/bomba-de-combustible/",
+      "taxonomy_label": "fuel_delivery",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "family_name": "Líquido de frenos",
+      "family_slug": "liquido-de-frenos",
+      "family_url": "https://www.disfal.com/services/liquido-de-frenos-colombia/",
+      "taxonomy_label": "brake_fluids",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    {
+      "family_name": "Crucetas",
+      "family_slug": "crucetas",
+      "family_url": "https://www.disfal.com/services/crucetas-colombia/",
+      "taxonomy_label": "driveline",
+      "source": "public_home_page",
+      "match_type": "category_only",
+      "requires_manual_confirmation": true
+    }
+  ],
+  "brand_pages": [
+    {
+      "brand_name": "PAXIS",
+      "brand_url": "https://www.disfal.com/amortiguadores-paxis-en-colombia/",
+      "source": "public_home_page",
+      "notes": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "brand_name": "MONROE",
+      "brand_url": "https://www.disfal.com/repuestos-monroe-colombia/",
+      "source": "public_home_page",
+      "notes": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "brand_name": "FACET",
+      "brand_url": "https://www.disfal.com/bombas-de-combustible-facet-colombia/",
+      "source": "public_home_page",
+      "notes": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "brand_name": "DAYCO",
+      "brand_url": "https://www.disfal.com/repuestos-dayco-colombia/",
+      "source": "public_home_page",
+      "notes": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "brand_name": "DONGIL (DRB)",
+      "brand_url": "https://www.disfal.com/correas-drb-colombia/",
+      "source": "public_home_page",
+      "notes": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "brand_name": "WALKER",
+      "brand_url": "https://www.disfal.com/repuestos-walker-colombia/",
+      "source": "public_home_page",
+      "notes": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "brand_name": "CHAMPION",
+      "brand_url": "https://www.disfal.com/bujias-champion-en-colombia/",
+      "source": "public_home_page",
+      "notes": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "brand_name": "MOOG",
+      "brand_url": "https://www.disfal.com/crucetas-moog-colombia/",
+      "source": "public_home_page",
+      "notes": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    }
+  ],
+  "service_series": [
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "PAXIS",
+      "commercial_line": null,
+      "series_label": null,
+      "heading_text": "PAXIS",
+      "image_url": "https://www.disfal.com/wp-content/uploads/2025/02/Screenshot-2025-02-27-131845-e1743655516993-300x119.png",
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "MONRO-MATIC PLUS",
+      "series_label": "Serie 31000 – 32000 – 33000",
+      "heading_text": "MONROE MONRO-MATIC PLUS: Serie 31000 – 32000 – 33000",
+      "image_url": null,
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "GAS MAGNUM",
+      "series_label": "Serie 34000",
+      "heading_text": "MONROE GAS MAGNUM: Serie 34000",
+      "image_url": "https://www.disfal.com/wp-content/uploads/2017/08/MONROE-GAS-MAGNUM.jpg",
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "REFLEX",
+      "series_label": "Serie 911000 – 931000",
+      "heading_text": "MONROE REFLEX: Serie 911000 – 931000",
+      "image_url": null,
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "OESpectrum",
+      "series_label": "Serie 37000 – 71000",
+      "heading_text": "MONROE OESpectrum: Serie 37000 – 71000",
+      "image_url": "https://www.disfal.com/wp-content/uploads/2017/08/monroe-oespectrum-192x300.jpg",
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "SENSA-TRAC",
+      "series_label": "Serie 58000 Con Espiral",
+      "heading_text": "MONROE SENSA-TRAC: Serie 58000 Con Espiral",
+      "image_url": null,
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "GAS-MAGNUM 60",
+      "series_label": "Serie 66000",
+      "heading_text": "MONROE GAS-MAGNUM 60: Serie 66000",
+      "image_url": "https://www.disfal.com/wp-content/uploads/2017/08/monroe-oespectrum-192x300.jpg",
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "GAS-MAGNUM 65",
+      "series_label": "Serie 65000",
+      "heading_text": "MONROE GAS-MAGNUM 65: Serie 65000",
+      "image_url": null,
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "MONRO-MAGNUM 70",
+      "series_label": "Serie 74000",
+      "heading_text": "MONROE MONRO-MAGNUM 70: Serie 74000",
+      "image_url": "https://www.disfal.com/wp-content/uploads/2017/08/MONROE-GAS-MAGNUM.jpg",
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "GAS-MAGNUM CABINA",
+      "series_label": "Serie 66100",
+      "heading_text": "MONROE GAS-MAGNUM CABINA: Serie 66100",
+      "image_url": null,
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "MAGNUM STEERING STABILIZERS",
+      "series_label": "Serie SC",
+      "heading_text": "MONROE MAGNUM STEERING STABILIZERS: Serie SC",
+      "image_url": "https://www.disfal.com/wp-content/uploads/2017/08/MONROE-GAS-MAGNUM.jpg",
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "RANCHO",
+      "commercial_line": "AMORTIGUADORES RANCHO",
+      "series_label": "Serie RS",
+      "heading_text": "AMORTIGUADORES RANCHO: Serie RS",
+      "image_url": null,
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    },
+    {
+      "service_name": "Amortiguadores",
+      "service_url": "https://www.disfal.com/services/amortiguadores/",
+      "brand_name": "MONROE",
+      "commercial_line": "DAKAR",
+      "series_label": "Serie 5LD",
+      "heading_text": "MONROE DAKAR: Serie 5LD",
+      "image_url": "https://www.disfal.com/wp-content/uploads/2017/08/MONROE-GAS-MAGNUM.jpg",
+      "taxonomy_label": "suspension_steering",
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "verification_note": "Public page exposes family, brand, and commercial-line information only. Exact part confirmation still requires manual validation with the supplier."
+    }
+  ],
+  "summary": {
+    "service_families_extracted": 10,
+    "brand_pages_extracted": 8,
+    "service_series_extracted": 13
+  }
+}

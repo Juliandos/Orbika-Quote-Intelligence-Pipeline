@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-08T02:50:50.010192+00:00",
+  "quote_key": "ea6b8827c6a11de4d020b9be",
+  "source": {
+    "message_id": "<455801414.3405.1780426181670@ip-172-16-10-135.ec2.internal>",
+    "received_at": "2026-06-02T18:49:41+00:00",
+    "subject": "🤖 LXQ591_ Fuiste Seleccionado para cotizar _SURA"
+  },
+  "quote_url_masked": "https://orbika.subocol.com/web/guest/marketplace",
+  "orbika": {
+    "load_status": "failed_after_retries",
+    "retries_used": 2,
+    "repuestos_count": 0,
+    "warnings": [
+      "Notice ID was not found in the rendered page.",
+      "No quote-replacement blocks were found in the rendered page.",
+      "Rendered quote page was still incomplete after retries."
+    ]
+  },
+  "supplier_matching": {
+    "generated_at": "2026-06-12T20:32:18.142847+00:00",
+    "summary": {
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0
+    }
+  },
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-16T00:43:13.256051+00:00",
+    "review_mode": "heuristic_fallback",
+    "summary": {
+      "parts_reviewed": 0,
+      "parts_with_agentic_matches": 0
+    }
+  }
+}

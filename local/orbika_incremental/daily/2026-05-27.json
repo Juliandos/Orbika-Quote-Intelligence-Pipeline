@@ -1,0 +1,27 @@
+{
+  "date": "2026-05-27",
+  "generated_at": "2026-06-15T21:16:36.083615+00:00",
+  "quotes": [
+    {
+      "quote_key": "459a46fe5c6c6136fe0cbf51",
+      "aviso_id": null,
+      "placa": null,
+      "subject": "🆘 IHR581_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "cc6e44b74661ae18f97dcfe1",
+      "aviso_id": null,
+      "placa": null,
+      "subject": "🆘 LFP715_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    }
+  ],
+  "provider_specs": []
+}

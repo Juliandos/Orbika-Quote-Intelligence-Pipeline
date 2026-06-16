@@ -1,0 +1,89 @@
+{
+  "date": "2026-05-20",
+  "generated_at": "2026-06-15T21:16:36.083790+00:00",
+  "quotes": [
+    {
+      "quote_key": "46a540e8a981eeb2c9a5651e",
+      "aviso_id": "422644",
+      "placa": "MUL831",
+      "subject": "🆘 MUL831_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 1,
+      "parts_with_matches": 1,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "partcar": 1
+      }
+    },
+    {
+      "quote_key": "52f0bb262c509cf00d90d26a",
+      "aviso_id": "415118",
+      "placa": "IHR165",
+      "subject": "🆘 IHR165_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 1,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "ba291d5dcae4ab94cbd3ecf3",
+      "aviso_id": "421791",
+      "placa": "GHZ034",
+      "subject": "🆘 GHZ034_ Fuiste Seleccionado para cotizar _BOLIVAR",
+      "parts_total": 1,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    },
+    {
+      "quote_key": "c54a51d8a539e321b2f60c35",
+      "aviso_id": "421361",
+      "placa": "HAL698",
+      "subject": "🆘 HAL698_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 38,
+      "parts_with_matches": 29,
+      "exact_reference_matches": 0,
+      "provider_hits": {
+        "impocali": 2,
+        "parrales": 4,
+        "partcar": 21,
+        "repuestera": 2
+      }
+    },
+    {
+      "quote_key": "e694d773fc960d298722a6e8",
+      "aviso_id": "417375",
+      "placa": "MNQ268",
+      "subject": "🆘 MNQ268_ Fuiste Seleccionado para cotizar _SURA",
+      "parts_total": 0,
+      "parts_with_matches": 0,
+      "exact_reference_matches": 0,
+      "provider_hits": {}
+    }
+  ],
+  "provider_specs": [
+    {
+      "provider_id": "impocali",
+      "display_name": "Impocali",
+      "website": "https://impocali.com/",
+      "snapshot_date": "2026-06-09"
+    },
+    {
+      "provider_id": "parrales",
+      "display_name": "Parrales",
+      "website": "https://parrales.com.co/tienda/",
+      "snapshot_date": "2026-06-09-full"
+    },
+    {
+      "provider_id": "partcar",
+      "display_name": "Partcar",
+      "website": "https://www.partcar.com.co/",
+      "snapshot_date": "2026-06-09"
+    },
+    {
+      "provider_id": "repuestera",
+      "display_name": "Repuestera",
+      "website": "https://repuestera.com.co/",
+      "snapshot_date": "2026-06-09"
+    }
+  ]
+}

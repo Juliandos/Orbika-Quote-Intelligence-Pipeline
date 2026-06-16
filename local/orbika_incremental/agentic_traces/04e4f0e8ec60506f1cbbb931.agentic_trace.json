@@ -1,0 +1,72 @@
+{
+  "quote_key": "04e4f0e8ec60506f1cbbb931",
+  "generated_at": "2026-06-12T20:33:04.580641+00:00",
+  "agentic_supplier_matching": {
+    "generated_at": "2026-06-12T20:33:04.580440+00:00",
+    "base_supplier_matching_generated_at": "2026-06-12T20:31:50.541174+00:00",
+    "review_mode": "heuristic_fallback",
+    "langgraph_available": false,
+    "langchain_available": false,
+    "langsmith_configured": false,
+    "model_name": null,
+    "summary": {
+      "parts_reviewed": 1,
+      "parts_with_agentic_matches": 1,
+      "provider_hits": {
+        "impocali": 1
+      }
+    },
+    "parts": [
+      {
+        "part_name": "Brazo espejo superior izq.",
+        "requested_reference": null,
+        "review_status": "reviewed",
+        "reviewer_mode": "heuristic_fallback",
+        "selected_count": 1,
+        "top_provider_id": "impocali",
+        "top_score_percent": 25,
+        "selected_matches": [
+          {
+            "rank": 1,
+            "provider_id": "impocali",
+            "provider_name": "Impocali",
+            "score_percent": 25,
+            "match_type": "manual_confirmation_required",
+            "product_name": "Brazo compensador",
+            "detail_url": "https://impocali.com/productos/suspension-y-direccion/",
+            "reference": null,
+            "sku": null,
+            "brand": null,
+            "category_name": "Suspension y Direccion",
+            "subcategory_name": "autos",
+            "requires_manual_confirmation": true,
+            "agentic_comment": "Impocali: mejor opcion disponible por tipo de pieza y compatibilidad."
+          }
+        ],
+        "notes": [
+          "Agentic review reranked supplier candidates using stricter vehicle and part-type checks."
+        ],
+        "trace": [
+          {
+            "timestamp": "2026-06-12T20:33:04.580251+00:00",
+            "stage": "prepare_candidates",
+            "message": "Loaded candidates for agentic review.",
+            "details": {
+              "candidates": 1
+            }
+          },
+          {
+            "timestamp": "2026-06-12T20:33:04.580426+00:00",
+            "stage": "review_candidates",
+            "message": "Reviewed candidate list.",
+            "details": {
+              "candidates": 1,
+              "selected": 1,
+              "reviewer_mode": "heuristic_fallback"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
