@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${ORBIKA_POSTGRES_DB:-orbika_local}
+      POSTGRES_USER: ${ORBIKA_POSTGRES_USER:-orbika}
+      POSTGRES_PASSWORD: ${ORBIKA_POSTGRES_PASSWORD:-orbika_local_dev_password}
+    ports:
+      - "${ORBIKA_POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - orbika_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    environment:
+      FRONTEND_ORIGIN: http://localhost:3000
+      GMAIL_OAUTH_CLIENT_SECRET: ${GMAIL_OAUTH_CLIENT_SECRET:-/root/.config/openclaw/gmail/autolujoslaser1-client-secret.json}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    ports:
+      - "8000:8000"
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    working_dir: /app
+    volumes:
+      - ./apps/web:/app
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8001
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  orbika_postgres_data:
