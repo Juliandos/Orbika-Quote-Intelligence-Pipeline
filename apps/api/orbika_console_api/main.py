@@ -8,9 +8,11 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 
-from .config import FRONTEND_ORIGIN
+from .config import API_STORE, FRONTEND_ORIGIN
 from .events import EventBus, format_sse
-from .quote_store import build_dashboard, get_quote_detail, list_quotes, load_state
+from . import quote_store
+from . import postgres_store
+from .quote_store import load_state
 from .task_runner import TaskManager
 
 app = FastAPI(title="Orbika Console API", version="0.1.0")
@@ -27,12 +29,26 @@ task_manager = TaskManager(event_bus)
 
 @app.get("/api/health")
 def health() -> dict[str, Any]:
-    return {"ok": True}
+    return {"ok": True, "store": API_STORE}
+
+
+def _store():
+    if API_STORE == "postgres":
+        return postgres_store
+    if API_STORE == "json":
+        return quote_store
+    raise HTTPException(
+        status_code=500,
+        detail="Invalid ORBIKA_API_STORE. Expected 'json' or 'postgres'.",
+    )
 
 
 @app.get("/api/dashboard")
 def dashboard() -> dict[str, Any]:
-    return build_dashboard()
+    try:
+        return _store().build_dashboard()
+    except RuntimeError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
 
 
 @app.get("/api/pipeline/state")
@@ -98,12 +114,18 @@ def run_agentic_review(payload: dict[str, Any] | None = None) -> dict[str, Any]:
 
 @app.get("/api/quotes")
 def quotes() -> list[dict[str, Any]]:
-    return list_quotes()
+    try:
+        return _store().list_quotes()
+    except RuntimeError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
 
 
 @app.get("/api/quotes/{quote_key}")
 def quote_detail(quote_key: str) -> dict[str, Any]:
-    payload = get_quote_detail(quote_key)
+    try:
+        payload = _store().get_quote_detail(quote_key)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
     if payload is None:
         raise HTTPException(status_code=404, detail="Quote not found.")
     return payload

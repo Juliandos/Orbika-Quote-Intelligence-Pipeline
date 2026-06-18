@@ -32,7 +32,7 @@ OpenClaw coordinates tasks, evidence, and review. Orbika contains the actual pip
 | 2 | PostgreSQL data model design | Done | `TASK-20260617-004` | Data model document created in Orbika. |
 | 2.1 | PostgreSQL infrastructure and initial migration | Done | `TASK-20260617-009` | Docker Compose DB, Alembic config, and initial schema verified manually. |
 | 3 | JSON to PostgreSQL importer | Done | `TASK-20260617-012` | Importer created, real import completed, and idempotency verified. |
-| 4 | API reads from PostgreSQL | Pending | Not created yet | Switch read side gradually from JSON to DB. |
+| 4 | API reads from PostgreSQL | Done | `TASK-20260617-013` | FastAPI can read dashboard, quote list, and quote detail from PostgreSQL with JSON fallback. |
 | 5 | Pipeline persists into PostgreSQL | Pending | Not created yet | Runner writes operational data to DB. |
 | 6 | Reduce generated files | Pending | Not created yet | Keep only necessary examples/artifacts and compact outputs. |
 | 7 | Workshop UI refinement | Pending | Not created yet | Make the UI fully operational for non-technical users. |
@@ -305,7 +305,9 @@ Acceptance:
 
 ### Phase 4: API Reads From PostgreSQL
 
-Status: Pending.
+Status: Done.
+
+OpenClaw task: `TASK-20260617-013`
 
 Goal:
 
@@ -317,12 +319,41 @@ Suggested approach:
 - Add feature flag or configuration to choose JSON vs DB reads.
 - Keep existing JSON endpoints working until DB is trusted.
 
+Implementation:
+
+- Added `apps/api/orbika_console_api/postgres_store.py`.
+- Added `ORBIKA_API_STORE=json|postgres`.
+- Kept `quote_store.py` as JSON fallback.
+- Kept the existing API route shapes for dashboard, quote list, and quote detail.
+- Did not change runner, supplier matching, agentic review, frontend behavior, or source JSON files.
+
+Activation:
+
+```bash
+export DATABASE_URL="postgresql+psycopg://orbika:orbika_local_dev_password@localhost:5433/orbika_local"
+export ORBIKA_API_STORE=postgres
+uv run uvicorn --app-dir apps/api orbika_console_api.main:app --reload --host 0.0.0.0 --port 8001
+```
+
+Use JSON fallback:
+
+```bash
+export ORBIKA_API_STORE=json
+```
+
 Verification:
 
 - Dashboard counts match imported DB data.
 - Quote list loads from DB.
 - Quote detail loads from DB.
 - Existing frontend remains usable.
+
+Verification completed with FastAPI `TestClient` in Postgres mode:
+
+- `GET /api/health`: `{"ok": true, "store": "postgres"}`
+- `GET /api/dashboard`: `quotes_total=48`, `loaded_quotes=29`, `failed_quotes=5`, `partial_quotes=14`
+- `GET /api/quotes`: `48` quotes
+- `GET /api/quotes/04e4f0e8ec60506f1cbbb931`: quote key `04e4f0e8ec60506f1cbbb931`, aviso `419451`, `1` part, `1` supplier matching part, `1` agentic part
 
 Acceptance:
 

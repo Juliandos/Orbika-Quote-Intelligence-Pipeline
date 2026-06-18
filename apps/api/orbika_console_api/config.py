@@ -27,3 +27,5 @@ DEFAULT_ORBIKA_STORAGE_STATE = str(
 )
 
 FRONTEND_ORIGIN = os.environ.get("FRONTEND_ORIGIN", "http://localhost:3000")
+DATABASE_URL = os.environ.get("DATABASE_URL")
+API_STORE = os.environ.get("ORBIKA_API_STORE", "json").strip().lower()
