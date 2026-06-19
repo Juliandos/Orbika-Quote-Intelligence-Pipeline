@@ -128,8 +128,8 @@ class SupplierQuoteMatcherTests(unittest.TestCase):
             stored = json.loads(path.read_text(encoding="utf-8"))
 
         self.assertNotIn("quote_url", stored)
-        self.assertNotIn("gmail_id", stored["source"])
-        self.assertNotIn("internal_date_ms", stored["source"])
+        self.assertEqual(stored["source"]["gmail_id"], "gmail-1")
+        self.assertEqual(stored["source"]["internal_date_ms"], "123")
         self.assertNotIn("quote_url", stored["orbika"])
         self.assertNotIn("visible_dom_values", stored["orbika"]["parts"][0])
         self.assertNotIn("reference_input_value", stored["orbika"]["parts"][0])

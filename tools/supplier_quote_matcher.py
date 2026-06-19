@@ -533,8 +533,11 @@ def compact_agentic_supplier_matching_for_storage(report: dict[str, Any]) -> dic
 def compact_source_for_storage(source: dict[str, Any]) -> dict[str, Any]:
     compacted = _compact_value_for_storage(
         {
+            "gmail_id": source.get("gmail_id"),
             "message_id": source.get("message_id"),
+            "internal_date_ms": source.get("internal_date_ms"),
             "received_at": source.get("received_at"),
+            "sender": source.get("sender"),
             "subject": source.get("subject"),
         }
     )

@@ -32,6 +32,12 @@ from tools.orbika_quote_extractor import (
     quote_page_ready,
     reject_repo_secret_path as reject_orbika_secret_path,
 )
+from tools.agentic_match_reviewer import (
+    DEFAULT_TRACE_DIR,
+    enrich_quote_payload_with_agentic_review,
+    write_trace_file,
+)
+from tools.postgres_quote_persistence import database_url_from_env, persist_single_quote_file
 from tools.supplier_quote_matcher import (
     DEFAULT_DAILY_REPORT_DIR,
     DEFAULT_PROVIDERS_ROOT,
@@ -46,6 +52,7 @@ DEFAULT_OUTPUT_DIR = Path("local/orbika_incremental")
 DEFAULT_STATE_PATH = DEFAULT_OUTPUT_DIR / "state.json"
 DEFAULT_QUOTES_DIR = DEFAULT_OUTPUT_DIR / "quotes"
 DEFAULT_SNAPSHOT_DIR = DEFAULT_OUTPUT_DIR / "snapshots"
+FILE_OUTPUT_MODES = ("minimal", "standard", "debug")
 
 
 def utc_now() -> str:
@@ -148,16 +155,31 @@ def save_state(path: Path, state: dict[str, Any]) -> None:
     tmp_path.replace(path)
 
 
-def write_quote_output(
-    quotes_dir: Path,
+def resolve_output_dirs(args: argparse.Namespace) -> argparse.Namespace:
+    if args.quotes_dir is None:
+        args.quotes_dir = DEFAULT_QUOTES_DIR
+
+    if args.daily_report_dir is None:
+        args.daily_report_dir = DEFAULT_DAILY_REPORT_DIR
+
+    if args.agentic_trace_dir is None:
+        args.agentic_trace_dir = DEFAULT_TRACE_DIR if args.file_output_mode in {"standard", "debug"} else None
+
+    if args.snapshot_dir is None:
+        args.snapshot_dir = DEFAULT_SNAPSHOT_DIR if args.file_output_mode == "debug" else None
+
+    return args
+
+
+def build_quote_output_payload(
+    *,
     key: str,
     message_record: Any,
     quote_url: str,
     quote_record: Any,
     supplier_matching: dict[str, Any] | None = None,
-) -> Path:
-    quotes_dir.mkdir(parents=True, exist_ok=True)
-    output_path = quotes_dir / f"{key}.json"
+    agentic_supplier_matching: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     payload = {
         "generated_at": utc_now(),
         "quote_key": key,
@@ -175,9 +197,94 @@ def write_quote_output(
     }
     if supplier_matching is not None:
         payload["supplier_matching"] = supplier_matching
+    if agentic_supplier_matching is not None:
+        payload["agentic_supplier_matching"] = agentic_supplier_matching
+    return payload
+
+
+def write_quote_output(
+    quotes_dir: Path,
+    key: str,
+    message_record: Any,
+    quote_url: str,
+    quote_record: Any,
+    supplier_matching: dict[str, Any] | None = None,
+    agentic_supplier_matching: dict[str, Any] | None = None,
+) -> Path:
+    quotes_dir.mkdir(parents=True, exist_ok=True)
+    output_path = quotes_dir / f"{key}.json"
+    payload = build_quote_output_payload(
+        key=key,
+        message_record=message_record,
+        quote_url=quote_url,
+        quote_record=quote_record,
+        supplier_matching=supplier_matching,
+        agentic_supplier_matching=agentic_supplier_matching,
+    )
     compact_payload = compact_quote_payload_for_storage(payload)
     output_path.write_text(json.dumps(compact_payload, indent=2, ensure_ascii=False), encoding="utf-8")
     return output_path
+
+
+def add_agentic_review_to_quote_payload(
+    quote_payload: dict[str, Any],
+    *,
+    trace_dir: Path | None,
+    limit_per_part: int,
+    model_name: str | None,
+) -> tuple[dict[str, Any] | None, Path | None]:
+    enriched = enrich_quote_payload_with_agentic_review(
+        quote_payload,
+        limit_per_part=limit_per_part,
+        model_name=model_name,
+    )
+    trace_path = write_trace_file(trace_dir, enriched) if trace_dir else None
+    return enriched.get("agentic_supplier_matching"), trace_path
+
+
+def persist_quote_output_to_postgres(output_path: Path) -> dict[str, Any]:
+    database_url = database_url_from_env()
+    if not database_url:
+        message = "DATABASE_URL is not configured; keeping quote in local files only."
+        print(f"warning: {message}", file=sys.stderr)
+        return {
+            "status": "skipped",
+            "reason": "missing_database_url",
+            "warning": message,
+            "updated_at": utc_now(),
+        }
+
+    try:
+        counters = persist_single_quote_file(output_path, database_url=database_url)
+    except Exception as exc:  # noqa: BLE001 - persistence must not break local flow.
+        message = f"PostgreSQL persistence failed for {output_path}: {exc}"
+        print(f"warning: {message}", file=sys.stderr)
+        return {
+            "status": "failed",
+            "reason": "postgres_error",
+            "warning": message,
+            "updated_at": utc_now(),
+        }
+
+    status = "failed" if counters.failed else "persisted"
+    if counters.warning_messages:
+        for warning in counters.warning_messages:
+            print(f"warning: postgres persistence: {warning}", file=sys.stderr)
+    return {
+        "status": status,
+        "imported": counters.imported,
+        "updated": counters.updated,
+        "failed": counters.failed,
+        "emails": counters.emails,
+        "quotes": counters.quotes,
+        "vehicles": counters.vehicles,
+        "workshops": counters.workshops,
+        "parts": counters.parts,
+        "supplier_matches": counters.supplier_matches,
+        "agentic_reviews": counters.agentic_reviews,
+        "warnings": counters.warning_messages,
+        "updated_at": utc_now(),
+    }
 
 
 def message_sort_key(message: dict[str, Any]) -> tuple[int, str]:
@@ -277,6 +384,13 @@ def process_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str, i
         "messages_with_quotes": 0,
         "quotes_processed": 0,
         "quotes_skipped": 0,
+        "quotes_postgres_persisted": 0,
+        "quotes_postgres_updated": 0,
+        "quotes_postgres_failed": 0,
+        "quotes_postgres_skipped": 0,
+        "quotes_agentic_reviewed": 0,
+        "quotes_agentic_skipped": 0,
+        "quotes_agentic_failed": 0,
     }
 
     for message in messages:
@@ -377,6 +491,34 @@ def process_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str, i
                 limit_per_part=args.top_supplier_matches,
             )
 
+            agentic_supplier_matching = None
+            agentic_trace_path = None
+            if args.skip_agentic_review:
+                counters["quotes_agentic_skipped"] += 1
+            else:
+                set_current(state, gmail_id, key, "running_agentic_review")
+                save_state(args.state_path, state)
+                quote_payload = build_quote_output_payload(
+                    key=key,
+                    message_record=message_record,
+                    quote_url=quote_url,
+                    quote_record=quote_record,
+                    supplier_matching=supplier_matching,
+                )
+                try:
+                    agentic_supplier_matching, agentic_trace_path = add_agentic_review_to_quote_payload(
+                        quote_payload,
+                        trace_dir=args.agentic_trace_dir,
+                        limit_per_part=args.agentic_limit_per_part,
+                        model_name=args.agentic_model,
+                    )
+                    counters["quotes_agentic_reviewed"] += 1
+                except Exception as exc:  # noqa: BLE001 - keep extraction and matching usable.
+                    counters["quotes_agentic_failed"] += 1
+                    state["quotes"][key]["agentic_review_error"] = str(exc)
+                    state["quotes"][key]["agentic_review_error_at"] = utc_now()
+                    print(f"warning: Agentic review failed for {key}: {exc}", file=sys.stderr)
+
             set_current(state, gmail_id, key, "writing_quote_output")
             save_state(args.state_path, state)
             output_path = write_quote_output(
@@ -386,7 +528,20 @@ def process_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str, i
                 quote_url=quote_url,
                 quote_record=quote_record,
                 supplier_matching=supplier_matching,
+                agentic_supplier_matching=agentic_supplier_matching,
             )
+            set_current(state, gmail_id, key, "persisting_quote_to_postgres")
+            save_state(args.state_path, state)
+            postgres_persistence = persist_quote_output_to_postgres(output_path)
+            if postgres_persistence["status"] == "persisted":
+                if postgres_persistence.get("imported"):
+                    counters["quotes_postgres_persisted"] += 1
+                else:
+                    counters["quotes_postgres_updated"] += 1
+            elif postgres_persistence["status"] == "skipped":
+                counters["quotes_postgres_skipped"] += 1
+            else:
+                counters["quotes_postgres_failed"] += 1
             state["quotes"][key] = {
                 "status": "processed",
                 "gmail_id": gmail_id,
@@ -397,6 +552,10 @@ def process_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str, i
                 "aviso_id": quote_record.aviso_id,
                 "matching_parts_with_hits": supplier_matching["summary"]["parts_with_matches"],
                 "matching_exact_reference_hits": supplier_matching["summary"]["exact_reference_matches"],
+                "agentic_review_status": (agentic_supplier_matching or {}).get("review_mode")
+                or ("skipped" if args.skip_agentic_review else "failed"),
+                "agentic_trace_path": str(agentic_trace_path) if agentic_trace_path else None,
+                "postgres_persistence": postgres_persistence,
                 "processed_at": utc_now(),
             }
             counters["quotes_processed"] += 1
@@ -429,7 +588,14 @@ def format_poll_status(state: dict[str, Any], counters: dict[str, int], poll_sec
         "Incremental run finished: "
         f"{counters['messages_seen']} new message(s), "
         f"{counters['quotes_processed']} quote(s) processed, "
-        f"{counters['quotes_skipped']} quote(s) skipped. "
+        f"{counters['quotes_skipped']} quote(s) skipped, "
+        f"postgres persisted={counters.get('quotes_postgres_persisted', 0)} "
+        f"updated={counters.get('quotes_postgres_updated', 0)} "
+        f"failed={counters.get('quotes_postgres_failed', 0)} "
+        f"skipped={counters.get('quotes_postgres_skipped', 0)}, "
+        f"agentic reviewed={counters.get('quotes_agentic_reviewed', 0)} "
+        f"failed={counters.get('quotes_agentic_failed', 0)} "
+        f"skipped={counters.get('quotes_agentic_skipped', 0)}. "
         f"State: {state.get('last_run', {}).get('finished_at', 'unknown')} "
         f"mode={mode} "
         f"cursor={last_completed} "
@@ -455,15 +621,34 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--token-cache", type=Path, default=DEFAULT_TOKEN_PATH)
     parser.add_argument("--storage-state", type=Path, default=DEFAULT_STORAGE_STATE)
     parser.add_argument("--state-path", type=Path, default=DEFAULT_STATE_PATH)
-    parser.add_argument("--quotes-dir", type=Path, default=DEFAULT_QUOTES_DIR)
-    parser.add_argument("--snapshot-dir", type=Path, default=DEFAULT_SNAPSHOT_DIR)
+    parser.add_argument(
+        "--file-output-mode",
+        choices=FILE_OUTPUT_MODES,
+        default="minimal",
+        help=(
+            "Control local artifact generation. "
+            "'minimal' keeps state, quotes and daily reports; "
+            "'standard' also writes agentic traces; "
+            "'debug' also writes HTML snapshots."
+        ),
+    )
+    parser.add_argument("--quotes-dir", type=Path, default=None)
+    parser.add_argument("--snapshot-dir", type=Path, default=None)
     parser.add_argument("--providers-root", type=Path, default=DEFAULT_PROVIDERS_ROOT)
-    parser.add_argument("--daily-report-dir", type=Path, default=DEFAULT_DAILY_REPORT_DIR)
+    parser.add_argument("--daily-report-dir", type=Path, default=None)
     parser.add_argument("--max-results", type=int, default=50)
     parser.add_argument("--timeout-ms", type=int, default=15000)
     parser.add_argument("--max-retries", type=int, default=2)
     parser.add_argument("--poll-seconds", type=int, default=0)
     parser.add_argument("--top-supplier-matches", type=int, default=5)
+    parser.add_argument("--agentic-limit-per-part", type=int, default=5)
+    parser.add_argument("--agentic-model", type=str, default=None)
+    parser.add_argument("--agentic-trace-dir", type=Path, default=None)
+    parser.add_argument(
+        "--skip-agentic-review",
+        action="store_true",
+        help="Skip automatic agentic supplier review and persist quote plus supplier matches only.",
+    )
     parser.add_argument(
         "--gmail-date",
         type=date.fromisoformat,
@@ -477,7 +662,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         help="Allow Orbika username/password login only as a fallback after quote URL reload recovery fails.",
     )
     parser.add_argument("--reprocess", action="store_true", help="Reprocess already completed quote keys.")
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    return resolve_output_dirs(args)
 
 
 def main(argv: list[str]) -> int:

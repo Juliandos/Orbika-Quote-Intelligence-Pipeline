@@ -1,4 +1,4 @@
-# Orbika Implementation Phases
+﻿# Orbika Implementation Phases
 
 This document is the operating roadmap for evolving Orbika Quote Intelligence Pipeline from a file-based local pipeline into a local workshop console backed by PostgreSQL.
 
@@ -33,9 +33,10 @@ OpenClaw coordinates tasks, evidence, and review. Orbika contains the actual pip
 | 2.1 | PostgreSQL infrastructure and initial migration | Done | `TASK-20260617-009` | Docker Compose DB, Alembic config, and initial schema verified manually. |
 | 3 | JSON to PostgreSQL importer | Done | `TASK-20260617-012` | Importer created, real import completed, and idempotency verified. |
 | 4 | API reads from PostgreSQL | Done | `TASK-20260617-013` | FastAPI can read dashboard, quote list, and quote detail from PostgreSQL with JSON fallback. |
-| 5 | Pipeline persists into PostgreSQL | Pending | Not created yet | Runner writes operational data to DB. |
-| 6 | Reduce generated files | Pending | Not created yet | Keep only necessary examples/artifacts and compact outputs. |
-| 7 | Workshop UI refinement | Pending | Not created yet | Make the UI fully operational for non-technical users. |
+| 5 | Pipeline persists into PostgreSQL | Done | `TASK-20260618-001` | Runner writes quote, parts and supplier matches to DB. |
+| 5.1 | Enriched runner persistence adjustment | Done | `TASK-20260618-002` | Verified manually with HHW977: rerun restored `agentic_reviews` in PostgreSQL and UI. |
+| 6 | Reduce generated files | Implemented | `TASK-20260618-003` | Runner defaults to minimal local artifacts, debug outputs moved behind modes, and cleanup helper added. |
+| 7 | Workshop UI refinement | Done | Manual implementation | Console UI refined for daily workshop operation with queue filters, stronger detail views, and operational overlays. |
 | 8 | Customer preferences and agentic matching improvements | Pending | Not created yet | Add preference memory and better part compatibility reasoning. |
 | 9 | RAG and future agents | Pending | Not created yet | Prepare knowledge base and future business assistants. |
 | 10 | Local app packaging/startup | Pending | Not created yet | Make the system easier to launch like a normal local app. |
@@ -213,8 +214,6 @@ Notes:
 - `.cache/` is local runtime cache and should not be committed.
 - OpenClaw had runner limitations with Docker socket and read-only cache, so manual WSL evidence was accepted.
 
-## Pending Phases
-
 ### Phase 3: JSON To PostgreSQL Importer
 
 Status: Done.
@@ -256,6 +255,65 @@ export UV_CACHE_DIR="$PWD/.cache/uv"
 export TMPDIR="$PWD/.cache/tmp"
 /home/julian95/.local/bin/uv run --with psycopg --with psycopg-binary python tools/import_quotes_to_postgres.py
 ```
+
+### Phase 5.1: Enriched Runner Persistence Adjustment
+
+Status: Done.
+
+OpenClaw task: `TASK-20260618-002`
+
+Purpose:
+
+- Ensure the incremental runner persists `agentic_supplier_matching` to PostgreSQL in the same pass.
+- Verify that UI-visible agentic review can be rebuilt from a fresh runner pass.
+
+Verification completed:
+
+- Quote `HHW977` (`quote_key = db2e4ac3c45513d17babbf37`) was deleted from PostgreSQL.
+- The runner was re-executed for `2026-06-05` with isolated state/quotes/snapshots/daily paths.
+- After rerun, PostgreSQL contained:
+  - `32` parts
+  - `69` supplier matches
+  - `32` agentic reviews
+- The quote also became visible again in the UI with agentic review populated.
+
+### Phase 6: Reduce Generated Files
+
+Status: Implemented.
+
+OpenClaw task: `TASK-20260618-003`
+
+Purpose:
+
+- Reduce local file sprawl now that PostgreSQL is the operational source of truth.
+- Keep compatibility and resume behavior without making the operator depend on folders.
+
+Implementation:
+
+- The incremental runner now supports `--file-output-mode`:
+  - `minimal` (default): `state.json`, `quotes/`, `daily/`
+  - `standard`: `minimal` + `agentic_traces/`
+  - `debug`: `standard` + `snapshots/`
+- Explicit `--snapshot-dir` and `--agentic-trace-dir` still override the mode.
+- Added `tools/cleanup_incremental_outputs.py` with dry-run by default.
+
+Retention policy established:
+
+- `state.json`: always keep
+- `quotes/`: keep as compatibility/debug minimum
+- `daily/`: regenerable
+- `agentic_traces/`: debug retention target of 7 days
+- `snapshots/`: debug retention target of 7 days
+- `debug/`: debug retention target of 7 days
+- `check-*`, `backfill-*`, `phase*`, `retest-*`: experimental artifacts, cleanup candidate after 7 days
+
+Verification:
+
+- Runner argument defaults updated and covered by tests.
+- Cleanup helper covered by unit tests.
+- No existing CLI flow was removed; debug-heavy outputs remain available explicitly.
+
+## Pending Phases
 
 First real import result:
 
@@ -362,11 +420,17 @@ Acceptance:
 
 ### Phase 5: Pipeline Persists Into PostgreSQL
 
-Status: Pending.
+Status: Done with Phase 5.1 adjustment implemented.
+
+OpenClaw tasks:
+
+- `TASK-20260618-001`
+- `TASK-20260618-002`
 
 Goal:
 
 - Make the incremental runner write operational records to PostgreSQL.
+- Ensure the enriched runner output reaches PostgreSQL consistently.
 
 Suggested approach:
 
@@ -374,16 +438,47 @@ Suggested approach:
 - Add DB persistence after each successful extraction/matching step.
 - Record task/events for UI activity.
 
+Implemented behavior:
+
+- The incremental runner still writes compact quote JSON files for compatibility.
+- After Orbika extraction, it runs supplier matching.
+- After supplier matching, it now runs the existing agentic supplier review in the
+  same quote processing pass by default.
+- The runner writes `agentic_supplier_matching` into the quote JSON and writes a
+  local trace under `local/orbika_incremental/agentic_traces/`.
+- PostgreSQL persistence runs after the enriched JSON is written, so
+  `agentic_reviews` rows are inserted when `agentic_supplier_matching.parts`
+  exists.
+- The compatibility flag `--skip-agentic-review` intentionally disables this
+  final review for diagnostics or old-style runs.
+
+Phase 5.1 finding:
+
+- PostgreSQL persistence was already capable of inserting `agentic_reviews`.
+- The inconsistency observed with HHW977 came from the incremental runner path:
+  it persisted immediately after supplier matching and before agentic review.
+- Therefore, a Gmail reproceso could restore `quotes`, `parts` and
+  `supplier_matches` while leaving `agentic_reviews=0`.
+- Agentic review is now part of the automatic runner flow unless explicitly
+  skipped.
+
 Verification:
 
 - New quote email creates DB rows.
 - Existing JSON files are still produced until Phase 6 decides otherwise.
 - Runner remains restart-safe.
+- Unit coverage confirms runner output can be enriched with
+  `agentic_supplier_matching` and trace files before persistence.
+- Sandbox limitation for `TASK-20260618-002`: Docker socket access was denied and
+  the local PostgreSQL connection was unavailable, so Gmail reproceso and live DB
+  verification must be repeated from a normal WSL shell.
 
 Acceptance:
 
 - New quotes appear in DB without running importer.
 - No duplicate quote rows after retries.
+- Agentic review is persisted automatically when review runs and matching output
+  exists.
 
 ### Phase 6: Reduce Generated Files
 
@@ -414,29 +509,44 @@ Acceptance:
 
 ### Phase 7: Workshop UI Refinement
 
-Status: Pending.
+Status: Done.
+
+Implementation mode:
+
+- Implemented directly in Orbika without a separate OpenClaw execution packet.
 
 Goal:
 
 - Make the console practical for non-technical workshop use.
 
-Important UI areas:
+Implemented improvements:
 
-- Dashboard
-- Pipeline status
-- Quote list
-- Quote detail
-- Parts
-- Supplier matches
-- Agentic ranking
-- Activity/log drawer or modal
-- Runner controls
-- Sound notifications for new valid quotes
+- Reworked the quote queue into a larger operational rail with live counters, search, and quick filters.
+- Improved the selected quote header with stronger hierarchy and at-a-glance operational chips.
+- Reorganized the detail view into clearer overview, parts, matches, and agentic work surfaces.
+- Added more useful operational overlays for pipeline status, activity, and runner actions.
+- Improved empty states and visual spacing so the operator can review quotes without reading raw JSON.
+
+Files updated:
+
+- `apps/web/app/page.tsx`
+
+Verification completed:
+
+```bash
+cd /home/julian95/projects/Orbika-Quote-Intelligence-Pipeline/apps/web
+npm run build
+```
+
+Observed result:
+
+- Next.js production build completed successfully.
+- TypeScript and lint validation passed during build.
 
 Acceptance:
 
-- Operator can work from UI without terminal or JSON files.
-- Important quote/match information fits on screen with useful scroll behavior.
+- Operator can work from UI without terminal or JSON files for the main review flow.
+- Important quote and match information fits on screen with clearer scroll behavior and overlays.
 
 ### Phase 8: Customer Preferences And Agentic Matching Improvements
 
@@ -535,3 +645,4 @@ Create OpenClaw task for Phase 3:
 - Scope: import existing quote JSON files into PostgreSQL.
 - Restriction: do not modify runner/frontend/backend behavior yet.
 - Verification: import one quote, rerun importer, confirm no duplication.
+

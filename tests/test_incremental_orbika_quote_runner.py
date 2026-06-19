@@ -3,17 +3,26 @@ import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
+from unittest.mock import patch
 
 from tools.gmail_quote_extractor import ExtractedMessage
 from tools.incremental_orbika_quote_runner import (
+    DEFAULT_DAILY_REPORT_DIR,
+    DEFAULT_QUOTES_DIR,
+    DEFAULT_SNAPSHOT_DIR,
+    add_agentic_review_to_quote_payload,
     build_gmail_sender_query,
+    build_quote_output_payload,
+    format_poll_status,
     load_state,
     parse_args,
+    persist_quote_output_to_postgres,
     quote_key,
     reconcile_state,
     update_completed_cursor,
     write_quote_output,
 )
+from tools.agentic_match_reviewer import DEFAULT_TRACE_DIR
 from tools.orbika_quote_extractor import ExtractedPart, ExtractedQuote
 
 
@@ -32,6 +41,12 @@ class IncrementalOrbikaQuoteRunnerTests(unittest.TestCase):
         args = parse_args(["--credentials", "/tmp/client-secret.json"])
         self.assertFalse(args.allow_login_fallback)
         self.assertIsNone(args.gmail_date)
+        self.assertFalse(args.skip_agentic_review)
+        self.assertEqual(args.file_output_mode, "minimal")
+        self.assertEqual(args.quotes_dir, DEFAULT_QUOTES_DIR)
+        self.assertEqual(args.daily_report_dir, DEFAULT_DAILY_REPORT_DIR)
+        self.assertIsNone(args.agentic_trace_dir)
+        self.assertIsNone(args.snapshot_dir)
 
     def test_parse_args_enables_login_fallback_explicitly(self) -> None:
         args = parse_args(
@@ -43,6 +58,60 @@ class IncrementalOrbikaQuoteRunnerTests(unittest.TestCase):
         )
         self.assertTrue(args.allow_login_fallback)
 
+    def test_parse_args_can_skip_agentic_review(self) -> None:
+        args = parse_args(
+            [
+                "--credentials",
+                "/tmp/client-secret.json",
+                "--skip-agentic-review",
+            ]
+        )
+        self.assertTrue(args.skip_agentic_review)
+
+    def test_parse_args_standard_mode_enables_agentic_traces(self) -> None:
+        args = parse_args(
+            [
+                "--credentials",
+                "/tmp/client-secret.json",
+                "--file-output-mode",
+                "standard",
+            ]
+        )
+        self.assertEqual(args.agentic_trace_dir, DEFAULT_TRACE_DIR)
+        self.assertIsNone(args.snapshot_dir)
+
+    def test_parse_args_debug_mode_enables_snapshots(self) -> None:
+        args = parse_args(
+            [
+                "--credentials",
+                "/tmp/client-secret.json",
+                "--file-output-mode",
+                "debug",
+            ]
+        )
+        self.assertEqual(args.agentic_trace_dir, DEFAULT_TRACE_DIR)
+        self.assertEqual(args.snapshot_dir, DEFAULT_SNAPSHOT_DIR)
+
+    def test_resolve_output_dirs_preserves_explicit_paths(self) -> None:
+        args = parse_args(
+            [
+                "--credentials",
+                "/tmp/client-secret.json",
+                "--agentic-trace-dir",
+                "/tmp/traces",
+                "--snapshot-dir",
+                "/tmp/snaps",
+                "--daily-report-dir",
+                "/tmp/daily",
+                "--quotes-dir",
+                "/tmp/quotes",
+            ]
+        )
+        self.assertEqual(args.agentic_trace_dir, Path("/tmp/traces"))
+        self.assertEqual(args.snapshot_dir, Path("/tmp/snaps"))
+        self.assertEqual(args.daily_report_dir, Path("/tmp/daily"))
+        self.assertEqual(args.quotes_dir, Path("/tmp/quotes"))
+
     def test_parse_args_accepts_gmail_date(self) -> None:
         args = parse_args(
             [
@@ -53,6 +122,34 @@ class IncrementalOrbikaQuoteRunnerTests(unittest.TestCase):
             ]
         )
         self.assertEqual(args.gmail_date, date(2026, 6, 14))
+
+    def test_persist_quote_output_to_postgres_skips_without_database_url(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = Path(tmpdir) / "quote.json"
+            path.write_text(json.dumps({"quote_key": "quote-key"}), encoding="utf-8")
+            with patch.dict("os.environ", {}, clear=True):
+                result = persist_quote_output_to_postgres(path)
+
+        self.assertEqual(result["status"], "skipped")
+        self.assertEqual(result["reason"], "missing_database_url")
+
+    def test_format_poll_status_includes_postgres_counts(self) -> None:
+        state = load_state(Path("/tmp/nonexistent-openclaw-state.json"))
+        status = format_poll_status(
+            state,
+            {
+                "messages_seen": 1,
+                "quotes_processed": 1,
+                "quotes_skipped": 0,
+                "quotes_postgres_persisted": 1,
+                "quotes_postgres_updated": 0,
+                "quotes_postgres_failed": 0,
+                "quotes_postgres_skipped": 0,
+            },
+            poll_seconds=0,
+        )
+
+        self.assertIn("postgres persisted=1", status)
 
     def test_load_state_creates_resume_indexes(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -181,6 +278,88 @@ class IncrementalOrbikaQuoteRunnerTests(unittest.TestCase):
         self.assertEqual(payload["orbika"]["parts"][0]["reference"], "664003W001")
         self.assertEqual(payload["orbika"]["parts"][0]["quantity"], 1)
         self.assertNotIn("provider_snapshot_dates", payload["supplier_matching"])
+
+    def test_add_agentic_review_to_quote_payload_returns_review_and_trace(self) -> None:
+        message = ExtractedMessage(
+            message_id="<message-1>",
+            gmail_id="gmail-1",
+            internal_date_ms="1798747200000",
+            sender="Orbika <cotizacionesorbika@subocol.com>",
+            subject="Quote",
+            received_at="2026-12-31T12:00:00+00:00",
+            quote_url="https://quotes.example.invalid/1",
+            quote_urls=["https://quotes.example.invalid/1"],
+            audit_excerpt="",
+            extraction_status="extracted",
+        )
+        quote = ExtractedQuote(
+            quote_url="https://quotes.example.invalid/1",
+            load_status="loaded",
+            retries_used=0,
+            aviso_id="428482",
+            fecha_aviso=None,
+            marca="KIA",
+            linea="SPORTAGE",
+            version="VIBRANT",
+            ano=None,
+            placa=None,
+            vin=None,
+            taller_entrega=None,
+            nombre_comercial=None,
+            nit=None,
+            ciudad=None,
+            direccion=None,
+            telefono=None,
+            email=None,
+            repuestos_count=0,
+            total_cotizacion=None,
+            repuestos_cotizados=None,
+            parts=[],
+        )
+        payload = build_quote_output_payload(
+            key="quote-key",
+            message_record=message,
+            quote_url=message.quote_url or "",
+            quote_record=quote,
+            supplier_matching={
+                "generated_at": "2026-06-18T00:00:00+00:00",
+                "parts": [
+                    {
+                        "part_name": "Protector motor",
+                        "requested_reference": None,
+                        "matches": [
+                            {
+                                "provider_id": "partcar",
+                                "provider_name": "Partcar",
+                                "score_percent": 80,
+                                "match_type": "vehicle_compatible",
+                                "product_name": "Protector Motor Inferior Para Kia Sportage",
+                                "detail_url": "https://example.invalid/kia-sportage",
+                                "brand": "KIA",
+                                "category_name": "Carroceria",
+                                "subcategory_name": None,
+                                "reference": None,
+                                "sku": None,
+                                "reasons": [],
+                            }
+                        ],
+                    }
+                ],
+            },
+        )
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            agentic_matching, trace_path = add_agentic_review_to_quote_payload(
+                payload,
+                trace_dir=Path(tmpdir),
+                limit_per_part=3,
+                model_name=None,
+            )
+            self.assertIsNotNone(trace_path)
+            self.assertTrue(trace_path.exists())
+
+        self.assertIsNotNone(agentic_matching)
+        self.assertEqual(agentic_matching["summary"]["parts_reviewed"], 1)
 
     def test_reconcile_state_refreshes_cursor_and_clears_stale_current(self) -> None:
         state = {

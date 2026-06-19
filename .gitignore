@@ -29,6 +29,8 @@ pnpm-debug.log*
 
 # Local generated application data
 local/
+.tmp/
+.tmp_*.sh
 
 # Provider/generated snapshots
 supplier_catalog/providers/*/snapshots/
