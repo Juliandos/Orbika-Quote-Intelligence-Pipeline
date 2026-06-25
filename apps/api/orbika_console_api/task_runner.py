@@ -1,7 +1,9 @@
+# Agrega comentarios de funcionalidad a todas las funciones
 from __future__ import annotations
 
 import os
 import subprocess
+import sys
 import threading
 import time
 import uuid
@@ -11,6 +13,7 @@ from typing import Any
 
 from .config import (
     AGENTIC_TRACES_DIR,
+    API_STORE,
     DAILY_DIR,
     DEFAULT_GMAIL_CREDENTIALS,
     DEFAULT_GMAIL_TOKEN_CACHE,
@@ -23,7 +26,12 @@ from .config import (
 from .events import EventBus
 from .quote_store import build_dashboard, list_quotes, load_state
 
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
+from tools.postgres_quote_persistence import database_url_from_env, persist_quote_files
+
+# TaskRecord es una clase de datos que representa la información relacionada con una tarea en ejecución. Contiene campos como id, tipo de tarea, comando ejecutado, timestamps de creación, inicio y finalización, estado actual, PID del proceso asociado, ruta del archivo de log, clave de singleton para tareas exclusivas y metadatos adicionales. Esta clase se utiliza para almacenar y gestionar el estado de las tareas que se ejecutan a través del TaskManager.
 @dataclass
 class TaskRecord:
     id: str
@@ -39,20 +47,25 @@ class TaskRecord:
     singleton_key: str | None = None
     meta: dict[str, Any] = field(default_factory=dict)
 
-
+# TaskManager es una clase que gestiona la ejecución de tareas en segundo plano, como el procesamiento de cotizaciones o la revisión agentica. Permite iniciar, monitorear y detener tareas, así como publicar eventos relacionados con el estado de las tareas y las cotizaciones. Utiliza hilos para manejar la ejecución de tareas y la supervisión de cambios en las cotizaciones.
 class TaskManager:
     def __init__(self, event_bus: EventBus) -> None:
         self._event_bus = event_bus
         self._lock = threading.Lock()
         self._tasks: dict[str, TaskRecord] = {}
         self._processes: dict[str, subprocess.Popen[str]] = {}
+        self._quote_mtimes: dict[str, float] = {
+            str(path): path.stat().st_mtime for path in QUOTES_DIR.glob("*.json")
+        }
         self._watcher_thread = threading.Thread(target=self._watch_quotes_loop, daemon=True)
         self._watcher_thread.start()
 
+    # tasks es un método que devuelve una lista de diccionarios que representan las tareas actualmente gestionadas por el TaskManager. Cada diccionario contiene la información de una tarea, como su id, tipo, comando, estado, timestamps, etc. Las tareas se ordenan por fecha de creación en orden descendente (las más recientes primero). Este método se utiliza para obtener una visión general del estado de las tareas en ejecución.
     def tasks(self) -> list[dict[str, Any]]:
         with self._lock:
             return [asdict(task) for task in sorted(self._tasks.values(), key=lambda item: item.created_at, reverse=True)]
 
+    # active_task es un método que busca una tarea activa (con estado "starting" o "running") que tenga una clave de singleton específica. Si encuentra una tarea que coincide con la clave de singleton y está en estado activo, devuelve esa tarea como un objeto TaskRecord. Si no encuentra ninguna tarea activa con esa clave, devuelve None. Este método se utiliza para garantizar que solo haya una instancia activa de ciertas tareas exclusivas (singleton) en ejecución al mismo tiempo.
     def active_task(self, singleton_key: str) -> TaskRecord | None:
         with self._lock:
             for task in self._tasks.values():
@@ -60,6 +73,7 @@ class TaskManager:
                     return task
         return None
 
+    # start_incremental_runner es un método que inicia una tarea de ejecución incremental para procesar cotizaciones de manera continua. Acepta varios parámetros de configuración, como el intervalo de sondeo, el número máximo de resultados a procesar, el tiempo de espera, el número máximo de reintentos, si la ejecución debe ser con interfaz gráfica (headed), una fecha específica para filtrar correos electrónicos en Gmail y si se permite una caída a un modo de inicio de sesión alternativo. El método construye el comando para ejecutar la tarea, verifica si ya hay una tarea activa del mismo tipo (singleton) y, si no la hay, inicia la tarea utilizando el método _start_task y devuelve la información de la tarea iniciada.
     def start_incremental_runner(
         self,
         *,
@@ -80,6 +94,8 @@ class TaskManager:
             "google-auth-oauthlib",
             "--with",
             "playwright",
+            "--with",
+            "psycopg[binary]",
             "python",
             "tools/incremental_orbika_quote_runner.py",
             "--credentials",
@@ -115,6 +131,7 @@ class TaskManager:
             },
         )
 
+    # stop_task es un método que intenta detener una tarea en ejecución dado su ID. Busca el proceso asociado a la tarea y, si la tarea está en estado "starting" o "running", envía una señal de terminación al proceso. Luego, publica un evento indicando que se ha solicitado la terminación de la tarea. Si la tarea no se encuentra o no está en un estado activo, devuelve False. Si la solicitud de terminación se realiza correctamente, devuelve True.
     def stop_task(self, task_id: str) -> bool:
         with self._lock:
             process = self._processes.get(task_id)
@@ -128,6 +145,7 @@ class TaskManager:
         )
         return True
 
+    # run_supplier_matching es un método que inicia una tarea de coincidencia de proveedores para procesar cotizaciones. Acepta un parámetro de configuración que especifica el número máximo de coincidencias por parte. El método construye el comando para ejecutar la tarea, verifica si ya hay una tarea activa del mismo tipo (singleton) y, si no la hay, inicia la tarea utilizando el método _start_task y devuelve la información de la tarea iniciada.
     def run_supplier_matching(self, limit_per_part: int = 5) -> dict[str, Any]:
         command = self._supplier_matching_command(limit_per_part=limit_per_part, quote_keys=None)
         return self._start_task(
@@ -137,6 +155,7 @@ class TaskManager:
             meta={"limit_per_part": limit_per_part},
         )
 
+    # run_supplier_matching_selection es un método que inicia una tarea de coincidencia de proveedores para un conjunto específico de cotizaciones. Acepta una lista de claves de cotización y un parámetro de configuración que especifica el número máximo de coincidencias por parte. El método construye el comando para ejecutar la tarea, verifica si ya hay una tarea activa del mismo tipo (singleton) y, si no la hay, inicia la tarea utilizando el método _start_task y devuelve la información de la tarea iniciada.
     def run_supplier_matching_selection(
         self,
         *,
@@ -151,6 +170,7 @@ class TaskManager:
             meta={"limit_per_part": limit_per_part, "quote_keys": quote_keys},
         )
 
+    # run_agentic_review es un método que inicia una tarea de revisión agentica para procesar cotizaciones. Acepta varios parámetros de configuración, como el número máximo de coincidencias por parte, el modelo a utilizar para la revisión, si se deben deshabilitar los rastros (traces) y una lista opcional de claves de cotización para limitar la revisión a un subconjunto específico. El método construye el comando para ejecutar la tarea, verifica si ya hay una tarea activa del mismo tipo (singleton) y, si no la hay, inicia la tarea utilizando el método _start_task y devuelve la información de la tarea iniciada.
     def run_agentic_review(
         self,
         *,
@@ -171,6 +191,7 @@ class TaskManager:
             meta={"limit_per_part": limit_per_part, "model": model, "disable_traces": disable_traces},
         )
 
+    # run_agentic_review_selection es un método que inicia una tarea de revisión agentica para un conjunto específico de cotizaciones. Acepta una lista de claves de cotización y varios parámetros de configuración, como el número máximo de coincidencias por parte, el modelo a utilizar para la revisión y si se deben deshabilitar los rastros (traces). El método construye el comando para ejecutar la tarea, verifica si ya hay una tarea activa del mismo tipo (singleton) y, si no la hay, inicia la tarea utilizando el método _start_task y devuelve la información de la tarea iniciada.
     def run_agentic_review_selection(
         self,
         *,
@@ -197,6 +218,7 @@ class TaskManager:
             },
         )
 
+    # _supplier_matching_command es un método que construye el comando de línea de comandos para ejecutar una tarea de coincidencia de proveedores. Acepta un parámetro de configuración que especifica el número máximo de coincidencias por parte y una lista opcional de claves de cotización para limitar la coincidencia a un subconjunto específico. El método devuelve una lista de cadenas que representan el comando a ejecutar, incluyendo los argumentos necesarios según si se proporcionan claves de cotización o no.
     def _supplier_matching_command(
         self,
         *,
@@ -234,6 +256,7 @@ class TaskManager:
             str(limit_per_part),
         ]
 
+    # _agentic_review_command es un método que construye el comando de línea de comandos para ejecutar una tarea de revisión agentica. Acepta varios parámetros de configuración, como el número máximo de coincidencias por parte, el modelo a utilizar para la revisión, si se deben deshabilitar los rastros (traces) y una lista opcional de claves de cotización para limitar la revisión a un subconjunto específico. El método devuelve una lista de cadenas que representan el comando a ejecutar, incluyendo los argumentos necesarios según los parámetros proporcionados.
     def _agentic_review_command(
         self,
         *,
@@ -280,6 +303,7 @@ class TaskManager:
             command.extend(["--trace-dir", str(AGENTIC_TRACES_DIR)])
         return command
 
+    # _start_task es un método que inicia una tarea de ejecución dado su tipo, comando, clave de singleton y metadatos. Verifica si ya existe una tarea activa con la misma clave de singleton (si se proporciona) y, si no la hay, crea un nuevo registro de tarea, inicia el proceso asociado al comando, actualiza el estado de la tarea y publica un evento indicando que la tarea ha comenzado. También inicia hilos para manejar la transmisión de salida del proceso y esperar su finalización.
     def _start_task(
         self,
         *,
@@ -333,6 +357,7 @@ class TaskManager:
         ).start()
         return asdict(task)
 
+    # _stream_output es un método que se ejecuta en un hilo separado para manejar la transmisión de salida de un proceso asociado a una tarea. Lee las líneas de salida del proceso, las escribe en un archivo de log y publica eventos con cada línea de salida para que puedan ser consumidos por otros componentes del sistema (por ejemplo, para mostrar en una interfaz de usuario en tiempo real).
     def _stream_output(self, task_id: str, process: subprocess.Popen[str], log_path: Path) -> None:
         assert process.stdout is not None
         with log_path.open("a", encoding="utf-8") as handle:
@@ -344,6 +369,7 @@ class TaskManager:
                     {"task_id": task_id, "line": rendered},
                 )
 
+    # _wait_for_completion es un método que se ejecuta en un hilo separado para esperar la finalización de un proceso asociado a una tarea. Cuando el proceso termina, actualiza el estado de la tarea con el código de salida, marca la tarea como completada o fallida según el resultado, elimina el proceso de la lista de procesos activos y publica un evento indicando que la tarea ha finalizado.
     def _wait_for_completion(self, task_id: str, process: subprocess.Popen[str]) -> None:
         exit_code = process.wait()
         with self._lock:
@@ -357,11 +383,45 @@ class TaskManager:
             {"task": asdict(task), "dashboard": build_dashboard(), "tasks": self.tasks()},
         )
 
+    #  _watch_quotes_loop es un método que se ejecuta en un hilo separado para monitorear continuamente el directorio de cotizaciones en busca de cambios. Mantiene un conjunto de claves de cotización conocidas y una marca de tiempo del último estado cargado. En un bucle infinito, verifica si hay nuevas cotizaciones o cambios en el estado, y si los encuentra, publica eventos correspondientes para notificar a otros componentes del sistema sobre las actualizaciones.
+    def _sync_changed_quotes_to_postgres(self, changed_paths: list[Path], reason: str) -> None:
+        if API_STORE != "postgres" or not changed_paths:
+            return
+        database_url = database_url_from_env()
+        if not database_url:
+            self._event_bus.publish(
+                "watcher.error",
+                {"message": f"Postgres sync skipped ({reason}): DATABASE_URL is not configured in the backend environment."},
+            )
+            return
+        counters = persist_quote_files(changed_paths, database_url=database_url, dry_run=False)
+        if counters.failed:
+            raise RuntimeError(
+                f"Postgres sync failed after {reason}: imported={counters.imported} updated={counters.updated} failed={counters.failed}"
+            )
+        self._event_bus.publish(
+            "task.log",
+            {
+                "task_id": "postgres-sync",
+                "line": (
+                    f"Postgres sync ({reason}): imported={counters.imported} updated={counters.updated} "
+                    f"skipped={counters.skipped} files={len(changed_paths)}"
+                ),
+            },
+        )
+
     def _watch_quotes_loop(self) -> None:
         last_quote_keys = {item["quote_key"] for item in list_quotes()}
         last_state_updated = load_state().get("updated_at")
         while True:
             try:
+                quote_paths = sorted(QUOTES_DIR.glob("*.json"))
+                current_mtimes = {str(path): path.stat().st_mtime for path in quote_paths}
+                changed_paths = [Path(path) for path, mtime in current_mtimes.items() if self._quote_mtimes.get(path) != mtime]
+                if changed_paths:
+                    self._sync_changed_quotes_to_postgres(changed_paths, reason="quote file update")
+                    self._quote_mtimes = current_mtimes
+
                 quotes = list_quotes()
                 current_keys = {item["quote_key"] for item in quotes}
                 new_keys = sorted(current_keys - last_quote_keys)
@@ -370,6 +430,9 @@ class TaskManager:
                         quote = next((item for item in quotes if item["quote_key"] == key), None)
                         if quote:
                             self._event_bus.publish("quote.new", {"quote": quote})
+                    self._event_bus.publish("dashboard.updated", build_dashboard())
+                    last_quote_keys = current_keys
+                elif changed_paths:
                     self._event_bus.publish("dashboard.updated", build_dashboard())
                     last_quote_keys = current_keys
 

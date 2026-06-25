@@ -1,5 +1,6 @@
 FROM python:3.12-slim
 
+# Set environment variables to prevent Python from writing .pyc files and to ensure that output is not buffered
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 

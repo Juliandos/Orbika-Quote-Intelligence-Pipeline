@@ -15,6 +15,8 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
+from tools.customer_preference_store import load_customer_preferences_for_quote
+
 
 DEFAULT_PROVIDERS_ROOT = Path("supplier_catalog/providers")
 DEFAULT_QUOTES_DIR = Path("local/orbika_incremental/quotes")
@@ -45,7 +47,7 @@ GENERIC_VEHICLE_TOKENS = {
     "aa",
     "ab",
     "abs",
-    "año",
+    "aÃƒÂ±o",
     "ano",
     "at",
     "ct",
@@ -79,6 +81,52 @@ GENERIC_PART_DESCRIPTOR_TOKENS = {
     "superior",
     "trasera",
     "trasero",
+}
+
+YEAR_RANGE_PATTERN = re.compile(r"(?<!\d)(20\d{2})\s*[-/]\s*(20\d{2})(?!\d)")
+YEAR_PATTERN = re.compile(r"(?<!\d)(20\d{2})(?!\d)")
+
+SIDE_TOKEN_GROUPS: dict[str, frozenset[str]] = {
+    "left": frozenset({"izquierda", "izquierdo", "left", "lh"}),
+    "right": frozenset({"derecha", "derecho", "right", "rh"}),
+}
+
+POSITION_TOKEN_GROUPS: dict[str, frozenset[str]] = {
+    "front": frozenset({"delantera", "delantero", "front", "frontal"}),
+    "rear": frozenset({"trasera", "trasero", "rear", "posterior"}),
+    "inner": frozenset({"interior", "inside", "inner"}),
+    "outer": frozenset({"exterior", "outside", "outer"}),
+    "upper": frozenset({"superior", "upper"}),
+    "lower": frozenset({"inferior", "lower"}),
+}
+
+PRESENTATION_TOKEN_GROUPS: dict[str, frozenset[str]] = {
+    "kit": frozenset({"kit", "juego", "set", "combo"}),
+    "unit": frozenset({"unidad", "unitario", "unit", "individual"}),
+}
+
+COLOR_TOKEN_GROUPS: dict[str, frozenset[str]] = {
+    "black": frozenset({"negro", "negra", "black"}),
+    "white": frozenset({"blanco", "blanca", "white"}),
+    "red": frozenset({"rojo", "roja", "red"}),
+    "blue": frozenset({"azul", "blue"}),
+    "gray": frozenset({"gris", "grisaceo", "silver", "plata", "gray", "grey"}),
+    "green": frozenset({"verde", "green"}),
+}
+
+FINISH_TOKEN_GROUPS: dict[str, frozenset[str]] = {
+    "chrome": frozenset({"cromado", "chrome"}),
+    "matte": frozenset({"mate", "matte"}),
+    "painted": frozenset({"pintado", "pintada", "painted", "imprimado", "primer"}),
+    "textured": frozenset({"texturizado", "texturizada", "textured"}),
+    "gloss": frozenset({"brillante", "brilloso", "gloss"}),
+}
+
+HARD_CONFLICT_RISK_FLAGS = frozenset({"side_mismatch", "position_mismatch", "presentation_mismatch"})
+SOFT_WARNING_SCORE_CAPS: dict[str, int] = {
+    "year_mismatch": 45,
+    "color_mismatch": 60,
+    "finish_mismatch": 58,
 }
 
 KNOWN_VEHICLE_BRANDS = frozenset(
@@ -365,6 +413,12 @@ def compact_match_entry_for_storage(entry: dict[str, Any]) -> dict[str, Any]:
             "brand": entry.get("brand"),
             "category_name": entry.get("category_name"),
             "subcategory_name": entry.get("subcategory_name"),
+            "risk_flags": entry.get("risk_flags"),
+            "compatibility_warnings": entry.get("compatibility_warnings"),
+            "preference_notes": entry.get("preference_notes"),
+            "compatibility_state": entry.get("compatibility_state"),
+            "compatibility_summary": entry.get("compatibility_summary"),
+            "operational_note": entry.get("operational_note"),
         }
     )
     return compacted if isinstance(compacted, dict) else {}
@@ -409,6 +463,7 @@ def compact_supplier_matching_for_storage(report: dict[str, Any]) -> dict[str, A
                 compact_provider_spec_for_storage(spec)
                 for spec in report.get("provider_specs", [])
             ],
+            "preferences": report.get("preferences"),
             "parts": [
                 compact_supplier_match_part_for_storage(part)
                 for part in report.get("parts", [])
@@ -482,6 +537,11 @@ def compact_agentic_match_for_storage(entry: dict[str, Any]) -> dict[str, Any]:
             "reference": entry.get("reference"),
             "brand": entry.get("brand"),
             "category_name": entry.get("category_name"),
+            "compatibility_state": entry.get("compatibility_state"),
+            "compatibility_summary": entry.get("compatibility_summary"),
+            "compatibility_warnings": entry.get("compatibility_warnings"),
+            "preference_notes": entry.get("preference_notes"),
+            "risk_flags": entry.get("risk_flags"),
             "agentic_comment": entry.get("agentic_comment"),
         }
     )
@@ -506,6 +566,9 @@ def compact_agentic_part_for_storage(part: dict[str, Any]) -> dict[str, Any]:
             "requested_reference": part.get("requested_reference"),
             "top_provider_id": part.get("top_provider_id"),
             "top_score_percent": part.get("top_score_percent"),
+            "review_status": part.get("review_status"),
+            "risk_notes": part.get("risk_notes"),
+            "preference_notes": part.get("preference_notes"),
             "selected_matches": [
                 compact_agentic_match_for_storage(match)
                 for match in part.get("selected_matches", [])
@@ -819,6 +882,130 @@ def vehicle_compatibility(
         },
         reasons,
     )
+
+
+
+def _extract_years(*values: Any) -> set[int]:
+    years: set[int] = set()
+    haystack = " ".join(str(value or "") for value in values)
+    for start_text, end_text in YEAR_RANGE_PATTERN.findall(haystack):
+        start = int(start_text)
+        end = int(end_text)
+        if end < start:
+            start, end = end, start
+        if end - start <= 15:
+            years.update(range(start, end + 1))
+    for year_text in YEAR_PATTERN.findall(haystack):
+        years.add(int(year_text))
+    return years
+
+
+def _detect_token_group(text: str, groups: dict[str, frozenset[str]]) -> str | None:
+    normalized = normalize_text(text)
+    token_values = token_set(normalized)
+    for label, group_tokens in groups.items():
+        if token_values & group_tokens:
+            return label
+    return None
+
+
+def compatibility_warnings(
+    part_name: str,
+    quote_context: dict[str, Any],
+    item: ProviderItem,
+    preferences: dict[str, Any],
+) -> tuple[list[str], list[str]]:
+    risk_flags: list[str] = []
+    notes: list[str] = []
+    item_text = " ".join(
+        str(value or "")
+        for value in (
+            item.title,
+            item.category_name,
+            item.subcategory_name,
+            item.reference,
+            item.sku,
+            item.supplier_item_code,
+        )
+    )
+
+    requested_side = _detect_token_group(part_name, SIDE_TOKEN_GROUPS)
+    candidate_side = _detect_token_group(item_text, SIDE_TOKEN_GROUPS)
+    if requested_side and candidate_side and requested_side != candidate_side:
+        risk_flags.append("side_mismatch")
+        notes.append("lado distinto al solicitado")
+
+    requested_position = _detect_token_group(part_name, POSITION_TOKEN_GROUPS)
+    candidate_position = _detect_token_group(item_text, POSITION_TOKEN_GROUPS)
+    if requested_position and candidate_position and requested_position != candidate_position:
+        risk_flags.append("position_mismatch")
+        notes.append("posicion distinta en el vehiculo")
+
+    requested_presentation = _detect_token_group(part_name, PRESENTATION_TOKEN_GROUPS)
+    candidate_presentation = _detect_token_group(item_text, PRESENTATION_TOKEN_GROUPS)
+    if requested_presentation and candidate_presentation and requested_presentation != candidate_presentation:
+        risk_flags.append("presentation_mismatch")
+        notes.append("presentacion distinta entre kit y unidad")
+
+    requested_color = _detect_token_group(part_name, COLOR_TOKEN_GROUPS)
+    candidate_color = _detect_token_group(item_text, COLOR_TOKEN_GROUPS)
+    if requested_color and candidate_color and requested_color != candidate_color:
+        risk_flags.append("color_mismatch")
+        notes.append("color visible distinto al solicitado")
+
+    requested_finish = _detect_token_group(part_name, FINISH_TOKEN_GROUPS)
+    candidate_finish = _detect_token_group(item_text, FINISH_TOKEN_GROUPS)
+    if requested_finish and candidate_finish and requested_finish != candidate_finish:
+        risk_flags.append("finish_mismatch")
+        notes.append("acabado visible distinto al solicitado")
+
+    quote_year = None
+    try:
+        quote_year = int(str(quote_context.get("ano") or "").strip())
+    except ValueError:
+        quote_year = None
+
+    candidate_years = _extract_years(item_text)
+    year_tolerance = int(preferences.get("year_tolerance") or 0)
+    if quote_year and candidate_years:
+        if not any(abs(year - quote_year) <= year_tolerance for year in candidate_years):
+            risk_flags.append("year_mismatch")
+            if len(candidate_years) <= 4:
+                sorted_years = sorted(candidate_years)
+                if len(sorted_years) > 1:
+                    notes.append(f"ano fuera del rango visible {sorted_years[0]}-{sorted_years[-1]}")
+                else:
+                    notes.append(f"ano visible {sorted_years[0]} no coincide")
+            else:
+                notes.append("ano visible no coincide")
+
+    return list(dict.fromkeys(risk_flags)), list(dict.fromkeys(notes))
+
+
+def apply_preference_adjustments(
+    item: ProviderItem,
+    score: int,
+    preferences: dict[str, Any],
+) -> tuple[int, list[str]]:
+    notes: list[str] = []
+    adjusted = score
+    provider_id = normalize_text(item.provider_id)
+    item_brand = normalize_text(item.brand)
+
+    if provider_id and provider_id in set(preferences.get("preferred_providers") or []):
+        adjusted += 8
+        notes.append(f"prioriza {provider_id} por preferencia del taller")
+    if provider_id and provider_id in set(preferences.get("avoided_providers") or []):
+        adjusted -= 20
+        notes.append(f"penaliza {provider_id} por preferencia del taller")
+    if item_brand and item_brand in set(preferences.get("preferred_brands") or []):
+        adjusted += 5
+        notes.append(f"marca {item.brand} preferida para este taller")
+    if item_brand and item_brand in set(preferences.get("avoided_brands") or []):
+        adjusted -= 12
+        notes.append(f"marca {item.brand} marcada para evitar")
+
+    return max(0, min(int(adjusted), 100)), notes
 
 
 def infer_taxonomies(*values: str | None) -> tuple[str, ...]:
@@ -1250,11 +1437,14 @@ def score_item(
     part_name: str,
     requested_reference: str | None,
     part_tokens: frozenset[str],
+    quote_context: dict[str, Any],
     quote_vehicle: VehicleProfile,
     requested_taxonomies: tuple[str, ...],
     item: ProviderItem,
-) -> tuple[int, list[str], str]:
+    preferences: dict[str, Any],
+) -> tuple[int, list[str], str, list[str], list[str]]:
     reasons: list[str] = []
+    preference_notes: list[str] = []
     exact_reference_hit = False
     normalized_item_refs = {
         value
@@ -1281,6 +1471,12 @@ def score_item(
     vehicle_overlap = len(vehicle_tokens & item.searchable_tokens)
     title_similarity = SequenceMatcher(None, normalize_text(part_name), normalize_text(item.title)).ratio()
     compatibility, compatibility_reasons = vehicle_compatibility(quote_vehicle, item)
+    risk_flags, compatibility_notes = compatibility_warnings(
+        part_name,
+        quote_context,
+        item,
+        preferences,
+    )
     reasons.extend(compatibility_reasons)
 
     score = 0
@@ -1293,7 +1489,7 @@ def score_item(
         reasons.append(f"Reference token was found in provider text: {requested_reference}")
     else:
         if not compatibility["compatible"]:
-            return 0, reasons, "manual_confirmation_required"
+            return 0, reasons, "manual_confirmation_required", risk_flags, preference_notes
         if (
             query_signal
             and item_signal
@@ -1302,11 +1498,11 @@ def score_item(
             reasons.append(
                 f"Candidate part type ({item_signal}) does not match the requested part type ({query_signal})."
             )
-            return 0, reasons, "manual_confirmation_required"
+            return 0, reasons, "manual_confirmation_required", risk_flags, preference_notes
         signal_points = part_signal_points(query_signal, item_signal)
         if part_tokens and not part_overlap_tokens and item.provider_type != "category_only" and signal_points <= 0:
             reasons.append("Candidate does not share any relevant part-name tokens.")
-            return 0, reasons, "manual_confirmation_required"
+            return 0, reasons, "manual_confirmation_required", risk_flags, preference_notes
         if taxonomy_overlap:
             score += 30
             reasons.append("Taxonomy/family looks compatible.")
@@ -1362,6 +1558,19 @@ def score_item(
                 "Vehicle-scoped candidate keeps only a partial score because the requested version is missing."
             )
 
+    if any(flag in HARD_CONFLICT_RISK_FLAGS for flag in risk_flags):
+        reasons.extend(f"Compatibility warning: {note}." for note in compatibility_notes)
+        return 0, reasons, "manual_confirmation_required", risk_flags, preference_notes
+    for flag, cap in SOFT_WARNING_SCORE_CAPS.items():
+        if flag in risk_flags:
+            reasons.extend(f"Compatibility warning: {note}." for note in compatibility_notes)
+            score = min(score, cap)
+
+    score, preference_notes = apply_preference_adjustments(item, score, preferences)
+    if preferences.get("prefer_exact_reference") and requested_reference and not exact_reference_hit:
+        score = min(score, 72)
+        preference_notes.append("se prioriza referencia exacta cuando exista")
+
     if item.provider_id in {"impocali", "disfal"}:
         score = min(score, 55 if taxonomy_overlap else 25)
     elif item.provider_id == "partcar":
@@ -1370,7 +1579,7 @@ def score_item(
         score = min(score, 88)
 
     if score < 20:
-        return 0, reasons, "manual_confirmation_required"
+        return 0, reasons, "manual_confirmation_required", risk_flags, preference_notes
 
     match_type = infer_match_type(
         requested_reference=requested_reference,
@@ -1382,7 +1591,7 @@ def score_item(
         brand_overlap=compatibility["brand_overlap"],
         line_overlap=compatibility["line_overlap"],
     )
-    return max(0, min(score, 100)), reasons, match_type
+    return max(0, min(score, 100)), reasons, match_type, risk_flags, preference_notes
 
 
 def summarize_match(item: ProviderItem, score: int, match_type: str) -> str:
@@ -1403,13 +1612,50 @@ def summarize_match(item: ProviderItem, score: int, match_type: str) -> str:
     return f"{item.provider_name} ofrece una coincidencia parcial por nombre/categoria ({score}%)."
 
 
+def compatibility_state_for_match(entry: dict[str, Any]) -> str:
+    risk_flags = set(entry.get("risk_flags") or [])
+    if risk_flags & HARD_CONFLICT_RISK_FLAGS:
+        return "incompatible"
+    if risk_flags:
+        return "warning"
+    if entry.get("provider_id") in {"impocali", "disfal"}:
+        return "insufficient_information"
+    if entry.get("requires_manual_confirmation"):
+        return "insufficient_information"
+    return "compatible"
+
+
+def compatibility_summary_for_match(entry: dict[str, Any]) -> str:
+    warnings = list(entry.get("compatibility_warnings") or [])
+    if warnings:
+        return warnings[0]
+    preference_notes = list(entry.get("preference_notes") or [])
+    if entry.get("match_type") == "exact_reference":
+        return "referencia exacta visible"
+    if entry.get("provider_id") in {"impocali", "disfal"}:
+        return "coincidencia por familia o categoria; validar manualmente"
+    if preference_notes:
+        return preference_notes[0]
+    if entry.get("requires_manual_confirmation"):
+        return "informacion insuficiente; requiere validacion manual"
+    if entry.get("match_type") == "vehicle_compatible":
+        return "compatible por vehiculo y tipo de repuesto"
+    return "coincidencia parcial sin alertas visibles"
+
+
 def build_match_entry(
     item: ProviderItem,
     score: int,
     match_type: str,
     reasons: list[str],
+    risk_flags: list[str],
+    preference_notes: list[str],
 ) -> dict[str, Any]:
-    return {
+    compatibility_warnings = [
+        flag.replace("_", " ")
+        for flag in risk_flags
+    ]
+    entry = {
         "provider_id": item.provider_id,
         "provider_name": item.provider_name,
         "score_percent": score,
@@ -1427,7 +1673,14 @@ def build_match_entry(
         "summary": summarize_match(item, score, match_type),
         "notes": list(item.notes),
         "reasons": reasons,
+        "risk_flags": risk_flags,
+        "compatibility_warnings": compatibility_warnings,
+        "preference_notes": preference_notes,
     }
+    entry["compatibility_state"] = compatibility_state_for_match(entry)
+    entry["compatibility_summary"] = compatibility_summary_for_match(entry)
+    entry["operational_note"] = entry["compatibility_summary"] or summarize_match(item, score, match_type)
+    return entry
 
 
 def dedupe_match_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -1452,6 +1705,7 @@ def match_quote_part(
     part: dict[str, Any],
     quote_context: dict[str, Any],
     index: CatalogIndex,
+    preferences: dict[str, Any],
     limit: int = 5,
 ) -> dict[str, Any]:
     part_name = str(part.get("name") or "").strip()
@@ -1474,17 +1728,21 @@ def match_quote_part(
     scored_matches: list[dict[str, Any]] = []
     for candidate_id in candidate_ids:
         item = index.items[candidate_id]
-        score, reasons, match_type = score_item(
+        score, reasons, match_type, risk_flags, preference_notes = score_item(
             part_name=part_name,
             requested_reference=requested_reference,
             part_tokens=part_tokens,
+            quote_context=quote_context,
             quote_vehicle=quote_vehicle,
             requested_taxonomies=requested_taxonomies,
             item=item,
+            preferences=preferences,
         )
         if score <= 0:
             continue
-        scored_matches.append(build_match_entry(item, score, match_type, reasons))
+        scored_matches.append(
+            build_match_entry(item, score, match_type, reasons, risk_flags, preference_notes)
+        )
 
     scored_matches.sort(
         key=lambda entry: (
@@ -1524,8 +1782,10 @@ def build_quote_match_report(
         "placa": orbika.get("placa"),
         "vin": orbika.get("vin"),
     }
+    preferences = load_customer_preferences_for_quote(quote_payload)
+    effective_limit = min(limit_per_part, int(preferences.get("max_options_per_part") or limit_per_part))
     part_reports = [
-        match_quote_part(part, quote_context, index, limit=limit_per_part)
+        match_quote_part(part, quote_context, index, preferences=preferences, limit=effective_limit)
         for part in orbika.get("parts", [])
     ]
 
@@ -1568,6 +1828,12 @@ def build_quote_match_report(
             "provider_hits": dict(sorted(provider_hits.items())),
         },
         "provider_specs": provider_specs,
+        "preferences": {
+            "applied_scopes": preferences.get("applied_scopes", []),
+            "applied_preferences": preferences.get("applied_preferences", []),
+            "prefer_exact_reference": preferences.get("prefer_exact_reference", False),
+            "year_tolerance": preferences.get("year_tolerance", 0),
+        },
         "parts": part_reports,
     }
 

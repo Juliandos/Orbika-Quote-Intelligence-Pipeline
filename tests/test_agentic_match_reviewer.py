@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from tools.agentic_match_reviewer import (
@@ -57,6 +58,10 @@ class AgenticMatchReviewerTests(unittest.TestCase):
         self.assertEqual(
             enriched["agentic_supplier_matching"]["summary"]["parts_with_agentic_matches"],
             1,
+        )
+        self.assertIn(
+            "revision agentica",
+            enriched["agentic_supplier_matching"]["parts"][0]["summary_comment"].lower(),
         )
 
     def test_agentic_review_collapses_same_provider_alternatives(self) -> None:
@@ -312,3 +317,169 @@ class AgenticMatchReviewerTests(unittest.TestCase):
             self.assertEqual(result["quotes_reviewed"], 1)
             self.assertEqual(len(result["trace_paths"]), 1)
             self.assertTrue((trace_dir / "trace-quote.agentic_trace.json").exists())
+
+    def test_agentic_review_prefers_provider_from_preferences(self) -> None:
+        payload = {
+            "quote_key": "quote-pref",
+            "customer_preferences": [
+                {
+                    "scope": "global",
+                    "preference_type": "preferred_provider",
+                    "value": {"provider_id": "parrales"},
+                }
+            ],
+            "orbika": {
+                "marca": "FORD",
+                "linea": "ECOSPORT",
+                "version": "TREND",
+                "ano": "2022",
+                "parts": [],
+            },
+            "supplier_matching": {
+                "generated_at": "2026-06-11T00:00:00+00:00",
+                "parts": [
+                    {
+                        "part_name": "Liquido refrigerante",
+                        "requested_reference": None,
+                        "matches": [
+                            {
+                                "provider_id": "repuestera",
+                                "provider_name": "Repuestera",
+                                "score_percent": 70,
+                                "match_type": "vehicle_compatible",
+                                "product_name": "LIQUIDO REFRIGERANTE FORD ECOSPORT",
+                                "detail_url": "https://example.invalid/refrig-repuestera",
+                                "brand": "FORD",
+                                "category_name": "Refrigerantes",
+                                "subcategory_name": None,
+                                "reference": None,
+                                "sku": None,
+                                "reasons": [],
+                            },
+                            {
+                                "provider_id": "parrales",
+                                "provider_name": "Parrales",
+                                "score_percent": 68,
+                                "match_type": "vehicle_compatible",
+                                "product_name": "LIQUIDO REFRIGERANTE FORD ECOSPORT",
+                                "detail_url": "https://example.invalid/refrig-parrales",
+                                "brand": "FORD",
+                                "category_name": "Refrigerantes",
+                                "subcategory_name": None,
+                                "reference": None,
+                                "sku": None,
+                                "reasons": [],
+                                "preference_notes": ["prioriza Parrales por preferencia del taller"],
+                            },
+                        ],
+                    }
+                ],
+            },
+        }
+
+        enriched = enrich_quote_payload_with_agentic_review(payload, limit_per_part=3)
+        matches = enriched["agentic_supplier_matching"]["parts"][0]["selected_matches"]
+
+        self.assertEqual(matches[0]["provider_id"], "parrales")
+        self.assertTrue(matches[0].get("preference_notes"))
+
+    def test_agentic_review_surfaces_year_mismatch_comment(self) -> None:
+        payload = {
+            "quote_key": "quote-year",
+            "orbika": {
+                "marca": "FORD",
+                "linea": "ECOSPORT",
+                "version": "TREND",
+                "ano": "2022",
+                "parts": [],
+            },
+            "supplier_matching": {
+                "generated_at": "2026-06-11T00:00:00+00:00",
+                "parts": [
+                    {
+                        "part_name": "Guardabarro derecho",
+                        "requested_reference": None,
+                        "matches": [
+                            {
+                                "provider_id": "partcar",
+                                "provider_name": "Partcar",
+                                "score_percent": 78,
+                                "match_type": "vehicle_compatible",
+                                "product_name": "GUARDABARRO FORD ECOSPORT 2025 DERECHO",
+                                "detail_url": "https://example.invalid/guardabarro-2025",
+                                "brand": "FORD",
+                                "category_name": "Carroceria",
+                                "subcategory_name": None,
+                                "reference": None,
+                                "sku": None,
+                                "reasons": [],
+                                "risk_flags": ["year_mismatch"],
+                                "compatibility_warnings": ["ano visible 2025 no coincide"],
+                            }
+                        ],
+                    }
+                ],
+            },
+        }
+
+        enriched = enrich_quote_payload_with_agentic_review(payload, limit_per_part=3)
+        part = enriched["agentic_supplier_matching"]["parts"][0]
+        match = part["selected_matches"][0]
+
+        self.assertEqual(match["agentic_comment"], "Partcar: revision agentica heuristica; validar ano o modelo.")
+        self.assertIn("ano visible 2025 no coincide", part["risk_notes"])
+
+
+    def test_agentic_review_marks_rag_supported_comments(self) -> None:
+        payload = {
+            "quote_key": "quote-rag",
+            "orbika": {
+                "marca": "FORD",
+                "linea": "ECOSPORT",
+                "version": "TITANIUM",
+                "ano": 2017,
+                "parts": [],
+            },
+            "supplier_matching": {
+                "generated_at": "2026-06-11T00:00:00+00:00",
+                "parts": [
+                    {
+                        "part_name": "Liquido refrigerante galon",
+                        "requested_reference": None,
+                        "matches": [
+                            {
+                                "provider_id": "impocali",
+                                "provider_name": "Impocali",
+                                "score_percent": 55,
+                                "match_type": "manual_confirmation_required",
+                                "product_name": "Refrigerante base agua",
+                                "detail_url": "https://example.invalid/refrigerante",
+                                "brand": None,
+                                "category_name": "Refrigeracion",
+                                "subcategory_name": None,
+                                "reference": None,
+                                "sku": None,
+                                "reasons": [],
+                            }
+                        ],
+                    }
+                ],
+            },
+        }
+
+        with patch(
+            "tools.agentic_match_reviewer.retrieve_candidate_evidence",
+            return_value={
+                "verdict": "vehicle_supported",
+                "summary": "Catalogo tecnico indica aplicacion compatible con Ford Ecosport.",
+                "citations": [{"title": "Catalogo", "page_span": "12"}],
+            },
+        ):
+            enriched = enrich_quote_payload_with_agentic_review(payload, limit_per_part=3)
+
+        part = enriched["agentic_supplier_matching"]["parts"][0]
+        match = part["selected_matches"][0]
+        self.assertEqual(match["explanation_source"], "rag")
+        self.assertIn("rag", match["agentic_comment"].lower())
+        self.assertEqual(match["rag_summary"], "Catalogo tecnico indica aplicacion compatible con Ford Ecosport.")
+        self.assertEqual(part["summary_comment"], match["agentic_comment"])

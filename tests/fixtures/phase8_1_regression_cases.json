@@ -1,0 +1,480 @@
+[
+  {
+    "id": "exact-reference-radiator",
+    "summary": "Referencia exacta debe quedar como mejor candidata.",
+    "owner_expected": "aceptar si el repuesto coincide por referencia exacta y no hay conflicto tecnico visible.",
+    "part": {
+      "name": "Radiador",
+      "reference": "RAD-2022-EX"
+    },
+    "quote_context": {
+      "marca": "FORD",
+      "linea": "ECOSPORT",
+      "version": "TREND",
+      "ano": "2022",
+      "placa": "JHX127"
+    },
+    "item": {
+      "provider_id": "repuestera",
+      "provider_name": "Repuestera",
+      "provider_type": "product_catalog",
+      "title": "RADIADOR FORD ECOSPORT TREND",
+      "category_name": "Refrigeracion",
+      "subcategory_name": null,
+      "brand": "FORD",
+      "reference": "RAD-2022-EX",
+      "sku": null,
+      "supplier_item_code": null,
+      "taxonomy_labels": ["cooling"],
+      "searchable_tokens": ["radiador", "ford", "ecosport", "trend", "rad2022ex"],
+      "raw_match_type": "exact_reference",
+      "requires_manual_confirmation": false
+    },
+    "preferences": {},
+    "expected": {
+      "score_equals": 100,
+      "match_type": "exact_reference"
+    }
+  },
+  {
+    "id": "wrong-side-guardabarro",
+    "summary": "Lado opuesto debe rechazarse aunque el resto del texto parezca correcto.",
+    "owner_expected": "rechazar lado incorrecto sin dejar que preferencias lo rescaten.",
+    "part": {
+      "name": "Guardabarro derecho",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "FORD",
+      "linea": "ECOSPORT",
+      "version": "TREND",
+      "ano": "2022"
+    },
+    "item": {
+      "provider_id": "partcar",
+      "provider_name": "Partcar",
+      "provider_type": "product_catalog_partial",
+      "title": "GUARDABARRO FORD ECOSPORT IZQUIERDO",
+      "category_name": "Carroceria",
+      "subcategory_name": null,
+      "brand": "FORD",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": "GB-LEFT",
+      "taxonomy_labels": ["body_panels"],
+      "searchable_tokens": ["guardabarro", "ford", "ecosport", "izquierdo"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": true
+    },
+    "preferences": {},
+    "expected": {
+      "score_equals": 0,
+      "match_type": "manual_confirmation_required",
+      "risk_flags_contains": ["side_mismatch"]
+    }
+  },
+  {
+    "id": "wrong-position-brazo-limpia-brisas",
+    "summary": "Posicion frontal/trasera contradictoria debe rechazarse.",
+    "owner_expected": "rechazar posicion distinta dentro del vehiculo.",
+    "part": {
+      "name": "Brazo limpia brisas trasero",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "KIA",
+      "linea": "SPORTAGE",
+      "version": "EX",
+      "ano": "2021"
+    },
+    "item": {
+      "provider_id": "partcar",
+      "provider_name": "Partcar",
+      "provider_type": "product_catalog_partial",
+      "title": "BRAZO LIMPIA BRISAS DELANTERO KIA SPORTAGE",
+      "category_name": "Accesorios",
+      "subcategory_name": null,
+      "brand": "KIA",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": "WIPER-FRONT",
+      "taxonomy_labels": ["accessories_misc"],
+      "searchable_tokens": ["brazo", "limpia", "brisas", "delantero", "kia", "sportage"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": true
+    },
+    "preferences": {},
+    "expected": {
+      "score_equals": 0,
+      "match_type": "manual_confirmation_required",
+      "risk_flags_contains": ["position_mismatch"]
+    }
+  },
+  {
+    "id": "year-mismatch-guardabarro",
+    "summary": "Ano visible incompatible debe quedar con advertencia y score capado.",
+    "owner_expected": "dejar opcion visible solo como advertencia, no como match fuerte.",
+    "part": {
+      "name": "Guardabarro derecho",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "FORD",
+      "linea": "ECOSPORT",
+      "version": "TREND",
+      "ano": "2022"
+    },
+    "item": {
+      "provider_id": "partcar",
+      "provider_name": "Partcar",
+      "provider_type": "product_catalog_partial",
+      "title": "GUARDABARRO FORD ECOSPORT 2025 DERECHO",
+      "category_name": "Carroceria",
+      "subcategory_name": null,
+      "brand": "FORD",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": "GB-2025",
+      "taxonomy_labels": ["body_panels"],
+      "searchable_tokens": ["guardabarro", "ford", "ecosport", "2025", "derecho"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": true
+    },
+    "preferences": {},
+    "expected": {
+      "maximum_score": 45,
+      "risk_flags_contains": ["year_mismatch"]
+    }
+  },
+  {
+    "id": "preferred-provider-refrigerante",
+    "summary": "Proveedor preferido debe recibir impulso leve, no una anulacion de reglas duras.",
+    "owner_expected": "preferir proveedor acostumbrado cuando la compatibilidad tecnica sea equivalente.",
+    "part": {
+      "name": "Liquido refrigerante",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "FORD",
+      "linea": "ECOSPORT",
+      "version": "TREND",
+      "ano": "2022"
+    },
+    "item": {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "provider_type": "product_catalog",
+      "title": "LIQUIDO REFRIGERANTE FORD ECOSPORT",
+      "category_name": "Refrigerantes",
+      "subcategory_name": null,
+      "brand": "FORD",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "taxonomy_labels": ["cooling"],
+      "searchable_tokens": ["liquido", "refrigerante", "ford", "ecosport"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": false
+    },
+    "preferences": {
+      "preferred_providers": ["parrales"]
+    },
+    "expected": {
+      "minimum_score": 70,
+      "preference_notes_contains": ["prioriza parrales"]
+    }
+  },
+  {
+    "id": "avoided-provider-penalty",
+    "summary": "Proveedor a evitar debe quedar penalizado, no removido si no hay conflicto duro.",
+    "owner_expected": "bajar prioridad del proveedor observado por el taller.",
+    "part": {
+      "name": "Liquido refrigerante",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "FORD",
+      "linea": "ECOSPORT",
+      "version": "TREND",
+      "ano": "2022"
+    },
+    "item": {
+      "provider_id": "repuestera",
+      "provider_name": "Repuestera",
+      "provider_type": "product_catalog",
+      "title": "LIQUIDO REFRIGERANTE FORD ECOSPORT",
+      "category_name": "Refrigerantes",
+      "subcategory_name": null,
+      "brand": "FORD",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "taxonomy_labels": ["cooling"],
+      "searchable_tokens": ["liquido", "refrigerante", "ford", "ecosport"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": false
+    },
+    "preferences": {
+      "avoided_providers": ["repuestera"]
+    },
+    "expected": {
+      "maximum_score": 68,
+      "preference_notes_contains": ["penaliza repuestera"]
+    }
+  },
+  {
+    "id": "prefer-exact-reference-cap",
+    "summary": "Si el taller prioriza referencia exacta, una opcion no exacta no debe verse demasiado fuerte.",
+    "owner_expected": "mantener alternativa visible pero por debajo de una opcion exacta potencial.",
+    "part": {
+      "name": "Capo",
+      "reference": "664003W001"
+    },
+    "quote_context": {
+      "marca": "KIA",
+      "linea": "SPORTAGE",
+      "version": "EX",
+      "ano": "2021"
+    },
+    "item": {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "provider_type": "product_catalog",
+      "title": "CAPO KIA SPORTAGE",
+      "category_name": "Carroceria",
+      "subcategory_name": null,
+      "brand": "KIA",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "taxonomy_labels": ["body_panels"],
+      "searchable_tokens": ["capo", "kia", "sportage"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": false
+    },
+    "preferences": {
+      "prefer_exact_reference": true
+    },
+    "expected": {
+      "maximum_score": 72,
+      "preference_notes_contains": ["referencia exacta"]
+    }
+  },
+  {
+    "id": "foreign-brand-rejected",
+    "summary": "Marca extranjera explicita debe caer como conflicto duro.",
+    "owner_expected": "rechazar candidato de otra marca cuando el titulo lo diga claro.",
+    "part": {
+      "name": "Espejo derecho",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "MAZDA",
+      "linea": "CX30",
+      "version": "GRAND TOURING",
+      "ano": "2025"
+    },
+    "item": {
+      "provider_id": "partcar",
+      "provider_name": "Partcar",
+      "provider_type": "product_catalog_partial",
+      "title": "ESPEJO DERECHO TOYOTA COROLLA",
+      "category_name": "Espejos",
+      "subcategory_name": null,
+      "brand": "TOYOTA",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": "ESP-TOYOTA",
+      "taxonomy_labels": ["accessories_misc"],
+      "searchable_tokens": ["espejo", "derecho", "toyota", "corolla"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": true
+    },
+    "preferences": {},
+    "expected": {
+      "score_equals": 0,
+      "reason_contains": ["different brand"]
+    }
+  },
+  {
+    "id": "vehicle-scoped-missing-line-cap",
+    "summary": "Si menciona marca pero no la linea solicitada, debe quedarse muy capado.",
+    "owner_expected": "dejar como posibilidad remota, no como recomendacion fuerte.",
+    "part": {
+      "name": "Guardabarro derecho",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "FORD",
+      "linea": "ECOSPORT",
+      "version": "TREND",
+      "ano": "2022"
+    },
+    "item": {
+      "provider_id": "partcar",
+      "provider_name": "Partcar",
+      "provider_type": "product_catalog_partial",
+      "title": "GUARDABARRO FORD DERECHO MODELO",
+      "category_name": "Carroceria",
+      "subcategory_name": null,
+      "brand": "FORD",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": "GB-FORD-GENERIC",
+      "taxonomy_labels": ["body_panels"],
+      "searchable_tokens": ["guardabarro", "ford", "derecho", "modelo"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": true
+    },
+    "preferences": {},
+    "expected": {
+      "maximum_score": 18
+    }
+  },
+  {
+    "id": "vehicle-scoped-missing-version-cap",
+    "summary": "Si marca y linea coinciden pero falta version visible, no debe quedar al nivel de un match fuerte.",
+    "owner_expected": "dejar opcion intermedia con advertencia tecnica.",
+    "part": {
+      "name": "Guardabarro derecho",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "FORD",
+      "linea": "ECOSPORT",
+      "version": "TREND",
+      "ano": "2022"
+    },
+    "item": {
+      "provider_id": "partcar",
+      "provider_name": "Partcar",
+      "provider_type": "product_catalog_partial",
+      "title": "GUARDABARRO FORD ECOSPORT DERECHO",
+      "category_name": "Carroceria",
+      "subcategory_name": null,
+      "brand": "FORD",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": "GB-FORD-ECO",
+      "taxonomy_labels": ["body_panels"],
+      "searchable_tokens": ["guardabarro", "ford", "ecosport", "derecho"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": true
+    },
+    "preferences": {},
+    "expected": {
+      "maximum_score": 68
+    }
+  },
+  {
+    "id": "category-provider-cap",
+    "summary": "Proveedor por familia/categoria no debe verse como certeza.",
+    "owner_expected": "mostrar como orientacion parcial, no como repuesto confirmado.",
+    "part": {
+      "name": "Liquido refrigerante",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "FORD",
+      "linea": "ECOSPORT",
+      "version": "TREND",
+      "ano": "2022"
+    },
+    "item": {
+      "provider_id": "impocali",
+      "provider_name": "Impocali",
+      "provider_type": "category_only",
+      "title": "REFRIGERANTES ORGANICO",
+      "category_name": "Refrigerantes",
+      "subcategory_name": null,
+      "brand": null,
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "taxonomy_labels": ["cooling"],
+      "searchable_tokens": ["refrigerantes", "organico"],
+      "raw_match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    "preferences": {},
+    "expected": {
+      "maximum_score": 55,
+      "match_type": "manual_confirmation_required"
+    }
+  },
+  {
+    "id": "unknown-keeps-unknown",
+    "summary": "Titulo incompleto sin conflicto visible no debe inventar incompatibilidad.",
+    "owner_expected": "dejar como informacion insuficiente o match parcial, no como rechazo inventado.",
+    "part": {
+      "name": "Base antena",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "NISSAN",
+      "linea": "MARCH",
+      "version": "ADVANCE",
+      "ano": "2024"
+    },
+    "item": {
+      "provider_id": "partcar",
+      "provider_name": "Partcar",
+      "provider_type": "product_catalog_partial",
+      "title": "BASE ANTENA",
+      "category_name": "Accesorios",
+      "subcategory_name": null,
+      "brand": null,
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": "ANT-BASE",
+      "taxonomy_labels": ["accessories_misc"],
+      "searchable_tokens": ["base", "antena"],
+      "raw_match_type": "category_only",
+      "requires_manual_confirmation": true
+    },
+    "preferences": {},
+    "expected": {
+      "minimum_score": 20,
+      "risk_flags_empty": true
+    }
+  },
+  {
+    "id": "preference-cannot-override-side-conflict",
+    "summary": "Una preferencia nunca debe revivir un conflicto duro de lado.",
+    "owner_expected": "mantener rechazo tecnico aunque el proveedor sea favorito.",
+    "part": {
+      "name": "Guardabarro derecho",
+      "reference": null
+    },
+    "quote_context": {
+      "marca": "FORD",
+      "linea": "ECOSPORT",
+      "version": "TREND",
+      "ano": "2022"
+    },
+    "item": {
+      "provider_id": "parrales",
+      "provider_name": "Parrales",
+      "provider_type": "product_catalog",
+      "title": "GUARDABARRO FORD ECOSPORT IZQUIERDO",
+      "category_name": "Carroceria",
+      "subcategory_name": null,
+      "brand": "FORD",
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "taxonomy_labels": ["body_panels"],
+      "searchable_tokens": ["guardabarro", "ford", "ecosport", "izquierdo"],
+      "raw_match_type": "vehicle_compatible",
+      "requires_manual_confirmation": false
+    },
+    "preferences": {
+      "preferred_providers": ["parrales"]
+    },
+    "expected": {
+      "score_equals": 0,
+      "risk_flags_contains": ["side_mismatch"],
+      "preference_notes_empty": true
+    }
+  }
+]

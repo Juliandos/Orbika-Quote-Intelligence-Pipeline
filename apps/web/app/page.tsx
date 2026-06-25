@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useDeferredValue, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import {
   BellRing,
   Bot,
@@ -29,6 +30,13 @@ import { DashboardPayload, QuoteSummary, TaskRecord } from "@/components/types";
 type TabKey = "overview" | "parts" | "matches" | "agentic";
 type OverlayKey = "operations" | "pipeline" | "activity" | null;
 type QueueFilter = "all" | "needs_attention" | "with_agentic" | "loaded" | "failed";
+type NoticeTone = "success" | "error" | "info";
+type NoticeItem = {
+  id: number;
+  title: string;
+  message: string;
+  tone: NoticeTone;
+};
 
 const statusTone: Record<string, string> = {
   loaded: "bg-emerald-100 text-emerald-800",
@@ -42,6 +50,81 @@ const statusLabel: Record<string, string> = {
   failed_after_retries: "Fallida",
 };
 
+const compatibilityTone: Record<string, string> = {
+  compatible: "good",
+  warning: "warn",
+  incompatible: "danger",
+  insufficient_information: "accent",
+};
+
+const compatibilityLabel: Record<string, string> = {
+  compatible: "Compatible",
+  warning: "Con advertencia",
+  incompatible: "Incompatible",
+  insufficient_information: "Info insuficiente",
+};
+
+const taskKindLabel: Record<string, string> = {
+  incremental_runner: "Runner incremental",
+  supplier_matching: "Matching de proveedores",
+  supplier_matching_selection: "Matching de selección",
+  agentic_review: "Revisión IA",
+  agentic_review_selection: "Revisión IA de selección",
+};
+
+const taskStatusLabel: Record<string, string> = {
+  queued: "En cola",
+  starting: "Iniciando",
+  running: "En ejecución",
+  finished: "Finalizada",
+  failed: "Fallida",
+  stopped: "Detenida",
+};
+
+function cleanDisplayText(value: unknown) {
+  if (value === null || value === undefined) return "";
+  return String(value).replace(/\u00C2/g, "").normalize("NFC");
+}
+
+function playUiTone(tone: NoticeTone) {
+  try {
+    const context = new window.AudioContext();
+    const oscillator = context.createOscillator();
+    const gain = context.createGain();
+    const secondOscillator = context.createOscillator();
+    const secondGain = context.createGain();
+
+    oscillator.type = "sine";
+    secondOscillator.type = "sine";
+
+    if (tone === "success") {
+      oscillator.frequency.value = 720;
+      secondOscillator.frequency.value = 980;
+    } else if (tone === "error") {
+      oscillator.frequency.value = 320;
+      secondOscillator.frequency.value = 220;
+    } else {
+      oscillator.frequency.value = 540;
+      secondOscillator.frequency.value = 720;
+    }
+
+    gain.gain.value = 0.035;
+    secondGain.gain.value = 0.03;
+
+    oscillator.connect(gain);
+    gain.connect(context.destination);
+    secondOscillator.connect(secondGain);
+    secondGain.connect(context.destination);
+
+    oscillator.start();
+    oscillator.stop(context.currentTime + 0.12);
+    secondOscillator.start(context.currentTime + 0.13);
+    secondOscillator.stop(context.currentTime + 0.28);
+  } catch {
+    // El navegador puede bloquear audio hasta que exista interacción del usuario.
+  }
+}
+
 export default function Page() {
   const [dashboard, setDashboard] = useState<DashboardPayload | null>(null);
   const [quotes, setQuotes] = useState<QuoteSummary[]>([]);
@@ -49,6 +132,7 @@ export default function Page() {
   const [selectedQuote, setSelectedQuote] = useState<any | null>(null);
   const [tasks, setTasks] = useState<TaskRecord[]>([]);
   const [logs, setLogs] = useState<string[]>([]);
+  const [notices, setNotices] = useState<NoticeItem[]>([]);
   const [activeTab, setActiveTab] = useState<TabKey>("overview");
   const [activeOverlay, setActiveOverlay] = useState<OverlayKey>(null);
   const [isBusy, setIsBusy] = useState(false);
@@ -58,7 +142,16 @@ export default function Page() {
 
   const deferredSearchText = useDeferredValue(searchText);
 
-  const refreshAll = async () => {
+  const pushNotice = (title: string, message: string, tone: NoticeTone = "info") => {
+    const id = Date.now() + Math.floor(Math.random() * 1000);
+    playUiTone(tone);
+    setNotices((current) => [{ id, title, message, tone }, ...current].slice(0, 4));
+    window.setTimeout(() => {
+      setNotices((current) => current.filter((notice) => notice.id !== id));
+    }, 4200);
+  };
+
+  const refreshAll = async ({ silent = false }: { silent?: boolean } = {}) => {
     const [dashboardPayload, quotesPayload, tasksPayload] = await Promise.all([
       getDashboard(),
       getQuotes(),
@@ -67,6 +160,9 @@ export default function Page() {
     setDashboard(dashboardPayload);
     setQuotes(quotesPayload);
     setTasks(tasksPayload);
+    if (!silent) {
+      pushNotice("Tablero actualizado", "La consola recargó cotizaciones, métricas y tareas.", "success");
+    }
     if (!selectedQuoteKey && quotesPayload[0]?.quote_key) {
       setSelectedQuoteKey(quotesPayload[0].quote_key);
     }
@@ -85,19 +181,19 @@ export default function Page() {
   };
 
   useEffect(() => {
-    refreshAll().catch((error) => setLogs((prev) => [`Error inicial: ${String(error)}`, ...prev]));
+    refreshAll({ silent: true }).catch((error) => setLogs((prev) => [`Error inicial: ${String(error)}`, ...prev]));
   }, []);
 
   useEffect(() => {
     if (!selectedQuoteKey) return;
     loadQuote(selectedQuoteKey).catch((error) =>
-      setLogs((prev) => [`No se pudo cargar la cotizacion: ${String(error)}`, ...prev]),
+      setLogs((prev) => [`No se pudo cargar la cotización: ${String(error)}`, ...prev]),
     );
   }, [selectedQuoteKey]);
 
   useEventStream({
     onDashboard: () => {
-      refreshAll().catch(() => {});
+      refreshAll({ silent: true }).catch(() => {});
       if (selectedQuoteKey) {
         loadQuote(selectedQuoteKey).catch(() => {});
       }
@@ -106,8 +202,24 @@ export default function Page() {
       getTasks().then(setTasks).catch(() => {});
     },
     onQuoteNew: (payload) => {
-      const subject = payload?.quote?.subject ?? "Nueva cotizacion";
-      setLogs((prev) => [`Nueva cotizacion detectada: ${subject}`, ...prev].slice(0, 120));
+      const subject = payload?.quote?.subject ?? "Nueva cotización";
+      setLogs((prev) => [`Nueva cotización detectada: ${subject}`, ...prev].slice(0, 120));
+      pushNotice("Nueva cotización detectada", subject, "success");
+    },
+    onTaskStarted: (payload) => {
+      const kind = payload?.task?.kind ?? "tarea";
+      const label = taskKindLabel[kind] ?? kind;
+      pushNotice("Tarea iniciada", `${label} comenzó a ejecutarse.`, "info");
+    },
+    onTaskCompleted: (payload) => {
+      const kind = payload?.task?.kind ?? "tarea";
+      const label = taskKindLabel[kind] ?? kind;
+      pushNotice("Tarea finalizada", `${label} terminó correctamente.`, "success");
+    },
+    onTaskFailed: (payload) => {
+      const kind = payload?.task?.kind ?? "tarea";
+      const label = taskKindLabel[kind] ?? kind;
+      pushNotice("Tarea fallida", `${label} terminó con error; revisa el panel de actividad.`, "error");
     },
     onLog: (payload) => {
       const line = payload?.line ?? payload?.message ?? JSON.stringify(payload);
@@ -154,20 +266,20 @@ export default function Page() {
     const agenticSummary = selectedQuote?.agentic_supplier_matching?.summary ?? {};
     const partCount = selectedQuote?.orbika?.parts?.length ?? 0;
     return [
-      { label: "Repuestos", value: String(partCount), hint: "extraidos de Orbika", tone: "neutral" as const },
+      { label: "Repuestos", value: String(partCount), hint: "extraídos de Orbika", tone: "neutral" as const },
       { label: "Con proveedor", value: String(matchingSummary.parts_with_matches ?? 0), hint: `${matchingSummary.parts_total ?? partCount} revisados`, tone: "good" as const },
-      { label: "Con agentic", value: String(agenticSummary.parts_with_agentic_matches ?? 0), hint: `${agenticSummary.parts_reviewed ?? 0} evaluados`, tone: "accent" as const },
-      { label: "Estado", value: statusLabel[selectedQuote?.orbika?.load_status ?? ""] ?? (selectedQuote?.orbika?.load_status ?? "n/a"), hint: selectedQuote?.orbika?.aviso_id ? `aviso ${selectedQuote.orbika.aviso_id}` : "sin aviso", tone: selectedQuote?.orbika?.load_status === "loaded" ? ("good" as const) : ("warn" as const) },
+      { label: "Con revisión IA", value: String(agenticSummary.parts_with_agentic_matches ?? 0), hint: `${agenticSummary.parts_reviewed ?? 0} evaluados`, tone: "accent" as const },
+      { label: "Estado", value: statusLabel[selectedQuote?.orbika?.load_status ?? ""] ?? (selectedQuote?.orbika?.load_status ?? "n/d"), hint: selectedQuote?.orbika?.aviso_id ? `aviso ${selectedQuote.orbika.aviso_id}` : "sin aviso", tone: selectedQuote?.orbika?.load_status === "loaded" ? ("good" as const) : ("warn" as const) },
     ];
   }, [selectedQuote]);
 
   const selectedQuoteTimeline = useMemo(() => {
     if (!selectedQuote) return [];
     return [
-      { label: "Correo recibido", value: selectedQuote.source?.received_at ?? "n/a" },
-      { label: "Ultimo generado", value: selectedQuote.generated_at ?? "n/a" },
-      { label: "Aviso", value: selectedQuote.orbika?.aviso_id ?? "n/a" },
-      { label: "Modo agentic", value: selectedQuote.agentic_supplier_matching?.review_mode ?? "n/a" },
+      { label: "Correo recibido", value: selectedQuote.source?.received_at ?? "n/d" },
+      { label: "Último generado", value: selectedQuote.generated_at ?? "n/d" },
+      { label: "Aviso", value: selectedQuote.orbika?.aviso_id ?? "n/d" },
+      { label: "Modo IA", value: selectedQuote.agentic_supplier_matching?.review_mode ?? "n/d" },
     ];
   }, [selectedQuote]);
 
@@ -176,9 +288,9 @@ export default function Page() {
     const summary = selectedQuote?.supplier_matching?.summary ?? {};
     const agenticSummary = selectedQuote?.agentic_supplier_matching?.summary ?? {};
     const notes = [];
-    if ((summary.parts_with_matches ?? 0) === 0) notes.push("No hay matches utiles todavia; conviene revisar proveedor o descripcion del repuesto.");
-    if ((agenticSummary.parts_with_agentic_matches ?? 0) < (summary.parts_with_matches ?? 0)) notes.push("Hay matches sin seleccion agentic final; puede requerir revision manual rapida.");
-    if (selectedQuote?.orbika?.load_status !== "loaded") notes.push("La cotizacion no quedo totalmente cargada; revisar consistencia antes de enviar.");
+    if ((summary.parts_with_matches ?? 0) === 0) notes.push("No hay matches útiles todavía; conviene revisar proveedor o descripción del repuesto.");
+    if ((agenticSummary.parts_with_agentic_matches ?? 0) < (summary.parts_with_matches ?? 0)) notes.push("Hay coincidencias sin selección final de revisión IA; puede requerir revisión manual rápida.");
+    if (selectedQuote?.orbika?.load_status !== "loaded") notes.push("La cotización no quedó totalmente cargada; revisar consistencia antes de enviar.");
     return notes;
   }, [selectedQuote]);
 
@@ -190,11 +302,15 @@ export default function Page() {
 
   const runAction = async (path: string, payload: Record<string, unknown> = {}) => {
     try {
+      setLogs((prev) => [`Lanzando acción: ${path}`, ...prev].slice(0, 120));
       setIsBusy(true);
       await postJson(path, payload);
-      await refreshAll();
+      setLogs((prev) => [`Acción aceptada: ${path}`, ...prev].slice(0, 120));
+      pushNotice("Acción enviada", "La solicitud fue aceptada por el backend y quedó registrada.", "success");
+      await refreshAll({ silent: true });
     } catch (error) {
-      setLogs((prev) => [`Error ejecutando accion: ${String(error)}`, ...prev]);
+      setLogs((prev) => [`Error ejecutando acción: ${String(error)}`, ...prev].slice(0, 120));
+      pushNotice("Acción fallida", String(error), "error");
     } finally {
       setIsBusy(false);
     }
@@ -202,25 +318,47 @@ export default function Page() {
 
   return (
     <main className="min-h-screen px-4 py-6 md:px-8 xl:h-screen xl:overflow-hidden">
+      <div className="pointer-events-none fixed left-4 top-4 z-50 flex w-full max-w-sm flex-col gap-3">
+        {notices.map((notice) => (
+          <div
+            key={notice.id}
+            className={`pointer-events-auto rounded-2xl border px-4 py-3 shadow-xl backdrop-blur ${
+              notice.tone === "success"
+                ? "border-emerald-300 bg-emerald-50/95 text-emerald-950"
+                : notice.tone === "error"
+                  ? "border-rose-300 bg-rose-50/95 text-rose-950"
+                  : "border-sky-300 bg-sky-50/95 text-sky-950"
+            }`}
+          >
+            <p className="text-sm font-semibold">{notice.title}</p>
+            <p className="mt-1 text-sm opacity-85">{notice.message}</p>
+          </div>
+        ))}
+      </div>
       <div className="mx-auto flex max-w-[1880px] flex-wrap items-center justify-between gap-4 pb-4">
-        <div>
-          <p className="text-xs uppercase tracking-[0.28em] text-olive">Orbika Console</p>
-          <h1 className="mt-1 text-3xl font-semibold text-pine">Vista operativa de cotizaciones</h1>
-          <p className="mt-2 max-w-2xl text-sm text-ink/65">
-            Cola priorizada para revisar correos, validar repuestos y decidir rapido que cotizacion esta lista, parcial o necesita apoyo manual.
-          </p>
+        <div className="flex items-center gap-4">
+          <div className="flex h-16 w-[220px] shrink-0 items-center justify-center overflow-hidden rounded-[1.35rem] bg-transparent">
+            <Image src="/accedo-logo.png" alt="ACCEDO" width={220} height={140} className="h-full w-full object-cover object-center" priority />
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.28em] text-sky-700">ACCEDO · Consola Orbika</p>
+            <h1 className="mt-1 text-3xl font-semibold text-pine">Vista operativa de cotizaciones</h1>
+            <p className="mt-2 max-w-2xl text-sm text-ink/65">
+              Cola priorizada para revisar correos, validar repuestos y decidir rápido qué cotización está lista, parcial o necesita apoyo manual.
+            </p>
+          </div>
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <button
             className="rounded-full border border-clay bg-white px-3 py-2 text-sm text-ink transition hover:border-olive"
-            onClick={() => refreshAll()}
+            onClick={() => refreshAll({ silent: false })}
             title="Actualizar tablero"
           >
             <RefreshCw className="h-4 w-4" />
           </button>
-          <TopDockButton icon={<Mail className="h-4 w-4" />} label="Operacion" active={activeOverlay === "operations"} onClick={() => setActiveOverlay((current) => (current === "operations" ? null : "operations"))} />
-          <TopDockButton icon={<Gauge className="h-4 w-4" />} label="Pipeline" active={activeOverlay === "pipeline"} onClick={() => setActiveOverlay((current) => (current === "pipeline" ? null : "pipeline"))} />
-          <TopDockButton icon={<PanelRightClose className="h-4 w-4" />} label="Actividad" active={activeOverlay === "activity"} onClick={() => setActiveOverlay((current) => (current === "activity" ? null : "activity"))} />
+          <TopDockButton icon={<Mail className="h-4 w-4" />} label="Operación" active={activeOverlay === "operations"} onClick={() => { setActiveOverlay((current) => (current === "operations" ? null : "operations")); pushNotice("Panel de operación", "Se abrió el panel de acciones operativas.", "info"); }} />
+          <TopDockButton icon={<Gauge className="h-4 w-4" />} label="Pipeline" active={activeOverlay === "pipeline"} onClick={() => { setActiveOverlay((current) => (current === "pipeline" ? null : "pipeline")); pushNotice("Estado del pipeline", "Se abrió el resumen operativo del pipeline.", "info"); }} />
+          <TopDockButton icon={<PanelRightClose className="h-4 w-4" />} label="Actividad" active={activeOverlay === "activity"} onClick={() => { setActiveOverlay((current) => (current === "activity" ? null : "activity")); pushNotice("Actividad", "Se abrió el registro en vivo del sistema.", "info"); }} />
         </div>
       </div>
 
@@ -255,8 +393,8 @@ export default function Page() {
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
                 <FilterChip active={queueFilter === "all"} label={`Todo (${queueStats.all})`} onClick={() => setQueueFilter("all")} />
-                <FilterChip active={queueFilter === "needs_attention"} label={`Atencion (${queueStats.needs_attention})`} onClick={() => setQueueFilter("needs_attention")} />
-                <FilterChip active={queueFilter === "with_agentic"} label={`Agentic (${queueStats.with_agentic})`} onClick={() => setQueueFilter("with_agentic")} />
+                <FilterChip active={queueFilter === "needs_attention"} label={`Atención (${queueStats.needs_attention})`} onClick={() => setQueueFilter("needs_attention")} />
+                <FilterChip active={queueFilter === "with_agentic"} label={`Con IA (${queueStats.with_agentic})`} onClick={() => setQueueFilter("with_agentic")} />
                 <FilterChip active={queueFilter === "failed"} label={`Fallidas (${queueStats.failed})`} onClick={() => setQueueFilter("failed")} />
               </div>
             </div>
@@ -281,26 +419,26 @@ export default function Page() {
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
                             <div className="flex flex-wrap items-center gap-2">
-                              <p className="max-h-14 overflow-hidden break-words text-base font-semibold">{quote.subject ?? quote.quote_key}</p>
+                              <p className="max-h-14 overflow-hidden break-words text-base font-semibold">{cleanDisplayText(quote.subject ?? quote.quote_key)}</p>
                               {needsAttention && (
                                 <span className={`rounded-full px-2 py-1 text-[11px] ${selected ? "bg-white/20" : "bg-amber-100 text-amber-800"}`}>
                                   revisar
                                 </span>
                               )}
                             </div>
-                            <p className="mt-2 text-sm opacity-85">{quote.placa ?? "Sin placa"} · aviso {quote.aviso_id ?? "n/a"}</p>
-                            <p className="mt-1 text-xs opacity-70">{quote.marca ?? "Marca n/a"} {quote.linea ?? ""}</p>
+                            <p className="mt-2 text-sm opacity-85">{cleanDisplayText(quote.placa ?? "Sin placa")} · aviso {cleanDisplayText(quote.aviso_id ?? "n/d")}</p>
+                            <p className="mt-1 text-xs opacity-70">{cleanDisplayText(quote.marca ?? "Marca n/d")} {cleanDisplayText(quote.linea ?? "")}</p>
                             <div className="mt-3 flex flex-wrap gap-2 text-[11px]">
                               <MiniBadge selected={selected} icon={<ClipboardList className="h-3 w-3" />}>
-                                {quote.parts_with_matches}/{quote.repuestos_count} con match
+                                {quote.parts_with_matches}/{quote.repuestos_count} con proveedor
                               </MiniBadge>
                               <MiniBadge selected={selected} icon={<Sparkles className="h-3 w-3" />}>
-                                {quote.parts_with_agentic_matches} agentic
+                                {quote.parts_with_agentic_matches} con IA
                               </MiniBadge>
                             </div>
                           </div>
                           <span className={`rounded-full px-3 py-1 text-xs ${selected ? "bg-white/20" : statusTone[quote.load_status ?? ""] ?? "bg-slate-100 text-slate-800"}`}>
-                            {statusLabel[quote.load_status ?? ""] ?? quote.load_status ?? "n/a"}
+                            {statusLabel[quote.load_status ?? ""] ?? quote.load_status ?? "n/d"}
                           </span>
                         </div>
                       </button>
@@ -309,7 +447,7 @@ export default function Page() {
                 );
               })}
               {filteredQuotes.length === 0 && (
-                <EmptyBlock title="No hay cotizaciones con ese filtro" description="Prueba otro texto de busqueda o cambia el filtro de la cola." />
+                <EmptyBlock title="No hay cotizaciones con ese filtro" description="Prueba otro texto de búsqueda o cambia el filtro de la cola." />
               )}
             </div>
           </section>
@@ -320,16 +458,16 @@ export default function Page() {
             <div className="flex min-h-0 flex-1 flex-col rounded-3xl bg-white/80 p-5 shadow-panel backdrop-blur xl:overflow-hidden">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div className="min-w-0 flex-1">
-                  <p className="text-xs uppercase tracking-[0.25em] text-olive">Cotizacion seleccionada</p>
-                  <h2 className="mt-1 break-words text-2xl font-semibold text-pine">{selectedQuote.source?.subject ?? selectedQuote.quote_key}</h2>
+                  <p className="text-xs uppercase tracking-[0.25em] text-olive">Cotización seleccionada</p>
+                  <h2 className="mt-1 break-words text-2xl font-semibold text-pine">{cleanDisplayText(selectedQuote.source?.subject ?? selectedQuote.quote_key)}</h2>
                   <div className="mt-3 flex flex-wrap gap-2 text-sm text-ink/70">
-                    <HeaderChip icon={<CarFront className="h-4 w-4" />} label={`${selectedQuote.orbika?.marca ?? "Marca n/a"} ${selectedQuote.orbika?.linea ?? ""}`} />
-                    <HeaderChip icon={<ClipboardList className="h-4 w-4" />} label={`Placa ${selectedQuote.orbika?.placa ?? "n/a"}`} />
-                    <HeaderChip icon={<Clock3 className="h-4 w-4" />} label={selectedQuote.source?.received_at ?? "sin fecha"} />
+                    <HeaderChip icon={<CarFront className="h-4 w-4" />} label={cleanDisplayText(`${selectedQuote.orbika?.marca ?? "Marca n/d"} ${selectedQuote.orbika?.linea ?? ""}`)} />
+                    <HeaderChip icon={<ClipboardList className="h-4 w-4" />} label={cleanDisplayText(`Placa ${selectedQuote.orbika?.placa ?? "n/d"}`)} />
+                    <HeaderChip icon={<Clock3 className="h-4 w-4" />} label={cleanDisplayText(selectedQuote.source?.received_at ?? "sin fecha")} />
                   </div>
                 </div>
                 <span className={`rounded-full px-3 py-1 text-xs font-medium ${statusTone[selectedQuote.orbika?.load_status] ?? "bg-slate-100 text-slate-800"}`}>
-                  {statusLabel[selectedQuote.orbika?.load_status] ?? selectedQuote.orbika?.load_status ?? "unknown"}
+                  {statusLabel[selectedQuote.orbika?.load_status] ?? selectedQuote.orbika?.load_status ?? "desconocido"}
                 </span>
               </div>
 
@@ -354,7 +492,7 @@ export default function Page() {
               )}
 
               <div className="mt-6 flex flex-wrap gap-2 border-b border-clay pb-3">
-                {[["overview", "Resumen"], ["parts", "Repuestos"], ["matches", "Matches"], ["agentic", "Agentic"]].map(([key, label]) => (
+                {[["overview", "Resumen"], ["parts", "Repuestos"], ["matches", "Proveedores"], ["agentic", "Revisión IA"]].map(([key, label]) => (
                   <button
                     key={key}
                     onClick={() => setActiveTab(key as TabKey)}
@@ -369,11 +507,11 @@ export default function Page() {
                 <div className="mt-6 grid gap-6 xl:min-h-0 xl:flex-1 xl:overflow-y-auto xl:pr-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(280px,0.9fr)]">
                   <div className="grid gap-6">
                     <InfoPanel title="Base" rows={[["Aviso", selectedQuote.orbika?.aviso_id], ["Recibido", selectedQuote.source?.received_at], ["Placa", selectedQuote.orbika?.placa], ["URL", selectedQuote.quote_url_masked]]} />
-                    <InfoPanel title="Vehiculo" rows={[["Marca", selectedQuote.orbika?.marca], ["Linea", selectedQuote.orbika?.linea], ["Version", selectedQuote.orbika?.version], ["Ano", selectedQuote.orbika?.ano], ["VIN", selectedQuote.orbika?.vin]]} />
-                    <InfoPanel title="Taller" rows={[["Nombre", selectedQuote.orbika?.nombre_comercial], ["Entrega", selectedQuote.orbika?.taller_entrega], ["Ciudad", selectedQuote.orbika?.ciudad], ["Direccion", selectedQuote.orbika?.direccion]]} />
+                    <InfoPanel title="Vehículo" rows={[["Marca", selectedQuote.orbika?.marca], ["Línea", selectedQuote.orbika?.linea], ["Versión", selectedQuote.orbika?.version], ["Año", selectedQuote.orbika?.ano], ["VIN", selectedQuote.orbika?.vin]]} />
+                    <InfoPanel title="Taller" rows={[["Nombre", selectedQuote.orbika?.nombre_comercial], ["Entrega", selectedQuote.orbika?.taller_entrega], ["Ciudad", selectedQuote.orbika?.ciudad], ["Dirección", selectedQuote.orbika?.direccion]]} />
                   </div>
                   <div className="grid gap-6">
-                    <InfoPanel title="Decision rapida" rows={[["Repuestos", String(selectedQuote?.orbika?.parts?.length ?? 0)], ["Con proveedor", String(selectedQuote?.supplier_matching?.summary?.parts_with_matches ?? 0)], ["Con agentic", String(selectedQuote?.agentic_supplier_matching?.summary?.parts_with_agentic_matches ?? 0)], ["Estado", statusLabel[selectedQuote?.orbika?.load_status ?? ""] ?? selectedQuote?.orbika?.load_status]]} />
+                    <InfoPanel title="Decisión rápida" rows={[["Repuestos", String(selectedQuote?.orbika?.parts?.length ?? 0)], ["Con proveedor", String(selectedQuote?.supplier_matching?.summary?.parts_with_matches ?? 0)], ["Con revisión IA", String(selectedQuote?.agentic_supplier_matching?.summary?.parts_with_agentic_matches ?? 0)], ["Estado", statusLabel[selectedQuote?.orbika?.load_status ?? ""] ?? selectedQuote?.orbika?.load_status]]} />
                     <TimelinePanel items={selectedQuoteTimeline} />
                     <ProviderPulse providerHits={dashboard?.provider_hits ?? {}} />
                   </div>
@@ -388,19 +526,19 @@ export default function Page() {
                         <div className="min-w-0 flex-1">
                           <p className="font-medium">{part.name}</p>
                           <div className="mt-2 flex flex-wrap gap-2 text-xs">
-                            <MiniInfo label="Cantidad" value={part.quantity ?? "n/a"} />
-                            <MiniInfo label="Referencia" value={part.reference ?? "n/a"} />
-                            <MiniInfo label="Calidad" value={part.quality ?? "n/a"} />
-                            <MiniInfo label="Entrega" value={part.delivery_days ?? "n/a"} />
+                            <MiniInfo label="Cantidad" value={part.quantity ?? "n/d"} />
+                            <MiniInfo label="Referencia" value={part.reference ?? "n/d"} />
+                            <MiniInfo label="Calidad" value={part.quality ?? "n/d"} />
+                            <MiniInfo label="Entrega" value={part.delivery_days ?? "n/d"} />
                           </div>
                           {(part.total_value || part.unit_gross_price || part.observation_visible) && (
                             <p className="mt-3 text-sm text-ink/65">
-                              Total: {part.total_value ?? "n/a"} · Unitario: {part.unit_gross_price ?? "n/a"}
+                              Total: {part.total_value ?? "n/d"} · Unitario: {part.unit_gross_price ?? "n/d"}
                               {part.observation_visible ? ` · Obs: ${part.observation_visible}` : ""}
                             </p>
                           )}
                         </div>
-                        <span className="rounded-full bg-sand px-2 py-1 text-xs">{part.raw_status ?? "n/a"}</span>
+                        <span className="rounded-full bg-sand px-2 py-1 text-xs">{part.raw_status ?? "n/d"}</span>
                       </div>
                     </div>
                   ))}
@@ -413,10 +551,10 @@ export default function Page() {
                     <div key={part.part_name} className="rounded-2xl border border-clay bg-white p-4">
                       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
                         <div>
-                          <p className="font-medium">{part.part_name}</p>
-                          <p className="text-sm text-ink/60">Mejor score: {part.best_score_percent ?? 0}% · {part.best_provider_id ?? "sin proveedor"}</p>
+                          <p className="font-medium">{cleanDisplayText(part.part_name)}</p>
+                          <p className="text-sm text-ink/60">Mejor puntaje: {cleanDisplayText(part.best_score_percent ?? 0)}% · {cleanDisplayText(part.best_provider_id ?? "sin proveedor")}</p>
                         </div>
-                        <span className="rounded-full bg-mist px-3 py-1 text-xs text-ink/70">{part.matches?.length ?? 0} opcion(es)</span>
+                        <span className="rounded-full bg-mist px-3 py-1 text-xs text-ink/70">{part.matches?.length ?? 0} opción(es)</span>
                       </div>
                       <div className="grid gap-3">
                         {part.matches?.length ? (
@@ -424,16 +562,27 @@ export default function Page() {
                             <div key={`${part.part_name}-${match.provider_id}-${index}`} className="rounded-xl bg-mist/80 p-3">
                               <div className="flex items-start justify-between gap-3">
                                 <div className="min-w-0 flex-1">
-                                  <p className="font-medium">{match.product_name}</p>
-                                  <p className="text-sm text-ink/60">{match.provider_name} · {match.match_type} · {match.score_percent}%</p>
-                                  {match.reference && <p className="mt-1 text-xs text-ink/55">Ref: {match.reference}</p>}
+                                  <p className="font-medium">{cleanDisplayText(match.product_name)}</p>
+                                  <p className="text-sm text-ink/60">{cleanDisplayText(match.provider_name)} · {cleanDisplayText(match.match_type)} · {cleanDisplayText(match.score_percent)}%</p>
+                                  {match.reference && <p className="mt-1 text-xs text-ink/55">Ref: {cleanDisplayText(match.reference)}</p>}
+                                  <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                                    <MiniBadge tone={match.explanation_source === "rag" ? "accent" : "good"}>
+                                      {match.explanation_source === "rag" ? "IA + RAG" : "IA heurística"}
+                                    </MiniBadge>
+                                    <MiniBadge tone={(compatibilityTone[match.compatibility_state ?? "insufficient_information"] as any) ?? "accent"}>
+                                      {compatibilityLabel[match.compatibility_state ?? "insufficient_information"] ?? "Info insuficiente"}
+                                    </MiniBadge>
+                                    {match.compatibility_summary ? <MiniBadge tone="neutral">{match.compatibility_summary}</MiniBadge> : null}
+                                  </div>
+                                  {match.compatibility_warnings?.length ? <p className="mt-2 text-xs text-amber-800">Validar: {cleanDisplayText(match.compatibility_warnings.join(", "))}</p> : null}
+                                  {match.preference_notes?.length ? <p className="mt-1 text-xs text-sky-800">Preferencia: {cleanDisplayText(match.preference_notes.join(", "))}</p> : null}
                                 </div>
                                 <a className="text-sm text-pine underline" href={match.detail_url} target="_blank" rel="noreferrer">Ver</a>
                               </div>
                             </div>
                           ))
                         ) : (
-                          <EmptyBlock title="Sin matches" description="Este repuesto todavia no tiene candidatos de proveedor." compact />
+                          <EmptyBlock title="Sin coincidencias" description="Este repuesto todavía no tiene candidatos de proveedor." compact />
                         )}
                       </div>
                     </div>
@@ -447,27 +596,52 @@ export default function Page() {
                     <div key={part.part_name} className="rounded-2xl border border-clay bg-white p-4">
                       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
                         <div>
-                          <p className="font-medium">{part.part_name}</p>
-                          <p className="text-sm text-ink/60">Top proveedor: {part.top_provider_id ?? "n/a"} · Score: {part.top_score_percent ?? 0}%</p>
+                          <p className="font-medium">{cleanDisplayText(part.part_name)}</p>
+                          <p className="text-sm text-ink/60">Proveedor líder: {cleanDisplayText(part.top_provider_id ?? "n/d")} · Puntaje: {cleanDisplayText(part.top_score_percent ?? 0)}%</p>
+                          {part.summary_comment ? <p className="mt-2 rounded-xl bg-olive/10 px-3 py-2 text-sm text-olive">{cleanDisplayText(part.summary_comment)}</p> : null}
                         </div>
-                        <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-800">{part.selected_matches?.length ?? 0} recomendacion(es)</span>
+                        <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs text-emerald-800">{part.selected_matches?.length ?? 0} recomendación(es)</span>
                       </div>
                       <div className="grid gap-3">
+                        {(part.risk_notes?.length || part.preference_notes?.length) ? (
+                          <div className="flex flex-wrap gap-2 text-xs">
+                            {part.risk_notes?.map((note: string) => (
+                              <span key={`${part.part_name}-risk-${note}`} className="rounded-full bg-amber-50 px-2 py-1 text-amber-900">Riesgo: {cleanDisplayText(note)}</span>
+                            ))}
+                            {part.preference_notes?.map((note: string) => (
+                              <span key={`${part.part_name}-pref-${note}`} className="rounded-full bg-sky-50 px-2 py-1 text-sky-900">Preferencia: {cleanDisplayText(note)}</span>
+                            ))}
+                          </div>
+                        ) : null}
                         {part.selected_matches?.length ? (
                           part.selected_matches.map((match: any) => (
                             <div key={`${part.part_name}-${match.rank}-${match.provider_id}`} className="rounded-xl bg-mist/80 p-3">
                               <div className="flex items-start justify-between gap-3">
                                 <div className="min-w-0 flex-1">
                                   <p className="font-medium">#{match.rank} · {match.product_name}</p>
-                                  <p className="text-sm text-ink/60">{match.provider_name} · {match.match_type} · {match.score_percent}%</p>
-                                  <p className="mt-2 rounded-xl bg-white px-3 py-2 text-sm text-olive">{match.agentic_comment || "Sin comentario adicional."}</p>
+                                  <p className="text-sm text-ink/60">{cleanDisplayText(match.provider_name)} · {cleanDisplayText(match.match_type)} · {cleanDisplayText(match.score_percent)}%</p>
+                                  <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                                    <MiniBadge tone={match.explanation_source === "rag" ? "accent" : "good"}>
+                                      {match.explanation_source === "rag" ? "IA + RAG" : "IA heurística"}
+                                    </MiniBadge>
+                                    <MiniBadge tone={(compatibilityTone[match.compatibility_state ?? "insufficient_information"] as any) ?? "accent"}>
+                                      {compatibilityLabel[match.compatibility_state ?? "insufficient_information"] ?? "Info insuficiente"}
+                                    </MiniBadge>
+                                    {match.compatibility_summary ? <MiniBadge tone="neutral">{match.compatibility_summary}</MiniBadge> : null}
+                                  </div>
+                                  {match.compatibility_warnings?.length ? <p className="mt-2 text-xs text-amber-800">Validar: {cleanDisplayText(match.compatibility_warnings.join(", "))}</p> : null}
+                                  {match.risk_flags?.length ? <p className="mt-1 text-xs text-amber-800">Riesgos: {cleanDisplayText(match.risk_flags.join(", "))}</p> : null}
+                                  {match.preference_notes?.length ? <p className="mt-1 text-xs text-sky-800">Preferencia: {cleanDisplayText(match.preference_notes.join(", "))}</p> : null}
+                                  {match.rag_summary ? <p className="mt-1 text-xs text-violet-800">Técnico: {cleanDisplayText(match.rag_summary)}</p> : null}
+                                  {match.rag_citations?.length ? <p className="mt-1 text-xs text-violet-800">Fuentes: {cleanDisplayText(match.rag_citations.map((citation: any) => `${citation.title} p.${citation.page_span}`).join(" · "))}</p> : null}
+                                  <p className="mt-2 rounded-xl bg-white px-3 py-2 text-sm text-olive">{cleanDisplayText(match.agentic_comment || "Sin comentario adicional.")}</p>
                                 </div>
                                 <a className="text-sm text-pine underline" href={match.detail_url} target="_blank" rel="noreferrer">Ver</a>
                               </div>
                             </div>
                           ))
                         ) : (
-                          <EmptyBlock title="Sin seleccion agentic" description="Esta pieza todavia no tiene recomendacion final del revisor agentic." compact />
+                          <EmptyBlock title="Sin selección IA" description="Esta pieza todavía no tiene recomendación final del revisor IA." compact />
                         )}
                       </div>
                     </div>
@@ -476,36 +650,36 @@ export default function Page() {
               )}
             </div>
           ) : (
-            <div className="rounded-3xl bg-white/80 p-10 text-center shadow-panel">Selecciona una cotizacion para verla.</div>
+            <div className="rounded-3xl bg-white/80 p-10 text-center shadow-panel">Selecciona una cotización para verla.</div>
           )}
         </section>
       </div>
 
-      <OverlayPanel open={activeOverlay === "operations"} title="Operacion funcional" subtitle="Acciones para mantener la cola al dia y lanzar reprocesos sin salir del tablero." onClose={() => setActiveOverlay(null)}>
+      <OverlayPanel open={activeOverlay === "operations"} title="Operación funcional" subtitle="Acciones para mantener la cola al día y lanzar reprocesos sin salir del tablero." onClose={() => setActiveOverlay(null)}>
         <div className="grid gap-3">
-          <ActionButton icon={<Mail className="h-4 w-4" />} title={runningRunner ? "Runner activo" : "Esperar correos"} description={runningRunner ? "El pipeline esta escuchando nuevos correos." : "Inicia el runner incremental en modo espera."} onClick={() => runAction("/api/tasks/incremental-runner/start", { poll_seconds: 300, max_results: 50 })} disabled={Boolean(runningRunner) || isBusy} tone={runningRunner ? "success" : "default"} />
+          <ActionButton icon={<Mail className="h-4 w-4" />} title={runningRunner ? "Runner activo" : "Esperar correos"} description={runningRunner ? "El pipeline está escuchando nuevos correos." : "Inicia el runner incremental en modo espera."} onClick={() => runAction("/api/tasks/incremental-runner/start", { poll_seconds: 300, max_results: 50 })} disabled={Boolean(runningRunner) || isBusy} tone={runningRunner ? "success" : "default"} />
           <ActionButton icon={<Square className="h-4 w-4" />} title="Detener runner" description="Finaliza el proceso de espera actual." onClick={() => runningRunner && runAction(`/api/tasks/${runningRunner.id}/stop`)} disabled={!runningRunner || isBusy} />
-          <ActionButton icon={<Wrench className="h-4 w-4" />} title="Recalcular matching" description="Reprocesa supplier matching para todas las cotizaciones." onClick={() => runAction("/api/tasks/supplier-matching/run", { limit_per_part: 5 })} disabled={isBusy} />
-          <ActionButton icon={<Layers3 className="h-4 w-4" />} title="Matching seleccion" description="Ejecuta supplier matching solo sobre las cotizaciones marcadas." onClick={() => runAction("/api/tasks/supplier-matching/run", { limit_per_part: 5, quote_keys: selectedQuoteKeys })} disabled={isBusy || selectedQuoteKeys.length === 0} />
-          <ActionButton icon={<Bot className="h-4 w-4" />} title="Agentic review" description="Ejecuta revision agentic sobre todas las cotizaciones." onClick={() => runAction("/api/tasks/agentic-review/run", { limit_per_part: 5, disable_traces: false })} disabled={isBusy} />
-          <ActionButton icon={<Sparkles className="h-4 w-4" />} title="Agentic seleccion" description="Ejecuta revision agentic solo sobre las cotizaciones marcadas." onClick={() => runAction("/api/tasks/agentic-review/run", { limit_per_part: 5, disable_traces: false, quote_keys: selectedQuoteKeys })} disabled={isBusy || selectedQuoteKeys.length === 0} />
+          <ActionButton icon={<Wrench className="h-4 w-4" />} title="Recalcular matching" description="Reprocesa matching de proveedores para todas las cotizaciones." onClick={() => runAction("/api/tasks/supplier-matching/run", { limit_per_part: 5 })} disabled={isBusy} />
+          <ActionButton icon={<Layers3 className="h-4 w-4" />} title="Matching de selección" description="Ejecuta matching de proveedores solo sobre las cotizaciones marcadas." onClick={() => runAction("/api/tasks/supplier-matching/run", { limit_per_part: 5, quote_keys: selectedQuoteKeys })} disabled={isBusy || selectedQuoteKeys.length === 0} />
+          <ActionButton icon={<Bot className="h-4 w-4" />} title="Revisión IA" description="Ejecuta la revisión IA sobre todas las cotizaciones." onClick={() => runAction("/api/tasks/agentic-review/run", { limit_per_part: 5, disable_traces: false })} disabled={isBusy} />
+          <ActionButton icon={<Sparkles className="h-4 w-4" />} title="Revisión IA de selección" description="Ejecuta la revisión IA solo sobre las cotizaciones marcadas." onClick={() => runAction("/api/tasks/agentic-review/run", { limit_per_part: 5, disable_traces: false, quote_keys: selectedQuoteKeys })} disabled={isBusy || selectedQuoteKeys.length === 0} />
         </div>
       </OverlayPanel>
 
-      <OverlayPanel open={activeOverlay === "pipeline"} title="Estado del pipeline" subtitle="Resumen operativo del runner, el ultimo ciclo y la presion actual sobre la cola." onClose={() => setActiveOverlay(null)}>
+      <OverlayPanel open={activeOverlay === "pipeline"} title="Estado del pipeline" subtitle="Resumen operativo del runner, el último ciclo y la presión actual sobre la cola." onClose={() => setActiveOverlay(null)}>
         <div className="grid gap-5">
           <section className="grid gap-2 text-sm">
             <StateRow label="Runner" value={runningRunner ? "Esperando correos" : "Detenido"} />
             <StateRow label="Etapa actual" value={String(dashboard?.current?.stage ?? "idle")} />
-            <StateRow label="Ultima corrida" value={String(dashboard?.last_run?.finished_at ?? "n/a")} />
-            <StateRow label="Ultima cotizacion" value={String(dashboard?.latest_quote_at ?? "n/a")} />
+            <StateRow label="Última corrida" value={String(dashboard?.last_run?.finished_at ?? "n/d")} />
+            <StateRow label="Última cotización" value={String(dashboard?.latest_quote_at ?? "n/d")} />
           </section>
 
           <section className="rounded-2xl border border-clay bg-mist/70 p-4">
-            <p className="text-sm font-semibold text-pine">Presion de la cola</p>
+            <p className="text-sm font-semibold text-pine">Presión de la cola</p>
             <div className="mt-3 grid gap-2 sm:grid-cols-2">
-              <StateBadge label="Atencion" value={String(queueStats.needs_attention)} tone="warn" />
-              <StateBadge label="Con agentic" value={String(queueStats.with_agentic)} tone="accent" />
+              <StateBadge label="Atención" value={String(queueStats.needs_attention)} tone="warn" />
+              <StateBadge label="Con IA" value={String(queueStats.with_agentic)} tone="accent" />
               <StateBadge label="Tareas corriendo" value={String(taskSummary.running)} tone="good" />
               <StateBadge label="Tareas fallidas" value={String(taskSummary.failed)} tone="danger" />
             </div>
@@ -523,7 +697,7 @@ export default function Page() {
                 <pre key={`${line}-${index}`} className="whitespace-pre-wrap font-mono">{line}</pre>
               ))
             ) : (
-              <p className="text-mist/70">Aun no hay actividad registrada.</p>
+              <p className="text-mist/70">Aún no hay actividad registrada.</p>
             )}
           </div>
           <div className="space-y-3">
@@ -531,8 +705,8 @@ export default function Page() {
             {tasks.slice(0, 8).map((task) => (
               <div key={task.id} className="rounded-2xl border border-clay bg-white p-3">
                 <div className="flex items-center justify-between gap-3">
-                  <p className="font-medium text-ink">{task.kind}</p>
-                  <span className="rounded-full bg-sand px-2 py-1 text-xs text-ink/70">{task.status}</span>
+                  <p className="font-medium text-ink">{taskKindLabel[task.kind] ?? task.kind}</p>
+                  <span className="rounded-full bg-sand px-2 py-1 text-xs text-ink/70">{taskStatusLabel[task.status] ?? task.status}</span>
                 </div>
                 <p className="mt-1 text-xs text-ink/55">{task.id}</p>
               </div>
@@ -567,7 +741,16 @@ function SummaryPill({ label, value, hint, tone }: { label: string; value: strin
 function ActionButton({ icon, title, description, onClick, disabled, tone = "default" }: { icon: ReactNode; title: string; description: string; onClick: () => void; disabled?: boolean; tone?: "default" | "success" }) {
   const toneClass = tone === "success" ? "border-emerald-300 bg-emerald-50" : "border-clay bg-sand";
   return (
-    <button disabled={disabled} onClick={onClick} className={`rounded-2xl border p-4 text-left transition hover:border-olive disabled:cursor-not-allowed disabled:opacity-50 ${toneClass}`}>
+    <button
+      type="button"
+      disabled={disabled}
+      onClick={(event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        onClick();
+      }}
+      className={`rounded-2xl border p-4 text-left transition hover:border-olive disabled:cursor-not-allowed disabled:opacity-50 ${toneClass}`}
+    >
       <div className="flex items-center gap-3 text-pine">{icon}<p className="font-medium">{title}</p></div>
       <p className="mt-2 text-sm text-ink/70">{description}</p>
     </button>
@@ -582,7 +765,7 @@ function InfoPanel({ title, rows }: { title: string; rows: [string, string | und
         {rows.map(([label, value]) => (
           <div key={label} className="grid grid-cols-[120px_minmax(0,1fr)] gap-3">
             <span className="text-ink/60">{label}</span>
-            <span className="break-words">{value ?? "n/a"}</span>
+            <span className="break-words">{value ?? "n/d"}</span>
           </div>
         ))}
       </div>
@@ -596,7 +779,15 @@ function StateRow({ label, value }: { label: string; value: string }) {
 
 function TopDockButton({ icon, label, active, onClick }: { icon: ReactNode; label: string; active?: boolean; onClick: () => void }) {
   return (
-    <button onClick={onClick} className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition ${active ? "border-pine bg-pine text-white" : "border-clay bg-white text-ink hover:border-olive"}`}>
+    <button
+      type="button"
+      onClick={(event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        onClick();
+      }}
+      className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition ${active ? "border-pine bg-pine text-white" : "border-clay bg-white text-ink hover:border-olive"}`}
+    >
       {icon}
       <span>{label}</span>
     </button>
@@ -606,8 +797,8 @@ function TopDockButton({ icon, label, active, onClick }: { icon: ReactNode; labe
 function OverlayPanel({ open, title, subtitle, onClose, children, wide }: { open: boolean; title: string; subtitle: string; onClose: () => void; children: ReactNode; wide?: boolean }) {
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-40 flex items-start justify-end bg-ink/20 p-4 backdrop-blur-sm">
-      <div className={`mt-20 w-full overflow-hidden rounded-[2rem] border border-clay bg-white shadow-2xl ${wide ? "max-w-4xl" : "max-w-xl"}`}>
+    <div className="fixed inset-0 z-40 flex items-start justify-end bg-ink/20 p-4 backdrop-blur-sm" onClick={onClose}>
+      <div className={`mt-20 w-full overflow-hidden rounded-[2rem] border border-clay bg-white shadow-2xl ${wide ? "max-w-4xl" : "max-w-xl"}`} onClick={(event) => event.stopPropagation()}>
         <div className="flex items-start justify-between gap-4 border-b border-clay px-6 py-5">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-olive">{title}</p>
@@ -624,6 +815,7 @@ function OverlayPanel({ open, title, subtitle, onClose, children, wide }: { open
 function FilterChip({ label, active, onClick }: { label: string; active: boolean; onClick: () => void }) {
   return (
     <button
+      type="button"
       onClick={onClick}
       className={`rounded-full px-3 py-2 text-xs transition ${active ? "bg-pine text-white" : "bg-white text-ink/75 hover:bg-sand"}`}
     >
@@ -674,7 +866,7 @@ function MiniInfo({ label, value }: { label: string; value: string }) {
 function TimelinePanel({ items }: { items: { label: string; value: string }[] }) {
   return (
     <section className="rounded-2xl border border-clay bg-white p-4">
-      <p className="mb-4 text-sm font-semibold text-pine">Linea de tiempo</p>
+      <p className="mb-4 text-sm font-semibold text-pine">Línea de tiempo</p>
       <div className="space-y-3">
         {items.map((item) => (
           <div key={item.label} className="flex items-center justify-between gap-3 rounded-xl bg-sand px-3 py-3 text-sm">
@@ -713,7 +905,7 @@ function ProviderPulse({ providerHits }: { providerHits: Record<string, number> 
             </div>
           ))
         ) : (
-          <p className="text-sm text-ink/60">Aun no hay hits agregados.</p>
+          <p className="text-sm text-ink/60">Aún no hay hits agregados.</p>
         )}
       </div>
     </section>
@@ -747,9 +939,3 @@ function EmptyBlock({ title, description, compact = false }: { title: string; de
     </section>
   );
 }
-
-
-
-
-
-

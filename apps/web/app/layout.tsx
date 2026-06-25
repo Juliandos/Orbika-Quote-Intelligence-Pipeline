@@ -3,8 +3,13 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Orbika Console",
-  description: "Visual operations console for the Orbika Quote Intelligence Pipeline",
+  title: "ACCEDO | Consola Orbika",
+  description: "Consola visual de cotizaciones Orbika para ACCEDO.",
+  icons: {
+    icon: "/accedo-icon.png",
+    shortcut: "/accedo-icon.png",
+    apple: "/accedo-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

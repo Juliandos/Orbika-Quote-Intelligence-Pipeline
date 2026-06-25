@@ -12,9 +12,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Protocol, TypedDict
 
+from tools.customer_preference_store import load_customer_preferences_for_quote
+from tools.rag_knowledge_base import retrieve_candidate_evidence
 from tools.supplier_quote_matcher import (
     DEFAULT_QUOTES_DIR,
     PART_SIGNAL_COMPATIBILITY,
+    compatibility_state_for_match,
+    compatibility_summary_for_match,
     infer_primary_part_signal,
     load_json,
     normalize_reference,
@@ -83,6 +87,7 @@ class HeuristicMatchReviewer:
     ) -> tuple[list[dict[str, Any]], list[str], str]:
         reviewed: list[dict[str, Any]] = []
         notes: list[str] = []
+        preferences = quote_context.get("preference_bundle") or {}
         vehicle = vehicle_profile_from_quote_context(quote_context)
         requested_signal = infer_primary_part_signal(
             part.get("part_name"),
@@ -137,6 +142,10 @@ class HeuristicMatchReviewer:
             line_overlap = len(vehicle.line_tokens & candidate_tokens)
             version_overlap = len(vehicle.version_tokens & candidate_tokens)
             lexical_overlap = len(requested_tokens & candidate_tokens)
+            risk_flags = list(candidate.get("risk_flags") or [])
+            preference_notes = list(candidate.get("preference_notes") or [])
+            provider_id = str(candidate.get("provider_id") or "")
+            brand_name = normalize_text(candidate.get("brand"))
 
             if brand_overlap > 0:
                 adjusted_score += min(brand_overlap * 8, 16)
@@ -151,10 +160,65 @@ class HeuristicMatchReviewer:
                 adjusted_score -= 12
                 rationale.append("Agentic review penalized low lexical overlap with the requested part.")
 
+            if "side_mismatch" in risk_flags or "position_mismatch" in risk_flags:
+                adjusted_score = 0
+                rationale.append("Agentic review rejected an incompatible side or vehicle position.")
+            elif "year_mismatch" in risk_flags:
+                adjusted_score -= 18
+                rationale.append("Agentic review penalized a visible year mismatch.")
+
+            if provider_id and provider_id in set(preferences.get("preferred_providers") or []):
+                adjusted_score += 10
+                preference_notes.append(f"{provider_id} tiene preferencia activa")
+            if provider_id and provider_id in set(preferences.get("avoided_providers") or []):
+                adjusted_score -= 18
+                preference_notes.append(f"{provider_id} tiene alerta para evitar")
+            if brand_name and brand_name in set(preferences.get("preferred_brands") or []):
+                adjusted_score += 6
+                preference_notes.append(f"marca {candidate.get('brand')} priorizada")
+            if brand_name and brand_name in set(preferences.get("avoided_brands") or []):
+                adjusted_score -= 10
+                preference_notes.append(f"marca {candidate.get('brand')} marcada para evitar")
+            if preferences.get("prefer_exact_reference") and part.get("requested_reference"):
+                if candidate.get("match_type") == "exact_reference":
+                    adjusted_score += 8
+                    preference_notes.append("preferencia por referencia exacta")
+                else:
+                    adjusted_score -= 6
+
             if requested_signal == "wiper_kit" and "kit" not in normalize_text(candidate.get("product_name")):
                 adjusted_score -= 18
                 rationale.append("Agentic review penalized a non-kit result for a kit request.")
 
+            rag_evidence = retrieve_candidate_evidence(
+                quote_context=quote_context,
+                part=part,
+                candidate=reviewed_candidate,
+                limit=3,
+            )
+            rag_verdict = rag_evidence.get("verdict")
+            rag_summary = rag_evidence.get("summary")
+            rag_citations = list(rag_evidence.get("citations") or [])
+
+            if rag_verdict == "reference_supported":
+                adjusted_score += 10
+                rationale.append("Technical corpus supported reference or fitment.")
+            elif rag_verdict == "vehicle_supported":
+                adjusted_score += 6
+                rationale.append("Technical corpus supported vehicle application.")
+            elif rag_verdict == "generic_support":
+                adjusted_score += 2
+                rationale.append("Technical corpus described a compatible family.")
+            elif rag_verdict == "year_scope_warning":
+                adjusted_score -= 10
+                rationale.append("Technical corpus suggested a different year scope.")
+                risk_flags.append("rag_year_scope_warning")
+
+            reviewed_candidate["risk_flags"] = list(dict.fromkeys(risk_flags))
+            reviewed_candidate["preference_notes"] = list(dict.fromkeys(preference_notes))
+            reviewed_candidate["rag_verdict"] = rag_verdict
+            reviewed_candidate["rag_summary"] = rag_summary
+            reviewed_candidate["rag_citations"] = rag_citations
             reviewed_candidate["agentic_adjusted_score"] = max(0, min(int(adjusted_score), 100))
             reviewed_candidate["agentic_reasons"] = rationale
             reviewed.append(reviewed_candidate)
@@ -276,15 +340,33 @@ def summarize_agentic_choice(entry: dict[str, Any], rank: int) -> str:
     provider_name = str(entry.get("provider_name") or "Proveedor")
     match_type = str(entry.get("match_type") or "")
     product_name = str(entry.get("product_name") or "").strip()
+    risk_flags = list(entry.get("risk_flags") or [])
+    preference_notes = list(entry.get("preference_notes") or [])
+    rag_verdict = entry.get("rag_verdict")
+    rag_summary = entry.get("rag_summary")
     if match_type == "exact_reference":
-        return f"{provider_name}: referencia exacta."
+        return f"{provider_name}: revision agentica con referencia exacta."
+    if rag_verdict == "reference_supported" and rag_summary:
+        return f"{provider_name}: revision agentica con respaldo RAG por referencia o aplicacion."
+    if rag_verdict == "vehicle_supported" and rag_summary:
+        return f"{provider_name}: revision agentica con respaldo RAG por aplicacion del vehiculo."
+    if rag_verdict == "year_scope_warning":
+        return f"{provider_name}: revision agentica con alerta RAG; validar anos segun catalogo tecnico."
+    if rag_verdict == "generic_support":
+        return f"{provider_name}: revision agentica con apoyo RAG parcial; validar referencia."
+    if "year_mismatch" in risk_flags:
+        return f"{provider_name}: revision agentica heuristica; validar ano o modelo."
+    if "color_mismatch" in risk_flags or "finish_mismatch" in risk_flags:
+        return f"{provider_name}: revision agentica heuristica; validar color o acabado."
+    if preference_notes and rank == 1:
+        return f"{provider_name}: revision agentica heuristica alineada con preferencia."
     if rank == 1:
-        return f"{provider_name}: mejor opcion."
+        return f"{provider_name}: revision agentica heuristica; mejor opcion."
     if entry.get("provider_id") in {"impocali", "disfal"}:
-        return f"{provider_name}: validar manual."
+        return f"{provider_name}: revision agentica heuristica; validar manualmente."
     if "kit" in normalize_text(product_name):
-        return f"{provider_name}: alternativa kit."
-    return f"{provider_name}: alternativa."
+        return f"{provider_name}: revision agentica heuristica; alternativa tipo kit."
+    return f"{provider_name}: revision agentica heuristica; alternativa util."
 
 
 def compact_agentic_match(entry: dict[str, Any], rank: int) -> dict[str, Any]:
@@ -303,7 +385,16 @@ def compact_agentic_match(entry: dict[str, Any], rank: int) -> dict[str, Any]:
         "category_name": entry.get("category_name"),
         "subcategory_name": entry.get("subcategory_name"),
         "requires_manual_confirmation": bool(entry.get("requires_manual_confirmation")),
+        "compatibility_state": compatibility_state_for_match(entry),
+        "compatibility_summary": compatibility_summary_for_match(entry),
+        "compatibility_warnings": list(entry.get("compatibility_warnings") or []),
         "agentic_comment": summarize_agentic_choice(entry, rank),
+        "explanation_source": "rag" if entry.get("rag_summary") else "agentic",
+        "risk_flags": list(entry.get("risk_flags") or []),
+        "preference_notes": list(entry.get("preference_notes") or []),
+        "rag_verdict": entry.get("rag_verdict"),
+        "rag_summary": entry.get("rag_summary"),
+        "rag_citations": list(entry.get("rag_citations") or []),
     }
 
 
@@ -364,6 +455,21 @@ def finalize_part_review(state: PartReviewState) -> dict[str, Any]:
         compact_agentic_match(entry, rank=index + 1)
         for index, entry in enumerate(selected[:3])
     ]
+    risk_notes = list(
+        dict.fromkeys(
+            note
+            for entry in selected
+            for note in (entry.get("compatibility_warnings") or [])[:2]
+        )
+    )
+    preference_notes = list(
+        dict.fromkeys(
+            note
+            for entry in selected
+            for note in (entry.get("preference_notes") or [])[:2]
+        )
+    )
+    summary_comment = compact_selected[0].get("agentic_comment") if compact_selected else None
     return {
         "part_name": state["part"].get("part_name"),
         "requested_reference": state["part"].get("requested_reference"),
@@ -374,7 +480,10 @@ def finalize_part_review(state: PartReviewState) -> dict[str, Any]:
         "top_score_percent": top_match.get("agentic_adjusted_score", top_match.get("score_percent", 0))
         if top_match
         else 0,
+        "summary_comment": summary_comment,
         "selected_matches": compact_selected,
+        "risk_notes": risk_notes[:2],
+        "preference_notes": preference_notes[:2],
         "notes": state.get("notes", [])[:1],
         "trace": state.get("trace", []),
     }
@@ -413,7 +522,9 @@ def build_agentic_match_report(
     model_name: str | None = None,
 ) -> dict[str, Any]:
     supplier_matching = quote_payload.get("supplier_matching") or {}
-    reviewer = choose_reviewer(limit_per_part=limit_per_part, model_name=model_name)
+    preference_bundle = load_customer_preferences_for_quote(quote_payload)
+    effective_limit = min(limit_per_part, int(preference_bundle.get("max_options_per_part") or limit_per_part))
+    reviewer = choose_reviewer(limit_per_part=effective_limit, model_name=model_name)
     quote_context = {
         "marca": quote_payload.get("orbika", {}).get("marca"),
         "linea": quote_payload.get("orbika", {}).get("linea"),
@@ -421,6 +532,7 @@ def build_agentic_match_report(
         "ano": quote_payload.get("orbika", {}).get("ano"),
         "placa": quote_payload.get("orbika", {}).get("placa"),
         "vin": quote_payload.get("orbika", {}).get("vin"),
+        "preference_bundle": preference_bundle,
     }
 
     part_reviews = [
@@ -447,6 +559,7 @@ def build_agentic_match_report(
             "parts_reviewed": len(part_reviews),
             "parts_with_agentic_matches": parts_with_agentic_matches,
             "provider_hits": dict(sorted(provider_hits.items())),
+            "preferences_applied": preference_bundle.get("applied_preferences", []),
         },
         "parts": part_reviews,
     }

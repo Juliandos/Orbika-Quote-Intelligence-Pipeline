@@ -1,4 +1,4 @@
-import json
+﻿import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -1010,5 +1010,112 @@ class SupplierQuoteMatcherTests(unittest.TestCase):
             self.assertTrue((daily_dir / "2026-06-09.md").exists())
 
 
+    def test_build_quote_match_report_applies_embedded_provider_preference(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            provider_dir = root / "parrales"
+            (provider_dir / "snapshots" / "2026-06-09").mkdir(parents=True)
+            (provider_dir / "provider.json").write_text(
+                json.dumps({"display_name": "Parrales"}),
+                encoding="utf-8",
+            )
+            (provider_dir / "snapshots" / "2026-06-09" / "extracted.json").write_text(
+                json.dumps(
+                    {
+                        "snapshot_date": "2026-06-09",
+                        "products": [
+                            {
+                                "product_name": "LIQUIDO REFRIGERANTE FORD ECOSPORT",
+                                "brand": "FORD",
+                                "category_name": "Refrigerantes",
+                                "detail_url": "https://example.invalid/refrigerante-1",
+                                "searchable_tokens": ["liquido", "refrigerante", "ford", "ecosport"],
+                                "match_type": "vehicle_compatible",
+                                "requires_manual_confirmation": False,
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            index = load_provider_catalog_index(root)
+
+        report = build_quote_match_report(
+            quote_payload={
+                "source": {"subject": "JHX127_ Fuiste Seleccionado para cotizar _SURA"},
+                "customer_preferences": [
+                    {
+                        "scope": "global",
+                        "preference_type": "preferred_provider",
+                        "value": {"provider_id": "parrales"},
+                    }
+                ],
+                "orbika": {
+                    "marca": "FORD",
+                    "linea": "ECOSPORT",
+                    "version": "TREND",
+                    "ano": "2022",
+                    "parts": [{"name": "Liquido refrigerante", "quantity": 1}],
+                },
+            },
+            index=index,
+            limit_per_part=3,
+        )
+
+        match = report["parts"][0]["matches"][0]
+        self.assertEqual(match["provider_id"], "parrales")
+        self.assertIn("prioriza parrales", " ".join(match.get("preference_notes", [])))
+        self.assertIn("preferred_provider", report["preferences"]["applied_preferences"])
+
+    def test_build_quote_match_report_marks_visible_year_mismatch(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            provider_dir = root / "partcar"
+            (provider_dir / "snapshots" / "2026-06-09").mkdir(parents=True)
+            (provider_dir / "provider.json").write_text(
+                json.dumps({"display_name": "Partcar"}),
+                encoding="utf-8",
+            )
+            (provider_dir / "snapshots" / "2026-06-09" / "extracted.json").write_text(
+                json.dumps(
+                    {
+                        "snapshot_date": "2026-06-09",
+                        "products": [
+                            {
+                                "product_name": "GUARDABARRO FORD ECOSPORT 2025 DERECHO",
+                                "taxonomy_label": "Carroceria",
+                                "detail_url": "https://example.invalid/guardabarro-2025",
+                                "supplier_item_code": "GB-2025",
+                                "searchable_tokens": ["guardabarro", "ford", "ecosport", "2025", "derecho"],
+                                "match_type": "vehicle_compatible",
+                                "requires_manual_confirmation": True,
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            index = load_provider_catalog_index(root)
+
+        report = build_quote_match_report(
+            quote_payload={
+                "source": {"subject": "Quote"},
+                "orbika": {
+                    "marca": "FORD",
+                    "linea": "ECOSPORT",
+                    "version": "TREND",
+                    "ano": "2022",
+                    "parts": [{"name": "Guardabarro derecho", "quantity": 1}],
+                },
+            },
+            index=index,
+            limit_per_part=3,
+        )
+
+        match = report["parts"][0]["matches"][0]
+        self.assertIn("year_mismatch", match.get("risk_flags", []))
+        self.assertLessEqual(match["score_percent"], 45)
+        self.assertTrue(match.get("compatibility_warnings"))
 if __name__ == "__main__":
     unittest.main()
+

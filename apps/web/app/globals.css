@@ -15,9 +15,10 @@ body {
 body {
   @apply bg-mist text-ink;
   background-image:
-    radial-gradient(circle at top left, rgba(88, 101, 77, 0.14), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(138, 91, 79, 0.1), transparent 28%),
-    linear-gradient(180deg, #f5f7f3 0%, #eef1ec 100%);
+    radial-gradient(circle at top left, rgba(17, 180, 230, 0.24), transparent 34%),
+    radial-gradient(circle at top right, rgba(9, 139, 199, 0.18), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(88, 101, 77, 0.12), transparent 26%),
+    linear-gradient(180deg, #f4fbfe 0%, #edf5f4 44%, #eef1ec 100%);
 }
 
 * {

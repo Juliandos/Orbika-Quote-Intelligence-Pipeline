@@ -28,3 +28,6 @@ Do not remove these compatibility files yet unless the next iteration is explici
 - `local/orbika_incremental/quotes/`
 
 The next step should be planned as a separate tightening pass, not as an automatic cleanup.
+
+
+Agregar recordatorio de que la última fase es verificar que todo funcione bien porque por ahora no espra correos, quiero ver bien lo de la retoma de correos, funcionamiento autónomo, que todos los botones de la ui funcionen correctamente, poder recibir mas proveedores, db actualizada.
