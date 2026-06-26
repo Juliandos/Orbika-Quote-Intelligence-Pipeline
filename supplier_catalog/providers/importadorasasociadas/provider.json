@@ -1,0 +1,49 @@
+﻿{
+  "provider_id": "importadorasasociadas",
+  "display_name": "Importadoras Asociadas",
+  "website": "https://www.importadorasasociadas.com/",
+  "catalog_root_url": "https://www.importadorasasociadas.com/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "public_menu_note": "Use Compra por categoría and Compra por marca de vehículo surfaces.",
+    "category_entry_hint": "https://www.importadorasasociadas.com/categorias/aceites",
+    "cluster_entry_hint": "https://www.importadorasasociadas.com/214?map=productClusterIds"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": false,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference",
+      "vehicle_compatible"
+    ],
+    "notes": "Use category and cluster pages as verification surfaces. Do not assume exact reference support from the public examples."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/importadorasasociadas/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

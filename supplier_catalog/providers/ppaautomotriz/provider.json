@@ -1,0 +1,49 @@
+{
+  "provider_id": "ppaautomotriz",
+  "display_name": "PPA Automotriz",
+  "website": "https://www.ppa-automotriz.com",
+  "catalog_root_url": "https://www.ppa-automotriz.com/productos/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "product_catalog_root": "https://www.ppa-automotriz.com/productos/",
+    "pagination_hint": "no pagination observed",
+    "product_detail_path_hint": "/producto/"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "basic_or_partial"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "Sparse site. Use it as a low-to-medium value verification source, not as an exact-reference source."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/ppaautomotriz/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

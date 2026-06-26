@@ -1,0 +1,48 @@
+﻿{
+  "provider_id": "corbeta",
+  "display_name": "Corbeta",
+  "website": "https://www.corbeta.com.co",
+  "catalog_root_url": "https://www.corbeta.com.co/automotriz.html",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "automotriz_category_root": "https://www.corbeta.com.co/automotriz.html",
+    "category_filter_hint": "topmenu_category_3"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "The automotriz category and its filter tree are useful, and the product pages expose enough data for verification."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/corbeta/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

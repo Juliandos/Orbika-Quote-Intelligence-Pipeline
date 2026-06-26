@@ -1,0 +1,16 @@
+﻿{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "autorecambiosltda",
+  "provider_name": "Autorecambios LTDA",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Repuestos para carros y camionetas",
+    "Tapa de tanque de combustible Fiesta Zetec"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Seed snapshot created from the user-provided public category and product examples; live validation pending."
+  ]
+}

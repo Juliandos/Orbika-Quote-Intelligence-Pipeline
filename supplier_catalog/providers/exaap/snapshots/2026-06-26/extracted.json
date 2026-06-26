@@ -1,0 +1,30 @@
+{
+  "provider_id": "exaap",
+  "provider_name": "Exaap",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://exaap.com/",
+  "catalog_root_url": "https://exaap.com/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Very weak public catalog signal; keep for manual verification only."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Catalogo general",
+      "category_name": "Catalogo general",
+      "detail_url": "https://exaap.com/",
+      "source_page_url": "https://exaap.com/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "low",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "catalogo",
+        "general"
+      ]
+    }
+  ]
+}

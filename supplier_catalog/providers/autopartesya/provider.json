@@ -1,0 +1,49 @@
+{
+  "provider_id": "autopartesya",
+  "display_name": "Autopartesya",
+  "website": "https://www.autopartesya.co/",
+  "catalog_root_url": "https://www.autopartesya.co/shop-2/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "shop_root": "https://www.autopartesya.co/shop-2/",
+    "pagination_query_hint": "query pagination",
+    "performance_note": "very slow / last to crawl"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "Useful, but slow. Keep it in the lower-priority queue and expect pagination / filter cost."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/autopartesya/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

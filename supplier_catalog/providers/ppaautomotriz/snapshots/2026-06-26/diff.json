@@ -1,0 +1,16 @@
+{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "ppaautomotriz",
+  "provider_name": "PPA Automotriz",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Productos",
+    "Renault 9 19 Clio 1 Yokomitsu"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
+  ]
+}

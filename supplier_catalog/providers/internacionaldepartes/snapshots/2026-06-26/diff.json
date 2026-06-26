@@ -1,0 +1,16 @@
+﻿{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "internacionaldepartes",
+  "provider_name": "Internacional de Partes",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Productos",
+    "Balinera clutch embrague Nissan NV 350 Urvan YD25 Colombia"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Seed snapshot created from the user-provided public product example; live validation pending."
+  ]
+}

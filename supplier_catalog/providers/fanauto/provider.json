@@ -1,0 +1,48 @@
+{
+  "provider_id": "fanauto",
+  "display_name": "Fanauto",
+  "website": "https://fanauto.com.co/",
+  "catalog_root_url": "https://fanauto.com.co/catalogo-digital/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "flipbook_root": "https://fanauto.com.co/catalogo-digital/",
+    "catalog_surface": "image flipbook / visual catalog"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": false,
+    "stock": false,
+    "prices": false,
+    "product_names": false,
+    "detail_links": false,
+    "image_urls": true,
+    "descriptions": "image_only"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference",
+      "vehicle_compatible",
+      "category_only"
+    ],
+    "notes": "Visual catalog only. Use manual confirmation unless OCR or vision extraction is added later."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/fanauto/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

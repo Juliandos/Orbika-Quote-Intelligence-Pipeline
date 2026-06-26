@@ -1,0 +1,16 @@
+{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "autolatas",
+  "provider_name": "Autolatas",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Tienda",
+    "Ampliacion izquierda bomper trasero Ford Ecosport 2004 a 2012"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
+  ]
+}

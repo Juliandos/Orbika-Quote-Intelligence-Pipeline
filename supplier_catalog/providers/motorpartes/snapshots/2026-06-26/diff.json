@@ -1,0 +1,16 @@
+{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "motorpartes",
+  "provider_name": "Motorpartes",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Bloques de motor",
+    "Valvulas admision Daewoo Tico Matiz Spark F8 B10S"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
+  ]
+}

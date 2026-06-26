@@ -1,0 +1,15 @@
+{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "exaap",
+  "provider_name": "Exaap",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Catalogo general"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Very weak public catalog signal; keep for manual verification only."
+  ]
+}

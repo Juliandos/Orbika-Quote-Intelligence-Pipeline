@@ -1,0 +1,50 @@
+{
+  "provider_id": "ppaautomotriz",
+  "provider_name": "PPA Automotriz",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.ppa-automotriz.com",
+  "catalog_root_url": "https://www.ppa-automotriz.com/productos/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Productos",
+      "category_name": "Productos",
+      "detail_url": "https://www.ppa-automotriz.com/productos/",
+      "source_page_url": "https://www.ppa-automotriz.com/productos/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "productos"
+      ]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Renault 9 19 Clio 1 Yokomitsu",
+      "product_url": "https://www.ppa-automotriz.com/producto/renault-9-19-clio-1-yokomitsu/",
+      "category_name": "Encendido",
+      "subcategory_name": "Ignicion",
+      "brand": "Renault",
+      "description": "Ficha basica publica.",
+      "vehicle_scope": "Renault 9 19 Clio 1",
+      "source_page_url": "https://www.ppa-automotriz.com/productos/",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "renault",
+        "clio",
+        "yokomitsu"
+      ]
+    }
+  ]
+}

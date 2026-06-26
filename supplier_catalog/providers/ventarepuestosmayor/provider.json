@@ -1,0 +1,48 @@
+{
+  "provider_id": "ventarepuestosmayor",
+  "display_name": "Venta Repuestos Mayor",
+  "website": "https://ventarepuestosmayor.mybelectricosas.co/",
+  "catalog_root_url": "https://ventarepuestosmayor.mybelectricosas.co/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "home_pdf_link_note": "Homepage button points to PDF catalog resources",
+    "catalog_surface": "pdf catalogs"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": false,
+    "stock": false,
+    "prices": false,
+    "product_names": false,
+    "detail_links": false,
+    "image_urls": false,
+    "descriptions": "pdf_catalog_only"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference",
+      "vehicle_compatible"
+    ],
+    "notes": "PDF catalog source. Keep it for manual verification only unless the PDF exposes structured product text."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/ventarepuestosmayor/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

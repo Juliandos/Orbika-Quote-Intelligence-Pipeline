@@ -1,0 +1,3 @@
+provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
+yamatocolombia,Yamato Colombia,2026-06-26,brand_page,category_only,Taiho,https://yamatocolombia.com.co/taiho/,Marcas,Taiho,Taiho,,,https://yamatocolombia.com.co/,1,category_only,low,True,taiho|yamato
+yamatocolombia,Yamato Colombia,2026-06-26,brand_page,category_only,Matsuda,https://yamatocolombia.com.co/matsuda/,Marcas,Matsuda,Matsuda,,,https://yamatocolombia.com.co/,1,category_only,low,True,matsuda|yamato

@@ -1,0 +1,45 @@
+﻿{
+  "provider_id": "imotriz",
+  "provider_name": "Imotriz",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.imotriz.com/home",
+  "catalog_root_url": "https://www.imotriz.com/catalogo/page/results?search=HYUNDAI",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot created from the user-provided public catalog examples; live validation pending.",
+    "Home modal is treated as low risk compared with the catalog surface."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Catalogo HYUNDAI",
+      "category_name": "Catalogo HYUNDAI",
+      "detail_url": "https://www.imotriz.com/catalogo/page/results?search=HYUNDAI",
+      "source_page_url": "https://www.imotriz.com/catalogo/page/results?search=HYUNDAI",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["catalogo", "hyundai"]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Contacto Airbag G I10",
+      "product_url": "https://www.imotriz.com/producto/901/93490-A4010-/Contacto-Airbag-G-I10",
+      "category_name": "Seguridad",
+      "subcategory_name": "Airbag",
+      "brand": "Hyundai",
+      "description": "Detalle público con información útil para comparación.",
+      "vehicle_scope": "Hyundai i10",
+      "source_page_url": "https://www.imotriz.com/catalogo/page/results?search=HYUNDAI",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "high",
+      "requires_manual_confirmation": false,
+      "searchable_tokens": ["contacto", "airbag", "g", "i10", "hyundai"]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+﻿{
+  "provider_id": "procar",
+  "display_name": "Procar",
+  "website": "https://procar.com.co/",
+  "catalog_root_url": "https://procar.com.co/categoria-producto/llantas/auto/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "home_modal_note": "Modal visible in home only; catalog pages are the extraction surface that matters.",
+    "autos_category_root": "https://procar.com.co/categoria-producto/llantas/auto/",
+    "product_detail_path_hint": "/producto/"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "Use the autos catalog only. Treat the home modal as low risk because the catalog pages are the real source. Prefer product names, category labels, and detail-page description over any inferred code."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/procar/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

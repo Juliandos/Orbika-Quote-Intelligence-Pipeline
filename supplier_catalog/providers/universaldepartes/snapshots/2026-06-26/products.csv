@@ -1,0 +1,3 @@
+provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
+,,,category,category_only,All products,https://www.universaldepartes.co/category/all-products,All products,,,,,https://www.universaldepartes.co/category/all-products,1,category_only,medium,True,all|products
+,,,product,product_catalog,SKF 280,https://www.universaldepartes.co/product-page/skf-280,Rodamientos,SKF,SKF,Descripcion basica publica para verificacion parcial.,Autos,https://www.universaldepartes.co/category/all-products,1,category_only,medium,True,skf|280

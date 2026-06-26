@@ -1,0 +1,16 @@
+{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "yamatocolombia",
+  "provider_name": "Yamato Colombia",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Taiho",
+    "Matsuda"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Image-heavy catalog; extract visible names only and keep fitment unverified."
+  ]
+}

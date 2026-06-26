@@ -1,0 +1,48 @@
+﻿{
+  "provider_id": "internacionaldepartes",
+  "display_name": "Internacional de Partes",
+  "website": "https://internacionaldepartes.com",
+  "catalog_root_url": "https://internacionaldepartes.com/productos",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "catalog_root": "https://internacionaldepartes.com/productos",
+    "filters": "category and brand"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": false,
+    "descriptions": "valid"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "The category and brand filters are useful, and product detail pages expose enough information to support matching."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/internacionaldepartes/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

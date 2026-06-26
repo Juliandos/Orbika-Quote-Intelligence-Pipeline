@@ -1,0 +1,49 @@
+﻿{
+  "provider_id": "propartes",
+  "display_name": "Propartes",
+  "website": "https://propartes.com/",
+  "catalog_root_url": "https://propartes.com/autos/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "autos_root": "https://propartes.com/autos/",
+    "filter_root": "https://tienda.propartes.com/filtros-automotriz",
+    "query_pagination_example": "https://tienda.propartes.com/filtros-de-aire/products?pageNumber=1&productLowPrice=0&productHighPrice=0&sort=1&attributes=%5B%5D"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": false,
+    "descriptions": "basic_or_partial"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "The catalog is useful, but many entries expose only basic tags. Prefer vehicle fitment clues and category context over any invented reference."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/propartes/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

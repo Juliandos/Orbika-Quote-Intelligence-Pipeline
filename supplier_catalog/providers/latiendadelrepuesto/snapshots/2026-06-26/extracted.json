@@ -1,0 +1,64 @@
+{
+  "provider_id": "latiendadelrepuesto",
+  "provider_name": "La Tienda del Repuesto",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://latiendadelrepuesto.com/",
+  "catalog_root_url": "https://latiendadelrepuesto.com/portafolio/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Sparse public site with limited but useful validation data."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Portafolio",
+      "category_name": "Portafolio",
+      "detail_url": "https://latiendadelrepuesto.com/portafolio/",
+      "source_page_url": "https://latiendadelrepuesto.com/portafolio/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "portafolio"
+      ]
+    },
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Caja y transmision",
+      "category_name": "Caja y transmision",
+      "detail_url": "https://latiendadelrepuesto.com/caja-y-transmision/",
+      "source_page_url": "https://latiendadelrepuesto.com/caja-y-transmision/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "low",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "caja",
+        "transmision"
+      ]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Accesorios",
+      "product_url": "https://latiendadelrepuesto.com/accesorios/",
+      "category_name": "Accesorios",
+      "subcategory_name": "Accesorios",
+      "brand": null,
+      "description": "Pagina pequeña pero con informacion util para validacion.",
+      "vehicle_scope": "Autos",
+      "source_page_url": "https://latiendadelrepuesto.com/accesorios/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "accesorios"
+      ]
+    }
+  ]
+}

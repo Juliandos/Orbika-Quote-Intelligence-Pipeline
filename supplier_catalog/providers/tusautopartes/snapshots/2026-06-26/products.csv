@@ -1,0 +1,3 @@
+provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
+,,,category,category_only,Alarmas,https://tusautopartes.com.co/collections/alarmas,Alarmas,,,,,https://tusautopartes.com.co/collections/alarmas,1,category_only,medium,True,alarmas
+,,,product,product_catalog,Alarma,https://tusautopartes.com.co/collections/alarmas,Seguridad,Alarmas,,Informacion valida de catalogo para verificacion parcial.,Autos,https://tusautopartes.com.co/collections/alarmas,1,category_only,medium,True,alarma

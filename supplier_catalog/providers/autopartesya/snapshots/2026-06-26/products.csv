@@ -1,0 +1,2 @@
+provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
+autopartesya,Autopartesya,2026-06-26,category,category_only,Shop,https://www.autopartesya.co/shop-2/,Shop,,,,,https://www.autopartesya.co/shop-2/,1,category_only,medium,True,shop|autopartesya

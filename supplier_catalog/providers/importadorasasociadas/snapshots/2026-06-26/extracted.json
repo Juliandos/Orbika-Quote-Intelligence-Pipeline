@@ -1,0 +1,40 @@
+﻿{
+  "provider_id": "importadorasasociadas",
+  "provider_name": "Importadoras Asociadas",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.importadorasasociadas.com/",
+  "catalog_root_url": "https://www.importadorasasociadas.com/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot created from the user-provided public catalog examples and filter routes; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Aceites automotrices",
+      "category_name": "Aceites",
+      "detail_url": "https://www.importadorasasociadas.com/categorias/aceites",
+      "source_page_url": "https://www.importadorasasociadas.com/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["aceites", "automotriz"]
+    },
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Catalogo por cluster 214",
+      "category_name": "Cluster de productos",
+      "detail_url": "https://www.importadorasasociadas.com/214?map=productClusterIds",
+      "source_page_url": "https://www.importadorasasociadas.com/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "low",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["cluster", "214", "productos"]
+    }
+  ]
+}

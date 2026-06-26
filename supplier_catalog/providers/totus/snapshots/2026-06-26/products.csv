@@ -1,0 +1,3 @@
+provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
+,,,category,category_only,Accesorios,https://www.totus.com.co/productos-categoria/accesorios/,Accesorios,,,,,https://www.totus.com.co/productos-categoria/accesorios/,1,category_only,medium,True,accesorios
+,,,product,product_catalog,Antena chapulin negra,https://www.totus.com.co/productos/antena-chapulin-negra/,Accesorios,Antenas,,Informacion basica util para comparacion.,Autos,https://www.totus.com.co/productos-categoria/accesorios/,1,category_only,medium,True,antena|chapulin|negra

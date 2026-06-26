@@ -1,0 +1,16 @@
+{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "pintuco",
+  "provider_name": "Pintuco",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Repintado automotriz",
+    "Endurecedor E30"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Automotive repaint catalog with general descriptions and implicit HTML pagination."
+  ]
+}

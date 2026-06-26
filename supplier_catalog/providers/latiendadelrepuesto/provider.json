@@ -1,0 +1,49 @@
+{
+  "provider_id": "latiendadelrepuesto",
+  "display_name": "La Tienda del Repuesto",
+  "website": "https://latiendadelrepuesto.com/",
+  "catalog_root_url": "https://latiendadelrepuesto.com/portafolio/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "portfolio_root": "https://latiendadelrepuesto.com/portafolio/",
+    "category_root_hint": "https://latiendadelrepuesto.com/caja-y-transmision/",
+    "accessories_hint": "https://latiendadelrepuesto.com/accesorios/"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": false,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "Sparse site. Keep it as a low-to-medium verification source and do not overinterpret the category pages."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/latiendadelrepuesto/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

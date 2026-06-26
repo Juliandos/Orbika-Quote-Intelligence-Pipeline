@@ -1,0 +1,51 @@
+{
+  "provider_id": "yamatocolombia",
+  "display_name": "Yamato Colombia",
+  "website": "https://yamatocolombia.com.co/",
+  "catalog_root_url": "https://yamatocolombia.com.co/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "brand_pages": [
+      "https://yamatocolombia.com.co/taiho/",
+      "https://yamatocolombia.com.co/matsuda/"
+    ],
+    "catalog_note": "extract names from image-backed pages only"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": false,
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference",
+      "vehicle_compatible"
+    ],
+    "notes": "Image-heavy catalog. Extract visible brand or product names only; do not infer fitment."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/yamatocolombia/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

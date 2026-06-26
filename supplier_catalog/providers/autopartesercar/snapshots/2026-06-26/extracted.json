@@ -1,0 +1,54 @@
+{
+  "provider_id": "autopartesercar",
+  "provider_name": "Autopartesercar",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://autopartesercar.com/",
+  "catalog_root_url": "https://autopartesercar.com/tienda/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Tienda",
+      "category_name": "Tienda",
+      "detail_url": "https://autopartesercar.com/tienda/",
+      "source_page_url": "https://autopartesercar.com/tienda/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "tienda",
+        "autopartesercar"
+      ]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Discos de freno delanteros Chevrolet Onix Turbo",
+      "product_url": "https://autopartesercar.com/product/discos-de-freno-delanteros-chevrolet-onix-turbo/",
+      "category_name": "Frenos",
+      "subcategory_name": "Discos de freno",
+      "brand": "Chevrolet",
+      "description": "Producto con informacion basica de marca y uso vehicular.",
+      "vehicle_scope": "Chevrolet Onix Turbo",
+      "source_page_url": "https://autopartesercar.com/tienda/",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "discos",
+        "freno",
+        "delanteros",
+        "chevrolet",
+        "onix",
+        "turbo"
+      ]
+    }
+  ]
+}

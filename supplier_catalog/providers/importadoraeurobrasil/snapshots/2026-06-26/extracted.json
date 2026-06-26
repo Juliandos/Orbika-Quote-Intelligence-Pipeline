@@ -1,0 +1,44 @@
+﻿{
+  "provider_id": "importadoraeurobrasil",
+  "provider_name": "Importadora EuroBrasil",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.importadoraeurobrasil.com",
+  "catalog_root_url": "https://www.importadoraeurobrasil.com/productos",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot created from the user-provided public product example; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Productos",
+      "category_name": "Productos",
+      "detail_url": "https://www.importadoraeurobrasil.com/productos",
+      "source_page_url": "https://www.importadoraeurobrasil.com/productos",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["productos", "catalogo"]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Axial arandela del ciguenal para Citroen Jumpy 2.0",
+      "product_url": "https://www.importadoraeurobrasil.com/producto/axial-arandela-del-ciguenal-para-citroen-jumpy-2-0/",
+      "category_name": "Motor",
+      "subcategory_name": "Ciguenal",
+      "brand": "Citroen",
+      "description": "Producto con información válida en la ficha pública.",
+      "vehicle_scope": "Citroen Jumpy 2.0",
+      "source_page_url": "https://www.importadoraeurobrasil.com/productos",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "high",
+      "requires_manual_confirmation": false,
+      "searchable_tokens": ["axial", "arandela", "ciguenal", "citroen", "jumpy", "2", "0"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "propartes",
+  "provider_name": "Propartes",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Filtros automotriz",
+    "Filtro de aire Audi A4 A5 Q5 3032 TF 2014"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Seed snapshot created from the user-provided public autos catalog examples; live validation pending."
+  ]
+}

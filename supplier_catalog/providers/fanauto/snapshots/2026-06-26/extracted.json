@@ -1,0 +1,32 @@
+{
+  "provider_id": "fanauto",
+  "provider_name": "Fanauto",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://fanauto.com.co/",
+  "catalog_root_url": "https://fanauto.com.co/catalogo-digital/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Visual flipbook catalog; OCR or vision extraction would be needed for richer data."
+  ],
+  "products": [
+    {
+      "item_type": "catalog",
+      "provider_type": "manual_confirmation_required",
+      "title": "Catalogo digital automotriz",
+      "category_name": "Catalogo digital",
+      "subcategory_name": "Flipbook",
+      "detail_url": "https://fanauto.com.co/catalogo-digital/",
+      "source_page_url": "https://fanauto.com.co/catalogo-digital/",
+      "page_number": 1,
+      "match_type": "manual_confirmation_required",
+      "match_confidence": "low",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "catalogo",
+        "digital",
+        "flipbook"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "provider_id": "motorpartes",
+  "provider_name": "Motorpartes",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.motorpartes.co/",
+  "catalog_root_url": "https://www.motorpartes.co/categoria-producto/bloques-de-motor/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Bloques de motor",
+      "category_name": "Bloques de motor",
+      "detail_url": "https://www.motorpartes.co/categoria-producto/bloques-de-motor/",
+      "source_page_url": "https://www.motorpartes.co/categoria-producto/bloques-de-motor/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "bloques",
+        "motor"
+      ]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Valvulas admision Daewoo Tico Matiz Spark F8 B10S",
+      "product_url": "https://www.motorpartes.co/producto/valvulas-admision-daewoo-tico-matiz-spark-f8-b10s/",
+      "category_name": "Valvulas",
+      "subcategory_name": "Admision",
+      "brand": "Daewoo",
+      "description": "Producto con etiquetas y descripcion basica para verificacion parcial.",
+      "vehicle_scope": "Daewoo Tico Matiz Spark",
+      "source_page_url": "https://www.motorpartes.co/categoria-producto/valvulas/",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "valvulas",
+        "admision",
+        "daewoo",
+        "tico",
+        "matiz",
+        "spark",
+        "f8",
+        "b10s"
+      ]
+    }
+  ]
+}

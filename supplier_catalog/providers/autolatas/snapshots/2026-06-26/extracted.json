@@ -1,0 +1,56 @@
+{
+  "provider_id": "autolatas",
+  "provider_name": "Autolatas",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://autolatas.com/",
+  "catalog_root_url": "https://autolatas.com/tienda",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Tienda",
+      "category_name": "Tienda",
+      "detail_url": "https://autolatas.com/tienda",
+      "source_page_url": "https://autolatas.com/tienda",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "tienda",
+        "autolatas"
+      ]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Ampliacion izquierda bomper trasero Ford Ecosport 2004 a 2012",
+      "product_url": "https://autolatas.com/ampliacion/ampliacion-izquierda-bomper-trasero-ford-ecosport-2004-a-2012/",
+      "category_name": "Bomper",
+      "subcategory_name": "Ampliacion",
+      "brand": "Ford",
+      "description": "Ficha basica, util para verificacion por vehiculo y categoria.",
+      "vehicle_scope": "Ford Ecosport 2004 a 2012",
+      "source_page_url": "https://autolatas.com/tienda",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "ampliacion",
+        "izquierda",
+        "bomper",
+        "trasero",
+        "ford",
+        "ecosport",
+        "2004",
+        "2012"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+﻿{
+  "provider_id": "propartes",
+  "provider_name": "Propartes",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://propartes.com/",
+  "catalog_root_url": "https://propartes.com/autos/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot created from the user-provided public autos catalog examples; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Filtros automotriz",
+      "category_name": "Filtros automotriz",
+      "detail_url": "https://tienda.propartes.com/filtros-automotriz",
+      "source_page_url": "https://tienda.propartes.com/filtros-automotriz",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["filtros", "automotriz"]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Filtro de aire Audi A4 A5 Q5 3032 TF 2014",
+      "product_url": "https://tienda.propartes.com/filtros-de-aire/f-aire--audi-a4a5q5-3032-tf-2014-r703",
+      "category_name": "Filtros de aire",
+      "subcategory_name": "Audi A4 A5 Q5",
+      "brand": null,
+      "description": "Ficha básica con etiquetas y compatibilidad por vehículo.",
+      "vehicle_scope": "Audi A4 A5 Q5 2014",
+      "source_page_url": "https://tienda.propartes.com/filtros-de-aire/products?pageNumber=1&productLowPrice=0&productHighPrice=0&sort=1&attributes=%5B%5D",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["filtro", "aire", "audi", "a4", "a5", "q5", "2014"]
+    }
+  ]
+}

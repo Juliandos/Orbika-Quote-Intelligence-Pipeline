@@ -1,0 +1,54 @@
+{
+  "provider_id": "pintuco",
+  "provider_name": "Pintuco",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.pintuco.com.co/",
+  "catalog_root_url": "https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Automotive repaint catalog with general descriptions and implicit HTML pagination."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Repintado automotriz",
+      "category_name": "Automotriz",
+      "subcategory_name": "Repintado automotriz",
+      "detail_url": "https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz",
+      "source_page_url": "https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "pintuco",
+        "automotriz",
+        "repintado"
+      ]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Endurecedor E30",
+      "product_url": "https://www.pintuco.com.co/productos/endurecedor-e30/",
+      "category_name": "Automotriz",
+      "subcategory_name": "Endurecedores",
+      "brand": "Pintuco",
+      "description": "Descripcion general publica; paginacion implicita en HTML.",
+      "vehicle_scope": "Autos",
+      "source_page_url": "https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "endurecedor",
+        "e30",
+        "pintuco",
+        "automotriz"
+      ]
+    }
+  ]
+}

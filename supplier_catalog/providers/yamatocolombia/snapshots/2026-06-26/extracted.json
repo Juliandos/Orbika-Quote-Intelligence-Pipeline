@@ -1,0 +1,50 @@
+{
+  "provider_id": "yamatocolombia",
+  "provider_name": "Yamato Colombia",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://yamatocolombia.com.co/",
+  "catalog_root_url": "https://yamatocolombia.com.co/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Image-heavy catalog; extract visible names only and keep fitment unverified."
+  ],
+  "products": [
+    {
+      "item_type": "brand_page",
+      "provider_type": "category_only",
+      "title": "Taiho",
+      "category_name": "Marcas",
+      "subcategory_name": "Taiho",
+      "brand": "Taiho",
+      "detail_url": "https://yamatocolombia.com.co/taiho/",
+      "source_page_url": "https://yamatocolombia.com.co/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "low",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "taiho",
+        "yamato"
+      ]
+    },
+    {
+      "item_type": "brand_page",
+      "provider_type": "category_only",
+      "title": "Matsuda",
+      "category_name": "Marcas",
+      "subcategory_name": "Matsuda",
+      "brand": "Matsuda",
+      "detail_url": "https://yamatocolombia.com.co/matsuda/",
+      "source_page_url": "https://yamatocolombia.com.co/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "low",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "matsuda",
+        "yamato"
+      ]
+    }
+  ]
+}

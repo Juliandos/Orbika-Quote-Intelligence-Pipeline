@@ -1,0 +1,49 @@
+{
+  "provider_id": "universaldepartes",
+  "display_name": "Universal de Partes",
+  "website": "https://www.universaldepartes.co/",
+  "catalog_root_url": "https://www.universaldepartes.co/category/all-products",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "category_root": "https://www.universaldepartes.co/category/all-products",
+    "pagination_query_hint": "query pagination",
+    "product_detail_path_hint": "/product-page/"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "basic_or_partial"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "Useful for partial verification. Product descriptions are basic, so the catalog should be treated conservatively."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/universaldepartes/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

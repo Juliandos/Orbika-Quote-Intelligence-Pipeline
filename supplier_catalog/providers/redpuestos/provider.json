@@ -1,0 +1,49 @@
+﻿{
+  "provider_id": "redpuestos",
+  "display_name": "Redpuestos",
+  "website": "https://www.imotriz.com/tienda/redpuestos/",
+  "catalog_root_url": "https://www.imotriz.com/tienda/redpuestos/catalogo/page/results",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "store_module_embed": "#store-module-embed-vue-app",
+    "catalog_results_path": "https://www.imotriz.com/tienda/redpuestos/catalogo/page/results",
+    "filter_dimensions": "Grupo, Marca Vehículo, Modelo Vehículo, Marca Producto"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": false,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference",
+      "vehicle_compatible"
+    ],
+    "notes": "The store is useful as a catalog and filter surface. Do not treat the filter UI as exact reference support unless a product detail page exposes it publicly."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/redpuestos/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

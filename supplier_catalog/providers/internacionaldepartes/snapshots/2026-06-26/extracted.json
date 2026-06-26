@@ -1,0 +1,44 @@
+﻿{
+  "provider_id": "internacionaldepartes",
+  "provider_name": "Internacional de Partes",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://internacionaldepartes.com",
+  "catalog_root_url": "https://internacionaldepartes.com/productos",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot created from the user-provided public product example; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Productos",
+      "category_name": "Productos",
+      "detail_url": "https://internacionaldepartes.com/productos",
+      "source_page_url": "https://internacionaldepartes.com/productos",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["productos", "catalogo"]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Balinera clutch embrague Nissan NV 350 Urvan YD25 Colombia",
+      "product_url": "https://internacionaldepartes.com/productos/balinera-cluth-embrague-nissan-nv-350-urvan-yd25-colombia",
+      "category_name": "Embrague",
+      "subcategory_name": "Balinera clutch",
+      "brand": "Nissan",
+      "description": "Descripción válida para verificación de compatibilidad.",
+      "vehicle_scope": "Nissan NV 350 Urvan YD25",
+      "source_page_url": "https://internacionaldepartes.com/productos",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "high",
+      "requires_manual_confirmation": false,
+      "searchable_tokens": ["balinera", "clutch", "embrague", "nissan", "nv", "350", "urvan", "yd25", "colombia"]
+    }
+  ]
+}

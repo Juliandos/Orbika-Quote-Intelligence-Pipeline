@@ -1,0 +1,48 @@
+{
+  "provider_id": "tusautopartes",
+  "display_name": "Tus Autopartes",
+  "website": "https://tusautopartes.com.co/",
+  "catalog_root_url": "https://tusautopartes.com.co/collections/alarmas",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "header_category_nav": "#shopify-section-header > sticky-header > header > nav > ul",
+    "collection_root": "https://tusautopartes.com.co/collections/alarmas"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "basic_or_partial"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "Collection pages are useful for comparison, but keep manual confirmation on for sparse product details."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/tusautopartes/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "ventarepuestosmayor",
+  "provider_name": "Venta Repuestos Mayor",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Catalogo PDF"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "PDF catalog source; manual verification only unless structured text is exposed."
+  ]
+}

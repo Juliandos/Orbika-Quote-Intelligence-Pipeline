@@ -1,0 +1,50 @@
+{
+  "provider_id": "universaldepartes",
+  "provider_name": "Universal de Partes",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.universaldepartes.co/",
+  "catalog_root_url": "https://www.universaldepartes.co/category/all-products",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "All products",
+      "category_name": "All products",
+      "detail_url": "https://www.universaldepartes.co/category/all-products",
+      "source_page_url": "https://www.universaldepartes.co/category/all-products",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "all",
+        "products"
+      ]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "SKF 280",
+      "product_url": "https://www.universaldepartes.co/product-page/skf-280",
+      "category_name": "Rodamientos",
+      "subcategory_name": "SKF",
+      "brand": "SKF",
+      "description": "Descripcion basica publica para verificacion parcial.",
+      "vehicle_scope": "Autos",
+      "source_page_url": "https://www.universaldepartes.co/category/all-products",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "skf",
+        "280"
+      ]
+    }
+  ]
+}

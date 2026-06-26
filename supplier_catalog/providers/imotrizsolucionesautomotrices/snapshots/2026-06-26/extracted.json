@@ -1,0 +1,44 @@
+﻿{
+  "provider_id": "imotrizsolucionesautomotrices",
+  "provider_name": "Imotriz Soluciones Automotrices",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.imotriz.com/tienda/solucionesautomotrices/catalogo",
+  "catalog_root_url": "https://www.imotriz.com/tienda/solucionesautomotrices/catalogo",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot created from the user-provided public catalog examples; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Catalogo soluciones automotrices",
+      "category_name": "Soluciones automotrices",
+      "detail_url": "https://www.imotriz.com/tienda/solucionesautomotrices/catalogo",
+      "source_page_url": "https://www.imotriz.com/tienda/solucionesautomotrices/catalogo",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["catalogo", "soluciones", "automotrices"]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Disco Clutch Soul 1.6 Dohc Marca Valeo",
+      "product_url": "https://www.imotriz.com/tienda/solucionesautomotrices/producto/41100-32021/Disco-Clutch-Soul-1-6-Dohc-Marca-Valeo",
+      "category_name": "Embrague",
+      "subcategory_name": "Disco clutch",
+      "brand": "Valeo",
+      "description": "Información básica suficiente para verificación parcial.",
+      "vehicle_scope": "Kia Soul 1.6 DOHC",
+      "source_page_url": "https://www.imotriz.com/tienda/solucionesautomotrices/catalogo",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["disco", "clutch", "soul", "1", "6", "dohc", "valeo"]
+    }
+  ]
+}

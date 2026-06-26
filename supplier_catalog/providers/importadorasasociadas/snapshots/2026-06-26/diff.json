@@ -1,0 +1,16 @@
+﻿{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "importadorasasociadas",
+  "provider_name": "Importadoras Asociadas",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Aceites automotrices",
+    "Catalogo por cluster 214"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Seed snapshot created from the user-provided public catalog examples and filter routes; live validation pending."
+  ]
+}

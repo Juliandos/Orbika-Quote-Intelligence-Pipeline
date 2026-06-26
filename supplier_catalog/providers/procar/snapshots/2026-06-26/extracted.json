@@ -1,0 +1,31 @@
+﻿{
+  "provider_id": "procar",
+  "provider_name": "Procar",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://procar.com.co/",
+  "catalog_root_url": "https://procar.com.co/categoria-producto/llantas/auto/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot created from the user-provided public autos catalog example; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "GalloPro H-T",
+      "product_url": "https://procar.com.co/producto/gallopro-h-t/",
+      "category_name": "Llantas auto",
+      "subcategory_name": "Auto",
+      "brand": "GalloPro",
+      "description": "Producto de autos con ficha más completa que la portada.",
+      "vehicle_scope": "Autos",
+      "source_page_url": "https://procar.com.co/categoria-producto/llantas/auto/",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": false,
+      "searchable_tokens": ["gallopro", "ht", "llantas", "auto"]
+    }
+  ]
+}

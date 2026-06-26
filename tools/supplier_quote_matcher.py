@@ -47,7 +47,7 @@ GENERIC_VEHICLE_TOKENS = {
     "aa",
     "ab",
     "abs",
-    "aÃƒÂ±o",
+    "aÃƒÆ’Ã‚Â±o",
     "ano",
     "at",
     "ct",
@@ -310,6 +310,18 @@ TAXONOMY_KEYWORDS = {
         "luz",
         "luces",
         "stop",
+    ],
+    "tires_wheels": [
+        "llanta",
+        "llantas",
+        "neumatico",
+        "neumaticos",
+        "rin",
+        "rines",
+        "tire",
+        "tires",
+        "wheel",
+        "wheels",
     ],
     "lubricants_fluids": [
         "aceite",
@@ -661,6 +673,10 @@ COMMON_PROVIDER_NOTES = {
     "partcar": (
         "El catalogo usa un codigo interno del proveedor; se recomienda confirmar equivalencia "
         "antes de tomarlo como reemplazo exacto."
+    ),
+    "procar": (
+        "Procar se apoya en catalogo autos y detalle de producto; el home modal es de bajo riesgo, "
+        "pero la validacion debe hacerse desde las paginas de catalogo y detalle."
     ),
 }
 
@@ -1020,7 +1036,7 @@ def infer_taxonomies(*values: str | None) -> tuple[str, ...]:
 
 
 def load_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def latest_snapshot_json(provider_dir: Path) -> Path | None:
@@ -1272,7 +1288,208 @@ def flatten_repuestera(
         )
     return items
 
+def flatten_procar(
+    metadata: dict[str, Any],
+    snapshot: dict[str, Any],
+) -> list[ProviderItem]:
+    items: list[ProviderItem] = []
+    common_notes = provider_item_notes("procar", metadata, snapshot)
+    products = snapshot.get("products") or snapshot.get("catalog_products") or snapshot.get("items") or []
+    if not isinstance(products, list):
+        products = []
+    for product in products:
+        product_name = str(product.get("product_name") or product.get("title") or "")
+        category_name = product.get("category_name") or product.get("category") or product.get("family_name")
+        subcategory_name = product.get("subcategory_name") or product.get("subcategory")
+        description = product.get("description") or product.get("short_description") or product.get("summary")
+        brand = product.get("brand")
+        vehicle_scope = product.get("vehicle_scope") or product.get("vehicle_brand") or product.get("vehicle_model")
+        detail_url = product.get("product_url") or product.get("detail_url") or product.get("url")
+        items.append(
+            ProviderItem(
+                provider_id="procar",
+                provider_name="Procar",
+                provider_type="product_catalog",
+                detail_url=detail_url,
+                title=product_name,
+                category_name=category_name,
+                subcategory_name=subcategory_name,
+                brand=brand,
+                reference=product.get("reference"),
+                sku=product.get("sku"),
+                supplier_item_code=product.get("supplier_item_code"),
+                taxonomy_labels=tuple(
+                    sorted(
+                        set(
+                            filter(
+                                None,
+                                [
+                                    *infer_taxonomies(
+                                        product_name,
+                                        category_name,
+                                        subcategory_name,
+                                        description,
+                                        vehicle_scope,
+                                    )
+                                ],
+                            )
+                        )
+                    )
+                ),
+                searchable_tokens=frozenset(product.get("searchable_tokens", []))
+                or token_set(
+                    product_name,
+                    category_name,
+                    subcategory_name,
+                    brand,
+                    description,
+                    vehicle_scope,
+                    product.get("reference"),
+                    product.get("sku"),
+                ),
+                raw_match_type=product.get("match_type"),
+                requires_manual_confirmation=bool(product.get("requires_manual_confirmation", True)),
+                notes=common_notes,
+            )
+        )
+    return items
 
+
+def flatten_seeded_catalog(
+    provider_id: str,
+    provider_name: str,
+    metadata: dict[str, Any],
+    snapshot: dict[str, Any],
+) -> list[ProviderItem]:
+    items: list[ProviderItem] = []
+    common_notes = provider_item_notes(provider_id, metadata, snapshot)
+
+    def add_record(record: dict[str, Any], default_provider_type: str) -> None:
+        title = str(
+            record.get("product_name")
+            or record.get("title")
+            or record.get("category_name")
+            or record.get("family_name")
+            or record.get("brand_name")
+            or record.get("name")
+            or ""
+        )
+        category_name = record.get("category_name") or record.get("category") or record.get("family_name") or record.get("group_name")
+        subcategory_name = record.get("subcategory_name") or record.get("subcategory") or record.get("segment")
+        brand = record.get("brand") or record.get("brand_name")
+        description = record.get("description") or record.get("short_description") or record.get("summary")
+        vehicle_scope = record.get("vehicle_scope") or record.get("vehicle_brand") or record.get("vehicle_model") or record.get("vehicle_fitment")
+        detail_url = (
+            record.get("product_url")
+            or record.get("detail_url")
+            or record.get("url")
+            or record.get("category_url")
+            or record.get("brand_url")
+        )
+        provider_type = str(record.get("provider_type") or default_provider_type)
+        items.append(
+            ProviderItem(
+                provider_id=provider_id,
+                provider_name=provider_name,
+                provider_type=provider_type,
+                detail_url=detail_url,
+                title=title,
+                category_name=category_name,
+                subcategory_name=subcategory_name,
+                brand=brand,
+                reference=record.get("reference"),
+                sku=record.get("sku"),
+                supplier_item_code=record.get("supplier_item_code"),
+                taxonomy_labels=tuple(
+                    sorted(
+                        set(
+                            filter(
+                                None,
+                                [
+                                    *infer_taxonomies(
+                                        title,
+                                        category_name,
+                                        subcategory_name,
+                                        description,
+                                        vehicle_scope,
+                                    )
+                                ],
+                            )
+                        )
+                    )
+                ),
+                searchable_tokens=frozenset(record.get("searchable_tokens", []))
+                or token_set(
+                    title,
+                    category_name,
+                    subcategory_name,
+                    brand,
+                    description,
+                    vehicle_scope,
+                    record.get("reference"),
+                    record.get("sku"),
+                    record.get("supplier_item_code"),
+                ),
+                raw_match_type=record.get("match_type"),
+                requires_manual_confirmation=bool(record.get("requires_manual_confirmation", True)),
+                notes=common_notes,
+            )
+        )
+
+    for record in snapshot.get("products") or snapshot.get("items") or []:
+        if isinstance(record, dict):
+            add_record(record, "product_catalog")
+
+    for record in snapshot.get("categories") or snapshot.get("category_pages") or []:
+        if isinstance(record, dict):
+            add_record(record, "category_only")
+
+    for record in snapshot.get("brand_pages") or []:
+        if isinstance(record, dict):
+            add_record(record, "category_only")
+
+    return items
+
+
+def flatten_importadorasasociadas(metadata: dict[str, Any], snapshot: dict[str, Any]) -> list[ProviderItem]:
+    return flatten_seeded_catalog("importadorasasociadas", "Importadoras Asociadas", metadata, snapshot)
+
+
+def flatten_redpuestos(metadata: dict[str, Any], snapshot: dict[str, Any]) -> list[ProviderItem]:
+    return flatten_seeded_catalog("redpuestos", "Redpuestos", metadata, snapshot)
+
+
+def flatten_propartes(metadata: dict[str, Any], snapshot: dict[str, Any]) -> list[ProviderItem]:
+    return flatten_seeded_catalog("propartes", "Propartes", metadata, snapshot)
+
+
+def flatten_autorecambiosltda(metadata: dict[str, Any], snapshot: dict[str, Any]) -> list[ProviderItem]:
+    return flatten_seeded_catalog("autorecambiosltda", "Autorecambios LTDA", metadata, snapshot)
+
+
+def flatten_internacionaldepartes(metadata: dict[str, Any], snapshot: dict[str, Any]) -> list[ProviderItem]:
+    return flatten_seeded_catalog("internacionaldepartes", "Internacional de Partes", metadata, snapshot)
+
+
+def flatten_importadoraeurobrasil(metadata: dict[str, Any], snapshot: dict[str, Any]) -> list[ProviderItem]:
+    return flatten_seeded_catalog("importadoraeurobrasil", "Importadora EuroBrasil", metadata, snapshot)
+
+
+def flatten_corbeta(metadata: dict[str, Any], snapshot: dict[str, Any]) -> list[ProviderItem]:
+    return flatten_seeded_catalog("corbeta", "Corbeta", metadata, snapshot)
+
+
+def flatten_imotriz(metadata: dict[str, Any], snapshot: dict[str, Any]) -> list[ProviderItem]:
+    return flatten_seeded_catalog("imotriz", "Imotriz", metadata, snapshot)
+
+
+def flatten_imotrizsolucionesautomotrices(metadata: dict[str, Any], snapshot: dict[str, Any]) -> list[ProviderItem]:
+    return flatten_seeded_catalog(
+        "imotrizsolucionesautomotrices",
+        "Imotriz Soluciones Automotrices",
+        metadata,
+        snapshot,
+    )
 def flatten_partcar(
     metadata: dict[str, Any],
     snapshot: dict[str, Any],
@@ -1317,11 +1534,35 @@ def flatten_partcar(
 
 
 FLATTENERS = {
+    "autopartesya": lambda metadata, snapshot: flatten_seeded_catalog("autopartesya", "Autopartesya", metadata, snapshot),
     "disfal": flatten_disfal,
+    "autorecambiosltda": flatten_autorecambiosltda,
+    "autolatas": lambda metadata, snapshot: flatten_seeded_catalog("autolatas", "Autolatas", metadata, snapshot),
+    "autopartesercar": lambda metadata, snapshot: flatten_seeded_catalog("autopartesercar", "Autopartesercar", metadata, snapshot),
+    "corbeta": flatten_corbeta,
+    "exaap": lambda metadata, snapshot: flatten_seeded_catalog("exaap", "Exaap", metadata, snapshot),
+    "fanauto": lambda metadata, snapshot: flatten_seeded_catalog("fanauto", "Fanauto", metadata, snapshot),
     "impocali": flatten_impocali,
+    "importadorasasociadas": flatten_importadorasasociadas,
+    "importadoraeurobrasil": flatten_importadoraeurobrasil,
+    "internacionaldepartes": flatten_internacionaldepartes,
+    "imotriz": flatten_imotriz,
+    "imotrizsolucionesautomotrices": flatten_imotrizsolucionesautomotrices,
+    "latiendadelrepuesto": lambda metadata, snapshot: flatten_seeded_catalog("latiendadelrepuesto", "La Tienda del Repuesto", metadata, snapshot),
+    "motorpartes": lambda metadata, snapshot: flatten_seeded_catalog("motorpartes", "Motorpartes", metadata, snapshot),
     "parrales": flatten_parrales,
     "partcar": flatten_partcar,
+    "pintuco": lambda metadata, snapshot: flatten_seeded_catalog("pintuco", "Pintuco", metadata, snapshot),
+    "ppaautomotriz": lambda metadata, snapshot: flatten_seeded_catalog("ppaautomotriz", "PPA Automotriz", metadata, snapshot),
+    "propartes": flatten_propartes,
+    "procar": flatten_procar,
+    "redpuestos": flatten_redpuestos,
     "repuestera": flatten_repuestera,
+    "totus": lambda metadata, snapshot: flatten_seeded_catalog("totus", "Totus", metadata, snapshot),
+    "tusautopartes": lambda metadata, snapshot: flatten_seeded_catalog("tusautopartes", "Tus Autopartes", metadata, snapshot),
+    "universaldepartes": lambda metadata, snapshot: flatten_seeded_catalog("universaldepartes", "Universal de Partes", metadata, snapshot),
+    "ventarepuestosmayor": lambda metadata, snapshot: flatten_seeded_catalog("ventarepuestosmayor", "Vente Repuestos Mayor", metadata, snapshot),
+    "yamatocolombia": lambda metadata, snapshot: flatten_seeded_catalog("yamatocolombia", "Yamato Colombia", metadata, snapshot),
 }
 
 
@@ -1979,3 +2220,10 @@ def main(argv: list[str]) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
+
+
+
+
+
+
+

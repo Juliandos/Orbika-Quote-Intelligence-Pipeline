@@ -1,0 +1,2 @@
+﻿provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
+procar,Procar,2026-06-26,product,product_catalog,GalloPro H-T,https://procar.com.co/producto/gallopro-h-t/,Llantas auto,Auto,GalloPro,"Producto de autos con ficha más completa que la portada.",Autos,https://procar.com.co/categoria-producto/llantas/auto/,1,vehicle_compatible,medium,False,"gallopro|ht|llantas|auto"

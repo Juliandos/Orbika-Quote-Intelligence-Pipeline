@@ -1,0 +1,49 @@
+{
+  "provider_id": "pintuco",
+  "display_name": "Pintuco",
+  "website": "https://www.pintuco.com.co/",
+  "catalog_root_url": "https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "category_root": "https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz",
+    "product_detail_path_hint": "/productos/",
+    "pagination_note": "implicit HTML pagination"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": false,
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference",
+      "vehicle_compatible"
+    ],
+    "notes": "Automotriz repintado catalog. Useful for category verification, not for exact vehicle fitment."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/pintuco/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

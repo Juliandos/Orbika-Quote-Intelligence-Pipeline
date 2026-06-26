@@ -1,0 +1,49 @@
+﻿{
+  "provider_id": "imotriz",
+  "display_name": "Imotriz",
+  "website": "https://www.imotriz.com/home",
+  "catalog_root_url": "https://www.imotriz.com/catalogo/page/results?search=HYUNDAI",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "home_sections": "https://www.imotriz.com/home",
+    "catalog_search_hint": "https://www.imotriz.com/catalogo/page/results?search=HYUNDAI",
+    "product_modal_note": "Selecting a product opens a modal before the detail page."
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "Use the catalog pages and the product detail pages. The home modal is low risk compared with the catalog surface."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/imotriz/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

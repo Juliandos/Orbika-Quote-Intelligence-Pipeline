@@ -1,0 +1,30 @@
+{
+  "provider_id": "autopartesya",
+  "provider_name": "Autopartesya",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.autopartesya.co/",
+  "catalog_root_url": "https://www.autopartesya.co/shop-2/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Very slow shop. Seeded as a lower-priority verification source."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Shop",
+      "category_name": "Shop",
+      "detail_url": "https://www.autopartesya.co/shop-2/",
+      "source_page_url": "https://www.autopartesya.co/shop-2/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "shop",
+        "autopartesya"
+      ]
+    }
+  ]
+}

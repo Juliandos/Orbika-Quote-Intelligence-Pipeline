@@ -1,0 +1,40 @@
+﻿{
+  "provider_id": "redpuestos",
+  "provider_name": "Redpuestos",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.imotriz.com/tienda/redpuestos/",
+  "catalog_root_url": "https://www.imotriz.com/tienda/redpuestos/catalogo/page/results",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot created from the user-provided public catalog examples and filter surfaces; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Redpuestos tienda virtual",
+      "category_name": "Redpuestos",
+      "detail_url": "https://www.imotriz.com/tienda/redpuestos/",
+      "source_page_url": "https://www.imotriz.com/tienda/redpuestos/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["redpuestos", "tienda", "autos"]
+    },
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Catalogo general con filtros",
+      "category_name": "Catalogo general",
+      "detail_url": "https://www.imotriz.com/tienda/redpuestos/catalogo/page/results",
+      "source_page_url": "https://www.imotriz.com/tienda/redpuestos/catalogo/page/results",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["catalogo", "filtros", "grupo", "marca", "modelo"]
+    }
+  ]
+}

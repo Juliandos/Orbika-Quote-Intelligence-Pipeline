@@ -1,0 +1,50 @@
+{
+  "provider_id": "totus",
+  "provider_name": "Totus",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.totus.com.co/",
+  "catalog_root_url": "https://www.totus.com.co/productos-categoria/accesorios/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Accesorios",
+      "category_name": "Accesorios",
+      "detail_url": "https://www.totus.com.co/productos-categoria/accesorios/",
+      "source_page_url": "https://www.totus.com.co/productos-categoria/accesorios/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "accesorios"
+      ]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Antena chapulin negra",
+      "product_url": "https://www.totus.com.co/productos/antena-chapulin-negra/",
+      "category_name": "Accesorios",
+      "subcategory_name": "Antenas",
+      "brand": null,
+      "description": "Informacion basica util para comparacion.",
+      "vehicle_scope": "Autos",
+      "source_page_url": "https://www.totus.com.co/productos-categoria/accesorios/",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "antena",
+        "chapulin",
+        "negra"
+      ]
+    }
+  ]
+}

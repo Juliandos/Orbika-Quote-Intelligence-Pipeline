@@ -1,0 +1,17 @@
+{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "latiendadelrepuesto",
+  "provider_name": "La Tienda del Repuesto",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Portafolio",
+    "Caja y transmision",
+    "Accesorios"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Sparse public site with limited but useful validation data."
+  ]
+}

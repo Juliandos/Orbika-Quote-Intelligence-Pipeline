@@ -1,0 +1,30 @@
+{
+  "provider_id": "ventarepuestosmayor",
+  "provider_name": "Venta Repuestos Mayor",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://ventarepuestosmayor.mybelectricosas.co/",
+  "catalog_root_url": "https://ventarepuestosmayor.mybelectricosas.co/",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "PDF catalog source; manual verification only unless structured text is exposed."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Catalogo PDF",
+      "category_name": "Catalogo PDF",
+      "detail_url": "https://ventarepuestosmayor.mybelectricosas.co/",
+      "source_page_url": "https://ventarepuestosmayor.mybelectricosas.co/",
+      "page_number": 1,
+      "match_type": "manual_confirmation_required",
+      "match_confidence": "low",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": [
+        "pdf",
+        "catalogo"
+      ]
+    }
+  ]
+}

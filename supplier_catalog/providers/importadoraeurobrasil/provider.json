@@ -1,0 +1,49 @@
+﻿{
+  "provider_id": "importadoraeurobrasil",
+  "display_name": "Importadora EuroBrasil",
+  "website": "https://www.importadoraeurobrasil.com",
+  "catalog_root_url": "https://www.importadoraeurobrasil.com/productos",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "catalog_root": "https://www.importadoraeurobrasil.com/productos",
+    "pagination_path_hint": "page/2/",
+    "category_and_brand_filters": true
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": false,
+    "descriptions": "valid"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "The paginated products catalog with brand and category filters is useful for matching and verification."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/importadoraeurobrasil/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+﻿{
+  "snapshot_type": "initial_seed_snapshot",
+  "provider_id": "corbeta",
+  "provider_name": "Corbeta",
+  "snapshot_date": "2026-06-26",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "new_items": [
+    "Automotriz",
+    "Llanta Toyo PXST3 265 50R20"
+  ],
+  "removed_items": [],
+  "changed_items": [],
+  "notes": [
+    "Seed snapshot created from the user-provided public automotriz example; live validation pending."
+  ]
+}

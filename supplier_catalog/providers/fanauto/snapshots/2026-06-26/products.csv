@@ -1,0 +1,2 @@
+provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
+fanauto,Fanauto,2026-06-26,catalog,manual_confirmation_required,Catalogo digital automotriz,https://fanauto.com.co/catalogo-digital/,Catalogo digital,Flipbook,,,,https://fanauto.com.co/catalogo-digital/,1,manual_confirmation_required,low,True,catalogo|digital|flipbook

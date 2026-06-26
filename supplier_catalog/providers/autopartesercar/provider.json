@@ -1,0 +1,49 @@
+{
+  "provider_id": "autopartesercar",
+  "display_name": "Autopartesercar",
+  "website": "https://autopartesercar.com/",
+  "catalog_root_url": "https://autopartesercar.com/tienda/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "shop_root": "https://autopartesercar.com/tienda/",
+    "pagination_query_hint": "query pagination",
+    "product_detail_path_hint": "/product/"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "partial_or_general"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "Useful as a verification source, but product pages are not very descriptive. Keep match confidence moderate."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/autopartesercar/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "provider_id": "motorpartes",
+  "display_name": "Motorpartes",
+  "website": "https://www.motorpartes.co/",
+  "catalog_root_url": "https://www.motorpartes.co/categoria-producto/bloques-de-motor/",
+  "access": {
+    "type": "open",
+    "requires_login": false,
+    "read_only": true
+  },
+  "selectors": {
+    "category_root": "https://www.motorpartes.co/categoria-producto/bloques-de-motor/",
+    "pagination_hint": "intrinsic category pagination",
+    "product_detail_path_hint": "/producto/"
+  },
+  "data_precision": {
+    "reference_codes": false,
+    "vehicle_compatibility": "partial",
+    "stock": false,
+    "prices": false,
+    "product_names": true,
+    "detail_links": true,
+    "image_urls": true,
+    "descriptions": "basic_or_partial"
+  },
+  "matching": {
+    "allowed_match_types": [
+      "vehicle_compatible",
+      "category_only",
+      "manual_confirmation_required"
+    ],
+    "forbidden_match_types": [
+      "exact_reference"
+    ],
+    "notes": "Useful for autos-only verification. Product pages are basic, so prefer fitment and category context."
+  },
+  "daily_refresh": {
+    "enabled": true,
+    "local_time": "07:00",
+    "timezone": "America/Bogota",
+    "snapshot_path_pattern": "supplier_catalog/providers/motorpartes/snapshots/YYYY-MM-DD/",
+    "outputs": [
+      "extracted.json",
+      "products.csv",
+      "diff.json",
+      "summary.md"
+    ]
+  }
+}

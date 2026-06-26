@@ -1,0 +1,44 @@
+﻿{
+  "provider_id": "corbeta",
+  "provider_name": "Corbeta",
+  "snapshot_date": "2026-06-26",
+  "timezone": "America/Bogota",
+  "website": "https://www.corbeta.com.co",
+  "catalog_root_url": "https://www.corbeta.com.co/automotriz.html",
+  "seed_source": "user_supplied_public_catalog_examples",
+  "notes": [
+    "Seed snapshot created from the user-provided public automotriz example; live validation pending."
+  ],
+  "products": [
+    {
+      "item_type": "category",
+      "provider_type": "category_only",
+      "title": "Automotriz",
+      "category_name": "Automotriz",
+      "detail_url": "https://www.corbeta.com.co/automotriz.html",
+      "source_page_url": "https://www.corbeta.com.co/automotriz.html",
+      "page_number": 1,
+      "match_type": "category_only",
+      "match_confidence": "medium",
+      "requires_manual_confirmation": true,
+      "searchable_tokens": ["automotriz", "corbeta"]
+    },
+    {
+      "item_type": "product",
+      "provider_type": "product_catalog",
+      "product_name": "Llanta Toyo PXST3 265 50R20",
+      "product_url": "https://www.corbeta.com.co/automotriz/llantas/llanta-toyo-pxst3-265-50r20.html",
+      "category_name": "Llantas",
+      "subcategory_name": "Toyo",
+      "brand": "Toyo",
+      "description": "Producto con información válida para verificación.",
+      "vehicle_scope": "Autos",
+      "source_page_url": "https://www.corbeta.com.co/automotriz.html",
+      "page_number": 1,
+      "match_type": "vehicle_compatible",
+      "match_confidence": "high",
+      "requires_manual_confirmation": false,
+      "searchable_tokens": ["llanta", "toyo", "pxst3", "265", "50r20"]
+    }
+  ]
+}
