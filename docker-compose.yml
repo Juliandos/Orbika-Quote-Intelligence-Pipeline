@@ -1,6 +1,6 @@
-services:
+﻿services:
   db:
-    image: postgres:16-alpine
+    image: pgvector/pgvector:pg16
     environment:
       POSTGRES_DB: ${ORBIKA_POSTGRES_DB:-orbika_local}
       POSTGRES_USER: ${ORBIKA_POSTGRES_USER:-orbika}
@@ -26,6 +26,10 @@ services:
       FRONTEND_ORIGIN: http://localhost:3000
       GMAIL_OAUTH_CLIENT_SECRET: ${GMAIL_OAUTH_CLIENT_SECRET:-/root/.config/openclaw/gmail/autolujoslaser1-client-secret.json}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      RAG_EMBEDDING_PROVIDER: ${RAG_EMBEDDING_PROVIDER:-openai}
+      RAG_EMBEDDING_MODEL: ${RAG_EMBEDDING_MODEL:-text-embedding-3-small}
+      RAG_EMBEDDING_DIMENSIONS: ${RAG_EMBEDDING_DIMENSIONS:-1536}
+      RAG_VECTOR_SEARCH_ENABLED: ${RAG_VECTOR_SEARCH_ENABLED:-1}
     ports:
       - "8000:8000"
 
@@ -45,3 +49,4 @@ services:
 
 volumes:
   orbika_postgres_data:
+

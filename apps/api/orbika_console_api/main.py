@@ -14,6 +14,7 @@ from . import quote_store
 from . import postgres_store
 from .quote_store import load_state
 from .task_runner import TaskManager
+from tools.local_console_launcher import status as launcher_status
 
 app = FastAPI(title="Orbika Console API", version="0.1.0")
 app.add_middleware(
@@ -54,6 +55,11 @@ def dashboard() -> dict[str, Any]:
 @app.get("/api/pipeline/state")
 def pipeline_state() -> dict[str, Any]:
     return load_state()
+
+
+@app.get("/api/launcher/status")
+def launcher_runtime_status() -> dict[str, Any]:
+    return launcher_status()
 
 
 @app.get("/api/tasks")
@@ -110,6 +116,12 @@ def run_agentic_review(payload: dict[str, Any] | None = None) -> dict[str, Any]:
         model=payload.get("model"),
         disable_traces=bool(payload.get("disable_traces", False)),
     )
+
+
+@app.post("/api/tasks/provider-refresh/run")
+def run_provider_refresh(payload: dict[str, Any] | None = None) -> dict[str, Any]:
+    payload = payload or {}
+    return task_manager.run_provider_refresh(limit_per_part=int(payload.get("limit_per_part", 5)))
 
 
 @app.get("/api/quotes")

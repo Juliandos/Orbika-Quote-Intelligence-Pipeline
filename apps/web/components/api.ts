@@ -1,4 +1,4 @@
-import { DashboardPayload, QuoteSummary, TaskRecord } from "./types";
+import { DashboardPayload, LauncherStatusPayload, QuoteSummary, TaskRecord } from "./types";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8001";
 
@@ -23,6 +23,12 @@ export async function getQuote(quoteKey: string): Promise<any> {
 export async function getTasks(): Promise<TaskRecord[]> {
   const response = await fetch(`${API_BASE}/api/tasks`, { cache: "no-store" });
   if (!response.ok) throw new Error("No se pudo cargar el estado de tareas");
+  return response.json();
+}
+
+export async function getLauncherStatus(): Promise<LauncherStatusPayload> {
+  const response = await fetch(`${API_BASE}/api/launcher/status`, { cache: "no-store" });
+  if (!response.ok) throw new Error("No se pudo cargar el estado del launcher");
   return response.json();
 }
 

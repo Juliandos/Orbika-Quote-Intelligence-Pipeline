@@ -4,8 +4,10 @@ from pathlib import Path
 from tools.rag_knowledge_base import (
     build_candidate_query,
     chunk_page_text,
+    merge_search_hits,
     retrieve_candidate_evidence,
     source_files,
+    vector_literal,
     years_covered,
 )
 
@@ -58,6 +60,56 @@ class RagKnowledgeBaseTests(unittest.TestCase):
         )
         self.assertEqual(result["verdict"], "no_evidence")
         self.assertEqual(result["citations"], [])
+
+    def test_vector_literal_serializes_embedding(self) -> None:
+        serialized = vector_literal([0.1, -0.25, 3])
+        self.assertEqual(serialized, "[0.10000000,-0.25000000,3.00000000]")
+
+    def test_merge_search_hits_marks_hybrid_results(self) -> None:
+        text_hits = [
+            {
+                "document_id": "doc-1",
+                "chunk_id": "chunk-1",
+                "title": "Catalogo A",
+                "file_path": "knowledge/rag_sources/a.pdf",
+                "page_start": 12,
+                "page_end": 12,
+                "chunk_index": 0,
+                "content": "guardabarro izquierdo mazda cx30 2022",
+                "score": 0.8,
+            }
+        ]
+        vector_hits = [
+            {
+                "document_id": "doc-1",
+                "chunk_id": "chunk-1",
+                "title": "Catalogo A",
+                "file_path": "knowledge/rag_sources/a.pdf",
+                "page_start": 12,
+                "page_end": 12,
+                "chunk_index": 0,
+                "content": "guardabarro izquierdo mazda cx30 2022",
+                "score": 0.92,
+            },
+            {
+                "document_id": "doc-2",
+                "chunk_id": "chunk-9",
+                "title": "Catalogo B",
+                "file_path": "knowledge/rag_sources/b.pdf",
+                "page_start": 7,
+                "page_end": 7,
+                "chunk_index": 3,
+                "content": "pieza compatible familia suv",
+                "score": 0.73,
+            },
+        ]
+
+        merged = merge_search_hits(text_hits, vector_hits, limit=3)
+
+        self.assertEqual(len(merged), 2)
+        self.assertEqual(merged[0]["retrieval_mode"], "hybrid")
+        self.assertGreater(merged[0]["score"], merged[1]["score"])
+        self.assertEqual(merged[1]["retrieval_mode"], "vector")
 
 
 if __name__ == "__main__":

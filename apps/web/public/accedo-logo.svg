@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 180" role="img" aria-labelledby="title desc">
+  <title id="title">ACCEDO</title>
+  <desc id="desc">Accesorios y Equipos de Colombia</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0a6f95" flood-opacity="0.28" />
+    </filter>
+  </defs>
+  <g fill="#fff" filter="url(#shadow)">
+    <path d="M12 28h42L18 150H0z"/>
+    <path d="M61 28h42L67 150H49z"/>
+    <path d="M110 28h42L116 150H98z"/>
+    <path d="M170 28h82c41 0 62 20 62 55 0 46-30 67-74 67h-92zm49 34-14 54h29c20 0 31-11 31-31 0-16-10-23-28-23z"/>
+    <path d="M338 28h148l-8 34h-98l-6 21h89l-7 31h-90l-6 22h101l-8 34H304z"/>
+    <path d="M504 28h83c40 0 61 18 61 52 0 48-33 70-79 70h-92zm50 34-14 54h29c20 0 31-11 31-31 0-16-10-23-28-23z"/>
+    <path d="M673 28h85c36 0 56 14 56 40 0 18-10 31-29 39 13 8 21 20 21 36 0 34-28 55-74 55h-95zm49 33-5 20h35c12 0 18-4 18-11 0-6-5-9-15-9zm-12 48-6 24h38c14 0 22-5 22-13 0-8-6-11-18-11z"/>
+    <path d="M110 165h100v8H110zm530 0h145v8H640z"/>
+    <text x="225" y="173" font-family="Arial, Helvetica, sans-serif" font-size="27" font-style="italic" font-weight="700" letter-spacing="1.8">ACCESORIOS Y EQUIPOS DE COLOMBIA</text>
+  </g>
+</svg>

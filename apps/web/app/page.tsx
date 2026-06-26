@@ -23,9 +23,9 @@ import {
   Wrench,
   X,
 } from "lucide-react";
-import { getDashboard, getQuote, getQuotes, getTasks, postJson } from "@/components/api";
+import { getDashboard, getLauncherStatus, getQuote, getQuotes, getTasks, postJson } from "@/components/api";
 import { useEventStream } from "@/components/use-event-stream";
-import { DashboardPayload, QuoteSummary, TaskRecord } from "@/components/types";
+import { DashboardPayload, LauncherStatusPayload, QuoteSummary, TaskRecord } from "@/components/types";
 
 type TabKey = "overview" | "parts" | "matches" | "agentic";
 type OverlayKey = "operations" | "pipeline" | "activity" | null;
@@ -77,6 +77,7 @@ const taskStatusLabel: Record<string, string> = {
   starting: "Iniciando",
   running: "En ejecución",
   finished: "Finalizada",
+  completed: "Finalizada",
   failed: "Fallida",
   stopped: "Detenida",
 };
@@ -131,6 +132,7 @@ export default function Page() {
   const [selectedQuoteKey, setSelectedQuoteKey] = useState<string | null>(null);
   const [selectedQuote, setSelectedQuote] = useState<any | null>(null);
   const [tasks, setTasks] = useState<TaskRecord[]>([]);
+  const [launcherStatus, setLauncherStatus] = useState<LauncherStatusPayload | null>(null);
   const [logs, setLogs] = useState<string[]>([]);
   const [notices, setNotices] = useState<NoticeItem[]>([]);
   const [activeTab, setActiveTab] = useState<TabKey>("overview");
@@ -152,14 +154,16 @@ export default function Page() {
   };
 
   const refreshAll = async ({ silent = false }: { silent?: boolean } = {}) => {
-    const [dashboardPayload, quotesPayload, tasksPayload] = await Promise.all([
+    const [dashboardPayload, quotesPayload, tasksPayload, launcherPayload] = await Promise.all([
       getDashboard(),
       getQuotes(),
       getTasks(),
+      getLauncherStatus(),
     ]);
     setDashboard(dashboardPayload);
     setQuotes(quotesPayload);
     setTasks(tasksPayload);
+    setLauncherStatus(launcherPayload);
     if (!silent) {
       pushNotice("Tablero actualizado", "La consola recargó cotizaciones, métricas y tareas.", "success");
     }

@@ -53,3 +53,20 @@ export type EventPayload = {
   state?: Record<string, unknown>;
   tasks?: TaskRecord[];
 };
+
+
+export type LauncherStatusPayload = {
+  db_port_open: boolean;
+  api_port_open: boolean;
+  web_port_open: boolean;
+  api_healthy: boolean;
+  web_healthy: boolean;
+  api_pid_running: boolean;
+  web_pid_running: boolean;
+  maintenance?: Record<string, unknown>;
+  provider_refresh?: Record<string, unknown>;
+  supervision?: Record<string, unknown>;
+  state_file?: string;
+  launcher_started_at?: string | null;
+};
+

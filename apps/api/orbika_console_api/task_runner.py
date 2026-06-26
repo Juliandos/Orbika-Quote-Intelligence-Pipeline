@@ -18,6 +18,7 @@ from .config import (
     DEFAULT_GMAIL_CREDENTIALS,
     DEFAULT_GMAIL_TOKEN_CACHE,
     DEFAULT_ORBIKA_STORAGE_STATE,
+    LOCAL_DIR,
     QUOTES_DIR,
     REPO_ROOT,
     STATE_PATH,
@@ -218,7 +219,45 @@ class TaskManager:
             },
         )
 
+
+    def run_provider_refresh(
+        self,
+        *,
+        limit_per_part: int = 5,
+    ) -> dict[str, Any]:
+        command = self._provider_refresh_command(limit_per_part=limit_per_part)
+        return self._start_task(
+            kind="provider_refresh",
+            command=command,
+            singleton_key="provider_refresh",
+            meta={"limit_per_part": limit_per_part},
+        )
+
     # _supplier_matching_command es un método que construye el comando de línea de comandos para ejecutar una tarea de coincidencia de proveedores. Acepta un parámetro de configuración que especifica el número máximo de coincidencias por parte y una lista opcional de claves de cotización para limitar la coincidencia a un subconjunto específico. El método devuelve una lista de cadenas que representan el comando a ejecutar, incluyendo los argumentos necesarios según si se proporcionan claves de cotización o no.
+    def _provider_refresh_command(
+        self,
+        *,
+        limit_per_part: int,
+    ) -> list[str]:
+        return [
+            "uv",
+            "run",
+            "--with",
+            "psycopg[binary]",
+            "python",
+            "tools/provider_refresh.py",
+            "--quotes-dir",
+            str(QUOTES_DIR),
+            "--daily-report-dir",
+            str(DAILY_DIR),
+            "--trace-dir",
+            str(AGENTIC_TRACES_DIR),
+            "--report-file",
+            str(LOCAL_DIR / "launcher" / "provider_refresh.json"),
+            "--limit-per-part",
+            str(limit_per_part),
+        ]
+
     def _supplier_matching_command(
         self,
         *,

@@ -40,9 +40,9 @@ OpenClaw coordinates tasks, evidence, and review. Orbika contains the actual pip
 | 8 | Agentic matching baseline | Done | Manual implementation | Preference-aware ranking, compact compatibility warnings, and concise agentic notes are implemented. |
 | 8.1 | Technical compatibility hardening | Implemented pending owner review | Manual implementation | Regression set, compatibility matrix, deterministic rules, API/UI evidence labels, and tests are implemented; owner review still required. |
 | 8.2 | Controlled workshop preferences | Optional after 8.1 review | Not created yet | Add a small, auditable preference editor only if owner review proves it is worth the operational complexity. |
-| 9 | Technical RAG for part selection | Implemented pending corpus validation | Manual implementation | RAG schema, ingestion/search CLI, and compact technical evidence in agentic review are implemented; corpus ingestion and evaluation still required. |
+| 9 | Technical RAG for part selection with local embeddings and pgvector | In progress | Manual implementation | Text RAG schema is already live; the local embedding provider is now implemented in code with `sentence-transformers`, `pgvector` migration, hybrid search scaffolding, and embedding-aware ingestion pending live validation and corpus reindex. |
 | 10 | End-to-end verification and hardening | Pending | Not created yet | Recover and prove the complete operational flow, including the waiting runner and every UI action. |
-| 11 | Simple local operation and startup | Pending | Not created yet | Give the non-technical operator one safe startup and shutdown experience with visible health checks. |
+| 11 | Simple local operation and startup | In progress | Manual implementation | Windows launcher, preflight, stop flow, maintenance/reporting, weekly maintenance scheduler, weekly provider refresh, and launcher supervision are implemented; final Windows operator rehearsal and packaging guidance remain pending. |
 
 ## Completed Work Register
 
@@ -970,13 +970,137 @@ Prefer manufacturer catalogs, standards bodies, official repair information, and
 - Add the failure to evaluation fixtures.
 - Do not start Phase 10 until RAG cannot block the base pipeline.
 
+#### Phase 9 Extension: Embeddings And pgvector Upgrade
+
+Status: In progress. Local embedding provider and vector search scaffolding are implemented in code; pending live corpus re-ingestion and validation.
+
+Purpose:
+
+- Evolve the current text-based RAG into a hybrid retrieval layer that combines lexical search with semantic embeddings.
+- Improve recall when the quote wording and the technical document wording are different but refer to the same part or compatibility rule.
+- Produce stronger technical evidence for the agentic reviewer so the final recommendation is more precise and easier for the workshop owner to trust.
+
+Current state already available:
+
+- `rag_documents` and `rag_chunks` exist in PostgreSQL.
+- PDF ingestion into `knowledge/rag_sources` is already working.
+- Text search is already returning chunked evidence from the stored corpus.
+- Agentic review can already consume compact evidence from the existing RAG layer.
+- `docker-compose.yml` now uses `pgvector/pgvector:pg16` so the local DB can host vector storage and similarity search.
+- `tools/rag_knowledge_base.py` now supports local embeddings by default, vector storage, and hybrid search with text fallback. OpenAI embeddings remain an optional fallback path only if explicitly requested.
+
+New scope to add:
+
+- Keep PostgreSQL `pgvector` enabled for chunk similarity search.
+- Keep an embedding column for chunk vectors at the selected local model size.
+- Generate embeddings during ingestion and on document refresh.
+- Support hybrid retrieval:
+  - lexical match by PostgreSQL text search
+  - semantic match by vector similarity
+  - merged or reranked final evidence list
+- Surface in the review output whether evidence came from text retrieval, vector retrieval, or both.
+
+Expected deliverables:
+
+- New Alembic migration for `pgvector` support and chunk embedding storage. Implemented as `migrations/versions/20260625_0003_rag_pgvector_embeddings.py`.
+- Updated RAG ingestion command that can:
+  - ingest documents
+  - compute embeddings
+  - re-embed changed chunks only
+- Retrieval helper that supports hybrid search.
+- Agentic review updates so recommendations can cite vector-backed evidence.
+- Documentation updates for required environment variables and verification steps.
+
+#### WSL Environment Variables
+
+Keep using normal WSL shell exports for this phase. Do not require `.env` yet.
+
+Example session values before running ingestion or search:
+
+- `export DATABASE_URL="postgresql+psycopg://orbika:orbika_local_dev_password@localhost:5433/orbika_local"`
+- `export RAG_EMBEDDING_PROVIDER=local`
+- `export RAG_EMBEDDING_MODEL=intfloat/multilingual-e5-small`
+- `export RAG_EMBEDDING_DIMENSIONS=384`
+- `export RAG_VECTOR_SEARCH_ENABLED=1`
+
+OpenAI embedding variables remain optional and only matter if a future fallback is explicitly requested.
+
+Example WSL commands:
+
+- Ingest the corpus locally:
+  - `PYTHONPATH=. uv run --with pypdf --with sentence-transformers --with torch --with "psycopg[binary]" python tools/rag_knowledge_base.py ingest --source-dir knowledge/rag_sources`
+- Search the indexed corpus locally:
+  - `PYTHONPATH=. uv run --with sentence-transformers --with torch --with "psycopg[binary]" python tools/rag_knowledge_base.py search --query "guardabarro izquierdo mazda cx30 2022" --limit 5`
+
+Implementation steps:
+
+1. Install and enable `pgvector` in the local PostgreSQL container.
+2. Add a migration that:
+   - creates the extension if needed
+   - adds an embedding column to `rag_chunks`
+   - creates the required vector index
+3. Define the embedding model configuration through environment variables so it can be changed without code rewrites.
+4. Update the RAG ingestion tool to:
+   - compute embeddings for each normalized chunk
+   - avoid recomputing embeddings for unchanged content
+   - store embedding metadata such as model name and version
+5. Add hybrid retrieval logic:
+   - text search first-pass
+   - vector similarity first-pass
+   - merged scoring or reranking
+6. Update agentic review prompts and evidence assembly so the reviewer can distinguish:
+   - exact lexical evidence
+   - semantic technical evidence
+   - low-confidence evidence that still needs manual validation
+7. Keep the current text mode as fallback in case embeddings are temporarily unavailable.
+
+Technical verification:
+
+- Confirm `pgvector` is installed and enabled in the local DB.
+- Confirm chunks now store embeddings in addition to text fields.
+- Run ingestion on the existing corpus and verify:
+  - documents imported
+  - chunks embedded
+  - re-ingest skips unchanged chunks correctly
+- Run comparison searches where plain text previously returned weak or empty results and verify hybrid retrieval returns better evidence.
+- Verify the agentic review output now includes visible evidence of vector-backed or hybrid-backed reasoning when applicable.
+
+Operational verification:
+
+- Select 5 to 10 real quote parts where wording is noisy, abbreviated, or commercially phrased.
+- Compare before vs after:
+  - text-only retrieval quality
+  - hybrid retrieval quality
+  - usefulness of the final recommendation for the workshop owner
+- Confirm the added precision is worth the extra cost and complexity.
+
+Acceptance criteria:
+
+- The project can ingest and search technical PDFs using both text and vector retrieval.
+- Agentic review shows stronger and more specific evidence for hard matches.
+- The pipeline still works if vector embedding generation is temporarily unavailable.
+- The workshop owner can distinguish between high-confidence evidence and manual-review cases.
+
+Risks:
+
+- Embedding generation introduces API cost and latency.
+- Poor chunking can reduce vector usefulness.
+- Overconfident semantic matches can be dangerous if not labeled clearly.
+- More moving parts means Phase 10 verification becomes even more important.
+
+If verification fails:
+
+- Keep text-mode RAG active as the fallback path.
+- Disable vector-backed scoring in review output until retrieval quality is acceptable.
+- Revisit chunking, normalization, and the chosen embedding model before enabling hybrid retrieval by default.
+
 ### Phase 10: End-To-End Verification And Hardening
 
 Status: Pending.
 
 #### Purpose
 
-Prove the complete system is reliable after all changes. This phase repairs regressions and validates the runner, data path, UI actions, recovery, security, and real operator workflow. It adds no major feature.
+Prove the complete system is reliable after all changes. This phase repairs regressions and validates the runner, data path, UI actions, recovery, security, and real operator workflow. It also confirms that the console gives clear visual and audio feedback for real actions, uses Spanish labels, and renders clean UTF-8 text without stray mojibake.
 
 #### Protected Final Test
 
@@ -1020,9 +1144,11 @@ Excluded:
 7. Test start/stop runner, matching all/selected, agentic all/selected, refresh, pipeline, and activity.
 8. Restart DB, API, frontend, and runner; reconcile stale states.
 9. Verify cleanup dry-run, retention, Git exclusions, URL redaction, and secret handling.
-10. After steps 1-9 pass, obtain approval and let the normal waiting runner discover the protected email naturally.
-11. Confirm extraction, matching, review, persistence, notification, UI display, and no unwanted artifacts.
-12. Ask the owner to review the result without terminal help and retest blocking issues.
+10. Verify visual confirmations do not hide modal controls, modals close from the backdrop as well as the close button, and the top-left/toast layout stays readable on the main workflow.
+11. Verify all visible UI text stays in Spanish and renders clean UTF-8 characters end to end.
+12. After steps 1-11 pass, obtain approval and let the normal waiting runner discover the protected email naturally.
+13. Confirm extraction, matching, review, persistence, notification, UI display, and no unwanted artifacts.
+14. Ask the owner to review the result without terminal help and retest blocking issues.
 
 #### Technical Verification
 
@@ -1044,12 +1170,18 @@ Also verify:
 - Duplicate checks return zero unexpected duplicates.
 - No enabled UI action returns an unhandled 500.
 - Sound fires once for a newly processed valid quote.
+- Confirmation banners render away from the modal close control.
+- Modal overlays dismiss from the backdrop and the `X` button.
+- No visible text shows mojibake, stray `Ã‚`, or untranslated English labels in the operator flow.
 
 #### Operational/Human Verification
 
 - Owner recognizes ready, partial, failed, and waiting states.
 - Owner understands provider links and warnings.
 - Owner safely starts/stops waiting.
+- Owner sees clear action feedback without UI elements covering controls.
+- Owner can dismiss overlays by clicking outside them or with the close button.
+- Owner reads the console entirely in Spanish.
 - Recovery steps for Gmail, Orbika, DB, agentic review, and RAG are understandable.
 - Protected email appears exactly once and is usable.
 
@@ -1059,6 +1191,8 @@ Also verify:
 - Startup backlog and waiting behavior pass repeated tests.
 - All enabled UI buttons pass mapped scenarios.
 - Restarts do not corrupt or duplicate data.
+- Visual and audio confirmations are present, placed safely, and do not block controls.
+- Console text is Spanish and UTF-8 clean in the verified operator surfaces.
 - Critical/high defects are closed.
 - Medium defects have accepted workaround and owner.
 - CLI/JSON fallback remain as documented.
@@ -1084,7 +1218,9 @@ Also verify:
 
 ### Phase 11: Simple Local Operation And Startup
 
-Status: Pending.
+Status: In progress.
+
+Current progress: Blocks 1, 2, and 3 are implemented. The launcher now covers startup, shutdown, retention maintenance, provider refresh, supervision, and Windows task wrappers. Phase 11 stays in progress until the full Windows handoff, rehearsal, and packaging guidance are closed.
 
 #### Purpose
 
@@ -1100,6 +1236,9 @@ Included:
 - Browser opening after health checks.
 - Plain-language health and recovery.
 - Backup/retention operations and reproducible corporate-PC setup.
+- Periodic local maintenance designed for Windows operation.
+- Safe scheduled cleanup for PostgreSQL and temporary local artifacts.
+- Weekly provider refresh and runner health supervision.
 
 Excluded:
 
@@ -1107,6 +1246,59 @@ Excluded:
 - Cloud or multi-user deployment.
 - Silent self-update.
 - Native Windows rewrite without separate approval.
+
+#### Execution Blocks
+
+Phase 11 must be implemented in three controlled blocks, not as one large change. The document can define all three now, but execution should advance block by block with verification at the end of each block.
+
+**Block 1: Simple Windows startup and shutdown**
+
+Focus:
+
+- single Windows launcher
+- preflight and health gates
+- controlled startup/shutdown
+- browser opening after health checks
+- plain-language recovery
+
+Goal:
+Make the system feel like one local app instead of a sequence of developer commands.
+
+**Block 2: Periodic maintenance and retention**
+
+Focus:
+
+- PostgreSQL retention rules
+- cleanup of expired local artifacts under `local/`
+- safe maintenance command
+- weekly Windows scheduled task
+- visible maintenance status
+
+Goal:
+Prevent disk growth, stale artifacts, and long-term operational drift without requiring technical cleanup from the operator.
+
+Status:
+Complete for Block 2. The safe maintenance command, visible maintenance report, and weekly Windows scheduled-task installer are implemented. Windows verification completed: the scheduled task was registered successfully and an applied maintenance run removed expired local artifacts. The maintenance wrapper now forwards DATABASE_URL so PostgreSQL retention cleanup can run from the same scheduled Windows flow.
+
+
+**Block 3: Supervision and weekly operational reliability**
+
+Focus:
+
+- runner health supervision
+- stale-state detection
+- weekly provider refresh
+- visible success/failure status
+- recovery guidance when routine tasks fail
+
+Goal:
+Ensure the system not only starts, but remains trustworthy week after week for a non-technical operator.
+
+Status:
+Implemented for Block 3. The launcher now exposes supervision and provider refresh reports, the API surfaces launcher status and a manual provider-refresh action, the UI shows the runner health and last weekly refresh result, and Windows wrappers exist for manual and scheduled provider refresh execution.
+
+Execution rule:
+Do not mark Phase 11 complete until all three blocks are implemented, verified, and rehearsed with the intended Windows workflow. Blocks 2 and 3 are already implemented; the remaining gate is a clean Windows operator rehearsal plus final packaging/handoff guidance.
 
 #### Deliverables
 
@@ -1118,6 +1310,11 @@ Excluded:
 - Tested backup/restore.
 - Redacted support bundle.
 - Operator acceptance checklist.
+- Windows scheduled-task plan for periodic maintenance.
+- Retention policy applied to DB and `local/`.
+- Weekly provider refresh routine with visible status.
+- Runner health check with stale-state detection and recovery guidance.
+- Windows wrappers and scheduled-task registration for weekly provider refresh.
 
 #### Implementation Steps
 
@@ -1130,9 +1327,14 @@ Excluded:
 7. Open the browser only after API/UI health passes.
 8. Stop runner first, then only Orbika processes, preserving DB data.
 9. Add plain recovery and never show green status from stale state.
-10. Add manual backup, disposable restore test, and redacted support bundle.
-11. Create a Windows shortcut that calls the supported WSL launcher.
-12. Rehearse full stop, first start, runner start, review, shutdown, and second start with the operator.
+10. Define and implement retention rules for PostgreSQL data, generated JSON artifacts, traces, logs, and other temporary files under `local/`.
+11. Add a safe maintenance command that can delete expired DB rows and removable local artifacts without touching active operational data.
+12. Add a Windows-compatible scheduled-task strategy so the operator does not need to remember weekly cleanup manually.
+13. Add a weekly provider-refresh task and make its latest success or failure visible in the UI or support diagnostics.
+14. Add runner health supervision that can detect stale waiting state, repeated failures, or long periods without successful polling.
+15. Add manual backup, disposable restore test, and redacted support bundle.
+16. Create a Windows shortcut that calls the supported WSL launcher.
+17. Rehearse full stop, first start, runner start, review, shutdown, second start, weekly maintenance, and provider refresh with the operator.
 
 #### Technical Verification
 
@@ -1141,6 +1343,11 @@ Excluded:
 - Ports remain DB 5433:5432, API 8001, frontend 3000.
 - Shutdown does not kill unrelated processes.
 - Restart preserves data/state.
+- Periodic maintenance does not delete current quotes needed for active work.
+- DB retention removes only data older than the approved window.
+- `local/` cleanup removes only temporary or expired artifacts.
+- Weekly provider refresh leaves a timestamped success/failure record.
+- Runner supervision detects stale health and failed polling without false green status.
 - Backup and test restore succeed.
 - Support bundle redacts secrets and signed URLs.
 - Phase 10 suite passes from launcher path.
@@ -1157,6 +1364,8 @@ Without terminal help, the operator can:
 6. Retry a recoverable problem.
 7. Stop safely.
 8. Find the short help guide.
+9. Understand whether weekly maintenance already ran or still needs attention.
+10. Understand whether provider refresh succeeded this week.
 
 #### Acceptance Criteria
 
@@ -1166,6 +1375,10 @@ Without terminal help, the operator can:
 - Duplicate instances are prevented.
 - Common failures are actionable.
 - Data survives restart.
+- Expired DB and local artifacts can be cleaned safely on a schedule.
+- Weekly maintenance can run without technical intervention.
+- Provider refresh has a controlled weekly routine.
+- Runner health is observable and stale state is not presented as healthy.
 - Backup/restore are tested.
 - Installation is reproducible on the corporate PC.
 
@@ -1176,6 +1389,10 @@ Without terminal help, the operator can:
 - Broad shutdown kills unrelated work.
 - Unguarded automatic migration is risky.
 - Shortcut hides diagnostics.
+- Over-aggressive retention could delete useful audit or support data.
+- Silent scheduled-task failure could create false trust in cleanup or provider refresh.
+- Provider refresh may depend on external sites that change structure or availability.
+- Weekly tasks can drift if Windows Task Scheduler or WSL permissions break.
 
 #### If Verification Fails
 
@@ -1183,6 +1400,8 @@ Without terminal help, the operator can:
 - Stop at the failed health gate.
 - Preserve redacted diagnostics and show recovery.
 - Fix launcher/preflight without changing validated pipeline behavior.
+- If cleanup fails, switch to dry-run mode and inspect affected targets before deleting anything.
+- If provider refresh fails, preserve the last successful provider data and expose the failure clearly.
 - Repeat complete operator rehearsal.
 
 ## Execution And Evidence Rules
@@ -1386,3 +1605,26 @@ En esos casos, primero se revisa, corrige y estabiliza el bloque actual.
 ### Resultado esperado de esta seccion
 
 El proyecto queda con una forma clara de delegar trabajo pesado a OpenClaw sin perder control. OpenClaw construye la base grande por bloques y Codex remata integracion, correcciones y coherencia final. Ese es el esquema recomendado para ahorrar tokens y mantener calidad.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Reminder Notes Added After Current Phase Review
+
+- Add the city for every provider and expose it in the page/UI so the operator can identify supplier location during review.
+- Generate an incremental Excel file for client delivery with the correct quotes that have at least one matched supplier part, even if it is only one part.
+- This Excel file must keep accumulating rows with each new quote instead of following the DB/local-artifact maintenance policy.
+- Do not auto-delete rows from this Excel file; the client decides whether old delivered rows remain or are removed.
+- The Excel file should include the full quote information required for delivery, not only the matched part fragment.
