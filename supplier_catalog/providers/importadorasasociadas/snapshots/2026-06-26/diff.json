@@ -1,16 +1,15 @@
-﻿{
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "importadorasasociadas",
-  "provider_name": "Importadoras Asociadas",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Aceites automotrices",
-    "Catalogo por cluster 214"
+{
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.importadorasasociadas.com/214?map=productClusterIds",
+    "https://www.importadorasasociadas.com/categorias/VOLKSWAGEN/GENUINO?map=c,specificationFilter_18,specificationFilter_21",
+    "https://www.importadorasasociadas.com/categorias/aceites",
+    "https://www.importadorasasociadas.com/categorias/aceites/MAKOTO?map=c,c,specificationFilter_21",
+    "https://www.importadorasasociadas.com/categorias/aceites?map=c%2Cc%2CspecificationFilter_21",
+    "https://www.importadorasasociadas.com/categorias/aceites?page=2",
+    "https://www.importadorasasociadas.com/categorias/baterias",
+    "https://www.importadorasasociadas.com/categorias/direccion-y-suspension/amortiguadores/makoto?initialMap=c,c,c&initialQuery=categorias/direccion-y-suspension/amortiguadores&map=category-1,category-2,category-3,marca-de-la-parte"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot created from the user-provided public catalog examples and filter routes; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

@@ -8,31 +8,71 @@
     "requires_login": false,
     "read_only": true
   },
+  "catalog": {
+    "root_url": "https://www.importadorasasociadas.com/",
+    "entry_urls": [
+      "https://www.importadorasasociadas.com/categorias/aceites",
+      "https://www.importadorasasociadas.com/categorias/motor",
+      "https://www.importadorasasociadas.com/categorias/direccion-y-suspension",
+      "https://www.importadorasasociadas.com/categorias/electricos",
+      "https://www.importadorasasociadas.com/categorias/refrigeracion",
+      "https://www.importadorasasociadas.com/categorias/carroceria",
+      "https://www.importadorasasociadas.com/categorias/frenado",
+      "https://www.importadorasasociadas.com/categorias/accesorios",
+      "https://www.importadorasasociadas.com/categorias/clutch",
+      "https://www.importadorasasociadas.com/categorias/filtracion",
+      "https://www.importadorasasociadas.com/categorias/iluminacion",
+      "https://www.importadorasasociadas.com/categorias/correas",
+      "https://www.importadorasasociadas.com/categorias/baterias"
+    ],
+    "api": {
+      "type": "vtex_graphql_productSearchV3",
+      "endpoint": "/_v/segment/graphql/v1",
+      "page_size": 48
+    }
+  },
   "selectors": {
-    "public_menu_note": "Use Compra por categoría and Compra por marca de vehículo surfaces.",
+    "public_menu_note": "Use Compra por categoria and Compra por marca de vehiculo surfaces.",
     "category_entry_hint": "https://www.importadorasasociadas.com/categorias/aceites",
-    "cluster_entry_hint": "https://www.importadorasasociadas.com/214?map=productClusterIds"
+    "category_entry_urls": [
+      "https://www.importadorasasociadas.com/categorias/aceites",
+      "https://www.importadorasasociadas.com/categorias/motor",
+      "https://www.importadorasasociadas.com/categorias/direccion-y-suspension",
+      "https://www.importadorasasociadas.com/categorias/electricos",
+      "https://www.importadorasasociadas.com/categorias/refrigeracion",
+      "https://www.importadorasasociadas.com/categorias/carroceria",
+      "https://www.importadorasasociadas.com/categorias/frenado",
+      "https://www.importadorasasociadas.com/categorias/accesorios",
+      "https://www.importadorasasociadas.com/categorias/clutch",
+      "https://www.importadorasasociadas.com/categorias/filtracion",
+      "https://www.importadorasasociadas.com/categorias/iluminacion",
+      "https://www.importadorasasociadas.com/categorias/correas",
+      "https://www.importadorasasociadas.com/categorias/baterias"
+    ],
+    "catalog_api_note": "VTEX productSearchV3 is the primary discovery surface for the complete autos catalog."
   },
   "data_precision": {
-    "reference_codes": false,
+    "product_level_catalog": true,
+    "reference_codes": true,
     "vehicle_compatibility": "partial",
-    "stock": false,
-    "prices": false,
+    "stock": true,
+    "prices": true,
+    "brand_text_structured": true,
+    "sku": true,
     "product_names": true,
     "detail_links": true,
-    "image_urls": false,
+    "image_urls": true,
     "descriptions": "partial_or_general"
   },
   "matching": {
     "allowed_match_types": [
+      "exact_reference",
+      "vehicle_compatible",
       "category_only",
       "manual_confirmation_required"
     ],
-    "forbidden_match_types": [
-      "exact_reference",
-      "vehicle_compatible"
-    ],
-    "notes": "Use category and cluster pages as verification surfaces. Do not assume exact reference support from the public examples."
+    "forbidden_match_types": [],
+    "notes": "Use the VTEX productSearchV3 catalog as the primary discovery surface. Public product search responses expose sku, productReference, brand, categories, images, prices and stock, so exact reference and vehicle-compatible support are both available for verification."
   },
   "daily_refresh": {
     "enabled": true,

@@ -2,22 +2,82 @@
   "provider_id": "imotriz",
   "display_name": "Imotriz",
   "website": "https://www.imotriz.com/home",
-  "catalog_root_url": "https://www.imotriz.com/catalogo/page/results?search=HYUNDAI",
+  "catalog_root_url": "https://www.imotriz.com/catalogo/page/results",
   "access": {
     "type": "open",
     "requires_login": false,
     "read_only": true
   },
+  "catalog": {
+    "root_url": "https://www.imotriz.com/catalogo/page/results",
+    "entry_urls": [
+      "https://www.imotriz.com/catalogo/page/results?makes=alfa%20romeo",
+      "https://www.imotriz.com/catalogo/page/results?makes=audi",
+      "https://www.imotriz.com/catalogo/page/results?makes=bmw",
+      "https://www.imotriz.com/catalogo/page/results?makes=cadillac",
+      "https://www.imotriz.com/catalogo/page/results?makes=chevrolet",
+      "https://www.imotriz.com/catalogo/page/results?makes=chrysler",
+      "https://www.imotriz.com/catalogo/page/results?makes=cupra",
+      "https://www.imotriz.com/catalogo/page/results?makes=daewoo",
+      "https://www.imotriz.com/catalogo/page/results?makes=imotriz",
+      "https://www.imotriz.com/catalogo/page/results?makes=hyundai",
+      "https://www.imotriz.com/catalogo/page/results?makes=hyosung",
+      "https://www.imotriz.com/catalogo/page/results?makes=hummer",
+      "https://www.imotriz.com/catalogo/page/results?makes=honda",
+      "https://www.imotriz.com/catalogo/page/results?makes=gmc",
+      "https://www.imotriz.com/catalogo/page/results?makes=ford",
+      "https://www.imotriz.com/catalogo/page/results?makes=fiat",
+      "https://www.imotriz.com/catalogo/page/results?makes=dodge",
+      "https://www.imotriz.com/catalogo/page/results?makes=datsun",
+      "https://www.imotriz.com/catalogo/page/results?makes=land%20rover",
+      "https://www.imotriz.com/catalogo/page/results?makes=lancia",
+      "https://www.imotriz.com/catalogo/page/results?makes=kia%20besta",
+      "https://www.imotriz.com/catalogo/page/results?makes=kia",
+      "https://www.imotriz.com/catalogo/page/results?makes=jeep",
+      "https://www.imotriz.com/catalogo/page/results?makes=lincoln",
+      "https://www.imotriz.com/catalogo/page/results?makes=mazda",
+      "https://www.imotriz.com/catalogo/page/results?makes=mercedes%20benz",
+      "https://www.imotriz.com/catalogo/page/results?makes=mercedesbenz",
+      "https://www.imotriz.com/catalogo/page/results?makes=mercury",
+      "https://www.imotriz.com/catalogo/page/results?makes=mini",
+      "https://www.imotriz.com/catalogo/page/results?makes=mitsubishi",
+      "https://www.imotriz.com/catalogo/page/results?makes=nissan",
+      "https://www.imotriz.com/catalogo/page/results?makes=nissan%2Fqashqai",
+      "https://www.imotriz.com/catalogo/page/results?makes=opel",
+      "https://www.imotriz.com/catalogo/page/results?makes=pontiac",
+      "https://www.imotriz.com/catalogo/page/results?makes=ram",
+      "https://www.imotriz.com/catalogo/page/results?makes=renault",
+      "https://www.imotriz.com/catalogo/page/results?makes=saturn",
+      "https://www.imotriz.com/catalogo/page/results?makes=seat",
+      "https://www.imotriz.com/catalogo/page/results?makes=sin%20marca",
+      "https://www.imotriz.com/catalogo/page/results?makes=skoda",
+      "https://www.imotriz.com/catalogo/page/results?makes=ssangyong",
+      "https://www.imotriz.com/catalogo/page/results?makes=subaru",
+      "https://www.imotriz.com/catalogo/page/results?makes=suzuki",
+      "https://www.imotriz.com/catalogo/page/results?makes=toyota",
+      "https://www.imotriz.com/catalogo/page/results?makes=volkswagen",
+      "https://www.imotriz.com/catalogo/page/results?makes=volvo"
+    ],
+    "pagination": {
+      "type": "infinite_scroll_by_brand",
+      "notes": "The catalog is discovered from rendered brand pages and not from the encrypted API payloads."
+    }
+  },
   "selectors": {
-    "home_sections": "https://www.imotriz.com/home",
-    "catalog_search_hint": "https://www.imotriz.com/catalogo/page/results?search=HYUNDAI",
-    "product_modal_note": "Selecting a product opens a modal before the detail page."
+    "catalog_search_hint": "https://www.imotriz.com/catalogo/page/results?makes=toyota",
+    "catalog_grid": "#catalog-embed-vue-app > section > section.row.m-0.col-12.p-0.line-height-3 > section.col-sm-8.col-md-9.ml-auto.p-0 > div > div.row.mx-1.g-1",
+    "product_modal_note": "Selecting some products can open a modal with option variants before the detail page.",
+    "brand_filter_note": "The brand filters are the primary discovery surface; scroll down to keep loading more products.",
+    "human_verification_note": "If the site asks for human confirmation after many brand changes, restart the browser session and continue from the affected brand page."
   },
   "data_precision": {
-    "reference_codes": false,
+    "product_level_catalog": true,
+    "reference_codes": true,
     "vehicle_compatibility": "partial",
-    "stock": false,
-    "prices": false,
+    "stock": true,
+    "prices": true,
+    "brand_text_structured": true,
+    "sku": true,
     "product_names": true,
     "detail_links": true,
     "image_urls": true,
@@ -25,14 +85,13 @@
   },
   "matching": {
     "allowed_match_types": [
+      "exact_reference",
       "vehicle_compatible",
       "category_only",
       "manual_confirmation_required"
     ],
-    "forbidden_match_types": [
-      "exact_reference"
-    ],
-    "notes": "Use the catalog pages and the product detail pages. The home modal is low risk compared with the catalog surface."
+    "forbidden_match_types": [],
+    "notes": "Use the rendered brand pages as the discovery surface. Product pages expose structured JSON-LD with sku, mpn, brand, image, price and availability, so exact reference and vehicle-compatible support are both available for verification."
   },
   "daily_refresh": {
     "enabled": true,

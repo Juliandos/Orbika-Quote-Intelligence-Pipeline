@@ -1,17 +1,10 @@
-﻿{
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "imotriz",
-  "provider_name": "Imotriz",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Catalogo HYUNDAI",
-    "Contacto Airbag G I10"
+{
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.imotriz.com/catalogo/catalog/v2",
+    "https://www.imotriz.com/catalogo/page/results?search=HYUNDAI",
+    "https://www.imotriz.com/producto/901/93490-A4010-/Contacto-Airbag-G-I10"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot created from the user-provided public catalog examples; live validation pending.",
-    "Home modal is treated as low risk compared with the catalog surface."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

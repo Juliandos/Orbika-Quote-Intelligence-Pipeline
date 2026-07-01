@@ -1,3 +1,9 @@
-﻿provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-importadorasasociadas,Importadoras Asociadas,2026-06-26,category,category_only,,https://www.importadorasasociadas.com/categorias/aceites,Aceites,,,"",,https://www.importadorasasociadas.com/,1,category_only,medium,True,"aceites|automotriz"
-importadorasasociadas,Importadoras Asociadas,2026-06-26,category,category_only,,https://www.importadorasasociadas.com/214?map=productClusterIds,Cluster de productos,,,"",,https://www.importadorasasociadas.com/,1,category_only,low,True,"cluster|214|productos"
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,ACEITES,,https://www.importadorasasociadas.com/categorias/aceites,,ACEITES,,,,,,category_only,medium
+category,category_only,Ford,,https://www.importadorasasociadas.com/214?map=productClusterIds,,Ford,,,,,,category_only,medium
+category,category_only,Categorias,,"https://www.importadorasasociadas.com/categorias/VOLKSWAGEN/GENUINO?map=c,specificationFilter_18,specificationFilter_21",,Categorias,,,,,,category_only,medium
+category,category_only,ACEITES,,"https://www.importadorasasociadas.com/categorias/aceites/MAKOTO?map=c,c,specificationFilter_21",,ACEITES,,,,,,category_only,medium
+category,category_only,AMORTIGUADORES,,"https://www.importadorasasociadas.com/categorias/direccion-y-suspension/amortiguadores/makoto?initialMap=c,c,c&initialQuery=categorias/direccion-y-suspension/amortiguadores&map=category-1,category-2,category-3,marca-de-la-parte",,AMORTIGUADORES,,,,,,category_only,medium
+category,category_only,ACEITES,,https://www.importadorasasociadas.com/categorias/aceites?page=2,,ACEITES,,,,,,category_only,medium
+category,category_only,ACEITES,,https://www.importadorasasociadas.com/categorias/aceites?map=c%2Cc%2CspecificationFilter_21,,ACEITES,,,,,,category_only,medium
+category,category_only,BATERÍAS,,https://www.importadorasasociadas.com/categorias/baterias,,BATERÍAS,,,,,,category_only,medium

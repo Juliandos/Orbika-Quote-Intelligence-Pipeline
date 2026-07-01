@@ -1,11 +1,10 @@
-﻿# Snapshot summary
+# Importadoras Asociadas
 
-- Provider: Importadoras Asociadas
 - Snapshot date: 2026-06-26
-- Seed source: user supplied public catalog examples
-- Records: 2
-- Match types:
-  - category_only: 2
+- Records: 8
+- Added records: 8
+- Removed records: 0
+- Changed records: 0
 
-Notes:
-- Seed snapshot created from the user-provided public catalog examples and filter routes; live validation pending.
+- Extraction is limited to autos surfaces only; motos and heavy-duty lines are intentionally excluded.
+- Public data remains partial and should be treated as supplier-verification support.
