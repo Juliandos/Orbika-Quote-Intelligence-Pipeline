@@ -1,3 +1,5 @@
-﻿provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-redpuestos,Redpuestos,2026-06-26,category,category_only,,https://www.imotriz.com/tienda/redpuestos/,Redpuestos,,,"",,https://www.imotriz.com/tienda/redpuestos/,1,category_only,medium,True,"redpuestos|tienda|autos"
-redpuestos,Redpuestos,2026-06-26,category,category_only,,https://www.imotriz.com/tienda/redpuestos/catalogo/page/results,Catalogo general,,,"",,https://www.imotriz.com/tienda/redpuestos/catalogo/page/results,1,category_only,medium,True,"catalogo|filtros|grupo|marca|modelo"
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,REDPUESTOS,,https://www.imotriz.com/tienda/redpuestos/catalogo/page/results,,REDPUESTOS,,,,,,category_only,medium
+category,category_only,REDPUESTOS,,https://www.imotriz.com/tienda/redpuestos/,,REDPUESTOS,,,,,,category_only,medium
+category,category_only,REDPUESTOS,,https://www.imotriz.com/tienda/redpuestos/catalogo,,REDPUESTOS,,,,,,category_only,medium
+category,category_only,REDPUESTOS,,https://www.imotriz.com/tienda/redpuestos/cart/page/index,,REDPUESTOS,,,,,,category_only,medium

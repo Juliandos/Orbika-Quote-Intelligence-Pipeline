@@ -1,4 +1,4 @@
-# Orbika Implementation Phases
+﻿# Orbika Implementation Phases
 
 This document is the operating roadmap for evolving Orbika Quote Intelligence Pipeline from a file-based local pipeline into a local workshop console backed by PostgreSQL.
 
@@ -1172,7 +1172,7 @@ Also verify:
 - Sound fires once for a newly processed valid quote.
 - Confirmation banners render away from the modal close control.
 - Modal overlays dismiss from the backdrop and the `X` button.
-- No visible text shows mojibake, stray `Ã‚`, or untranslated English labels in the operator flow.
+- No visible text shows mojibake, stray `Ãƒâ€š`, or untranslated English labels in the operator flow.
 
 #### Operational/Human Verification
 
@@ -1221,6 +1221,33 @@ Also verify:
 Status: In progress.
 
 Current progress: Blocks 1, 2, and 3 are implemented. The launcher now covers startup, shutdown, retention maintenance, provider refresh, supervision, and Windows task wrappers. Phase 11 stays in progress until the full Windows handoff, rehearsal, and packaging guidance are closed.
+
+Operational supplier coverage note:
+
+- Large autos catalog sources already added to the provider ecosystem:
+  - `importadorasasociadas` - VTEX-based autos catalog with lazy-loaded category surfaces and captcha-aware crawling.
+  - `imotriz` - large autos catalog recovered with manual captcha support; the latest usable snapshot contains `3788` records and should be treated as the current baseline.
+  - Some providers, including `imotriz`, may require manual human validation during weekly extraction runs because the site can present captcha or human-verification prompts.
+- Latest weekly refresh failure that still deserves visibility:
+  - `partcar` - the weekly refresh failed with `IncompleteRead`, even though the latest saved snapshot remains large and usable (`9268` products).
+- Large catalog providers that still remain worthwhile for future hardening or coverage closure:
+  - `procar`
+  - `propartes`
+  - `corbeta`
+  - `totus`
+  - `autopartesercar`
+  - `autopartesya`
+  - `internacionaldepartes`
+  - `universaldepartes`
+  - `ppaautomotriz`
+  - `redpuestos`
+- Provider crawl lessons to keep for future integrations:
+  - `redpuestos` confirmed that provider-specific live crawlers are safer than a shared generic browser flow.
+  - Manual captcha handling must preserve the current scroll position and continue the same catalog surface after validation.
+  - Do not auto-return to a home or product-detail page after captcha if the goal is a full catalog crawl; that can restart the traversal and lose progress.
+  - Seed pages should stay on listing surfaces, and product-detail URLs should only be used as enrichment targets when needed.
+  - Lazy-loading catalogs need a higher idle tolerance before the crawler assumes the surface is exhausted.
+
 
 #### Purpose
 
@@ -1628,3 +1655,4 @@ El proyecto queda con una forma clara de delegar trabajo pesado a OpenClaw sin p
 - This Excel file must keep accumulating rows with each new quote instead of following the DB/local-artifact maintenance policy.
 - Do not auto-delete rows from this Excel file; the client decides whether old delivered rows remain or are removed.
 - The Excel file should include the full quote information required for delivery, not only the matched part fragment.
+

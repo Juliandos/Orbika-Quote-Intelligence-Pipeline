@@ -32,7 +32,7 @@
       "exact_reference",
       "vehicle_compatible"
     ],
-    "notes": "The store is useful as a catalog and filter surface. Do not treat the filter UI as exact reference support unless a product detail page exposes it publicly."
+    "notes": "The store is useful as a catalog and filter surface. Do not treat the filter UI as exact reference support unless a product detail page exposes it publicly. Browser runs may require manual captcha validation in headed mode."
   },
   "daily_refresh": {
     "enabled": true,
@@ -47,3 +47,4 @@
     ]
   }
 }
+

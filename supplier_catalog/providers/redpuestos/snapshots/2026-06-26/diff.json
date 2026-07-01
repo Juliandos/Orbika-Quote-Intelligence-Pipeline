@@ -1,16 +1,11 @@
-﻿{
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "redpuestos",
-  "provider_name": "Redpuestos",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Redpuestos tienda virtual",
-    "Catalogo general con filtros"
+{
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.imotriz.com/tienda/redpuestos/",
+    "https://www.imotriz.com/tienda/redpuestos/cart/page/index",
+    "https://www.imotriz.com/tienda/redpuestos/catalogo",
+    "https://www.imotriz.com/tienda/redpuestos/catalogo/page/results"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot created from the user-provided public catalog examples and filter surfaces; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

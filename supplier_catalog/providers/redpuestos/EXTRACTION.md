@@ -6,11 +6,19 @@ Website: `https://www.imotriz.com/tienda/redpuestos/`
 
 Catalog root: `https://www.imotriz.com/tienda/redpuestos/catalogo/page/results`
 
-Status: public site. Seed snapshot created from the user-provided public catalog examples and filter surfaces; live validation is still pending.
+Status: public site. The live extractor now runs in browser mode and may require manual human validation if a captcha appears.
 
 Scope: autos only. Ignore motos, carga pesada, buses and camiones.
 
-This store is filter-driven and the catalog results page is the operational source. Use the store embed and catalog filters as the extraction entry point.
+This store is filter-driven and the catalog results page is the operational source. Use the rendered store embed and catalog filters as the extraction entry point.
+
+## Live run
+
+Use a visible browser when captcha support is needed:
+
+```bash
+REDPUESTOS_HEADED=1 REDPUESTOS_WAIT_FOR_HUMAN=1 uv run --with playwright python tools/redpuestos_catalog_extractor.py
+```
 
 ## Extraction target
 
