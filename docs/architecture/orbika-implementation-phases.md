@@ -1656,3 +1656,4 @@ El proyecto queda con una forma clara de delegar trabajo pesado a OpenClaw sin p
 - Do not auto-delete rows from this Excel file; the client decides whether old delivered rows remain or are removed.
 - The Excel file should include the full quote information required for delivery, not only the matched part fragment.
 
+
