@@ -1,15 +1,8 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "fanauto",
-  "provider_name": "Fanauto",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Catalogo digital automotriz"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://fanauto.com.co/catalogo-digital/"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Visual flipbook catalog; OCR or vision extraction would be needed for richer data."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

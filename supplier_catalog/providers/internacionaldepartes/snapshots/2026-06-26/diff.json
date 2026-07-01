@@ -1,16 +1,31 @@
-﻿{
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "internacionaldepartes",
-  "provider_name": "Internacional de Partes",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Productos",
-    "Balinera clutch embrague Nissan NV 350 Urvan YD25 Colombia"
+{
+  "previous_snapshot": null,
+  "added_records": [
+    "https://internacionaldepartes.com/productos",
+    "https://internacionaldepartes.com/productos/",
+    "https://internacionaldepartes.com/productos/22680-3va0a-afh60m-47-sensor-flujo-de-aire-nissan-colombia",
+    "https://internacionaldepartes.com/productos/22680-7s000-hitachi-original-afh70m-38-maf-renault-koleos-colombia",
+    "https://internacionaldepartes.com/productos/22680-7s000-sensor-flujo-aire-maf-hitachi-original-afh70m-38-colombia",
+    "https://internacionaldepartes.com/productos/22680-7s000-sensor-flujo-aire-maf-original-renault-koleos-colombia",
+    "https://internacionaldepartes.com/productos/amortiguadores-delanteros-renault-koleos-set-x2-colombia",
+    "https://internacionaldepartes.com/productos/amortiguadores-traseros-bmw-320i-e90-set-x2-colombia",
+    "https://internacionaldepartes.com/productos/amortiguadores-traseros-volkswagen-jetta-colombia",
+    "https://internacionaldepartes.com/productos/aplicador-de-lubricante-para-cadenas-de-bicicletas-colombia",
+    "https://internacionaldepartes.com/productos/arbol-levas-chevrolet-luv-2300-colombia",
+    "https://internacionaldepartes.com/productos/arbol-levas-chevrolet-rodeo-colombia",
+    "https://internacionaldepartes.com/productos/arbol-levas-chevrolet-trooper-colombia",
+    "https://internacionaldepartes.com/productos/balinera-cluth-embrague-jmc-28-colombia",
+    "https://internacionaldepartes.com/productos/balinera-cluth-embrague-nissan-nv-350-urvan-yd25-colombia",
+    "https://internacionaldepartes.com/productos/balinera-embrague-cluth-brillance-h220-colombia",
+    "https://internacionaldepartes.com/productos/balinera-rodamiento-embrague-cluth-nkr-4jb1-turbo-colombia",
+    "https://internacionaldepartes.com/productos/bandas-freno-de-mano-emergencia-nissan-x-trail-t30-colombia",
+    "https://internacionaldepartes.com/productos/base-rodamiento-amortiguador-delantero-volkswagen-new-jetta-colombia",
+    "https://internacionaldepartes.com/productos/base-soporte-amortiguador-citroen-c-elysee-colombia",
+    "https://internacionaldepartes.com/productos/base-termostato-citroen-c-elysee-16-gasolina-colombia",
+    "https://internacionaldepartes.com/productos/base-termostato-citroen-saxo-00-16-2000-2006-colombia",
+    "https://internacionaldepartes.com/productos/base-termostato-mazda-3-20-colombia",
+    "https://internacionaldepartes.com/productos/base-termostato-volkswagen-jetta-20-colombia"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot created from the user-provided public product example; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

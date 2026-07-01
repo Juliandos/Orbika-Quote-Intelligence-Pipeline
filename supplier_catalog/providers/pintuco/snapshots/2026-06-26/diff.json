@@ -1,16 +1,15 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "pintuco",
-  "provider_name": "Pintuco",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Repintado automotriz",
-    "Endurecedor E30"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz",
+    "https://www.pintuco.com.co/productos/",
+    "https://www.pintuco.com.co/productos/endurecedor-e30/",
+    "https://www.pintuco.com.co/productos/page/2/",
+    "https://www.pintuco.com.co/productos/page/3/",
+    "https://www.pintuco.com.co/productos/page/4/",
+    "https://www.pintuco.com.co/productos/page/5/",
+    "https://www.pintuco.com.co/productos/sistema-de-color-mega-basecoat/"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Automotive repaint catalog with general descriptions and implicit HTML pagination."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

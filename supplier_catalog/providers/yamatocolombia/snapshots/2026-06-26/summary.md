@@ -1,11 +1,10 @@
-# Snapshot summary
+# Yamato Colombia
 
-- Provider: Yamato Colombia
 - Snapshot date: 2026-06-26
-- Seed source: user supplied public catalog examples
-- Records: 2
-- Match types:
-  - category_only: 2
+- Records: 4
+- Added records: 4
+- Removed records: 0
+- Changed records: 0
 
-Notes:
-- Image-heavy catalog; extract visible names only and keep fitment unverified.
+- Extraction is limited to autos surfaces only; motos and heavy-duty lines are intentionally excluded.
+- Public data remains partial and should be treated as supplier-verification support.

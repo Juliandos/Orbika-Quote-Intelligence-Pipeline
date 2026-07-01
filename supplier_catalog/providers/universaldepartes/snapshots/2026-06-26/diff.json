@@ -1,16 +1,25 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "universaldepartes",
-  "provider_name": "Universal de Partes",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "All products",
-    "SKF 280"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.universaldepartes.co/category/accesorios",
+    "https://www.universaldepartes.co/category/all-products",
+    "https://www.universaldepartes.co/category/all-products?page=2",
+    "https://www.universaldepartes.co/category/cardan",
+    "https://www.universaldepartes.co/category/eje",
+    "https://www.universaldepartes.co/category/embrague",
+    "https://www.universaldepartes.co/category/frenos",
+    "https://www.universaldepartes.co/category/quinta-rueda",
+    "https://www.universaldepartes.co/product-page/luk",
+    "https://www.universaldepartes.co/product-page/luk-1",
+    "https://www.universaldepartes.co/product-page/luk-2",
+    "https://www.universaldepartes.co/product-page/luk-3",
+    "https://www.universaldepartes.co/product-page/skf-280",
+    "https://www.universaldepartes.co/product-page/skf-299",
+    "https://www.universaldepartes.co/product-page/skf-301",
+    "https://www.universaldepartes.co/product-page/skf-304",
+    "https://www.universaldepartes.co/product-page/skf-305",
+    "https://www.universaldepartes.co/product-page/skf-311"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

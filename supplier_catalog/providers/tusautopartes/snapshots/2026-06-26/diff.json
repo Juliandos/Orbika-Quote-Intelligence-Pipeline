@@ -1,16 +1,22 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "tusautopartes",
-  "provider_name": "Tus Autopartes",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Alarmas",
-    "Alarma"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://tusautopartes.com.co/collections/alarmas",
+    "https://tusautopartes.com.co/collections/alarmas.atom",
+    "https://tusautopartes.com.co/collections/all",
+    "https://tusautopartes.com.co/collections/aperturas-de-baul",
+    "https://tusautopartes.com.co/collections/barras-y-estribos-1",
+    "https://tusautopartes.com.co/collections/cabeceros-y-pantallas",
+    "https://tusautopartes.com.co/collections/camaras-y-dvr",
+    "https://tusautopartes.com.co/collections/farolas-y-exploradoras",
+    "https://tusautopartes.com.co/collections/kits-de-carretera",
+    "https://tusautopartes.com.co/collections/mandos-de-timon",
+    "https://tusautopartes.com.co/collections/modulos-elevavidrios-y-otros",
+    "https://tusautopartes.com.co/collections/peliculas-y-polarizados",
+    "https://tusautopartes.com.co/collections/portacelulares",
+    "https://tusautopartes.com.co/collections/push-start",
+    "https://tusautopartes.com.co/collections/tapetes"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

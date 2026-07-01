@@ -1,12 +1,10 @@
-﻿# Snapshot summary
+# Autorecambios LTDA
 
-- Provider: Autorecambios LTDA
 - Snapshot date: 2026-06-26
-- Seed source: user supplied public catalog examples
-- Records: 2
-- Match types:
-  - category_only: 1
-  - vehicle_compatible: 1
+- Records: 0
+- Added records: 0
+- Removed records: 0
+- Changed records: 0
 
-Notes:
-- Seed snapshot created from the user-provided public category and product examples; live validation pending.
+- Extraction is limited to autos surfaces only; motos and heavy-duty lines are intentionally excluded.
+- Public data remains partial and should be treated as supplier-verification support.

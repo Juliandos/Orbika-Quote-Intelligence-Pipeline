@@ -1,15 +1,16 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "ventarepuestosmayor",
-  "provider_name": "Venta Repuestos Mayor",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Catalogo PDF"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://ventarepuestosmayor.mybelectricosas.co/",
+    "https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/arranquesyalternadores.pdf",
+    "https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogobombaselectronicas0524.pdf",
+    "https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogobombillos0524.pdf",
+    "https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogoescobillas0524.pdf",
+    "https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogomiscelania2024.pdf",
+    "https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogospitosycornetas0524.pdf",
+    "https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/manometros.pdf",
+    "https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/portaescobillas.pdf"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "PDF catalog source; manual verification only unless structured text is exposed."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

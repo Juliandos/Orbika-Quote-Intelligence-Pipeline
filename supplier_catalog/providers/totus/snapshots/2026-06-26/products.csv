@@ -1,3 +1,25 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-,,,category,category_only,Accesorios,https://www.totus.com.co/productos-categoria/accesorios/,Accesorios,,,,,https://www.totus.com.co/productos-categoria/accesorios/,1,category_only,medium,True,accesorios
-,,,product,product_catalog,Antena chapulin negra,https://www.totus.com.co/productos/antena-chapulin-negra/,Accesorios,Antenas,,Informacion basica util para comparacion.,Autos,https://www.totus.com.co/productos-categoria/accesorios/,1,category_only,medium,True,antena|chapulin|negra
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Accesorios,,https://www.totus.com.co/productos-categoria/accesorios/,,Accesorios,,,,,,category_only,medium
+product,product_catalog,,Antena Chapulin Negra,https://www.totus.com.co/productos/antena-chapulin-negra/,https://www.totus.com.co/productos/antena-chapulin-negra/,,,,1601001,1601001,,vehicle_compatible,medium
+category,category_only,Manijas,,https://www.totus.com.co/productos-categoria/accesorios/manijas/,,Manijas,,,,,,category_only,medium
+category,category_only,Chapas,,https://www.totus.com.co/productos-categoria/accesorios/chapas/,,Chapas,,,,,,category_only,medium
+category,category_only,Cilindros,,https://www.totus.com.co/productos-categoria/accesorios/cilindros/,,Cilindros,,,,,,category_only,medium
+category,category_only,Emblemas,,https://www.totus.com.co/productos-categoria/accesorios/emblemas/,,Emblemas,,,,,,category_only,medium
+category,category_only,Mecanismo Silla,,https://www.totus.com.co/productos-categoria/accesorios/mecanismo-silla/,,Mecanismo Silla,,,,,,category_only,medium
+category,category_only,Pasador Puerta,,https://www.totus.com.co/productos-categoria/accesorios/pasador-puerta/,,Pasador Puerta,,,,,,category_only,medium
+category,category_only,Peras Barra De Cambios,,https://www.totus.com.co/productos-categoria/accesorios/peras-barra-de-cambios/,,Peras Barra De Cambios,,,,,,category_only,medium
+category,category_only,Eléctricos Automotriz,,https://www.totus.com.co/productos-categoria/electricos-automotriz/,,Eléctricos Automotriz,,,,,,category_only,medium
+category,category_only,Bombillos,,https://www.totus.com.co/productos-categoria/electricos-automotriz/bombillos/,,Bombillos,,,,,,category_only,medium
+category,category_only,Medidores,,https://www.totus.com.co/productos-categoria/electricos-automotriz/medidores/,,Medidores,,,,,,category_only,medium
+category,category_only,Partes para Bateria,,https://www.totus.com.co/productos-categoria/electricos-automotriz/partes-para-bateria/,,Partes para Bateria,,,,,,category_only,medium
+category,category_only,Caimanes,,https://www.totus.com.co/productos-categoria/electricos-automotriz/caimanes/,,Caimanes,,,,,,category_only,medium
+category,category_only,Corazas,,https://www.totus.com.co/productos-categoria/electricos-automotriz/corazas/,,Corazas,,,,,,category_only,medium
+category,category_only,Encendedores y Plugs,,https://www.totus.com.co/productos-categoria/electricos-automotriz/encendedores-y-plugs/,,Encendedores y Plugs,,,,,,category_only,medium
+category,category_only,Flasher,,https://www.totus.com.co/productos-categoria/electricos-automotriz/flasher/,,Flasher,,,,,,category_only,medium
+category,category_only,Fusible,,https://www.totus.com.co/productos-categoria/electricos-automotriz/fusible/,,Fusible,,,,,,category_only,medium
+category,category_only,Luces Laterales,,https://www.totus.com.co/productos-categoria/electricos-automotriz/luces-laterales/,,Luces Laterales,,,,,,category_only,medium
+category,category_only,Pitos,,https://www.totus.com.co/productos-categoria/electricos-automotriz/pitos/,,Pitos,,,,,,category_only,medium
+category,category_only,Relay,,https://www.totus.com.co/productos-categoria/electricos-automotriz/relay/,,Relay,,,,,,category_only,medium
+category,category_only,Socket,,https://www.totus.com.co/productos-categoria/electricos-automotriz/socket/,,Socket,,,,,,category_only,medium
+category,category_only,Switches,,https://www.totus.com.co/productos-categoria/electricos-automotriz/switches/,,Switches,,,,,,category_only,medium
+category,category_only,Terminales,,https://www.totus.com.co/productos-categoria/electricos-automotriz/terminales/,,Terminales,,,,,,category_only,medium

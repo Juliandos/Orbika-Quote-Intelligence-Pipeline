@@ -1,12 +1,10 @@
-﻿# Snapshot summary
+# Importadora EuroBrasil
 
-- Provider: Importadora EuroBrasil
 - Snapshot date: 2026-06-26
-- Seed source: user supplied public catalog examples
-- Records: 2
-- Match types:
-  - category_only: 1
-  - vehicle_compatible: 1
+- Records: 20
+- Added records: 20
+- Removed records: 0
+- Changed records: 0
 
-Notes:
-- Seed snapshot created from the user-provided public product example; live validation pending.
+- Extraction is limited to autos surfaces only; motos and heavy-duty lines are intentionally excluded.
+- Public data remains partial and should be treated as supplier-verification support.

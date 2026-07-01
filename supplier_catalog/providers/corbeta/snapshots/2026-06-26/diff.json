@@ -1,16 +1,23 @@
-﻿{
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "corbeta",
-  "provider_name": "Corbeta",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Automotriz",
-    "Llanta Toyo PXST3 265 50R20"
+{
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.corbeta.com.co/automotriz.html",
+    "https://www.corbeta.com.co/automotriz/filtros-y-repuestos.html",
+    "https://www.corbeta.com.co/automotriz/filtros-y-repuestos/accesorios-repuestos-herramientas.html",
+    "https://www.corbeta.com.co/automotriz/filtros-y-repuestos/accesorios-repuestos-herramientas/bujias.html",
+    "https://www.corbeta.com.co/automotriz/filtros-y-repuestos/accesorios-repuestos-herramientas/otros.html",
+    "https://www.corbeta.com.co/automotriz/filtros-y-repuestos/accesorios-repuestos-herramientas/plumillas.html",
+    "https://www.corbeta.com.co/automotriz/filtros-y-repuestos/accesorios-repuestos-herramientas/sata.html",
+    "https://www.corbeta.com.co/automotriz/filtros-y-repuestos/filtros.html",
+    "https://www.corbeta.com.co/automotriz/filtros-y-repuestos/filtros/filtros-de-aceite.html",
+    "https://www.corbeta.com.co/automotriz/filtros-y-repuestos/filtros/filtros-de-aire.html",
+    "https://www.corbeta.com.co/automotriz/llantas/llanta-toyo-pxst3-265-50r20.html",
+    "https://www.corbeta.com.co/automotriz/spa-automotriz.html",
+    "https://www.corbeta.com.co/automotriz/spa-automotriz/ambientadores.html",
+    "https://www.corbeta.com.co/automotriz/spa-automotriz/brillantil.html",
+    "https://www.corbeta.com.co/automotriz/spa-automotriz/desengrasantes.html",
+    "https://www.corbeta.com.co/automotriz/spa-automotriz/siliconas.html"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot created from the user-provided public automotriz example; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

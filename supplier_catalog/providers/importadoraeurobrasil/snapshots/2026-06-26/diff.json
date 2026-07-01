@@ -1,16 +1,27 @@
-﻿{
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "importadoraeurobrasil",
-  "provider_name": "Importadora EuroBrasil",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Productos",
-    "Axial arandela del ciguenal para Citroen Jumpy 2.0"
+{
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.importadoraeurobrasil.com/categoria-producto/citroen/",
+    "https://www.importadoraeurobrasil.com/categoria-producto/fiat/",
+    "https://www.importadoraeurobrasil.com/categoria-producto/ford/",
+    "https://www.importadoraeurobrasil.com/categoria-producto/peugeot/",
+    "https://www.importadoraeurobrasil.com/producto/alternador-regulador-adaptable-a-iveco-3510/",
+    "https://www.importadoraeurobrasil.com/producto/amortiguador-delantero-para-jumper-iii-magneti-marelli/",
+    "https://www.importadoraeurobrasil.com/producto/amortiguador-delantero-para-jumper-iii/",
+    "https://www.importadoraeurobrasil.com/producto/anillos-en-medida-estandar-para-fiat-argo-mobi/",
+    "https://www.importadoraeurobrasil.com/producto/arbol-de-levas-de-escape-para-citroen-2-2/",
+    "https://www.importadoraeurobrasil.com/producto/articulacion-axial-citroen-jumper/",
+    "https://www.importadoraeurobrasil.com/producto/axial-arandela-del-ciguenal-para-citroen-jumpy-2-0/",
+    "https://www.importadoraeurobrasil.com/producto/axial-de-direccion-para-v-w-amarok-2-0/",
+    "https://www.importadoraeurobrasil.com/producto/axial-direccion-derecho-para-fiat-argo-cronos-17-20/",
+    "https://www.importadoraeurobrasil.com/productos/",
+    "https://www.importadoraeurobrasil.com/productos/page/2/",
+    "https://www.importadoraeurobrasil.com/productos/page/3/",
+    "https://www.importadoraeurobrasil.com/productos/page/4/",
+    "https://www.importadoraeurobrasil.com/productos/page/41/",
+    "https://www.importadoraeurobrasil.com/productos/page/42/",
+    "https://www.importadoraeurobrasil.com/productos/page/43/"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot created from the user-provided public product example; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

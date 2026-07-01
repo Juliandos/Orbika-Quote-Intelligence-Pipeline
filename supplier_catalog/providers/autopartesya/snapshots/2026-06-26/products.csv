@@ -1,2 +1,13 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-autopartesya,Autopartesya,2026-06-26,category,category_only,Shop,https://www.autopartesya.co/shop-2/,Shop,,,,,https://www.autopartesya.co/shop-2/,1,category_only,medium,True,shop|autopartesya
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,AutopartesYa,,https://www.autopartesya.co/shop-2/,,AutopartesYa,,,,,,category_only,medium
+category,category_only,Kits de embragues y sus partes,,https://www.autopartesya.co/product-category/autopartes/clutch/,,Kits de embragues y sus partes,,,,,,category_only,medium
+category,category_only,Actuadores Hidráulicos Archivos,,https://www.autopartesya.co/product-category/autopartes/clutch/actuadores-hidraulicos/,,Actuadores Hidráulicos Archivos,,,,,,category_only,medium
+category,category_only,Balineras de Clutch Archivos,,https://www.autopartesya.co/product-category/autopartes/clutch/balineras-de-clutch/,,Balineras de Clutch Archivos,,,,,,category_only,medium
+category,category_only,Disco de Clutch Archivos,,https://www.autopartesya.co/product-category/autopartes/clutch/disco-de-clutch/,,Disco de Clutch Archivos,,,,,,category_only,medium
+category,category_only,Guayas de Clutch Archivos,,https://www.autopartesya.co/product-category/autopartes/clutch/guayas-de-clutch/,,Guayas de Clutch Archivos,,,,,,category_only,medium
+category,category_only,Horquillas de Clutch Archivos,,https://www.autopartesya.co/product-category/autopartes/clutch/horquillas-de-clutch/,,Horquillas de Clutch Archivos,,,,,,category_only,medium
+category,category_only,Kits de embragues completos,,https://www.autopartesya.co/product-category/autopartes/clutch/kit-de-clutch/,,Kits de embragues completos,,,,,,category_only,medium
+category,category_only,Otros Archivos,,https://www.autopartesya.co/product-category/autopartes/clutch/otros-clutch/,,Otros Archivos,,,,,,category_only,medium
+category,category_only,Correas de distribución,,https://www.autopartesya.co/product-category/autopartes/correas/,,Correas de distribución,,,,,,category_only,medium
+category,category_only,Correas Acanaladas Archivos,,https://www.autopartesya.co/product-category/autopartes/correas/correas-acanaladas/,,Correas Acanaladas Archivos,,,,,,category_only,medium
+category,category_only,Correas de Distribución Archivos,,https://www.autopartesya.co/product-category/autopartes/correas/correas-de-distribucion/,,Correas de Distribución Archivos,,,,,,category_only,medium

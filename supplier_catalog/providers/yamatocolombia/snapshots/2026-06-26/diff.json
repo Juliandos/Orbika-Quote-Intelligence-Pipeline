@@ -1,16 +1,11 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "yamatocolombia",
-  "provider_name": "Yamato Colombia",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Taiho",
-    "Matsuda"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://yamatocolombia.com.co/",
+    "https://yamatocolombia.com.co/matsuda/",
+    "https://yamatocolombia.com.co/productos/",
+    "https://yamatocolombia.com.co/taiho/"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Image-heavy catalog; extract visible names only and keep fitment unverified."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

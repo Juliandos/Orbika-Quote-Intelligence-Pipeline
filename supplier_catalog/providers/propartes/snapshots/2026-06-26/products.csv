@@ -1,3 +1,13 @@
-﻿provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-propartes,Propartes,2026-06-26,category,category_only,,https://tienda.propartes.com/filtros-automotriz,Filtros automotriz,,,"",,https://tienda.propartes.com/filtros-automotriz,1,category_only,medium,True,"filtros|automotriz"
-propartes,Propartes,2026-06-26,product,product_catalog,Filtro de aire Audi A4 A5 Q5 3032 TF 2014,https://tienda.propartes.com/filtros-de-aire/f-aire--audi-a4a5q5-3032-tf-2014-r703,Filtros de aire,Audi A4 A5 Q5,,"Ficha básica con etiquetas y compatibilidad por vehículo.",Audi A4 A5 Q5 2014,https://tienda.propartes.com/filtros-de-aire/products?pageNumber=1&productLowPrice=0&productHighPrice=0&sort=1&attributes=%5B%5D,1,vehicle_compatible,medium,True,"filtro|aire|audi|a4|a5|q5|2014"
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Automotriz,,https://propartes.com/autos/,,Automotriz,,,,,,category_only,medium
+category,category_only,FILTROS AUTOMOTRIZ,,https://tienda.propartes.com/filtros-automotriz,,FILTROS AUTOMOTRIZ,,,,,,category_only,medium
+category,category_only,Catalogo,,https://tienda.propartes.com/filtros-de-aire/products?pageNumber=1&productLowPrice=0&productHighPrice=0&sort=1&attributes=%5B%5D,,Catalogo,,,,,,category_only,medium
+category,category_only,Propartes,,https://tienda.propartes.com/filtros-de-aire/f-aire--audi-a4a5q5-3032-tf-2014-r703,,Propartes,,,,,,category_only,medium
+category,category_only,Productos,,https://propartes.com/productos/,,Productos,,,,,,category_only,medium
+category,category_only,Automotriz - Filtros - Misfat,,https://propartes.com/autos/filtros/misfat/,,Automotriz - Filtros - Misfat,,,,,,category_only,medium
+category,category_only,Automotriz - Filtros-Mann Filter,,https://propartes.com/autos/filtros/mann-filter/,,Automotriz - Filtros-Mann Filter,,,,,,category_only,medium
+category,category_only,Automotriz - Frenos- Icer,,https://propartes.com/autos/frenos/icer-brakes/,,Automotriz - Frenos- Icer,,,,,,category_only,medium
+category,category_only,Automotriz - Frenos - Fras-le,,https://propartes.com/autos/frenos/frasle-frenos-autos/,,Automotriz - Frenos - Fras-le,,,,,,category_only,medium
+category,category_only,Automotriz - Frenos- Textar,,https://propartes.com/autos/frenos/textar/,,Automotriz - Frenos- Textar,,,,,,category_only,medium
+category,category_only,Automotriz - Bombillos - Philips,,https://propartes.com/autos/bombillos/philips/,,Automotriz - Bombillos - Philips,,,,,,category_only,medium
+category,category_only,Automotriz - Refrigerantes - Peak,,https://propartes.com/autos/refrigerantes/peak/,,Automotriz - Refrigerantes - Peak,,,,,,category_only,medium

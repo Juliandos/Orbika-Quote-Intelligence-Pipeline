@@ -1,16 +1,19 @@
-﻿{
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "propartes",
-  "provider_name": "Propartes",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Filtros automotriz",
-    "Filtro de aire Audi A4 A5 Q5 3032 TF 2014"
+{
+  "previous_snapshot": null,
+  "added_records": [
+    "https://propartes.com/autos/",
+    "https://propartes.com/autos/bombillos/philips/",
+    "https://propartes.com/autos/filtros/mann-filter/",
+    "https://propartes.com/autos/filtros/misfat/",
+    "https://propartes.com/autos/frenos/frasle-frenos-autos/",
+    "https://propartes.com/autos/frenos/icer-brakes/",
+    "https://propartes.com/autos/frenos/textar/",
+    "https://propartes.com/autos/refrigerantes/peak/",
+    "https://propartes.com/productos/",
+    "https://tienda.propartes.com/filtros-automotriz",
+    "https://tienda.propartes.com/filtros-de-aire/f-aire--audi-a4a5q5-3032-tf-2014-r703",
+    "https://tienda.propartes.com/filtros-de-aire/products?pageNumber=1&productLowPrice=0&productHighPrice=0&sort=1&attributes=%5B%5D"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot created from the user-provided public autos catalog examples; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

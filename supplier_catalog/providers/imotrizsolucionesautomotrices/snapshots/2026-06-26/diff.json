@@ -1,16 +1,15 @@
-﻿{
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "imotrizsolucionesautomotrices",
-  "provider_name": "Imotriz Soluciones Automotrices",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Catalogo soluciones automotrices",
-    "Disco Clutch Soul 1.6 Dohc Marca Valeo"
+{
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.imotriz.com/catalogo/catalog/v2",
+    "https://www.imotriz.com/producto/10/41100-32021/Disco-Clutch-Soul-1-6-Dohc-Marca-Valeo",
+    "https://www.imotriz.com/tienda/solucionesautomotrices/cart/page/index",
+    "https://www.imotriz.com/tienda/solucionesautomotrices/catalogo",
+    "https://www.imotriz.com/tienda/solucionesautomotrices/catalogo/catalog/v2",
+    "https://www.imotriz.com/tienda/solucionesautomotrices/credit/page/solicitudCredito",
+    "https://www.imotriz.com/tienda/solucionesautomotrices/home/page/cotizacion",
+    "https://www.imotriz.com/tienda/solucionesautomotrices/producto/41100-32021/Disco-Clutch-Soul-1-6-Dohc-Marca-Valeo"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot created from the user-provided public catalog examples; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

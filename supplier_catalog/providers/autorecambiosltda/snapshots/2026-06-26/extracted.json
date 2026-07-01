@@ -1,44 +1,14 @@
-﻿{
+{
   "provider_id": "autorecambiosltda",
   "provider_name": "Autorecambios LTDA",
   "snapshot_date": "2026-06-26",
   "timezone": "America/Bogota",
   "website": "https://autorecambiosltda.com",
   "catalog_root_url": "https://autorecambiosltda.com/repuestos-para-carros-y-camionetas/",
-  "seed_source": "user_supplied_public_catalog_examples",
+  "extraction_mode": "live_seeded_public_catalog_refresh",
   "notes": [
-    "Seed snapshot created from the user-provided public category and product examples; live validation pending."
+    "Extraction is limited to autos surfaces only; motos and heavy-duty lines are intentionally excluded.",
+    "Public data remains partial and should be treated as supplier-verification support."
   ],
-  "products": [
-    {
-      "item_type": "category",
-      "provider_type": "category_only",
-      "title": "Repuestos para carros y camionetas",
-      "category_name": "Repuestos para carros y camionetas",
-      "detail_url": "https://autorecambiosltda.com/repuestos-para-carros-y-camionetas/",
-      "source_page_url": "https://autorecambiosltda.com/repuestos-para-carros-y-camionetas/",
-      "page_number": 1,
-      "match_type": "category_only",
-      "match_confidence": "medium",
-      "requires_manual_confirmation": true,
-      "searchable_tokens": ["repuestos", "carros", "camionetas"]
-    },
-    {
-      "item_type": "product",
-      "provider_type": "product_catalog",
-      "product_name": "Tapa de tanque de combustible Fiesta Zetec",
-      "product_url": "https://autorecambiosltda.com/producto/tapa-de-tanque-de-combustible-fiesta-zetec/",
-      "category_name": "Sistema de combustible",
-      "subcategory_name": "Tapa de tanque",
-      "brand": "Ford",
-      "description": "Ficha descriptiva completa para verificación de compatibilidad.",
-      "vehicle_scope": "Ford Fiesta Zetec",
-      "source_page_url": "https://autorecambiosltda.com/repuestos-para-carros-y-camionetas/",
-      "page_number": 1,
-      "match_type": "vehicle_compatible",
-      "match_confidence": "high",
-      "requires_manual_confirmation": false,
-      "searchable_tokens": ["tapa", "tanque", "combustible", "fiesta", "zetec", "ford"]
-    }
-  ]
+  "products": []
 }

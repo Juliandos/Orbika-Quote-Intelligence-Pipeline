@@ -5,25 +5,36 @@
   "timezone": "America/Bogota",
   "website": "https://exaap.com/",
   "catalog_root_url": "https://exaap.com/",
-  "seed_source": "user_supplied_public_catalog_examples",
+  "extraction_mode": "live_seeded_public_catalog_refresh",
   "notes": [
-    "Very weak public catalog signal; keep for manual verification only."
+    "Extraction is limited to autos surfaces only; motos and heavy-duty lines are intentionally excluded.",
+    "Fetch warning for https://exaap.com/index.html: HTTP Error 404: Not Found",
+    "Public data remains partial and should be treated as supplier-verification support."
   ],
   "products": [
     {
       "item_type": "category",
       "provider_type": "category_only",
-      "title": "Catalogo general",
-      "category_name": "Catalogo general",
+      "title": "Bell",
+      "product_name": null,
       "detail_url": "https://exaap.com/",
+      "product_url": null,
+      "category_name": "Bell",
+      "subcategory_name": null,
+      "brand": null,
+      "reference": null,
+      "sku": null,
+      "supplier_item_code": null,
+      "description": null,
+      "vehicle_scope": null,
+      "image_url": null,
       "source_page_url": "https://exaap.com/",
       "page_number": 1,
       "match_type": "category_only",
-      "match_confidence": "low",
+      "match_confidence": "medium",
       "requires_manual_confirmation": true,
       "searchable_tokens": [
-        "catalogo",
-        "general"
+        "bell"
       ]
     }
   ]

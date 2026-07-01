@@ -1,15 +1,30 @@
-﻿{
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "procar",
-  "provider_name": "Procar",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "GalloPro H-T"
+{
+  "previous_snapshot": null,
+  "added_records": [
+    "https://procar.com.co/categoria-producto/filtros/",
+    "https://procar.com.co/categoria-producto/llantas/",
+    "https://procar.com.co/categoria-producto/llantas/auto/",
+    "https://procar.com.co/categoria-producto/lubricantes/",
+    "https://procar.com.co/categoria-producto/otros-productos/",
+    "https://procar.com.co/producto/dreamland-r-t/",
+    "https://procar.com.co/producto/dx240/",
+    "https://procar.com.co/producto/dx390/",
+    "https://procar.com.co/producto/dx640/",
+    "https://procar.com.co/producto/ecolander-2/",
+    "https://procar.com.co/producto/ecosaver-2/",
+    "https://procar.com.co/producto/effivan-2/",
+    "https://procar.com.co/producto/gallopro-h-t/",
+    "https://procar.com.co/producto/ly166/",
+    "https://procar.com.co/producto/ly688/",
+    "https://procar.com.co/producto/maxatraves-m-t/",
+    "https://procar.com.co/producto/p-309/",
+    "https://procar.com.co/producto/p-609/",
+    "https://procar.com.co/producto/p307/",
+    "https://procar.com.co/producto/p607/",
+    "https://procar.com.co/producto/protoura-sport/",
+    "https://procar.com.co/producto/x-spider-a-s/",
+    "https://procar.com.co/producto/zealion/"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot created from the user-provided public autos catalog example; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

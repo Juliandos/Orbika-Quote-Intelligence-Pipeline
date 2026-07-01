@@ -1,3 +1,24 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-,,,category,category_only,Tienda,https://autolatas.com/tienda,Tienda,,,,,https://autolatas.com/tienda,1,category_only,medium,True,tienda|autolatas
-,,,product,product_catalog,Ampliacion izquierda bomper trasero Ford Ecosport 2004 a 2012,https://autolatas.com/ampliacion/ampliacion-izquierda-bomper-trasero-ford-ecosport-2004-a-2012/,Bomper,Ampliacion,Ford,"Ficha basica, util para verificacion por vehiculo y categoria.",Ford Ecosport 2004 a 2012,https://autolatas.com/tienda,1,vehicle_compatible,medium,True,ampliacion|izquierda|bomper|trasero|ford|ecosport|2004|2012
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Tienda,,https://autolatas.com/tienda/,,Tienda,,,,,,category_only,medium
+product,product_catalog,,AMPLIACION IZQUIERDA BOMPER TRASERO FORD ECOSPORT 2004 A 2012,https://autolatas.com/ampliacion/ampliacion-izquierda-bomper-trasero-ford-ecosport-2004-a-2012/,https://autolatas.com/ampliacion/ampliacion-izquierda-bomper-trasero-ford-ecosport-2004-a-2012/,Tienda,AMPLIACION IZQUIERDA BOMPER TRASERO FORD ECOSPORT 2004 A 2012,,44 604 509601,44 604 509601,,vehicle_compatible,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/page/2/,,Tienda,,,,,,category_only,medium
+product,product_catalog,,AMPLIACION,https://autolatas.com/ampliacion/,https://autolatas.com/ampliacion/,,,,,,Autos,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/page/3/,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/page/4/,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/page/87/,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/page/88/,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/page/89/,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=7730,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=10936,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=10945,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=8933,,Tienda,,,,,,category_only,medium
+product,product_catalog,,AMPLIACION DERECHA BOMPER DELANTERO CHEVROLET D MAX 2002 A 2008 CORTA - TW,https://autolatas.com/ampliacion/ampliacion-derecha-corta-bomper-delantero-chevrolet-d-max-2002-a-2008/,https://autolatas.com/ampliacion/ampliacion-derecha-corta-bomper-delantero-chevrolet-d-max-2002-a-2008/,Tienda,AMPLIACION DERECHA BOMPER DELANTERO CHEVROLET D MAX 2002 A 2008 CORTA – TW,,44 116 8600,44 116 8600,,vehicle_compatible,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=8789,,Tienda,,,,,,category_only,medium
+product,product_catalog,,AMPLIACION DERECHA BOMPER DELANTERO FORD ECOSPORT 2004 A 2012 - TW,https://autolatas.com/ampliacion/ampliacion-derecha-bomper-delantero-ford-ecosport-2004-a-2012/,https://autolatas.com/ampliacion/ampliacion-derecha-bomper-delantero-ford-ecosport-2004-a-2012/,Tienda,AMPLIACION DERECHA BOMPER DELANTERO FORD ECOSPORT 2004 A 2012 – TW,,44 604 8600,44 604 8600,,vehicle_compatible,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=9366,,Tienda,,,,,,category_only,medium
+product,product_catalog,,AMPLIACION DERECHA BOMPER TRASERO FORD ECOSPORT 2004 A 2012,https://autolatas.com/ampliacion/ampliacion-derecha-bomper-trasero-ford-ecosport-2004-a-2012/,https://autolatas.com/ampliacion/ampliacion-derecha-bomper-trasero-ford-ecosport-2004-a-2012/,Tienda,AMPLIACION DERECHA BOMPER TRASERO FORD ECOSPORT 2004 A 2012,,44 604 508601,44 604 508601,,vehicle_compatible,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=9368,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=8934,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=8939,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autolatas.com/tienda/?add-to-cart=8942,,Tienda,,,,,,category_only,medium
+product,product_catalog,,AMPLIACION IZQUIERDA BOMPER DELANTERO CHEVROLET D MAX 2002 A 2008 CORTA - TW,https://autolatas.com/ampliacion/ampliacion-izquierda-corta-bomper-delantero-chevrolet-d-max-2002-a-2008/,https://autolatas.com/ampliacion/ampliacion-izquierda-corta-bomper-delantero-chevrolet-d-max-2002-a-2008/,Tienda,AMPLIACION IZQUIERDA BOMPER DELANTERO CHEVROLET D MAX 2002 A 2008 CORTA – TW,,44 116 9600,44 116 9600,,vehicle_compatible,medium

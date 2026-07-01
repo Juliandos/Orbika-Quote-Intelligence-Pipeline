@@ -1,3 +1,16 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-,,,category,category_only,Alarmas,https://tusautopartes.com.co/collections/alarmas,Alarmas,,,,,https://tusautopartes.com.co/collections/alarmas,1,category_only,medium,True,alarmas
-,,,product,product_catalog,Alarma,https://tusautopartes.com.co/collections/alarmas,Seguridad,Alarmas,,Informacion valida de catalogo para verificacion parcial.,Autos,https://tusautopartes.com.co/collections/alarmas,1,category_only,medium,True,alarma
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Colección: Alarmas,,https://tusautopartes.com.co/collections/alarmas,,Colección: Alarmas,,,,,,category_only,medium
+category,category_only,Tus Autopartes,,https://tusautopartes.com.co/collections/alarmas.atom,,Tus Autopartes,,,,,,category_only,medium
+category,category_only,Colección: Productos,,https://tusautopartes.com.co/collections/all,,Colección: Productos,,,,,,category_only,medium
+category,category_only,Colección: Cabeceros y Pantallas,,https://tusautopartes.com.co/collections/cabeceros-y-pantallas,,Colección: Cabeceros y Pantallas,,,,,,category_only,medium
+category,category_only,Colección: Camaras y DVR,,https://tusautopartes.com.co/collections/camaras-y-dvr,,Colección: Camaras y DVR,,,,,,category_only,medium
+category,category_only,Colección: Kits de carretera,,https://tusautopartes.com.co/collections/kits-de-carretera,,Colección: Kits de carretera,,,,,,category_only,medium
+category,category_only,Colección: Mandos de timon,,https://tusautopartes.com.co/collections/mandos-de-timon,,Colección: Mandos de timon,,,,,,category_only,medium
+category,category_only,Colección: Modulos elevavidrios y otros,,https://tusautopartes.com.co/collections/modulos-elevavidrios-y-otros,,Colección: Modulos elevavidrios y otros,,,,,,category_only,medium
+category,category_only,Colección: Portacelulares,,https://tusautopartes.com.co/collections/portacelulares,,Colección: Portacelulares,,,,,,category_only,medium
+category,category_only,Colección: Push Start,,https://tusautopartes.com.co/collections/push-start,,Colección: Push Start,,,,,,category_only,medium
+category,category_only,Colección: Tapetes,,https://tusautopartes.com.co/collections/tapetes,,Colección: Tapetes,,,,,,category_only,medium
+category,category_only,Colección: Aperturas de baul,,https://tusautopartes.com.co/collections/aperturas-de-baul,,Colección: Aperturas de baul,,,,,,category_only,medium
+category,category_only,Colección: Barras y estribos,,https://tusautopartes.com.co/collections/barras-y-estribos-1,,Colección: Barras y estribos,,,,,,category_only,medium
+category,category_only,Colección: Farolas y Exploradoras,,https://tusautopartes.com.co/collections/farolas-y-exploradoras,,Colección: Farolas y Exploradoras,,,,,,category_only,medium
+category,category_only,Colección: Películas y polarizados,,https://tusautopartes.com.co/collections/peliculas-y-polarizados,,Colección: Películas y polarizados,,,,,,category_only,medium

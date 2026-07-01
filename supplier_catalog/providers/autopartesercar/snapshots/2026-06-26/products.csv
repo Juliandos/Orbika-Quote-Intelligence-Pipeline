@@ -1,3 +1,20 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-,,,category,category_only,Tienda,https://autopartesercar.com/tienda/,Tienda,,,,,https://autopartesercar.com/tienda/,1,category_only,medium,True,tienda|autopartesercar
-,,,product,product_catalog,Discos de freno delanteros Chevrolet Onix Turbo,https://autopartesercar.com/product/discos-de-freno-delanteros-chevrolet-onix-turbo/,Frenos,Discos de freno,Chevrolet,Producto con informacion basica de marca y uso vehicular.,Chevrolet Onix Turbo,https://autopartesercar.com/tienda/,1,vehicle_compatible,medium,True,discos|freno|delanteros|chevrolet|onix|turbo
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Tienda,,https://autopartesercar.com/tienda/,,Tienda,,,,,,category_only,medium
+product,product_catalog,,Discos de freno delanteros Chevrolet Onix Turbo,https://autopartesercar.com/product/discos-de-freno-delanteros-chevrolet-onix-turbo/,https://autopartesercar.com/product/discos-de-freno-delanteros-chevrolet-onix-turbo/,Discos de freno,Discos de freno delanteros Chevrolet Onix Turbo,,,,,vehicle_compatible,medium
+category,category_only,Tienda,,https://autopartesercar.com/tienda/page/2/,,Tienda,,,,,,category_only,medium
+category,category_only,Bobinas archivos,,https://autopartesercar.com/product-category/bobinas/,,Bobinas archivos,,,,,,category_only,medium
+category,category_only,Espirales archivos,,https://autopartesercar.com/product-category/espirales/,,Espirales archivos,,,,,,category_only,medium
+category,category_only,Farolas archivos,,https://autopartesercar.com/product-category/farolas/,,Farolas archivos,,,,,,category_only,medium
+category,category_only,Freno archivos,,https://autopartesercar.com/product-category/freno/,,Freno archivos,,,,,,category_only,medium
+category,category_only,General archivos,,https://autopartesercar.com/product-category/general/,,General archivos,,,,,,category_only,medium
+category,category_only,Kit de Clutch / Embrague archivos,,https://autopartesercar.com/product-category/kit-de-clutch/,,Kit de Clutch / Embrague archivos,,,,,,category_only,medium
+category,category_only,Stops archivos,,https://autopartesercar.com/product-category/stops/,,Stops archivos,,,,,,category_only,medium
+category,category_only,Varios archivos,,https://autopartesercar.com/product-category/varios/,,Varios archivos,,,,,,category_only,medium
+category,category_only,Tienda,,https://autopartesercar.com/tienda/?layout=list,,Tienda,,,,,,category_only,medium
+category,category_only,Tienda,,https://autopartesercar.com/tienda/?layout=grid,,Tienda,,,,,,category_only,medium
+product,product_catalog,,Amortiguadores Delanteros Chevrolet Aveo,https://autopartesercar.com/product/amortiguadores-delanteros-chevrolet-aveo/,https://autopartesercar.com/product/amortiguadores-delanteros-chevrolet-aveo/,Amortiguadores,Amortiguadores Delanteros Chevrolet Aveo,,G706062/63,G706062/63,Autos,vehicle_compatible,medium
+category,category_only,Amortiguadores archivos,,https://autopartesercar.com/product-category/amortiguadores/,,Amortiguadores archivos,,,,,,category_only,medium
+category,category_only,Tienda,,https://autopartesercar.com/tienda/?add-to-cart=1540,,Tienda,,,,,,category_only,medium
+product,product_catalog,,Amortiguadores delanteros Chevrolet Spark Life,https://autopartesercar.com/product/amortiguadores-delanteros-chevrolet-spark-life/,https://autopartesercar.com/product/amortiguadores-delanteros-chevrolet-spark-life/,Amortiguadores,Amortiguadores delanteros Chevrolet Spark Life,,,,,vehicle_compatible,medium
+category,category_only,Tienda,,https://autopartesercar.com/tienda/?add-to-cart=8595,,Tienda,,,,,,category_only,medium
+product,product_catalog,,Amortiguadores delanteros Chevrolet Spark Life / Go / Chronos,https://autopartesercar.com/product/amortiguadores-delanteros-chevrolet-spark-life-go-chronos/,https://autopartesercar.com/product/amortiguadores-delanteros-chevrolet-spark-life-go-chronos/,Amortiguadores,Amortiguadores delanteros Chevrolet Spark Life / Go / Chronos,,,,,vehicle_compatible,medium

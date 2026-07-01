@@ -1,4 +1,4 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-latiendadelrepuesto,La Tienda del Repuesto,2026-06-26,category,category_only,Portafolio,https://latiendadelrepuesto.com/portafolio/,Portafolio,,,,,https://latiendadelrepuesto.com/portafolio/,1,category_only,medium,True,portafolio
-latiendadelrepuesto,La Tienda del Repuesto,2026-06-26,category,category_only,Caja y transmision,https://latiendadelrepuesto.com/caja-y-transmision/,Caja y transmision,,,,,https://latiendadelrepuesto.com/caja-y-transmision/,1,category_only,low,True,caja|transmision
-latiendadelrepuesto,La Tienda del Repuesto,2026-06-26,product,product_catalog,Accesorios,https://latiendadelrepuesto.com/accesorios/,Accesorios,Accesorios,,Pagina pequeña pero con informacion util para validacion.,Autos,https://latiendadelrepuesto.com/accesorios/,1,category_only,medium,True,accesorios
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Portafolio,,https://latiendadelrepuesto.com/portafolio/,,Portafolio,,,,,,category_only,medium
+category,category_only,Caja y Transmisión vehículo,,https://latiendadelrepuesto.com/caja-y-transmision/,,Caja y Transmisión vehículo,,,,,,category_only,medium
+category,category_only,"Amortiguadores Quinta puerta, Capó y Carroceras",,https://latiendadelrepuesto.com/accesorios/,,"Amortiguadores Quinta puerta, Capó y Carroceras",,,,,,category_only,medium

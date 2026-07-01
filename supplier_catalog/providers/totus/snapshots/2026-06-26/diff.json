@@ -1,16 +1,31 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "totus",
-  "provider_name": "Totus",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Accesorios",
-    "Antena chapulin negra"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.totus.com.co/productos-categoria/accesorios/",
+    "https://www.totus.com.co/productos-categoria/accesorios/chapas/",
+    "https://www.totus.com.co/productos-categoria/accesorios/cilindros/",
+    "https://www.totus.com.co/productos-categoria/accesorios/emblemas/",
+    "https://www.totus.com.co/productos-categoria/accesorios/manijas/",
+    "https://www.totus.com.co/productos-categoria/accesorios/mecanismo-silla/",
+    "https://www.totus.com.co/productos-categoria/accesorios/pasador-puerta/",
+    "https://www.totus.com.co/productos-categoria/accesorios/peras-barra-de-cambios/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/bombillos/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/caimanes/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/corazas/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/encendedores-y-plugs/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/flasher/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/fusible/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/luces-laterales/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/medidores/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/partes-para-bateria/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/pitos/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/relay/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/socket/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/switches/",
+    "https://www.totus.com.co/productos-categoria/electricos-automotriz/terminales/",
+    "https://www.totus.com.co/productos/antena-chapulin-negra/"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

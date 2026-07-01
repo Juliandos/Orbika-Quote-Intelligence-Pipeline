@@ -1,16 +1,31 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "ppaautomotriz",
-  "provider_name": "PPA Automotriz",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Productos",
-    "Renault 9 19 Clio 1 Yokomitsu"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.ppa-automotriz.com/categoria-producto/clutch/",
+    "https://www.ppa-automotriz.com/categoria-producto/correa-de-reparticion/",
+    "https://www.ppa-automotriz.com/categoria-producto/frenos-cilindro-de-frenos/",
+    "https://www.ppa-automotriz.com/categoria-producto/kit-de-reparticion/",
+    "https://www.ppa-automotriz.com/categoria-producto/suspensiones/",
+    "https://www.ppa-automotriz.com/producto/bieletas-de-barra-estabilizadora/",
+    "https://www.ppa-automotriz.com/producto/ciguenales-y-pistones/",
+    "https://www.ppa-automotriz.com/producto/cilindro-freno/",
+    "https://www.ppa-automotriz.com/producto/clio-campus-twingo-16v-wurtex/",
+    "https://www.ppa-automotriz.com/producto/culatas/",
+    "https://www.ppa-automotriz.com/producto/megane-2-logan-3-qashqai-2-0-wurtex/",
+    "https://www.ppa-automotriz.com/producto/pistones-y-bielas/",
+    "https://www.ppa-automotriz.com/producto/ren-clio-1-6-megane-symb-duster-logan-16v-bhorke/",
+    "https://www.ppa-automotriz.com/producto/ren-duster-2-megane-2-wurtex/",
+    "https://www.ppa-automotriz.com/producto/renault-9-1-4-stp/",
+    "https://www.ppa-automotriz.com/producto/renault-9-19-clio-1-yokomitsu/",
+    "https://www.ppa-automotriz.com/producto/renault-koleos-2-5-nissan-xtrail-2-5-sores/",
+    "https://www.ppa-automotriz.com/producto/renault-kwid-stp/",
+    "https://www.ppa-automotriz.com/producto/renault-logan-sandero-wurtex/",
+    "https://www.ppa-automotriz.com/producto/renault-trafic-3-1-6-hq/",
+    "https://www.ppa-automotriz.com/producto/renault-twingo-8v-stp/",
+    "https://www.ppa-automotriz.com/producto/tricetas/",
+    "https://www.ppa-automotriz.com/producto/valvulas-admision-y-escape/",
+    "https://www.ppa-automotriz.com/productos/"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

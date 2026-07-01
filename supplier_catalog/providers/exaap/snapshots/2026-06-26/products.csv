@@ -1,2 +1,2 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-exaap,Exaap,2026-06-26,category,category_only,Catalogo general,https://exaap.com/,Catalogo general,,,,,https://exaap.com/,1,category_only,low,True,catalogo|general
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Bell,,https://exaap.com/,,Bell,,,,,,category_only,medium

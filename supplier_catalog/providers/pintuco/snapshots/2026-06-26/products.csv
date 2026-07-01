@@ -1,3 +1,9 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-pintuco,Pintuco,2026-06-26,category,category_only,Repintado automotriz,https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz,Automotriz,Repintado automotriz,,,,https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz,1,category_only,medium,True,pintuco|automotriz|repintado
-pintuco,Pintuco,2026-06-26,product,product_catalog,Endurecedor E30,https://www.pintuco.com.co/productos/endurecedor-e30/,Automotriz,Endurecedores,Pintuco,Descripcion general publica; paginacion implicita en HTML.,Autos,https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz,1,category_only,medium,True,endurecedor|e30|pintuco|automotriz
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Automotriz Archivos,,https://www.pintuco.com.co/cat_productos/automotriz/?cat_productos=automotriz%2Crepintado-automotriz,,Automotriz Archivos,,,,,,category_only,medium
+category,category_only,Endurecedor E30,,https://www.pintuco.com.co/productos/endurecedor-e30/,,Endurecedor E30,,,,,,category_only,medium
+category,category_only,Productos Archivo,,https://www.pintuco.com.co/productos/,,Productos Archivo,,,,,,category_only,medium
+category,category_only,Sistema de color Mega basecoat,,https://www.pintuco.com.co/productos/sistema-de-color-mega-basecoat/,,Sistema de color Mega basecoat,,,,,,category_only,medium
+category,category_only,Productos Archivo,,https://www.pintuco.com.co/productos/page/2/,,Productos Archivo,,,,,,category_only,medium
+category,category_only,Productos Archivo,,https://www.pintuco.com.co/productos/page/3/,,Productos Archivo,,,,,,category_only,medium
+category,category_only,Productos Archivo,,https://www.pintuco.com.co/productos/page/4/,,Productos Archivo,,,,,,category_only,medium
+category,category_only,Productos Archivo,,https://www.pintuco.com.co/productos/page/5/,,Productos Archivo,,,,,,category_only,medium

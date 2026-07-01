@@ -1,16 +1,30 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "autolatas",
-  "provider_name": "Autolatas",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Tienda",
-    "Ampliacion izquierda bomper trasero Ford Ecosport 2004 a 2012"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://autolatas.com/ampliacion/",
+    "https://autolatas.com/ampliacion/ampliacion-derecha-bomper-delantero-ford-ecosport-2004-a-2012/",
+    "https://autolatas.com/ampliacion/ampliacion-derecha-bomper-trasero-ford-ecosport-2004-a-2012/",
+    "https://autolatas.com/ampliacion/ampliacion-derecha-corta-bomper-delantero-chevrolet-d-max-2002-a-2008/",
+    "https://autolatas.com/ampliacion/ampliacion-izquierda-bomper-trasero-ford-ecosport-2004-a-2012/",
+    "https://autolatas.com/ampliacion/ampliacion-izquierda-corta-bomper-delantero-chevrolet-d-max-2002-a-2008/",
+    "https://autolatas.com/tienda/",
+    "https://autolatas.com/tienda/?add-to-cart=10936",
+    "https://autolatas.com/tienda/?add-to-cart=10945",
+    "https://autolatas.com/tienda/?add-to-cart=7730",
+    "https://autolatas.com/tienda/?add-to-cart=8789",
+    "https://autolatas.com/tienda/?add-to-cart=8933",
+    "https://autolatas.com/tienda/?add-to-cart=8934",
+    "https://autolatas.com/tienda/?add-to-cart=8939",
+    "https://autolatas.com/tienda/?add-to-cart=8942",
+    "https://autolatas.com/tienda/?add-to-cart=9366",
+    "https://autolatas.com/tienda/?add-to-cart=9368",
+    "https://autolatas.com/tienda/page/2/",
+    "https://autolatas.com/tienda/page/3/",
+    "https://autolatas.com/tienda/page/4/",
+    "https://autolatas.com/tienda/page/87/",
+    "https://autolatas.com/tienda/page/88/",
+    "https://autolatas.com/tienda/page/89/"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Seed snapshot based on the user-provided public catalog examples; live validation pending."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

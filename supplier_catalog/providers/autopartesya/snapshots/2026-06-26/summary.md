@@ -1,11 +1,10 @@
-# Snapshot summary
+# Autopartesya
 
-- Provider: Autopartesya
 - Snapshot date: 2026-06-26
-- Seed source: user supplied public catalog examples
-- Records: 1
-- Match types:
-  - category_only: 1
+- Records: 12
+- Added records: 12
+- Removed records: 0
+- Changed records: 0
 
-Notes:
-- Very slow shop. Seeded as a lower-priority verification source.
+- Extraction is limited to autos surfaces only; motos and heavy-duty lines are intentionally excluded.
+- Public data remains partial and should be treated as supplier-verification support.

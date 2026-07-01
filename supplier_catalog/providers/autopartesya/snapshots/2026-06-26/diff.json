@@ -1,15 +1,19 @@
 {
-  "snapshot_type": "initial_seed_snapshot",
-  "provider_id": "autopartesya",
-  "provider_name": "Autopartesya",
-  "snapshot_date": "2026-06-26",
-  "seed_source": "user_supplied_public_catalog_examples",
-  "new_items": [
-    "Shop"
+  "previous_snapshot": null,
+  "added_records": [
+    "https://www.autopartesya.co/product-category/autopartes/clutch/",
+    "https://www.autopartesya.co/product-category/autopartes/clutch/actuadores-hidraulicos/",
+    "https://www.autopartesya.co/product-category/autopartes/clutch/balineras-de-clutch/",
+    "https://www.autopartesya.co/product-category/autopartes/clutch/disco-de-clutch/",
+    "https://www.autopartesya.co/product-category/autopartes/clutch/guayas-de-clutch/",
+    "https://www.autopartesya.co/product-category/autopartes/clutch/horquillas-de-clutch/",
+    "https://www.autopartesya.co/product-category/autopartes/clutch/kit-de-clutch/",
+    "https://www.autopartesya.co/product-category/autopartes/clutch/otros-clutch/",
+    "https://www.autopartesya.co/product-category/autopartes/correas/",
+    "https://www.autopartesya.co/product-category/autopartes/correas/correas-acanaladas/",
+    "https://www.autopartesya.co/product-category/autopartes/correas/correas-de-distribucion/",
+    "https://www.autopartesya.co/shop-2/"
   ],
-  "removed_items": [],
-  "changed_items": [],
-  "notes": [
-    "Very slow shop. Seeded as a lower-priority verification source."
-  ]
+  "removed_records": [],
+  "changed_records": []
 }

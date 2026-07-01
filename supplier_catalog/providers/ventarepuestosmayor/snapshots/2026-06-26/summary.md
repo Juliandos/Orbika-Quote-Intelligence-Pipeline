@@ -1,11 +1,10 @@
-# Snapshot summary
+# Venta Repuestos Mayor
 
-- Provider: Venta Repuestos Mayor
 - Snapshot date: 2026-06-26
-- Seed source: user supplied public catalog examples
-- Records: 1
-- Match types:
-  - manual_confirmation_required: 1
+- Records: 9
+- Added records: 9
+- Removed records: 0
+- Changed records: 0
 
-Notes:
-- PDF catalog source; manual verification only unless structured text is exposed.
+- Extraction is limited to autos surfaces only; motos and heavy-duty lines are intentionally excluded.
+- Public data remains partial and should be treated as supplier-verification support.

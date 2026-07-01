@@ -1,2 +1,24 @@
-﻿provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-procar,Procar,2026-06-26,product,product_catalog,GalloPro H-T,https://procar.com.co/producto/gallopro-h-t/,Llantas auto,Auto,GalloPro,"Producto de autos con ficha más completa que la portada.",Autos,https://procar.com.co/categoria-producto/llantas/auto/,1,vehicle_compatible,medium,False,"gallopro|ht|llantas|auto"
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Auto,,https://procar.com.co/categoria-producto/llantas/auto/,,Auto,,,,,,category_only,medium
+product,product_catalog,,GALLOPRO H/T,https://procar.com.co/producto/gallopro-h-t/,https://procar.com.co/producto/gallopro-h-t/,,,,,,Autos,category_only,medium
+category,category_only,Llantas,,https://procar.com.co/categoria-producto/llantas/,,Llantas,,,,,,category_only,medium
+category,category_only,FILTROS,,https://procar.com.co/categoria-producto/filtros/,,FILTROS,,,,,,category_only,medium
+category,category_only,LUBRICANTES,,https://procar.com.co/categoria-producto/lubricantes/,,LUBRICANTES,,,,,,category_only,medium
+category,category_only,OTROS PRODUCTOS,,https://procar.com.co/categoria-producto/otros-productos/,,OTROS PRODUCTOS,,,,,,category_only,medium
+product,product_catalog,,ECOLANDER,https://procar.com.co/producto/ecolander-2/,https://procar.com.co/producto/ecolander-2/,,,,,,Autos,category_only,medium
+product,product_catalog,,ECOSAVER,https://procar.com.co/producto/ecosaver-2/,https://procar.com.co/producto/ecosaver-2/,,,,,,Autos,category_only,medium
+product,product_catalog,,EFFIVAN,https://procar.com.co/producto/effivan-2/,https://procar.com.co/producto/effivan-2/,,,,,,Autos,category_only,medium
+product,product_catalog,,LY166,https://procar.com.co/producto/ly166/,https://procar.com.co/producto/ly166/,,,,,,Autos,category_only,medium
+product,product_catalog,,LY688,https://procar.com.co/producto/ly688/,https://procar.com.co/producto/ly688/,,,,,,Autos,category_only,medium
+product,product_catalog,,P-309,https://procar.com.co/producto/p-309/,https://procar.com.co/producto/p-309/,,,,,,Autos,category_only,medium
+product,product_catalog,,P-609,https://procar.com.co/producto/p-609/,https://procar.com.co/producto/p-609/,,,,,,Autos,category_only,medium
+product,product_catalog,,X.SPIDER A/S,https://procar.com.co/producto/x-spider-a-s/,https://procar.com.co/producto/x-spider-a-s/,,,,,,Autos,category_only,medium
+product,product_catalog,,ZEALION,https://procar.com.co/producto/zealion/,https://procar.com.co/producto/zealion/,,,,,,Autos,category_only,medium
+product,product_catalog,,DX640,https://procar.com.co/producto/dx640/,https://procar.com.co/producto/dx640/,,,,,,Autos,category_only,medium
+product,product_catalog,,DX240,https://procar.com.co/producto/dx240/,https://procar.com.co/producto/dx240/,,,,,,Autos,category_only,medium
+product,product_catalog,,DX390,https://procar.com.co/producto/dx390/,https://procar.com.co/producto/dx390/,,,,,,Autos,category_only,medium
+product,product_catalog,,P307,https://procar.com.co/producto/p307/,https://procar.com.co/producto/p307/,,,,,,Autos,category_only,medium
+product,product_catalog,,P607,https://procar.com.co/producto/p607/,https://procar.com.co/producto/p607/,,,,,,Autos,category_only,medium
+product,product_catalog,,PROTOURA SPORT,https://procar.com.co/producto/protoura-sport/,https://procar.com.co/producto/protoura-sport/,,,,,,Autos,category_only,medium
+product,product_catalog,,DREAMLAND R/T,https://procar.com.co/producto/dreamland-r-t/,https://procar.com.co/producto/dreamland-r-t/,,,,,,Autos,category_only,medium
+product,product_catalog,,MAXATRAVES M/T,https://procar.com.co/producto/maxatraves-m-t/,https://procar.com.co/producto/maxatraves-m-t/,,,,,,Autos,category_only,medium

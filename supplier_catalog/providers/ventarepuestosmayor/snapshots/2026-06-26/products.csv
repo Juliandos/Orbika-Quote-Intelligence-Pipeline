@@ -1,2 +1,10 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-ventarepuestosmayor,Venta Repuestos Mayor,2026-06-26,category,category_only,Catalogo PDF,https://ventarepuestosmayor.mybelectricosas.co/,Catalogo PDF,,,,,https://ventarepuestosmayor.mybelectricosas.co/,1,manual_confirmation_required,low,True,pdf|catalogo
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+document,category_only,catalogomiscelania2024,,https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogomiscelania2024.pdf,,Catalogo PDF,,,,,,manual_confirmation_required,low
+document,category_only,Catálogo Escobillas,,https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogoescobillas0524.pdf,,Catalogo PDF,,,,,,manual_confirmation_required,low
+document,category_only,Catálogo Bombilleria,,https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogobombillos0524.pdf,,Catalogo PDF,,,,,,manual_confirmation_required,low
+document,category_only,Catálogo Manometros,,https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/manometros.pdf,,Catalogo PDF,,,,,,manual_confirmation_required,low
+document,category_only,Catálogo Portaescobillas,,https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/portaescobillas.pdf,,Catalogo PDF,,,,,,manual_confirmation_required,low
+document,category_only,Catálogo Pitos y Cornetas,,https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogospitosycornetas0524.pdf,,Catalogo PDF,,,,,,manual_confirmation_required,low
+document,category_only,Catálogo Bombas Electrónicas,,https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/catalogobombaselectronicas0524.pdf,,Catalogo PDF,,,,,,manual_confirmation_required,low
+document,category_only,Catálogo Arranques y Alternadores,,https://ventarepuestosmayor.mybelectricosas.co/wp-content/uploads/2024/05/arranquesyalternadores.pdf,,Catalogo PDF,,,,,,manual_confirmation_required,low
+category,category_only,Repuestos Eléctricos al Por Mayor: Potencia Tu Negocio con Nuestra Amplia Selección,,https://ventarepuestosmayor.mybelectricosas.co/,,Repuestos Eléctricos al Por Mayor: Potencia Tu Negocio con Nuestra Amplia Selección,,,,,,manual_confirmation_required,low

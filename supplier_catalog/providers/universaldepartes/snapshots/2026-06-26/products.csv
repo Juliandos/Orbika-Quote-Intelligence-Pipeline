@@ -1,3 +1,19 @@
-provider_id,provider_name,snapshot_date,item_type,provider_type,product_name,product_url,category_name,subcategory_name,brand,description,vehicle_scope,source_page_url,page_number,match_type,match_confidence,requires_manual_confirmation,searchable_tokens
-,,,category,category_only,All products,https://www.universaldepartes.co/category/all-products,All products,,,,,https://www.universaldepartes.co/category/all-products,1,category_only,medium,True,all|products
-,,,product,product_catalog,SKF 280,https://www.universaldepartes.co/product-page/skf-280,Rodamientos,SKF,SKF,Descripcion basica publica para verificacion parcial.,Autos,https://www.universaldepartes.co/category/all-products,1,category_only,medium,True,skf|280
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+category,category_only,Todos los productos,,https://www.universaldepartes.co/category/all-products,,Todos los productos,,,,,,category_only,medium
+product,product_catalog,,HUB DE RUEDA,https://www.universaldepartes.co/product-page/skf-280,https://www.universaldepartes.co/product-page/skf-280,,,SKF,VKBA3569,VKBA3569,,vehicle_compatible,medium
+category,category_only,Todos los productos,,https://www.universaldepartes.co/category/all-products?page=2,,Todos los productos,,,,,,category_only,medium
+category,category_only,EMBRAGUE,,https://www.universaldepartes.co/category/embrague,,EMBRAGUE,,,,,,category_only,medium
+category,category_only,FRENOS,,https://www.universaldepartes.co/category/frenos,,FRENOS,,,,,,category_only,medium
+category,category_only,CARDAN,,https://www.universaldepartes.co/category/cardan,,CARDAN,,,,,,category_only,medium
+category,category_only,EJE Y RUEDA,,https://www.universaldepartes.co/category/eje,,EJE Y RUEDA,,,,,,category_only,medium
+category,category_only,TRAILER,,https://www.universaldepartes.co/category/quinta-rueda,,TRAILER,,,,,,category_only,medium
+category,category_only,ACCESORIOS,,https://www.universaldepartes.co/category/accesorios,,ACCESORIOS,,,,,,category_only,medium
+product,product_catalog,,KIT DE EMBRAGUE,https://www.universaldepartes.co/product-page/luk-3,https://www.universaldepartes.co/product-page/luk-3,,,LUK,624347409-K,624347409-K,,vehicle_compatible,medium
+product,product_catalog,,KIT DE EMBRAGUE AMAROK,https://www.universaldepartes.co/product-page/luk-2,https://www.universaldepartes.co/product-page/luk-2,,,LUK,624347409,624347409,,vehicle_compatible,medium
+product,product_catalog,,KIT DE EMBRAGUE GOLF / JETTA,https://www.universaldepartes.co/product-page/luk-1,https://www.universaldepartes.co/product-page/luk-1,,,LUK,620312700,620312700,,vehicle_compatible,medium
+product,product_catalog,,KIT DE EMBRAGUE AMAROK,https://www.universaldepartes.co/product-page/luk,https://www.universaldepartes.co/product-page/luk,,,LUK,624347409-K_b,624347409-K_b,,vehicle_compatible,medium
+product,product_catalog,,RODAMIENTO DE BOLAS,https://www.universaldepartes.co/product-page/skf-311,https://www.universaldepartes.co/product-page/skf-311,,,SKF,6206-2RS1/GJN,6206-2RS1/GJN,,vehicle_compatible,medium
+product,product_catalog,,SET RODAMIENTOS CONICOS 3982/3920 SKF,https://www.universaldepartes.co/product-page/skf-305,https://www.universaldepartes.co/product-page/skf-305,,,SKF,SET103,SET103,,vehicle_compatible,medium
+product,product_catalog,,SET RODAMIENTO CONICO 580/572 SKF,https://www.universaldepartes.co/product-page/skf-304,https://www.universaldepartes.co/product-page/skf-304,,,SKF,SET401,SET401,,vehicle_compatible,medium
+product,product_catalog,,SET RODAMIENTOS CONICOS 39590/39520 SKF,https://www.universaldepartes.co/product-page/skf-301,https://www.universaldepartes.co/product-page/skf-301,,,SKF,SET408,SET408,,vehicle_compatible,medium
+product,product_catalog,,SET RODAMIENTO CONICO HM212049/HM212011 BT1-0827 SKF,https://www.universaldepartes.co/product-page/skf-299,https://www.universaldepartes.co/product-page/skf-299,,,SKF,SET413,SET413,,vehicle_compatible,medium
