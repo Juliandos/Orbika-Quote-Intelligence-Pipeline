@@ -1,4 +1,4 @@
-﻿# Orbika Implementation Phases
+# Orbika Implementation Phases
 
 This document is the operating roadmap for evolving Orbika Quote Intelligence Pipeline from a file-based local pipeline into a local workshop console backed by PostgreSQL.
 
@@ -1247,6 +1247,9 @@ Operational supplier coverage note:
   - Do not auto-return to a home or product-detail page after captcha if the goal is a full catalog crawl; that can restart the traversal and lose progress.
   - Seed pages should stay on listing surfaces, and product-detail URLs should only be used as enrichment targets when needed.
   - Lazy-loading catalogs need a higher idle tolerance before the crawler assumes the surface is exhausted.
+  - motorpartes showed that exclusion filters must be evaluated against the route path and query, not the full URL string, because provider domains or catalog slugs can contain misleading substrings like moto.
+  - motorpartes also showed that browser crawlers should emit intermediate diagnostics while crawling categories and parsing detail pages, so a finished run can explain how many URLs were discovered, how many details parsed, and which samples failed.
+  - Keep a small per-provider diagnostic bundle or JSON artifact whenever a live crawler may take a long time or may be interrupted by human validation, captcha, or flaky loading.
 
 
 #### Purpose
