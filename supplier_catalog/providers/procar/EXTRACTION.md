@@ -4,13 +4,20 @@ Provider: `procar`
 
 Website: `https://procar.com.co/`
 
-Autos catalog root: `https://procar.com.co/categoria-producto/llantas/auto/`
+Autos catalog roots:
+
+- `https://procar.com.co/categoria-producto/llantas/`
+- `https://procar.com.co/categoria-producto/llantas/auto/`
+- `https://procar.com.co/categoria-producto/llantas/camioneta/`
+- `https://procar.com.co/categoria-producto/filtros/`
+- `https://procar.com.co/categoria-producto/lubricantes/`
+- `https://procar.com.co/categoria-producto/otros-productos/`
 
 Status: public site. A modal may appear on the home page, but the catalog pages are the operational source and should be treated as the main extraction surface.
 
 ## Why This Provider Matters
 
-Procar is useful because it exposes an autos-oriented catalog with category pages and product detail pages that carry more descriptive information than simple category-only suppliers.
+Procar is useful because it exposes an autos-oriented catalog with category pages and product detail pages that carry richer information than simple category-only suppliers.
 
 The most relevant source pages for Orbika are:
 
@@ -18,7 +25,7 @@ The most relevant source pages for Orbika are:
 - product detail pages
 - autos-focused product cards or listings
 
-Ignore camioneta, carga pesada, and non-auto lines.
+Ignore motos and heavy-duty lines. Keep `camioneta` in scope.
 
 ## Important Extraction Rule
 
@@ -89,6 +96,6 @@ It must not:
 - add items to carts
 - try to checkout
 - login
-- assume camioneta or heavy-duty pages are part of the autos corpus
+- assume motos or heavy-duty pages are part of the autos corpus
 
-The first implementation should walk autos category pages and capture the detail page for each relevant product.
+The first implementation should walk the listed autos catalog surfaces and capture the detail page for each relevant product.

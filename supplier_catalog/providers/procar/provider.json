@@ -2,15 +2,33 @@
   "provider_id": "procar",
   "display_name": "Procar",
   "website": "https://procar.com.co/",
-  "catalog_root_url": "https://procar.com.co/categoria-producto/llantas/auto/",
+  "catalog_root_url": "https://procar.com.co/categoria-producto/llantas/",
   "access": {
     "type": "open",
     "requires_login": false,
     "read_only": true
   },
+  "catalog": {
+    "root_url": "https://procar.com.co/categoria-producto/llantas/",
+    "entry_urls": [
+      "https://procar.com.co/categoria-producto/llantas/",
+      "https://procar.com.co/categoria-producto/llantas/auto/",
+      "https://procar.com.co/categoria-producto/llantas/camioneta/",
+      "https://procar.com.co/categoria-producto/filtros/",
+      "https://procar.com.co/categoria-producto/lubricantes/",
+      "https://procar.com.co/categoria-producto/otros-productos/"
+    ]
+  },
   "selectors": {
     "home_modal_note": "Modal visible in home only; catalog pages are the extraction surface that matters.",
-    "autos_category_root": "https://procar.com.co/categoria-producto/llantas/auto/",
+    "catalog_entry_urls": [
+      "https://procar.com.co/categoria-producto/llantas/",
+      "https://procar.com.co/categoria-producto/llantas/auto/",
+      "https://procar.com.co/categoria-producto/llantas/camioneta/",
+      "https://procar.com.co/categoria-producto/filtros/",
+      "https://procar.com.co/categoria-producto/lubricantes/",
+      "https://procar.com.co/categoria-producto/otros-productos/"
+    ],
     "product_detail_path_hint": "/producto/"
   },
   "data_precision": {
@@ -21,7 +39,7 @@
     "product_names": true,
     "detail_links": true,
     "image_urls": true,
-    "descriptions": "partial_or_general"
+    "descriptions": "detailed"
   },
   "matching": {
     "allowed_match_types": [
@@ -32,7 +50,7 @@
     "forbidden_match_types": [
       "exact_reference"
     ],
-    "notes": "Use the autos catalog only. Treat the home modal as low risk because the catalog pages are the real source. Prefer product names, category labels, and detail-page description over any inferred code."
+    "notes": "Use the autos catalog and the listed category surfaces only. Treat the home modal as low risk because the catalog pages are the real source. Prefer product names, category labels, and detail-page descriptions over any inferred code."
   },
   "daily_refresh": {
     "enabled": true,

@@ -1,0 +1,191 @@
+item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
+product,product_catalog,,GALLOPRO H/T,https://procar.com.co/producto/gallopro-h-t/,https://procar.com.co/producto/gallopro-h-t/,Llantas,CAMIONETA,ZMAX,,,Autos,category_only,medium
+product,product_catalog,,ECOLANDER,https://procar.com.co/producto/ecolander-2/,https://procar.com.co/producto/ecolander-2/,Llantas,Auto,RAPID,,,Autos,category_only,medium
+product,product_catalog,,ECOSAVER,https://procar.com.co/producto/ecosaver-2/,https://procar.com.co/producto/ecosaver-2/,Llantas,Auto,RAPID,,,Autos,category_only,medium
+product,product_catalog,,EFFIVAN,https://procar.com.co/producto/effivan-2/,https://procar.com.co/producto/effivan-2/,Llantas,Auto,RAPID,,,Autos,category_only,medium
+product,product_catalog,,LY166,https://procar.com.co/producto/ly166/,https://procar.com.co/producto/ly166/,Llantas,Auto,ZMAX,,,Autos,category_only,medium
+product,product_catalog,,LY688,https://procar.com.co/producto/ly688/,https://procar.com.co/producto/ly688/,Llantas,Auto,ZMAX,,,Autos,category_only,medium
+product,product_catalog,,P-309,https://procar.com.co/producto/p-309/,https://procar.com.co/producto/p-309/,Llantas,Auto,RAPID,,,Autos,category_only,medium
+product,product_catalog,,P-609,https://procar.com.co/producto/p-609/,https://procar.com.co/producto/p-609/,Llantas,Auto,RAPID,,,Autos,category_only,medium
+product,product_catalog,,X.SPIDER A/S,https://procar.com.co/producto/x-spider-a-s/,https://procar.com.co/producto/x-spider-a-s/,Llantas,Auto,ZMAX,,,Autos,category_only,medium
+product,product_catalog,,ZEALION,https://procar.com.co/producto/zealion/,https://procar.com.co/producto/zealion/,Llantas,Auto,ZMAX,,,Autos,category_only,medium
+product,product_catalog,,DX640,https://procar.com.co/producto/dx640/,https://procar.com.co/producto/dx640/,Llantas,Auto,DAVANTI,,,Autos,category_only,medium
+product,product_catalog,,DX240,https://procar.com.co/producto/dx240/,https://procar.com.co/producto/dx240/,Llantas,Auto,DAVANTI,,,Autos,category_only,medium
+product,product_catalog,,DX390,https://procar.com.co/producto/dx390/,https://procar.com.co/producto/dx390/,Llantas,Auto,DAVANTI,,,Autos,category_only,medium
+product,product_catalog,,P307,https://procar.com.co/producto/p307/,https://procar.com.co/producto/p307/,Llantas,Auto,,,,Autos,category_only,medium
+product,product_catalog,,P607,https://procar.com.co/producto/p607/,https://procar.com.co/producto/p607/,Llantas,Auto,,,,Autos,category_only,medium
+product,product_catalog,,PROTOURA SPORT,https://procar.com.co/producto/protoura-sport/,https://procar.com.co/producto/protoura-sport/,Llantas,Auto,DAVANTI,,,Autos,category_only,medium
+product,product_catalog,,DREAMLAND R/T,https://procar.com.co/producto/dreamland-r-t/,https://procar.com.co/producto/dreamland-r-t/,Llantas,CAMIONETA,ZMAX,,,Autos,category_only,medium
+product,product_catalog,,MAXATRAVES M/T,https://procar.com.co/producto/maxatraves-m-t/,https://procar.com.co/producto/maxatraves-m-t/,Llantas,CAMIONETA,ZMAX,,,Autos,category_only,medium
+product,product_catalog,,TERRA XPLORER C2 A/T,https://procar.com.co/producto/terra-xplorer-c2-a-t/,https://procar.com.co/producto/terra-xplorer-c2-a-t/,Llantas,CAMIONETA,ZMAX,,,Autos,category_only,medium
+product,product_catalog,,VANMEJOR C30,https://procar.com.co/producto/vanmejor-c30/,https://procar.com.co/producto/vanmejor-c30/,Llantas,CAMIONETA,ZMAX,,,Autos,category_only,medium
+product,product_catalog,,ECOSAVER,https://procar.com.co/producto/ecosaver/,https://procar.com.co/producto/ecosaver/,Llantas,CAMIONETA,,,,Autos,category_only,medium
+product,product_catalog,,EFFIVAN,https://procar.com.co/producto/effivan/,https://procar.com.co/producto/effivan/,Llantas,CAMIONETA,,,,Autos,category_only,medium
+product,product_catalog,,ECOLANDER,https://procar.com.co/producto/ecolander/,https://procar.com.co/producto/ecolander/,Llantas,CAMIONETA,,,,Autos,category_only,medium
+product,product_catalog,,MUDMAXX,https://procar.com.co/producto/mudmaxx/,https://procar.com.co/producto/mudmaxx/,Llantas,CAMIONETA,,,,Autos,category_only,medium
+product,product_catalog,,DX390,https://procar.com.co/producto/dx390-2/,https://procar.com.co/producto/dx390-2/,Llantas,CAMIONETA,DAVANTI,,,Autos,category_only,medium
+product,product_catalog,,DX440,https://procar.com.co/producto/dx440/,https://procar.com.co/producto/dx440/,Llantas,CAMIONETA,DAVANTI,,,Autos,category_only,medium
+product,product_catalog,,DX640,https://procar.com.co/producto/dx640-2/,https://procar.com.co/producto/dx640-2/,Llantas,CAMIONETA,DAVANTI,,,Autos,category_only,medium
+product,product_catalog,,DX740® H/T,https://procar.com.co/producto/dx740-h-t/,https://procar.com.co/producto/dx740-h-t/,Llantas,CAMIONETA,DAVANTI,,,Autos,category_only,medium
+product,product_catalog,,TERRATOURA A/T,https://procar.com.co/producto/terratoura-a-t/,https://procar.com.co/producto/terratoura-a-t/,Llantas,CAMIONETA,DAVANTI,,,Autos,category_only,medium
+product,product_catalog,,FILTRO DF-FC127M,https://procar.com.co/producto/filtro-df-fc127m/,https://procar.com.co/producto/filtro-df-fc127m/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DF1212,https://procar.com.co/producto/filtro-df1212/,https://procar.com.co/producto/filtro-df1212/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DF5209,https://procar.com.co/producto/filtro-df5209/,https://procar.com.co/producto/filtro-df5209/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DF5304,https://procar.com.co/producto/filtro-df5304/,https://procar.com.co/producto/filtro-df5304/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DF5508,https://procar.com.co/producto/filtro-df5508/,https://procar.com.co/producto/filtro-df5508/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFE5550,https://procar.com.co/producto/filtro-dfe5550/,https://procar.com.co/producto/filtro-dfe5550/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFF5506,https://procar.com.co/producto/filtro-dff5506/,https://procar.com.co/producto/filtro-dff5506/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ193,https://procar.com.co/producto/filtro-dfj193/,https://procar.com.co/producto/filtro-dfj193/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ195E,https://procar.com.co/producto/filtro-dfj195e/,https://procar.com.co/producto/filtro-dfj195e/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ208,https://procar.com.co/producto/filtro-dfj208/,https://procar.com.co/producto/filtro-dfj208/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ214,https://procar.com.co/producto/filtro-dfj214/,https://procar.com.co/producto/filtro-dfj214/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ226,https://procar.com.co/producto/filtro-dfj226/,https://procar.com.co/producto/filtro-dfj226/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ321,https://procar.com.co/producto/filtro-dfj321/,https://procar.com.co/producto/filtro-dfj321/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ513,https://procar.com.co/producto/filtro-dfj513/,https://procar.com.co/producto/filtro-dfj513/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ5235,https://procar.com.co/producto/filtro-dfj5235/,https://procar.com.co/producto/filtro-dfj5235/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ5318,https://procar.com.co/producto/filtro-dfj5318/,https://procar.com.co/producto/filtro-dfj5318/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,STAR CAR PLUS SAE 5W30 API SN,https://procar.com.co/producto/star-car-plus-sae-5w30-api-sn/,https://procar.com.co/producto/star-car-plus-sae-5w30-api-sn/,LUBRICANTES,Gasolina y Gas,STAR OIL,,,Autos,category_only,medium
+product,product_catalog,,STAR CAR PLUS SAE 20W50 API SL,https://procar.com.co/producto/star-car-plus-sae-20w50-api-sl/,https://procar.com.co/producto/star-car-plus-sae-20w50-api-sl/,LUBRICANTES,Gasolina y Gas,STAR OIL,,,Autos,category_only,medium
+product,product_catalog,,STAR CAR PLUS SAE 20W50 SL/CF,https://procar.com.co/producto/star-car-plus-sae-20w50-sl-cf/,https://procar.com.co/producto/star-car-plus-sae-20w50-sl-cf/,LUBRICANTES,Gasolina y Gas,STAR OIL,,,,category_only,medium
+product,product_catalog,,STAR CAR PLUS SAE 20W50 SN,https://procar.com.co/producto/star-car-plus-sae-20w50-sn/,https://procar.com.co/producto/star-car-plus-sae-20w50-sn/,LUBRICANTES,Gasolina y Gas,STAR OIL,,,Autos,category_only,medium
+product,product_catalog,,STAR ENGINE SAE 50 API SF/CF,https://procar.com.co/producto/star-engine-sae-50-api-sf-cf/,https://procar.com.co/producto/star-engine-sae-50-api-sf-cf/,LUBRICANTES,Gasolina y Gas,STAR OIL,,,Autos,category_only,medium
+product,product_catalog,,STAR CAR PLUS SAE 10W30 SN,https://procar.com.co/producto/star-car-plus-sae-10w30-sn/,https://procar.com.co/producto/star-car-plus-sae-10w30-sn/,LUBRICANTES,Gasolina y Gas,STAR OIL,,,Autos,category_only,medium
+product,product_catalog,,STAR TRUCK SAE 50 CF/SF,https://procar.com.co/producto/star-truck-sae-50-cf-sf/,https://procar.com.co/producto/star-truck-sae-50-cf-sf/,LUBRICANTES,Diesel,STAR OIL,,,Autos,category_only,medium
+product,product_catalog,,STAR BIKE 2T JASO FB,https://procar.com.co/producto/star-bike-2t-jaso-fb/,https://procar.com.co/producto/star-bike-2t-jaso-fb/,Moto,LUBRICANTES,STAR OIL,,,,category_only,medium
+product,product_catalog,,STAR BIKE 4T SAE 20W50 JASO MA,https://procar.com.co/producto/star-bike-4t-sae-20w50-jaso-ma/,https://procar.com.co/producto/star-bike-4t-sae-20w50-jaso-ma/,Moto,LUBRICANTES,STAR OIL,,,,category_only,medium
+product,product_catalog,,STAR BIKE 4T 25W60 JASO MA2,https://procar.com.co/producto/star-bike-4t-25w60-jaso-ma2/,https://procar.com.co/producto/star-bike-4t-25w60-jaso-ma2/,Moto,LUBRICANTES,STAR OIL,,,,category_only,medium
+product,product_catalog,,ACEITE 2T TC-2 VERDE,https://procar.com.co/producto/aceite-2t-tc-2-verde/,https://procar.com.co/producto/aceite-2t-tc-2-verde/,Moto,LUBRICANTES,PROCOL,,,,category_only,medium
+product,product_catalog,,ELF Evolution 500 TS 15W-40,https://procar.com.co/producto/elf-evolution-500-ts-15w-40/,https://procar.com.co/producto/elf-evolution-500-ts-15w-40/,Moto,LUBRICANTES,ELF,,,,category_only,medium
+product,product_catalog,,ELF Evolution 900 FT 5W-40,https://procar.com.co/producto/elf-evolution-900-ft-5w-40/,https://procar.com.co/producto/elf-evolution-900-ft-5w-40/,Moto,LUBRICANTES,ELF,,,Autos,vehicle_compatible,medium
+product,product_catalog,,Elf Evolution 900 Usx 5w-30,https://procar.com.co/producto/elf-evolution-900-usx-5w-30/,https://procar.com.co/producto/elf-evolution-900-usx-5w-30/,Moto,LUBRICANTES,ELF,,,Autos,vehicle_compatible,medium
+product,product_catalog,,REFRIGERANTE FREEZETONE VERDE,https://procar.com.co/producto/refrigerante-freezetone-verde/,https://procar.com.co/producto/refrigerante-freezetone-verde/,REFRIGERANTE,OTROS PRODUCTOS,FREEZETONE,,,Autos,category_only,medium
+product,product_catalog,,REFRIGERANTE STAR FREE ROJO,https://procar.com.co/producto/refrigerante-star-free-rojo/,https://procar.com.co/producto/refrigerante-star-free-rojo/,REFRIGERANTE,OTROS PRODUCTOS,STAR FREE,,,,category_only,medium
+product,product_catalog,,REFRIGERANTE STAR FREE VERDE,https://procar.com.co/producto/refrigerante-star-free-verde/,https://procar.com.co/producto/refrigerante-star-free-verde/,REFRIGERANTE,OTROS PRODUCTOS,STAR FREE,,,,category_only,medium
+product,product_catalog,,Líquido Para Frenos Dot 5.1,https://procar.com.co/producto/liquido-para-frenos-dot-5-1/,https://procar.com.co/producto/liquido-para-frenos-dot-5-1/,OTROS PRODUCTOS,LIQUIDO PARA FRENOS,COFRE,,,,category_only,medium
+product,product_catalog,,Líquido Para Frenos Dot3,https://procar.com.co/producto/liquido-para-frenos-dot3/,https://procar.com.co/producto/liquido-para-frenos-dot3/,OTROS PRODUCTOS,LIQUIDO PARA FRENOS,COFRE,,,,category_only,medium
+product,product_catalog,,Líquido Para Frenos Dot4,https://procar.com.co/producto/liquido-para-frenos-dot4/,https://procar.com.co/producto/liquido-para-frenos-dot4/,OTROS PRODUCTOS,LIQUIDO PARA FRENOS,COFRE,,,,category_only,medium
+product,product_catalog,,Líquido Para Frenos Dot4,https://procar.com.co/producto/liquido-para-frenos-dot4-2/,https://procar.com.co/producto/liquido-para-frenos-dot4-2/,OTROS PRODUCTOS,LIQUIDO PARA FRENOS,KROSS,,,,category_only,medium
+product,product_catalog,,STAR BLUE,https://procar.com.co/producto/star-blue/,https://procar.com.co/producto/star-blue/,OTROS PRODUCTOS,GRASAS,STAR BLUE,,,Autos,category_only,medium
+product,product_catalog,,STAR OIL GRASAS LITIO AZUL,https://procar.com.co/producto/star-oil-grasas-litio-azul/,https://procar.com.co/producto/star-oil-grasas-litio-azul/,OTROS PRODUCTOS,GRASAS,STAR OIL,,,,category_only,medium
+product,product_catalog,,STAR OIL GRASA CALCIO,https://procar.com.co/producto/star-oil-grasa-calcio/,https://procar.com.co/producto/star-oil-grasa-calcio/,OTROS PRODUCTOS,GRASAS,STAR OIL,,,,category_only,medium
+product,product_catalog,,Silicona Loctite Roja 70ml,https://procar.com.co/producto/silicona-loctite-roja-70ml/,https://procar.com.co/producto/silicona-loctite-roja-70ml/,SILICONA,OTROS PRODUCTOS,LOCTITE,,,Autos,category_only,medium
+product,product_catalog,,SILICONA LOCTITE GRIS 50ML,https://procar.com.co/producto/silicona-loctite-gris-50ml/,https://procar.com.co/producto/silicona-loctite-gris-50ml/,SILICONA,OTROS PRODUCTOS,LOCTITE,,,,category_only,medium
+product,product_catalog,,SILICONA LOCTITE GRIS 70ML,https://procar.com.co/producto/silicona-loctite-gris-70ml/,https://procar.com.co/producto/silicona-loctite-gris-70ml/,SILICONA,OTROS PRODUCTOS,LOCTITE,,,,category_only,medium
+product,product_catalog,,Silicona Loctite Negra 70ml,https://procar.com.co/producto/silicona-loctite-negra-70ml/,https://procar.com.co/producto/silicona-loctite-negra-70ml/,SILICONA,OTROS PRODUCTOS,LOCTITE,,,,category_only,medium
+product,product_catalog,,Silicona Loctite Transparente 70ml,https://procar.com.co/producto/silicona-loctite-transparente-70ml/,https://procar.com.co/producto/silicona-loctite-transparente-70ml/,SILICONA,OTROS PRODUCTOS,LOCTITE,,,,category_only,medium
+product,product_catalog,,Silicona Sealstar Gris 85ml,https://procar.com.co/producto/silicona-sealstar-gris-85ml/,https://procar.com.co/producto/silicona-sealstar-gris-85ml/,SILICONA,OTROS PRODUCTOS,SEALSTAR,,,,category_only,medium
+product,product_catalog,,HK867,https://procar.com.co/producto/hk867/,https://procar.com.co/producto/hk867/,Llantas,CAMION LIGERO,SUPERHAWK,,,Autos,category_only,medium
+product,product_catalog,,HK802,https://procar.com.co/producto/hk802/,https://procar.com.co/producto/hk802/,Llantas,CAMION LIGERO,SUPERHAWK,,,Autos,category_only,medium
+product,product_catalog,,HK806,https://procar.com.co/producto/hk806/,https://procar.com.co/producto/hk806/,Llantas,CAMION LIGERO,SUPERHAWK,,,Autos,category_only,medium
+product,product_catalog,,SDR02,https://procar.com.co/producto/sdr02/,https://procar.com.co/producto/sdr02/,Llantas,CAMION LIGERO,SUPERHAWK,,,Autos,category_only,medium
+product,product_catalog,,HK839,https://procar.com.co/producto/hk839/,https://procar.com.co/producto/hk839/,Llantas,CAMIONES PESADO,SUPERHAWK,,,,category_only,medium
+product,product_catalog,,HK862,https://procar.com.co/producto/hk862/,https://procar.com.co/producto/hk862/,Llantas,CAMIONES PESADO,SUPERHAWK,,,Autos,category_only,medium
+product,product_catalog,,HK810,https://procar.com.co/producto/hk810/,https://procar.com.co/producto/hk810/,Llantas,CAMIONES PESADO,SUPERHAWK,,,,category_only,medium
+product,product_catalog,,HK859,https://procar.com.co/producto/hk859/,https://procar.com.co/producto/hk859/,Llantas,CAMIONES PESADO,SUPERHAWK,,,,category_only,medium
+product,product_catalog,,SKY030,https://procar.com.co/producto/sky030/,https://procar.com.co/producto/sky030/,MOTO,Llantas,SKYTYRE,,,,category_only,medium
+product,product_catalog,,SKY2305,https://procar.com.co/producto/sky2305/,https://procar.com.co/producto/sky2305/,MOTO,Llantas,SKYTYRE,,,,category_only,medium
+product,product_catalog,,SKY311,https://procar.com.co/producto/sky311/,https://procar.com.co/producto/sky311/,MOTO,Llantas,SKYTYRE,,,,category_only,medium
+product,product_catalog,,SKY191,https://procar.com.co/producto/sky191/,https://procar.com.co/producto/sky191/,MOTO,Llantas,SKYTYRE,,,,category_only,medium
+product,product_catalog,,SKY320,https://procar.com.co/producto/sky320/,https://procar.com.co/producto/sky320/,MOTO,Llantas,SKYTYRE,,,,category_only,medium
+product,product_catalog,,EY-029-Semipistera,https://procar.com.co/producto/ey-029-semipistera/,https://procar.com.co/producto/ey-029-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-6011-Semipistera,https://procar.com.co/producto/ey-6011-semipistera/,https://procar.com.co/producto/ey-6011-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-311-Mixta,https://procar.com.co/producto/ey-311-mixta/,https://procar.com.co/producto/ey-311-mixta/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-2304-Semipistera,https://procar.com.co/producto/ey-2304-semipistera/,https://procar.com.co/producto/ey-2304-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-029-Semipistera,https://procar.com.co/producto/ey-029-semipistera-2/,https://procar.com.co/producto/ey-029-semipistera-2/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-458-Semipistera,https://procar.com.co/producto/ey-458-semipistera/,https://procar.com.co/producto/ey-458-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-034-Mixta,https://procar.com.co/producto/ey-034-mixta/,https://procar.com.co/producto/ey-034-mixta/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-2305-Semipistera,https://procar.com.co/producto/ey-2305-semipistera/,https://procar.com.co/producto/ey-2305-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-846-Semipistera,https://procar.com.co/producto/ey-846-semipistera/,https://procar.com.co/producto/ey-846-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-2303-Semipistera,https://procar.com.co/producto/ey-2303-semipistera/,https://procar.com.co/producto/ey-2303-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-2300-Semipistera,https://procar.com.co/producto/ey-2300-semipistera/,https://procar.com.co/producto/ey-2300-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-1081-2-Semipistera,https://procar.com.co/producto/ey-1081-2-semipistera/,https://procar.com.co/producto/ey-1081-2-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-1081-2-Semipistera,https://procar.com.co/producto/ey-1081-2-semipistera-2/,https://procar.com.co/producto/ey-1081-2-semipistera-2/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-198-Semipistera,https://procar.com.co/producto/ey-198-semipistera/,https://procar.com.co/producto/ey-198-semipistera/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,EY-034-Mixta,https://procar.com.co/producto/ey-034-mixta-2/,https://procar.com.co/producto/ey-034-mixta-2/,MOTO,Llantas,Giroldi,,,,category_only,medium
+product,product_catalog,,FILTRO DF5538,https://procar.com.co/producto/filtro-df5538/,https://procar.com.co/producto/filtro-df5538/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DF5739,https://procar.com.co/producto/filtro-df5739/,https://procar.com.co/producto/filtro-df5739/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DF9513,https://procar.com.co/producto/filtro-df9513/,https://procar.com.co/producto/filtro-df9513/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO243K,https://procar.com.co/producto/filtro-do243k/,https://procar.com.co/producto/filtro-do243k/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO3000,https://procar.com.co/producto/filtro-do3000/,https://procar.com.co/producto/filtro-do3000/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4081,https://procar.com.co/producto/filtro-do4081/,https://procar.com.co/producto/filtro-do4081/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4102M,https://procar.com.co/producto/filtro-do4102m/,https://procar.com.co/producto/filtro-do4102m/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4120,https://procar.com.co/producto/filtro-do4120/,https://procar.com.co/producto/filtro-do4120/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4276,https://procar.com.co/producto/filtro-do4276/,https://procar.com.co/producto/filtro-do4276/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4280,https://procar.com.co/producto/filtro-do4280/,https://procar.com.co/producto/filtro-do4280/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4312,https://procar.com.co/producto/filtro-do4312/,https://procar.com.co/producto/filtro-do4312/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4347,https://procar.com.co/producto/filtro-do4347/,https://procar.com.co/producto/filtro-do4347/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4368,https://procar.com.co/producto/filtro-do4368/,https://procar.com.co/producto/filtro-do4368/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4379,https://procar.com.co/producto/filtro-do4379/,https://procar.com.co/producto/filtro-do4379/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4705,https://procar.com.co/producto/filtro-do4705/,https://procar.com.co/producto/filtro-do4705/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4745,https://procar.com.co/producto/filtro-do4745/,https://procar.com.co/producto/filtro-do4745/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA-7139,https://procar.com.co/producto/filtro-da-7139/,https://procar.com.co/producto/filtro-da-7139/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA0248,https://procar.com.co/producto/filtro-da0248/,https://procar.com.co/producto/filtro-da0248/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA1055,https://procar.com.co/producto/filtro-da1055/,https://procar.com.co/producto/filtro-da1055/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA2548,https://procar.com.co/producto/filtro-da2548/,https://procar.com.co/producto/filtro-da2548/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA2760,https://procar.com.co/producto/filtro-da2760/,https://procar.com.co/producto/filtro-da2760/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA3779,https://procar.com.co/producto/filtro-da3779/,https://procar.com.co/producto/filtro-da3779/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA3841,https://procar.com.co/producto/filtro-da3841/,https://procar.com.co/producto/filtro-da3841/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA9149,https://procar.com.co/producto/filtro-da9149/,https://procar.com.co/producto/filtro-da9149/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA9200,https://procar.com.co/producto/filtro-da9200/,https://procar.com.co/producto/filtro-da9200/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA9264,https://procar.com.co/producto/filtro-da9264/,https://procar.com.co/producto/filtro-da9264/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA9305,https://procar.com.co/producto/filtro-da9305/,https://procar.com.co/producto/filtro-da9305/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA9389,https://procar.com.co/producto/filtro-da9389/,https://procar.com.co/producto/filtro-da9389/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA9432,https://procar.com.co/producto/filtro-da9432/,https://procar.com.co/producto/filtro-da9432/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA9438,https://procar.com.co/producto/filtro-da9438/,https://procar.com.co/producto/filtro-da9438/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DA9850,https://procar.com.co/producto/filtro-da9850/,https://procar.com.co/producto/filtro-da9850/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DAJ2004,https://procar.com.co/producto/filtro-daj2004/,https://procar.com.co/producto/filtro-daj2004/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC71003,https://procar.com.co/producto/filtro-dc71003/,https://procar.com.co/producto/filtro-dc71003/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC71005,https://procar.com.co/producto/filtro-dc71005/,https://procar.com.co/producto/filtro-dc71005/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC71028,https://procar.com.co/producto/filtro-dc71028/,https://procar.com.co/producto/filtro-dc71028/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC71030,https://procar.com.co/producto/filtro-dc71030/,https://procar.com.co/producto/filtro-dc71030/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC71210,https://procar.com.co/producto/filtro-dc71210/,https://procar.com.co/producto/filtro-dc71210/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC7127,https://procar.com.co/producto/filtro-dc7127/,https://procar.com.co/producto/filtro-dc7127/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC7130,https://procar.com.co/producto/filtro-dc7130/,https://procar.com.co/producto/filtro-dc7130/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC7198,https://procar.com.co/producto/filtro-dc7198/,https://procar.com.co/producto/filtro-dc7198/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC7328,https://procar.com.co/producto/filtro-dc7328/,https://procar.com.co/producto/filtro-dc7328/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC7338,https://procar.com.co/producto/filtro-dc7338/,https://procar.com.co/producto/filtro-dc7338/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC7360,https://procar.com.co/producto/filtro-dc7360/,https://procar.com.co/producto/filtro-dc7360/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC7374,https://procar.com.co/producto/filtro-dc7374/,https://procar.com.co/producto/filtro-dc7374/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC74001,https://procar.com.co/producto/filtro-dc74001/,https://procar.com.co/producto/filtro-dc74001/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC76018,https://procar.com.co/producto/filtro-dc76018/,https://procar.com.co/producto/filtro-dc76018/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DC76025,https://procar.com.co/producto/filtro-dc76025/,https://procar.com.co/producto/filtro-dc76025/,FILTROS,FILTRO DE CABINA,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ208A,https://procar.com.co/producto/filtro-dfj208a/,https://procar.com.co/producto/filtro-dfj208a/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFK001,https://procar.com.co/producto/filtro-dfk001/,https://procar.com.co/producto/filtro-dfk001/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DFJ601,https://procar.com.co/producto/filtro-dfj601/,https://procar.com.co/producto/filtro-dfj601/,FILTROS,COMBUSTIBLE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4750,https://procar.com.co/producto/filtro-do4750/,https://procar.com.co/producto/filtro-do4750/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DO4905,https://procar.com.co/producto/filtro-do4905/,https://procar.com.co/producto/filtro-do4905/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOE584,https://procar.com.co/producto/filtro-doe584/,https://procar.com.co/producto/filtro-doe584/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ101A,https://procar.com.co/producto/filtro-doj101a/,https://procar.com.co/producto/filtro-doj101a/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ110,https://procar.com.co/producto/filtro-doj110/,https://procar.com.co/producto/filtro-doj110/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ115D,https://procar.com.co/producto/filtro-doj115d/,https://procar.com.co/producto/filtro-doj115d/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ196,https://procar.com.co/producto/filtro-doj196/,https://procar.com.co/producto/filtro-doj196/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ218,https://procar.com.co/producto/filtro-doj218/,https://procar.com.co/producto/filtro-doj218/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ225,https://procar.com.co/producto/filtro-doj225/,https://procar.com.co/producto/filtro-doj225/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ304,https://procar.com.co/producto/filtro-doj304/,https://procar.com.co/producto/filtro-doj304/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ406,https://procar.com.co/producto/filtro-doj406/,https://procar.com.co/producto/filtro-doj406/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ412D,https://procar.com.co/producto/filtro-doj412d/,https://procar.com.co/producto/filtro-doj412d/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ412S,https://procar.com.co/producto/filtro-doj412s/,https://procar.com.co/producto/filtro-doj412s/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ518D,https://procar.com.co/producto/filtro-doj518d/,https://procar.com.co/producto/filtro-doj518d/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ518S,https://procar.com.co/producto/filtro-doj518s/,https://procar.com.co/producto/filtro-doj518s/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ527,https://procar.com.co/producto/filtro-doj527/,https://procar.com.co/producto/filtro-doj527/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ527S,https://procar.com.co/producto/filtro-doj527s/,https://procar.com.co/producto/filtro-doj527s/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ606,https://procar.com.co/producto/filtro-doj606/,https://procar.com.co/producto/filtro-doj606/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOJ901,https://procar.com.co/producto/filtro-doj901/,https://procar.com.co/producto/filtro-doj901/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DOLF734,https://procar.com.co/producto/filtro-dolf734/,https://procar.com.co/producto/filtro-dolf734/,FILTROS,FILTRO DE ACEITE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DAJ2005,https://procar.com.co/producto/filtro-daj2005/,https://procar.com.co/producto/filtro-daj2005/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DAJ472,https://procar.com.co/producto/filtro-daj472/,https://procar.com.co/producto/filtro-daj472/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DAJ576,https://procar.com.co/producto/filtro-daj576/,https://procar.com.co/producto/filtro-daj576/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DAJ579,https://procar.com.co/producto/filtro-daj579/,https://procar.com.co/producto/filtro-daj579/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,FILTRO DAJ622,https://procar.com.co/producto/filtro-daj622/,https://procar.com.co/producto/filtro-daj622/,FILTROS,FILTRO DE AIRE,ELEMFIL,,,,category_only,medium
+product,product_catalog,,STAR ATF DX III,https://procar.com.co/producto/star-atf-dx-iii/,https://procar.com.co/producto/star-atf-dx-iii/,LUBRICANTES,Caja y Transmisión,STAR OIL,,,Autos,vehicle_compatible,medium
+product,product_catalog,,STAR GEAR PLUS 85W140 GL-5,https://procar.com.co/producto/star-gear-plus-85w140-gl-5/,https://procar.com.co/producto/star-gear-plus-85w140-gl-5/,LUBRICANTES,Caja y Transmisión,STAR OIL,,,Autos,category_only,medium
+product,product_catalog,,STAR GEAR SAE 80W90 API GL-5,https://procar.com.co/producto/star-gear-sae-80w90-api-gl-5/,https://procar.com.co/producto/star-gear-sae-80w90-api-gl-5/,LUBRICANTES,Caja y Transmisión,STAR OIL,,,Autos,category_only,medium
+product,product_catalog,,STAR GEAR SAE 85W140 API,https://procar.com.co/producto/star-gear-sae-85w140-api/,https://procar.com.co/producto/star-gear-sae-85w140-api/,LUBRICANTES,Caja y Transmisión,STAR OIL,,,Autos,category_only,medium
+product,product_catalog,,VALVULINA GL1 140,https://procar.com.co/producto/valvulina-gl1-140/,https://procar.com.co/producto/valvulina-gl1-140/,LUBRICANTES,Caja y Transmisión,PROCOL,,,,category_only,medium
+product,product_catalog,,HYDROSTAR AW ISO 68,https://procar.com.co/producto/hydrostar-aw-iso-68/,https://procar.com.co/producto/hydrostar-aw-iso-68/,LUBRICANTES,Hidráulicos,STAR OIL,,,,category_only,medium
+product,product_catalog,,ELF Evolution 700 STI 10W40,https://procar.com.co/producto/elf-evolution-700-sti-10w40/,https://procar.com.co/producto/elf-evolution-700-sti-10w40/,LUBRICANTES,Hidráulicos,ELF,,,Autos,category_only,medium
+product,product_catalog,,HIDRAULICO ISO 68,https://procar.com.co/producto/hidraulico-iso-68/,https://procar.com.co/producto/hidraulico-iso-68/,LUBRICANTES,Hidráulicos,PROCOL,,,,category_only,medium
+product,product_catalog,,EVOL. 500 FT 20W50,https://procar.com.co/producto/evol-500-ft-20w50/,https://procar.com.co/producto/evol-500-ft-20w50/,Moto,LUBRICANTES,ELF,,,,category_only,medium
+product,product_catalog,,EVOL. 500 FTX SP 10W30,https://procar.com.co/producto/evol-500-ftx-sp-10w30/,https://procar.com.co/producto/evol-500-ftx-sp-10w30/,Moto,LUBRICANTES,ELF,,,,category_only,medium
+product,product_catalog,,Bandas Para Frenos,https://procar.com.co/producto/bandas-para-frenos/,https://procar.com.co/producto/bandas-para-frenos/,OTROS PRODUCTOS,OTROS,KROSS,,,,category_only,medium
+product,product_catalog,,Pastillas Para Frenos,https://procar.com.co/producto/pastillas-para-frenos/,https://procar.com.co/producto/pastillas-para-frenos/,OTROS PRODUCTOS,OTROS,KROSS,,,,category_only,medium

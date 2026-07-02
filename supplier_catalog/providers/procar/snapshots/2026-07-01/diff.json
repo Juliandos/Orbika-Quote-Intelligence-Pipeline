@@ -1,0 +1,478 @@
+{
+  "previous_snapshot": "supplier_catalog/providers/procar/snapshots/2026-06-30/extracted.json",
+  "added_records": [
+    "https://procar.com.co/producto/aceite-2t-tc-2-verde/",
+    "https://procar.com.co/producto/bandas-para-frenos/",
+    "https://procar.com.co/producto/dx390-2/",
+    "https://procar.com.co/producto/dx440/",
+    "https://procar.com.co/producto/dx640-2/",
+    "https://procar.com.co/producto/dx740-h-t/",
+    "https://procar.com.co/producto/ecolander/",
+    "https://procar.com.co/producto/ecosaver/",
+    "https://procar.com.co/producto/effivan/",
+    "https://procar.com.co/producto/elf-evolution-500-ts-15w-40/",
+    "https://procar.com.co/producto/elf-evolution-700-sti-10w40/",
+    "https://procar.com.co/producto/elf-evolution-900-ft-5w-40/",
+    "https://procar.com.co/producto/elf-evolution-900-usx-5w-30/",
+    "https://procar.com.co/producto/evol-500-ft-20w50/",
+    "https://procar.com.co/producto/evol-500-ftx-sp-10w30/",
+    "https://procar.com.co/producto/ey-029-semipistera-2/",
+    "https://procar.com.co/producto/ey-029-semipistera/",
+    "https://procar.com.co/producto/ey-034-mixta-2/",
+    "https://procar.com.co/producto/ey-034-mixta/",
+    "https://procar.com.co/producto/ey-1081-2-semipistera-2/",
+    "https://procar.com.co/producto/ey-1081-2-semipistera/",
+    "https://procar.com.co/producto/ey-198-semipistera/",
+    "https://procar.com.co/producto/ey-2300-semipistera/",
+    "https://procar.com.co/producto/ey-2303-semipistera/",
+    "https://procar.com.co/producto/ey-2304-semipistera/",
+    "https://procar.com.co/producto/ey-2305-semipistera/",
+    "https://procar.com.co/producto/ey-311-mixta/",
+    "https://procar.com.co/producto/ey-458-semipistera/",
+    "https://procar.com.co/producto/ey-6011-semipistera/",
+    "https://procar.com.co/producto/ey-846-semipistera/",
+    "https://procar.com.co/producto/filtro-da-7139/",
+    "https://procar.com.co/producto/filtro-da0248/",
+    "https://procar.com.co/producto/filtro-da1055/",
+    "https://procar.com.co/producto/filtro-da2548/",
+    "https://procar.com.co/producto/filtro-da2760/",
+    "https://procar.com.co/producto/filtro-da3779/",
+    "https://procar.com.co/producto/filtro-da3841/",
+    "https://procar.com.co/producto/filtro-da9149/",
+    "https://procar.com.co/producto/filtro-da9200/",
+    "https://procar.com.co/producto/filtro-da9264/",
+    "https://procar.com.co/producto/filtro-da9305/",
+    "https://procar.com.co/producto/filtro-da9389/",
+    "https://procar.com.co/producto/filtro-da9432/",
+    "https://procar.com.co/producto/filtro-da9438/",
+    "https://procar.com.co/producto/filtro-da9850/",
+    "https://procar.com.co/producto/filtro-daj2004/",
+    "https://procar.com.co/producto/filtro-daj2005/",
+    "https://procar.com.co/producto/filtro-daj472/",
+    "https://procar.com.co/producto/filtro-daj576/",
+    "https://procar.com.co/producto/filtro-daj579/",
+    "https://procar.com.co/producto/filtro-daj622/",
+    "https://procar.com.co/producto/filtro-dc71003/",
+    "https://procar.com.co/producto/filtro-dc71005/",
+    "https://procar.com.co/producto/filtro-dc71028/",
+    "https://procar.com.co/producto/filtro-dc71030/",
+    "https://procar.com.co/producto/filtro-dc71210/",
+    "https://procar.com.co/producto/filtro-dc7127/",
+    "https://procar.com.co/producto/filtro-dc7130/",
+    "https://procar.com.co/producto/filtro-dc7198/",
+    "https://procar.com.co/producto/filtro-dc7328/",
+    "https://procar.com.co/producto/filtro-dc7338/",
+    "https://procar.com.co/producto/filtro-dc7360/",
+    "https://procar.com.co/producto/filtro-dc7374/",
+    "https://procar.com.co/producto/filtro-dc74001/",
+    "https://procar.com.co/producto/filtro-dc76018/",
+    "https://procar.com.co/producto/filtro-dc76025/",
+    "https://procar.com.co/producto/filtro-df-fc127m/",
+    "https://procar.com.co/producto/filtro-df1212/",
+    "https://procar.com.co/producto/filtro-df5209/",
+    "https://procar.com.co/producto/filtro-df5304/",
+    "https://procar.com.co/producto/filtro-df5508/",
+    "https://procar.com.co/producto/filtro-df5538/",
+    "https://procar.com.co/producto/filtro-df5739/",
+    "https://procar.com.co/producto/filtro-df9513/",
+    "https://procar.com.co/producto/filtro-dfe5550/",
+    "https://procar.com.co/producto/filtro-dff5506/",
+    "https://procar.com.co/producto/filtro-dfj193/",
+    "https://procar.com.co/producto/filtro-dfj195e/",
+    "https://procar.com.co/producto/filtro-dfj208/",
+    "https://procar.com.co/producto/filtro-dfj208a/",
+    "https://procar.com.co/producto/filtro-dfj214/",
+    "https://procar.com.co/producto/filtro-dfj226/",
+    "https://procar.com.co/producto/filtro-dfj321/",
+    "https://procar.com.co/producto/filtro-dfj513/",
+    "https://procar.com.co/producto/filtro-dfj5235/",
+    "https://procar.com.co/producto/filtro-dfj5318/",
+    "https://procar.com.co/producto/filtro-dfj601/",
+    "https://procar.com.co/producto/filtro-dfk001/",
+    "https://procar.com.co/producto/filtro-do243k/",
+    "https://procar.com.co/producto/filtro-do3000/",
+    "https://procar.com.co/producto/filtro-do4081/",
+    "https://procar.com.co/producto/filtro-do4102m/",
+    "https://procar.com.co/producto/filtro-do4120/",
+    "https://procar.com.co/producto/filtro-do4276/",
+    "https://procar.com.co/producto/filtro-do4280/",
+    "https://procar.com.co/producto/filtro-do4312/",
+    "https://procar.com.co/producto/filtro-do4347/",
+    "https://procar.com.co/producto/filtro-do4368/",
+    "https://procar.com.co/producto/filtro-do4379/",
+    "https://procar.com.co/producto/filtro-do4705/",
+    "https://procar.com.co/producto/filtro-do4745/",
+    "https://procar.com.co/producto/filtro-do4750/",
+    "https://procar.com.co/producto/filtro-do4905/",
+    "https://procar.com.co/producto/filtro-doe584/",
+    "https://procar.com.co/producto/filtro-doj101a/",
+    "https://procar.com.co/producto/filtro-doj110/",
+    "https://procar.com.co/producto/filtro-doj115d/",
+    "https://procar.com.co/producto/filtro-doj196/",
+    "https://procar.com.co/producto/filtro-doj218/",
+    "https://procar.com.co/producto/filtro-doj225/",
+    "https://procar.com.co/producto/filtro-doj304/",
+    "https://procar.com.co/producto/filtro-doj406/",
+    "https://procar.com.co/producto/filtro-doj412d/",
+    "https://procar.com.co/producto/filtro-doj412s/",
+    "https://procar.com.co/producto/filtro-doj518d/",
+    "https://procar.com.co/producto/filtro-doj518s/",
+    "https://procar.com.co/producto/filtro-doj527/",
+    "https://procar.com.co/producto/filtro-doj527s/",
+    "https://procar.com.co/producto/filtro-doj606/",
+    "https://procar.com.co/producto/filtro-doj901/",
+    "https://procar.com.co/producto/filtro-dolf734/",
+    "https://procar.com.co/producto/hidraulico-iso-68/",
+    "https://procar.com.co/producto/hk802/",
+    "https://procar.com.co/producto/hk806/",
+    "https://procar.com.co/producto/hk810/",
+    "https://procar.com.co/producto/hk839/",
+    "https://procar.com.co/producto/hk859/",
+    "https://procar.com.co/producto/hk862/",
+    "https://procar.com.co/producto/hk867/",
+    "https://procar.com.co/producto/hydrostar-aw-iso-68/",
+    "https://procar.com.co/producto/liquido-para-frenos-dot-5-1/",
+    "https://procar.com.co/producto/liquido-para-frenos-dot3/",
+    "https://procar.com.co/producto/liquido-para-frenos-dot4-2/",
+    "https://procar.com.co/producto/liquido-para-frenos-dot4/",
+    "https://procar.com.co/producto/mudmaxx/",
+    "https://procar.com.co/producto/pastillas-para-frenos/",
+    "https://procar.com.co/producto/refrigerante-freezetone-verde/",
+    "https://procar.com.co/producto/refrigerante-star-free-rojo/",
+    "https://procar.com.co/producto/refrigerante-star-free-verde/",
+    "https://procar.com.co/producto/sdr02/",
+    "https://procar.com.co/producto/silicona-loctite-gris-50ml/",
+    "https://procar.com.co/producto/silicona-loctite-gris-70ml/",
+    "https://procar.com.co/producto/silicona-loctite-negra-70ml/",
+    "https://procar.com.co/producto/silicona-loctite-roja-70ml/",
+    "https://procar.com.co/producto/silicona-loctite-transparente-70ml/",
+    "https://procar.com.co/producto/silicona-sealstar-gris-85ml/",
+    "https://procar.com.co/producto/sky030/",
+    "https://procar.com.co/producto/sky191/",
+    "https://procar.com.co/producto/sky2305/",
+    "https://procar.com.co/producto/sky311/",
+    "https://procar.com.co/producto/sky320/",
+    "https://procar.com.co/producto/star-atf-dx-iii/",
+    "https://procar.com.co/producto/star-bike-2t-jaso-fb/",
+    "https://procar.com.co/producto/star-bike-4t-25w60-jaso-ma2/",
+    "https://procar.com.co/producto/star-bike-4t-sae-20w50-jaso-ma/",
+    "https://procar.com.co/producto/star-blue/",
+    "https://procar.com.co/producto/star-car-plus-sae-10w30-sn/",
+    "https://procar.com.co/producto/star-car-plus-sae-20w50-api-sl/",
+    "https://procar.com.co/producto/star-car-plus-sae-20w50-sl-cf/",
+    "https://procar.com.co/producto/star-car-plus-sae-20w50-sn/",
+    "https://procar.com.co/producto/star-car-plus-sae-5w30-api-sn/",
+    "https://procar.com.co/producto/star-engine-sae-50-api-sf-cf/",
+    "https://procar.com.co/producto/star-gear-plus-85w140-gl-5/",
+    "https://procar.com.co/producto/star-gear-sae-80w90-api-gl-5/",
+    "https://procar.com.co/producto/star-gear-sae-85w140-api/",
+    "https://procar.com.co/producto/star-oil-grasa-calcio/",
+    "https://procar.com.co/producto/star-oil-grasas-litio-azul/",
+    "https://procar.com.co/producto/star-truck-sae-50-cf-sf/",
+    "https://procar.com.co/producto/terra-xplorer-c2-a-t/",
+    "https://procar.com.co/producto/terratoura-a-t/",
+    "https://procar.com.co/producto/valvulina-gl1-140/",
+    "https://procar.com.co/producto/vanmejor-c30/"
+  ],
+  "removed_records": [],
+  "changed_records": [
+    {
+      "record_key": "https://procar.com.co/producto/gallopro-h-t/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "CAMIONETA"
+        },
+        "brand": {
+          "old": "",
+          "new": "ZMAX"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/ecolander-2/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "RAPID"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/ecosaver-2/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "RAPID"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/effivan-2/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "RAPID"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/ly166/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "ZMAX"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/ly688/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "ZMAX"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/p-309/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "RAPID"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/p-609/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "RAPID"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/x-spider-a-s/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "ZMAX"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/zealion/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "ZMAX"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/dx640/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "DAVANTI"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/dx240/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "DAVANTI"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/dx390/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "DAVANTI"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/p307/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/p607/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/protoura-sport/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "Auto"
+        },
+        "brand": {
+          "old": "",
+          "new": "DAVANTI"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/dreamland-r-t/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "CAMIONETA"
+        },
+        "brand": {
+          "old": "",
+          "new": "ZMAX"
+        }
+      }
+    },
+    {
+      "record_key": "https://procar.com.co/producto/maxatraves-m-t/",
+      "changes": {
+        "category_name": {
+          "old": null,
+          "new": "Llantas"
+        },
+        "subcategory_name": {
+          "old": null,
+          "new": "CAMIONETA"
+        },
+        "brand": {
+          "old": "",
+          "new": "ZMAX"
+        }
+      }
+    }
+  ]
+}
