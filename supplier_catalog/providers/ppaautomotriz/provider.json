@@ -1,4 +1,4 @@
-{
+﻿{
   "provider_id": "ppaautomotriz",
   "display_name": "PPA Automotriz",
   "website": "https://www.ppa-automotriz.com",
@@ -10,14 +10,14 @@
   },
   "selectors": {
     "product_catalog_root": "https://www.ppa-automotriz.com/productos/",
-    "pagination_hint": "no pagination observed",
+    "pagination_hint": "lazy scroll / dynamic loading",
     "product_detail_path_hint": "/producto/"
   },
   "data_precision": {
-    "reference_codes": false,
+    "reference_codes": true,
     "vehicle_compatibility": "partial",
     "stock": false,
-    "prices": false,
+    "prices": true,
     "product_names": true,
     "detail_links": true,
     "image_urls": true,
@@ -32,7 +32,7 @@
     "forbidden_match_types": [
       "exact_reference"
     ],
-    "notes": "Sparse site. Use it as a low-to-medium value verification source, not as an exact-reference source."
+    "notes": "Dynamic scroll-backed public catalog. Use it as a medium-value verification source; product pages often expose references and prices."
   },
   "daily_refresh": {
     "enabled": true,

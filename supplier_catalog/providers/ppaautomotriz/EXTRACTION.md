@@ -1,4 +1,4 @@
-# PPA Automotriz Extraction Notes
+﻿# PPA Automotriz Extraction Notes
 
 Provider: `ppaautomotriz`
 
@@ -6,11 +6,11 @@ Website: `https://www.ppa-automotriz.com`
 
 Catalog root: `https://www.ppa-automotriz.com/productos/`
 
-Status: public site. Seed snapshot created from the user-provided public catalog examples; live validation is still pending.
+Status: public site. Live validation completed against the products surface with browser-assisted scrolling and product enrichment.
 
 Scope: autos only. Ignore motos, carga pesada, buses and camiones.
 
-Use the product catalog and product detail pages. The site is sparse, but the public product pages are enough for conservative matching.
+Use the product catalog and product detail pages. The browser-backed listing crawl is required to discover the full autos surface before product enrichment.
 
 ## Extraction target
 
@@ -32,3 +32,4 @@ Capture only what is visible and reliable:
 - `requires_manual_confirmation`
 
 If a public reference code appears, capture it. If not, do not invent one.
+
