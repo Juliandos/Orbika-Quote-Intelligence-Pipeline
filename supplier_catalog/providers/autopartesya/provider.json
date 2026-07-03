@@ -10,18 +10,20 @@
   },
   "selectors": {
     "shop_root": "https://www.autopartesya.co/shop-2/",
-    "pagination_query_hint": "query pagination",
-    "performance_note": "very slow / last to crawl"
+    "listing_products": "a[href*='/product/']",
+    "pagination_links": "a[href*='/shop-2/page/']",
+    "pagination_query_hint": "browser pagination /shop-2/page/N/",
+    "performance_note": "browser-assisted crawl; dynamic pagination; slow catalog"
   },
   "data_precision": {
-    "reference_codes": false,
+    "reference_codes": true,
     "vehicle_compatibility": "partial",
     "stock": false,
-    "prices": false,
+    "prices": true,
     "product_names": true,
     "detail_links": true,
     "image_urls": true,
-    "descriptions": "partial_or_general"
+    "descriptions": "detailed_or_partial"
   },
   "matching": {
     "allowed_match_types": [
@@ -32,7 +34,7 @@
     "forbidden_match_types": [
       "exact_reference"
     ],
-    "notes": "Useful, but slow. Keep it in the lower-priority queue and expect pagination / filter cost."
+    "notes": "Useful, but browser-assisted. Keep it in the lower-priority queue and expect dynamic pagination / filter cost."
   },
   "daily_refresh": {
     "enabled": true,

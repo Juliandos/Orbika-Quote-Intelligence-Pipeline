@@ -61,6 +61,13 @@ These notes come from the live provider work and should be reused for future sup
 - For Universaldepartes, parallel product fetching was necessary to make the 700+ item catalog feasible inside the local workflow without waiting on a purely serial pass.
 - Some Universaldepartes product URLs contain accented or non-ASCII characters, so requests must percent-encode paths and query strings before fetching or valid products will be skipped.
 - The autos-only Universaldepartes snapshot on 2026-07-02 reached 632 products and should be treated as supplier-verification support, not as a brute-force dump of the full visible marketplace inventory.
+- Autopartesya needed a browser-assisted crawl for the `/shop-2/` surface because the rendered DOM exposed the real product pagination, which reached page 140 in the final run.
+- Autopartesya product detail pages are the main bottleneck: many fetches time out, so the extractor must preserve intermediate progress, keep a list of failures, and only write the final snapshot at the end of the run.
+- Autopartesya benefits from parallel detail fetching; the current extractor uses worker-based parsing so a large catalog does not run entirely serially.
+- Autopartesya visible result counts are not the same as final product counts. The site may show around 2240 results, but the final normalized snapshot can be smaller after deduplication, autos-only filtering, and timeout-driven skips.
+- Autopartesya snapshots should be considered valid only when the run finishes and writes the final bundle. Partial runs can discover thousands of URLs but still end up with no usable final snapshot if interrupted too early.
+- Autopartesya final snapshot on `2026-07-03` reached 1656 products and produced 287 notes, including many timeout warnings on product detail fetches.
+- Future provider extractors should keep the same pattern: browser-assisted discovery for dynamic listings, explicit detail-fetch failure tracking, parallelized detail processing when catalogs are large, and a final snapshot written only after the crawl has settled.
 
 ## Completed Work Register
 

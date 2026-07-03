@@ -6,11 +6,16 @@ Website: `https://www.autopartesya.co/`
 
 Catalog root: `https://www.autopartesya.co/shop-2/`
 
-Status: public site. Seed snapshot created from the user-provided public catalog examples; live validation is still pending.
+Status: live browser-assisted validation complete for the catalog surface. The rendered DOM exposes product links even when raw HTML fetches stay empty.
 
 Scope: autos only. Ignore motos, carga pesada, buses and camiones.
 
-This shop is slow and dense. Use it last when crawling, but keep it in the catalog because it still exposes useful category and filter data.
+## What changed
+
+- The listing crawl must use a browser session.
+- Product detail links are discovered from the rendered DOM with `a[href*="/product/"]`.
+- Pagination is dynamic and was discovered from the rendered pager, with a last page link around `140` during validation.
+- Product detail pages expose usable JSON-LD, so reference codes, descriptions, images and prices can be enriched without inventing data.
 
 ## Extraction target
 
@@ -20,6 +25,8 @@ Capture only what is visible and reliable:
 - `product_url` or `detail_url`
 - `category_name` / `subcategory_name`
 - `brand`
+- `reference`
+- `sku`
 - `description`
 - `image_url` / `image_alt`
 - `price` / `stock` when visible
@@ -32,3 +39,7 @@ Capture only what is visible and reliable:
 - `requires_manual_confirmation`
 
 If a public reference code appears, capture it. If not, do not invent one.
+
+## Operational note
+
+This shop is still dense, but it is now suitable for a full live crawl. Keep it browser-based, reuse a single browser session, and let pagination drive the inventory instead of a fixed page limit.
