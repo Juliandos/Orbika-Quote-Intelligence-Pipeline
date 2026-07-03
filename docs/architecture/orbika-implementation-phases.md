@@ -44,6 +44,20 @@ OpenClaw coordinates tasks, evidence, and review. Orbika contains the actual pip
 | 10 | End-to-end verification and hardening | Pending | Not created yet | Recover and prove the complete operational flow, including the waiting runner and every UI action. |
 | 11 | Simple local operation and startup | In progress | Manual implementation | Windows launcher, preflight, stop flow, maintenance/reporting, weekly maintenance scheduler, weekly provider refresh, and launcher supervision are implemented; final Windows operator rehearsal and packaging guidance remain pending. |
 
+## Provider Extraction Learnings
+
+These notes come from the live provider work and should be reused for future supplier integrations.
+
+- Corbeta needed a browser-assisted crawl for the public llantas surface because some brands and products only appeared through rendered AJAX filters, not in the raw listing HTML.
+- Avoid broad autos exclusion keywords that can hide valid catalog terms. In Corbeta, `camion` had to be removed because it also excluded `camioneta`.
+- When a site renders facet filters in the DOM, read them from the rendered page first and fall back to raw HTML only if needed.
+- Pagination should be treated as stateful and sometimes delayed. A single click is not always enough; verify that the visible product set actually changed before stopping.
+- The Corbeta llantas snapshot on `2026-07-02` reached 70 products and recovered the previously missing examples:
+  - `llanta-trian-tr292-235-75r15`
+  - `llanta-trian-tr259-215-55r18`
+  - `llanta-nexen-ro-gtx-235-55r17`
+- Future provider extractors should preserve intermediate evidence and not stop on the first partial pass if the catalog is clearly larger.
+
 ## Completed Work Register
 
 ### Phase 0: Current Repo Diagnosis

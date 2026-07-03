@@ -1,48 +1,50 @@
 ﻿{
-  "provider_id": "corbeta",
-  "display_name": "Corbeta",
-  "website": "https://www.corbeta.com.co",
-  "catalog_root_url": "https://www.corbeta.com.co/automotriz.html",
-  "access": {
-    "type": "open",
-    "requires_login": false,
-    "read_only": true
-  },
-  "selectors": {
-    "automotriz_category_root": "https://www.corbeta.com.co/automotriz.html",
-    "category_filter_hint": "topmenu_category_3"
-  },
-  "data_precision": {
-    "reference_codes": false,
-    "vehicle_compatibility": "partial",
-    "stock": false,
-    "prices": false,
-    "product_names": true,
-    "detail_links": true,
-    "image_urls": true,
-    "descriptions": "partial_or_general"
-  },
-  "matching": {
-    "allowed_match_types": [
-      "vehicle_compatible",
-      "category_only",
-      "manual_confirmation_required"
-    ],
-    "forbidden_match_types": [
-      "exact_reference"
-    ],
-    "notes": "The automotriz category and its filter tree are useful, and the product pages expose enough data for verification."
-  },
-  "daily_refresh": {
-    "enabled": true,
-    "local_time": "07:00",
-    "timezone": "America/Bogota",
-    "snapshot_path_pattern": "supplier_catalog/providers/corbeta/snapshots/YYYY-MM-DD/",
-    "outputs": [
-      "extracted.json",
-      "products.csv",
-      "diff.json",
-      "summary.md"
-    ]
-  }
+    "provider_id":  "corbeta",
+    "display_name":  "Corbeta",
+    "website":  "https://www.corbeta.com.co",
+    "catalog_root_url":  "https://www.corbeta.com.co/automotriz/llantas.html",
+    "access":  {
+                   "type":  "open",
+                   "requires_login":  false,
+                   "read_only":  true
+               },
+    "selectors":  {
+                      "category_products_container":  "#chweb_layered_container \u003e div.category-products.widget-products \u003e ul",
+                      "pagination_container":  "#chweb_layered_container \u003e div.category-products.widget-products \u003e div.toolbar \u003e div.pager \u003e div",
+                      "automotriz_category_root":  "https://www.corbeta.com.co/automotriz/llantas.html",
+                      "layered_brand_filter":  "#chweb_layered_marca a.chweb_layered_attribute"
+                  },
+    "data_precision":  {
+                           "reference_codes":  false,
+                           "vehicle_compatibility":  "partial",
+                           "stock":  false,
+                           "prices":  true,
+                           "product_names":  true,
+                           "detail_links":  true,
+                           "image_urls":  true,
+                           "descriptions":  "partial_or_general"
+                       },
+    "matching":  {
+                     "allowed_match_types":  [
+                                                 "vehicle_compatible",
+                                                 "category_only",
+                                                 "manual_confirmation_required"
+                                             ],
+                     "forbidden_match_types":  [
+                                                   "exact_reference"
+                                               ],
+                     "notes":  "Corbeta llantas is a public autos surface. Product titles and descriptions are useful for verification, but moto and heavy-duty lines must be excluded. Brand filters use AJAX and expose additional autos products."
+                 },
+    "daily_refresh":  {
+                          "enabled":  true,
+                          "local_time":  "07:00",
+                          "timezone":  "America/Bogota",
+                          "snapshot_path_pattern":  "supplier_catalog/providers/corbeta/snapshots/YYYY-MM-DD/",
+                          "outputs":  [
+                                          "extracted.json",
+                                          "products.csv",
+                                          "diff.json",
+                                          "summary.md"
+                                      ]
+                      }
 }
