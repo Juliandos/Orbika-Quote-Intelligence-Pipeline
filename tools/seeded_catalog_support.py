@@ -11,7 +11,7 @@ from dataclasses import asdict, dataclass, field
 from html import unescape
 from pathlib import Path
 from typing import Any, Callable, Iterable
-from urllib.parse import urljoin, urlparse, urlunparse
+from urllib.parse import quote, urljoin, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
 
@@ -94,9 +94,17 @@ def build_searchable_tokens(*values: str | None) -> list[str]:
     return tokens
 
 
+def _request_ready_url(url: str) -> str:
+    parsed = urlparse(url)
+    path = quote(parsed.path, safe="/%")
+    query = quote(parsed.query, safe="=&%/?")
+    fragment = quote(parsed.fragment, safe="")
+    return urlunparse((parsed.scheme, parsed.netloc, path, parsed.params, query, fragment))
+
+
 def fetch_url(url: str, user_agent: str = DEFAULT_USER_AGENT) -> tuple[str, bytes, dict[str, str]]:
     request = Request(
-        url,
+        _request_ready_url(url),
         headers={
             "User-Agent": user_agent,
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",

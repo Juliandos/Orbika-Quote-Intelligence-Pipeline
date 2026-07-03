@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
 from pathlib import Path
 import sys
@@ -39,8 +40,8 @@ from tools.seeded_catalog_support import (
 
 PROVIDER_ID = "universaldepartes"
 DISPLAY_NAME = "Universal de Partes"
-MAX_CATEGORY_PAGES = 4
-MAX_PRODUCTS = 48
+MAX_CATEGORY_PAGES = 1000
+MAX_PRODUCTS = 2000
 ENTRY_HINTS = (
     "https://www.universaldepartes.co/category/all-products",
     "https://www.universaldepartes.co/category/all-products?page=2",
@@ -48,7 +49,6 @@ ENTRY_HINTS = (
 EXCLUDE_KEYWORDS = (
     "moto",
     "motoc",
-    "camion",
     "camiones",
     "bus",
     "buses",
@@ -81,7 +81,12 @@ def product_like_url(url: str) -> bool:
 
 def category_like_url(url: str) -> bool:
     parsed = urlparse(url)
-    return parsed.path.rstrip("/") == "/category/all-products" and not ignored_url(url)
+    return parsed.path.rstrip("/") == "/category/all-products" and not ignored_url(url) and not parsed.query
+
+
+def listing_page_like_url(url: str) -> bool:
+    parsed = urlparse(url)
+    return parsed.path.rstrip("/") == "/category/all-products" and not ignored_url(url) and "page=" in parsed.query
 
 
 def parse_product_page(url: str, html: str, source_page_url: str) -> list[ProductRecord]:
@@ -116,6 +121,19 @@ def parse_product_page(url: str, html: str, source_page_url: str) -> list[Produc
     return records
 
 
+def fetch_and_parse_product(url: str, source_page_url: str, host: str) -> tuple[str, list[ProductRecord], str | None]:
+    try:
+        final_url, raw, headers = fetch_url(url)
+    except Exception as exc:  # noqa: BLE001
+        return url, [], f"Fetch warning for {url}: {exc}"
+    if not same_host(final_url, host) or ignored_url(final_url):
+        return url, [], None
+    html = decode_html(raw, headers)
+    if not product_like_url(final_url):
+        return url, [], None
+    return final_url, parse_product_page(final_url, html, source_page_url), None
+
+
 def crawl_provider(metadata: dict[str, object], seed_snapshot: dict[str, object] | None) -> tuple[list[ProductRecord], list[str]]:
     host = urlparse(str(metadata.get("website") or metadata.get("catalog_root_url") or "")).netloc.lower()
     entry_urls = [str(metadata.get("catalog_root_url") or metadata.get("website") or "")]
@@ -139,9 +157,12 @@ def crawl_provider(metadata: dict[str, object], seed_snapshot: dict[str, object]
     visited: set[str] = set()
     category_pages_seen = 0
     records: list[ProductRecord] = []
-    notes = [AUTOS_ONLY_NOTE, "Wix category pages are used only as entry points; product detail pages are preferred for real matching support."]
+    notes = [AUTOS_ONLY_NOTE, "Wix category pages are used only as entry points; product detail pages are preferred for real matching support.", "Universal de Partes pagination is dynamic and should be exhausted until no new page links remain."]
 
-    while category_queue and category_pages_seen < MAX_CATEGORY_PAGES:
+    while category_queue:
+        if category_pages_seen >= MAX_CATEGORY_PAGES:
+            notes.append(f"Safety cap reached while crawling category pages: {MAX_CATEGORY_PAGES}")
+            break
         url, source_page_url = category_queue.pop(0)
         if url in visited or ignored_url(url):
             continue
@@ -161,24 +182,27 @@ def crawl_provider(metadata: dict[str, object], seed_snapshot: dict[str, object]
             if product_like_url(link):
                 product_queue.append((link, final_url))
                 seen_queue.add(link)
-            elif category_like_url(link):
+            elif category_like_url(link) or listing_page_like_url(link):
                 category_queue.append((link, final_url))
                 seen_queue.add(link)
 
-    while product_queue and len(records) < MAX_PRODUCTS:
+    product_jobs: list[tuple[str, str]] = []
+    while product_queue:
         url, source_page_url = product_queue.pop(0)
         if url in visited or ignored_url(url):
             continue
         visited.add(url)
-        try:
-            final_url, raw, headers = fetch_url(url)
-        except Exception as exc:  # noqa: BLE001
-            notes.append(f"Fetch warning for {url}: {exc}")
-            continue
-        html = decode_html(raw, headers)
-        if not product_like_url(final_url):
-            continue
-        records.extend(parse_product_page(final_url, html, source_page_url))
+        product_jobs.append((url, source_page_url))
+
+    if product_jobs:
+        with ThreadPoolExecutor(max_workers=12) as executor:
+            futures = [executor.submit(fetch_and_parse_product, url, source_page_url, host) for url, source_page_url in product_jobs[:MAX_PRODUCTS]]
+            for future in as_completed(futures):
+                final_url, parsed_records, warning = future.result()
+                if warning:
+                    notes.append(warning)
+                if parsed_records:
+                    records.extend(parsed_records)
 
     return dedupe_records(records, EXCLUDE_KEYWORDS), list(dict.fromkeys(notes + [MANUAL_NOTE]))
 

@@ -57,6 +57,10 @@ These notes come from the live provider work and should be reused for future sup
   - `llanta-trian-tr259-215-55r18`
   - `llanta-nexen-ro-gtx-235-55r17`
 - Future provider extractors should preserve intermediate evidence and not stop on the first partial pass if the catalog is clearly larger.
+- Universaldepartes required dynamic pagination discovery on category/all-products; fixed page-count assumptions left valid autos products behind.
+- For Universaldepartes, parallel product fetching was necessary to make the 700+ item catalog feasible inside the local workflow without waiting on a purely serial pass.
+- Some Universaldepartes product URLs contain accented or non-ASCII characters, so requests must percent-encode paths and query strings before fetching or valid products will be skipped.
+- The autos-only Universaldepartes snapshot on 2026-07-02 reached 632 products and should be treated as supplier-verification support, not as a brute-force dump of the full visible marketplace inventory.
 
 ## Completed Work Register
 

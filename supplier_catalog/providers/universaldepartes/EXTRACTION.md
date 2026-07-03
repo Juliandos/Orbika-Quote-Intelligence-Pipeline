@@ -6,11 +6,11 @@ Website: `https://www.universaldepartes.co/`
 
 Catalog root: `https://www.universaldepartes.co/category/all-products`
 
-Status: public site. Seed snapshot created from the user-provided public catalog examples; live validation is still pending.
+Status: public site. Live validation completed against the all-products listing with dynamic query pagination.
 
 Scope: autos only. Ignore motos, carga pesada, buses and camiones.
 
-Use the all-products category listing and query pagination. The public pages expose enough product detail to support partial verification.
+Use the all-products category listing and exhaust query pagination dynamically until no new page links remain. The latest live snapshot captured hundreds of autos products and the public pages expose enough product detail to support partial verification.
 
 ## Extraction target
 
