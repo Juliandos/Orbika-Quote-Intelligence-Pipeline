@@ -68,6 +68,9 @@ These notes come from the live provider work and should be reused for future sup
 - Autopartesya snapshots should be considered valid only when the run finishes and writes the final bundle. Partial runs can discover thousands of URLs but still end up with no usable final snapshot if interrupted too early.
 - Autopartesya final snapshot on `2026-07-03` reached 1656 products and produced 287 notes, including many timeout warnings on product detail fetches.
 - Future provider extractors should keep the same pattern: browser-assisted discovery for dynamic listings, explicit detail-fetch failure tracking, parallelized detail processing when catalogs are large, and a final snapshot written only after the crawl has settled.
+- Autolatas needed a broader browser-assisted crawl than the first draft because the site exposes many valid product URLs under general category slugs, not only under a single subpath. The extractor had to stop rejecting non-/ampliacion/ product URLs and instead accept product-shaped paths such as /<categoria>/<slug>/.
+- Autolatas also showed why intermediate evidence matters: the visible storefront count is around 1059, but the final normalized snapshot reached 1030 products after broader discovery, deduplication, and a small set of fetch failures. The remaining gap came from timeouts and occasional 502 responses, not from a single hard stop.
+- Future provider runs should periodically re-execute the live extractors for every supplier, not just when a new provider is added. Catalogs drift over time, so a scheduled refresh cadence is needed to keep the stored repuestos as current as possible and to surface new failures early.
 
 ## Completed Work Register
 
@@ -1686,11 +1689,15 @@ El proyecto queda con una forma clara de delegar trabajo pesado a OpenClaw sin p
 
 
 - Future provider extractors should keep the same pattern: browser-assisted discovery for dynamic listings, explicit detail-fetch failure tracking, parallelized detail processing when catalogs are large, and a final snapshot written only after the crawl has settled.
+- Autolatas needed a broader browser-assisted crawl than the first draft because the site exposes many valid product URLs under general category slugs, not only under a single subpath. The extractor had to stop rejecting non-/ampliacion/ product URLs and instead accept product-shaped paths such as /<categoria>/<slug>/.
+- Autolatas also showed why intermediate evidence matters: the visible storefront count is around 1059, but the final normalized snapshot reached 1030 products after broader discovery, deduplication, and a small set of fetch failures. The remaining gap came from timeouts and occasional 502 responses, not from a single hard stop.
+- Future provider runs should periodically re-execute the live extractors for every supplier, not just when a new provider is added. Catalogs drift over time, so a scheduled refresh cadence is needed to keep the stored repuestos as current as possible and to surface new failures early.
 
 - Autopartesercar exposed a different failure mode: the catalog discovery phase found more product URLs than the final snapshot initially wrote, so the extractor had to persist intermediate discovery snapshots before the long detail parse stage.
 - For Autopartesercar, the visible store count was not the same as the usable snapshot count. Some runs showed 84 visible storefront products, but the saved snapshot could still lag behind if the run stopped before discovery progress was persisted.
 - Autopartesercar also produced noisy false positives such as `lost-password` and other invalid product-like URLs. The extractor needs URL-level filtering before writing snapshot evidence.
 - The final fix for Autopartesercar was to preserve discovered products during the crawl, not only at the end, so a partial timeout still leaves a usable snapshot instead of an empty or stale result set.
 - Future providers with slow detail pages should follow the same pattern: capture discovery first, persist it early, then enrich details as a second phase instead of depending on a single end-of-run write.
+
 
 
