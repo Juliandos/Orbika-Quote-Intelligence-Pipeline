@@ -1,4 +1,4 @@
-# Orbika Implementation Phases
+﻿# Orbika Implementation Phases
 
 This document is the operating roadmap for evolving Orbika Quote Intelligence Pipeline from a file-based local pipeline into a local workshop console backed by PostgreSQL.
 
@@ -1197,7 +1197,7 @@ Also verify:
 - Sound fires once for a newly processed valid quote.
 - Confirmation banners render away from the modal close control.
 - Modal overlays dismiss from the backdrop and the `X` button.
-- No visible text shows mojibake, stray `Ãƒâ€š`, or untranslated English labels in the operator flow.
+- No visible text shows mojibake, stray `ÃƒÆ’Ã¢â‚¬Å¡`, or untranslated English labels in the operator flow.
 
 #### Operational/Human Verification
 
@@ -1683,5 +1683,14 @@ El proyecto queda con una forma clara de delegar trabajo pesado a OpenClaw sin p
 - This Excel file must keep accumulating rows with each new quote instead of following the DB/local-artifact maintenance policy.
 - Do not auto-delete rows from this Excel file; the client decides whether old delivered rows remain or are removed.
 - The Excel file should include the full quote information required for delivery, not only the matched part fragment.
+
+
+- Future provider extractors should keep the same pattern: browser-assisted discovery for dynamic listings, explicit detail-fetch failure tracking, parallelized detail processing when catalogs are large, and a final snapshot written only after the crawl has settled.
+
+- Autopartesercar exposed a different failure mode: the catalog discovery phase found more product URLs than the final snapshot initially wrote, so the extractor had to persist intermediate discovery snapshots before the long detail parse stage.
+- For Autopartesercar, the visible store count was not the same as the usable snapshot count. Some runs showed 84 visible storefront products, but the saved snapshot could still lag behind if the run stopped before discovery progress was persisted.
+- Autopartesercar also produced noisy false positives such as `lost-password` and other invalid product-like URLs. The extractor needs URL-level filtering before writing snapshot evidence.
+- The final fix for Autopartesercar was to preserve discovered products during the crawl, not only at the end, so a partial timeout still leaves a usable snapshot instead of an empty or stale result set.
+- Future providers with slow detail pages should follow the same pattern: capture discovery first, persist it early, then enrich details as a second phase instead of depending on a single end-of-run write.
 
 
