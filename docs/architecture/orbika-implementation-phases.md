@@ -70,6 +70,12 @@ These notes come from the live provider work and should be reused for future sup
 - Future provider extractors should keep the same pattern: browser-assisted discovery for dynamic listings, explicit detail-fetch failure tracking, parallelized detail processing when catalogs are large, and a final snapshot written only after the crawl has settled.
 - Autolatas needed a broader browser-assisted crawl than the first draft because the site exposes many valid product URLs under general category slugs, not only under a single subpath. The extractor had to stop rejecting non-/ampliacion/ product URLs and instead accept product-shaped paths such as /<categoria>/<slug>/.
 - Autolatas also showed why intermediate evidence matters: the visible storefront count is around 1059, but the final normalized snapshot reached 1030 products after broader discovery, deduplication, and a small set of fetch failures. The remaining gap came from timeouts and occasional 502 responses, not from a single hard stop.
+- Fanauto required a block-based OCR extractor because the catalog is a 102-page flipbook, not a standard HTML listing.
+- Each product card had to be treated as an isolated visual unit: the title/reference, image, and description belong to the same block and should not be merged across adjacent cards.
+- The first passes undercounted the catalog because a page was treated too coarsely; the correct approach was to segment every spread into individual product cards and only emit a product when the card content was internally consistent.
+- Pages 1 and 102 are cover/closing material and should not be counted as products.
+- Preserve intermediate evidence while the OCR run progresses so the extractor can be audited even if the browser closes before the final bundle is written.
+- If a card has an image but no usable description, prefer to omit it rather than invent text or merge fragments from another card.
 - Future provider runs should periodically re-execute the live extractors for every supplier, not just when a new provider is added. Catalogs drift over time, so a scheduled refresh cadence is needed to keep the stored repuestos as current as possible and to surface new failures early.
 
 ## Completed Work Register
@@ -1691,6 +1697,12 @@ El proyecto queda con una forma clara de delegar trabajo pesado a OpenClaw sin p
 - Future provider extractors should keep the same pattern: browser-assisted discovery for dynamic listings, explicit detail-fetch failure tracking, parallelized detail processing when catalogs are large, and a final snapshot written only after the crawl has settled.
 - Autolatas needed a broader browser-assisted crawl than the first draft because the site exposes many valid product URLs under general category slugs, not only under a single subpath. The extractor had to stop rejecting non-/ampliacion/ product URLs and instead accept product-shaped paths such as /<categoria>/<slug>/.
 - Autolatas also showed why intermediate evidence matters: the visible storefront count is around 1059, but the final normalized snapshot reached 1030 products after broader discovery, deduplication, and a small set of fetch failures. The remaining gap came from timeouts and occasional 502 responses, not from a single hard stop.
+- Fanauto required a block-based OCR extractor because the catalog is a 102-page flipbook, not a standard HTML listing.
+- Each product card had to be treated as an isolated visual unit: the title/reference, image, and description belong to the same block and should not be merged across adjacent cards.
+- The first passes undercounted the catalog because a page was treated too coarsely; the correct approach was to segment every spread into individual product cards and only emit a product when the card content was internally consistent.
+- Pages 1 and 102 are cover/closing material and should not be counted as products.
+- Preserve intermediate evidence while the OCR run progresses so the extractor can be audited even if the browser closes before the final bundle is written.
+- If a card has an image but no usable description, prefer to omit it rather than invent text or merge fragments from another card.
 - Future provider runs should periodically re-execute the live extractors for every supplier, not just when a new provider is added. Catalogs drift over time, so a scheduled refresh cadence is needed to keep the stored repuestos as current as possible and to surface new failures early.
 
 - Autopartesercar exposed a different failure mode: the catalog discovery phase found more product URLs than the final snapshot initially wrote, so the extractor had to persist intermediate discovery snapshots before the long detail parse stage.
@@ -1698,6 +1710,7 @@ El proyecto queda con una forma clara de delegar trabajo pesado a OpenClaw sin p
 - Autopartesercar also produced noisy false positives such as `lost-password` and other invalid product-like URLs. The extractor needs URL-level filtering before writing snapshot evidence.
 - The final fix for Autopartesercar was to preserve discovered products during the crawl, not only at the end, so a partial timeout still leaves a usable snapshot instead of an empty or stale result set.
 - Future providers with slow detail pages should follow the same pattern: capture discovery first, persist it early, then enrich details as a second phase instead of depending on a single end-of-run write.
+
 
 
 

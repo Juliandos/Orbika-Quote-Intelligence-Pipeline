@@ -1,4 +1,4 @@
-{
+﻿{
   "provider_id": "fanauto",
   "display_name": "Fanauto",
   "website": "https://fanauto.com.co/",
@@ -10,17 +10,17 @@
   },
   "selectors": {
     "flipbook_root": "https://fanauto.com.co/catalogo-digital/",
-    "catalog_surface": "image flipbook / visual catalog"
+    "catalog_surface": "real3d flipbook / OCR image catalog"
   },
   "data_precision": {
-    "reference_codes": false,
-    "vehicle_compatibility": false,
+    "reference_codes": true,
+    "vehicle_compatibility": true,
     "stock": false,
     "prices": false,
-    "product_names": false,
+    "product_names": true,
     "detail_links": false,
     "image_urls": true,
-    "descriptions": "image_only"
+    "descriptions": "ocr_from_image_catalog"
   },
   "matching": {
     "allowed_match_types": [
@@ -31,7 +31,7 @@
       "vehicle_compatible",
       "category_only"
     ],
-    "notes": "Visual catalog only. Use manual confirmation unless OCR or vision extraction is added later."
+    "notes": "Visual flipbook catalog processed page by page with OCR evidence. Use manual confirmation because layout is image-based and page titles may contain OCR noise."
   },
   "daily_refresh": {
     "enabled": true,
