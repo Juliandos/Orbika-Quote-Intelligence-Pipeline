@@ -9,6 +9,22 @@ The project is coordinated with OpenClaw, but Orbika remains a separate reposito
 
 OpenClaw coordinates tasks, evidence, and review. Orbika contains the actual pipeline, app, database, migrations, frontend, backend, and scripts.
 
+## Documentation Map
+
+For a fast, reliable handoff to a new chat, read these documents in this order:
+
+1. docs/project-context-handoff.md
+2. docs/architecture/orbika-implementation-phases.md
+3. docs/incremental-orbika-quote-runner.md
+4. docs/windows-local-operation.md
+
+Supporting technical references:
+
+- docs/architecture/postgres-data-model-v1.md
+- docs/architecture/postgres-local-setup.md
+
+Historical or narrower documents such as extractor-specific phase notes, executive reports, or older focused reminders should be treated as secondary context, not as the first source of truth.
+
 ## Current Decisions
 
 - The app is local/manual for now.
@@ -69,6 +85,10 @@ These notes come from the live provider work and should be reused for future sup
 - Autopartesya final snapshot on `2026-07-03` reached 1656 products and produced 287 notes, including many timeout warnings on product detail fetches.
 - Future provider extractors should keep the same pattern: browser-assisted discovery for dynamic listings, explicit detail-fetch failure tracking, parallelized detail processing when catalogs are large, and a final snapshot written only after the crawl has settled.
 - Autolatas needed a broader browser-assisted crawl than the first draft because the site exposes many valid product URLs under general category slugs, not only under a single subpath. The extractor had to stop rejecting non-/ampliacion/ product URLs and instead accept product-shaped paths such as /<categoria>/<slug>/.
+- Autorecambios LTDA required running the extractor with a non-snap Playwright browser in WSL; the bundled system Chromium could fail at launch and produce an empty snapshot even though the live page was reachable in a regular browser.
+- Autorecambios LTDA also showed that keyword filters must stay conservative: removing the overly broad `diesel` exclusion recovered valid autos products that were being dropped from the listing crawl.
+- Importadora EuroBrasil required a provider-specific listing crawl on `https://www.importadoraeurobrasil.com/productos/` with dynamic pagination discovery from the rendered WooCommerce nav, not a fixed page limit or category crawl. The public count was `512` results across `43` pages, and the last page contained `8` products.
+- For Importadora EuroBrasil, the listing URL changes on pagination and the extractor must collect the page grilla before moving on to the next page. Capturing per-page evidence first avoided losing the last item of a page during fast pagination and produced a complete `512/512` snapshot with no missing URLs.
 - Autolatas also showed why intermediate evidence matters: the visible storefront count is around 1059, but the final normalized snapshot reached 1030 products after broader discovery, deduplication, and a small set of fetch failures. The remaining gap came from timeouts and occasional 502 responses, not from a single hard stop.
 - Fanauto required a block-based OCR extractor because the catalog is a 102-page flipbook, not a standard HTML listing.
 - Each product card had to be treated as an isolated visual unit: the title/reference, image, and description belong to the same block and should not be merged across adjacent cards.
@@ -76,6 +96,9 @@ These notes come from the live provider work and should be reused for future sup
 - Pages 1 and 102 are cover/closing material and should not be counted as products.
 - Preserve intermediate evidence while the OCR run progresses so the extractor can be audited even if the browser closes before the final bundle is written.
 - If a card has an image but no usable description, prefer to omit it rather than invent text or merge fragments from another card.
+- Some browser-assisted catalogs (for example Imotriz / Redpuestos / Soluciones Automotrices) can show repeated human verification challenges while scrolling. The extractor must detect the challenge, stop dismissing overlays, let the operator solve it manually, and then resume scrolling from the same catalog page without restarting the crawl.
+- Do not click outside a verification challenge while the catalog is loading. That can hide the challenge before the operator can solve it and cause the crawl to terminate early.
+- When a provider uses one-page catalog loading with scroll-driven growth, use a single browser session and keep a resume window after each verification so late-loaded products are not lost.
 - Future provider runs should periodically re-execute the live extractors for every supplier, not just when a new provider is added. Catalogs drift over time, so a scheduled refresh cadence is needed to keep the stored repuestos as current as possible and to surface new failures early.
 
 ## Completed Work Register
@@ -1206,7 +1229,7 @@ Also verify:
 - Sound fires once for a newly processed valid quote.
 - Confirmation banners render away from the modal close control.
 - Modal overlays dismiss from the backdrop and the `X` button.
-- No visible text shows mojibake, stray `ÃƒÆ’Ã¢â‚¬Å¡`, or untranslated English labels in the operator flow.
+- No visible text shows mojibake, stray `ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡`, or untranslated English labels in the operator flow.
 
 #### Operational/Human Verification
 
@@ -1710,6 +1733,9 @@ El proyecto queda con una forma clara de delegar trabajo pesado a OpenClaw sin p
 - Autopartesercar also produced noisy false positives such as `lost-password` and other invalid product-like URLs. The extractor needs URL-level filtering before writing snapshot evidence.
 - The final fix for Autopartesercar was to preserve discovered products during the crawl, not only at the end, so a partial timeout still leaves a usable snapshot instead of an empty or stale result set.
 - Future providers with slow detail pages should follow the same pattern: capture discovery first, persist it early, then enrich details as a second phase instead of depending on a single end-of-run write.
+
+
+
 
 
 
