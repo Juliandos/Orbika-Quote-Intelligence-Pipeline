@@ -2,25 +2,28 @@
   "provider_id": "importadoraeurobrasil",
   "display_name": "Importadora EuroBrasil",
   "website": "https://www.importadoraeurobrasil.com",
-  "catalog_root_url": "https://www.importadoraeurobrasil.com/productos",
+  "catalog_root_url": "https://www.importadoraeurobrasil.com/productos/",
   "access": {
     "type": "open",
     "requires_login": false,
     "read_only": true
   },
   "selectors": {
-    "catalog_root": "https://www.importadoraeurobrasil.com/productos",
-    "pagination_path_hint": "page/2/",
-    "category_and_brand_filters": true
+    "catalog_root": "https://www.importadoraeurobrasil.com/productos/",
+    "result_count": "#main > div > p",
+    "product_container": "#main > div > ul",
+    "pagination": "#main > div > nav.woocommerce-pagination > ul",
+    "product_link_pattern": "/producto/",
+    "pagination_changes_url": true
   },
   "data_precision": {
-    "reference_codes": false,
+    "reference_codes": true,
     "vehicle_compatibility": "partial",
     "stock": false,
-    "prices": false,
+    "prices": "partial",
     "product_names": true,
     "detail_links": true,
-    "image_urls": false,
+    "image_urls": true,
     "descriptions": "valid"
   },
   "matching": {
@@ -32,7 +35,7 @@
     "forbidden_match_types": [
       "exact_reference"
     ],
-    "notes": "The paginated products catalog with brand and category filters is useful for matching and verification."
+    "notes": "El extractor vivo recorre solamente /productos/, descubre dinamicamente toda la paginacion y consolida cada URL real del catalogo sin saltar a categorias externas."
   },
   "daily_refresh": {
     "enabled": true,
@@ -43,7 +46,9 @@
       "extracted.json",
       "products.csv",
       "diff.json",
-      "summary.md"
+      "summary.md",
+      "listing_evidence.json",
+      "detail_failures.json"
     ]
   }
 }
