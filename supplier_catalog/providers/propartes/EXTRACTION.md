@@ -6,7 +6,7 @@ Website: `https://propartes.com/`
 
 Catalog root: `https://propartes.com/autos/`
 
-Status: public site. Seed snapshot created from the user-provided public autos catalog examples; live validation is still pending.
+Status: public site. The live extractor now follows the autos surfaces, query-paginated category pages, and product detail pages when the URL clearly looks like a product.
 
 Scope: autos only. Ignore motos, carga pesada, buses and camiones.
 
@@ -32,3 +32,7 @@ Capture only what is visible and reliable:
 - `requires_manual_confirmation`
 
 If a public reference code appears, capture it. If not, do not invent one.
+
+## Operational note
+
+The extractor must not treat catalog listing pages, CSS assets, or favicon URLs as products. Only nested detail URLs on `tienda.propartes.com` should be treated as product pages unless the HTML explicitly proves otherwise.

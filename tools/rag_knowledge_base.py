@@ -26,6 +26,7 @@ except Exception:  # pragma: no cover - optional dependency
 
 
 DEFAULT_SOURCE_DIR = Path("knowledge/rag_sources")
+DEFAULT_MANIFEST_FILE = DEFAULT_SOURCE_DIR / "manifest.json"
 DEFAULT_MAX_CHARS = 1400
 DEFAULT_OVERLAP = 180
 DEFAULT_SEARCH_LIMIT = 5
@@ -125,14 +126,138 @@ def unique_tokens(*values: Any) -> list[str]:
 def source_files(source_dir: Path, limit: int | None = None) -> list[Path]:
     files = [
         path
-        for path in sorted(source_dir.glob("*.pdf"))
-        if path.is_file() and not path.name.endswith(":Zone.Identifier")
+        for path in sorted(source_dir.rglob("*"), key=lambda item: item.as_posix().lower())
+        if path.is_file()
+        and path.suffix.lower() == ".pdf"
+        and not path.name.endswith(":Zone.Identifier")
     ]
     if limit is not None:
         files = files[:limit]
     return files
 
 
+def normalize_manifest_path(value: Any) -> str:
+    text = str(value or "").strip().replace("\\", "/")
+    text = re.sub(r"/+(?!$)", "/", text)
+    text = text.lstrip("./")
+    return text.lower()
+
+
+def load_source_manifest(manifest_path: Path) -> dict[str, dict[str, Any]]:
+    if not manifest_path.exists():
+        return {}
+    with manifest_path.open("r", encoding="utf-8-sig") as handle:
+        payload = json.load(handle)
+    if isinstance(payload, dict):
+        documents = payload.get("documents")
+        if not isinstance(documents, list):
+            raise ValueError("manifest.json must contain a documents array")
+    elif isinstance(payload, list):
+        documents = payload
+    else:
+        raise ValueError("manifest.json must be a list or an object with a documents array")
+
+    index: dict[str, dict[str, Any]] = {}
+    for entry in documents:
+        if not isinstance(entry, dict):
+            continue
+        key = normalize_manifest_path(
+            entry.get("path")
+            or entry.get("file_path")
+            or entry.get("relative_path")
+            or entry.get("source_path")
+        )
+        if not key:
+            continue
+        normalized = dict(entry)
+        normalized["path"] = key
+        index[key] = normalized
+        index.setdefault(Path(key).name.lower(), normalized)
+    return index
+
+
+def manifest_entry_for_file(source_dir: Path, path: Path, manifest_index: dict[str, dict[str, Any]]) -> dict[str, Any] | None:
+    try:
+        relative_path = normalize_manifest_path(path.relative_to(source_dir).as_posix())
+    except ValueError:
+        relative_path = normalize_manifest_path(path.name)
+    candidates = [relative_path, normalize_manifest_path(path.name), normalize_manifest_path(path.stem)]
+    for candidate in candidates:
+        if candidate and candidate in manifest_index:
+            return manifest_index[candidate]
+    return None
+
+
+
+def manifest_documents(manifest_index: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    documents: dict[str, dict[str, Any]] = {}
+    for entry in manifest_index.values():
+        if not isinstance(entry, dict):
+            continue
+        key = normalize_manifest_path(entry.get("path"))
+        if not key:
+            continue
+        documents[key] = entry
+    return [documents[key] for key in sorted(documents)]
+
+
+def audit_source_manifest(source_dir: Path, manifest_path: Path) -> dict[str, Any]:
+    files = source_files(source_dir)
+    manifest_index = load_source_manifest(manifest_path)
+    manifest_items = manifest_documents(manifest_index)
+
+    source_paths: set[str] = set()
+    missing_documents: list[dict[str, Any]] = []
+    matched_documents = 0
+
+    for path in files:
+        try:
+            relative_path = normalize_manifest_path(path.relative_to(source_dir).as_posix())
+        except ValueError:
+            relative_path = normalize_manifest_path(path.name)
+        source_paths.add(relative_path)
+
+        entry = manifest_entry_for_file(source_dir, path, manifest_index)
+        if entry is None:
+            missing_documents.append(
+                {
+                    "path": relative_path,
+                    "file_name": path.name,
+                    "title": path.stem,
+                }
+            )
+        else:
+            matched_documents += 1
+
+    orphan_documents: list[dict[str, Any]] = []
+    for entry in manifest_items:
+        entry_path = normalize_manifest_path(entry.get("path"))
+        if not entry_path or entry_path in source_paths:
+            continue
+        orphan_documents.append(
+            {
+                "path": entry_path,
+                "title": entry.get("title"),
+                "approved": entry.get("approved"),
+                "source": entry.get("source"),
+            }
+        )
+
+    coverage = round((matched_documents / len(files)) * 100, 1) if files else 100.0
+    status = "ok" if not missing_documents and not orphan_documents else "attention"
+    return {
+        "status": status,
+        "source_dir": str(source_dir),
+        "manifest_path": str(manifest_path),
+        "pdf_count": len(files),
+        "manifest_count": len(manifest_items),
+        "covered_count": matched_documents,
+        "coverage_pct": coverage,
+        "missing_count": len(missing_documents),
+        "orphan_count": len(orphan_documents),
+        "missing_documents": missing_documents,
+        "orphan_documents": orphan_documents,
+    }
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -402,6 +527,7 @@ def upsert_document(
     path: Path,
     sha256: str,
     info: dict[str, Any],
+    manifest_entry: dict[str, Any] | None = None,
 ) -> tuple[str, bool]:
     cur.execute("SELECT id FROM rag_documents WHERE sha256 = %s", (sha256,))
     existing = cur.fetchone()
@@ -410,7 +536,8 @@ def upsert_document(
             "author": info.get("author"),
             "producer": info.get("producer"),
             "creator": info.get("creator"),
-        }
+        },
+        "source_manifest": manifest_entry or {},
     }
     if existing:
         cur.execute(
@@ -499,11 +626,13 @@ def ingest_documents(
     max_chars: int = DEFAULT_MAX_CHARS,
     overlap: int = DEFAULT_OVERLAP,
     skip_embeddings: bool = False,
+    manifest_path: Path | None = None,
 ) -> IngestCounters:
     counters = IngestCounters()
     import psycopg
     from psycopg.rows import dict_row
 
+    manifest_index = load_source_manifest(manifest_path) if manifest_path else {}
     with psycopg.connect(database_url, row_factory=dict_row) as conn:
         try:
             with conn.cursor() as cur:
@@ -515,11 +644,17 @@ def ingest_documents(
                             counters.skipped += 1
                             counters.warn(f"{path.name}: no extractable text found")
                             continue
+                        manifest_entry = manifest_entry_for_file(
+                            manifest_path.parent if manifest_path else path.parent,
+                            path,
+                            manifest_index,
+                        )
                         document_id, existed = upsert_document(
                             cur,
                             path=path,
                             sha256=sha256,
                             info=info,
+                            manifest_entry=manifest_entry,
                         )
                         chunks = build_chunks(pages, max_chars=max_chars, overlap=overlap)
                         embedded_count, embedding_warnings = attach_embeddings_to_chunks(
@@ -893,14 +1028,18 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Ingest and search technical PDFs for Orbika RAG.")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    ingest = subparsers.add_parser("ingest", help="Load PDFs from knowledge/rag_sources into PostgreSQL.")
+    ingest = subparsers.add_parser("ingest", help="Load PDFs recursively from knowledge/rag_sources into PostgreSQL.")
     ingest.add_argument("--source-dir", type=Path, default=DEFAULT_SOURCE_DIR)
     ingest.add_argument("--limit", type=int)
     ingest.add_argument("--max-chars", type=int, default=DEFAULT_MAX_CHARS)
     ingest.add_argument("--overlap", type=int, default=DEFAULT_OVERLAP)
     ingest.add_argument("--dry-run", action="store_true")
     ingest.add_argument("--skip-embeddings", action="store_true")
+    ingest.add_argument("--manifest-path", type=Path, default=DEFAULT_MANIFEST_FILE, help="Optional manifest JSON with per-document audit metadata.")
 
+    audit = subparsers.add_parser("audit", help="Compare knowledge/rag_sources with manifest.json and report gaps.")
+    audit.add_argument("--source-dir", type=Path, default=DEFAULT_SOURCE_DIR)
+    audit.add_argument("--manifest-path", type=Path, default=DEFAULT_MANIFEST_FILE, help="Optional manifest JSON with per-document audit metadata.")
     search = subparsers.add_parser("search", help="Query indexed RAG chunks from PostgreSQL.")
     search.add_argument("--query", required=True)
     search.add_argument("--limit", type=int, default=DEFAULT_SEARCH_LIMIT)
@@ -911,6 +1050,11 @@ def build_parser() -> argparse.ArgumentParser:
 def main() -> int:
     parser = build_parser()
     args = parser.parse_args()
+
+    if args.command == "audit":
+        report = audit_source_manifest(args.source_dir, args.manifest_path)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0 if report["status"] == "ok" else 2
 
     database_url = database_url_from_env()
     if not database_url:
@@ -929,6 +1073,7 @@ def main() -> int:
             max_chars=args.max_chars,
             overlap=args.overlap,
             skip_embeddings=args.skip_embeddings,
+            manifest_path=args.manifest_path,
         )
         print_ingest_summary(counters, args.dry_run)
         return 1 if counters.failed else 0
@@ -946,7 +1091,16 @@ def main() -> int:
     parser.error(f"Unsupported command: {args.command}")
     return 2
 
-
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+
+
+
+
+
+
+
+
 

@@ -19,6 +19,38 @@ from tools.postgres_quote_persistence import database_url_from_env, persist_quot
 
 UV_CANDIDATES = [REPO_ROOT / ".venv/bin/uv", Path.home() / ".local/bin/uv"]
 UV_BIN = next((candidate for candidate in UV_CANDIDATES if candidate.exists()), Path("uv"))
+CATALOG_EXTRACTOR_SCRIPTS = [
+    ("autolatas", "tools/autolatas_catalog_extractor.py"),
+    ("autopartesercar", "tools/autopartesercar_catalog_extractor.py"),
+    ("autopartesya", "tools/autopartesya_catalog_extractor.py"),
+    ("autorecambiosltda", "tools/autorecambiosltda_catalog_extractor.py"),
+    ("corbeta", "tools/corbeta_catalog_extractor.py"),
+    ("disfal", "tools/disfal_catalog_extractor.py"),
+    ("exaap", "tools/exaap_catalog_extractor.py"),
+    ("fanauto", "tools/fanauto_catalog_extractor.py"),
+    ("imotriz", "tools/imotriz_catalog_extractor.py"),
+    ("imotrizsolucionesautomotrices", "tools/imotrizsolucionesautomotrices_catalog_extractor_scroll.py"),
+    ("impocali", "tools/impocali_catalog_extractor.py"),
+    ("importadoraeurobrasil", "tools/importadoraeurobrasil_catalog_extractor.py"),
+    ("importadorasasociadas", "tools/importadorasasociadas_catalog_extractor.py"),
+    ("internacionaldepartes", "tools/internacionaldepartes_catalog_extractor.py"),
+    ("latiendadelrepuesto", "tools/latiendadelrepuesto_catalog_extractor.py"),
+    ("motorpartes", "tools/motorpartes_catalog_extractor.py"),
+    ("parrales", "tools/parrales_catalog_extractor.py"),
+    ("partcar", "tools/partcar_catalog_extractor.py"),
+    ("pintuco", "tools/pintuco_catalog_extractor.py"),
+    ("ppaautomotriz", "tools/ppaautomotriz_catalog_extractor.py"),
+    ("procar", "tools/procar_catalog_extractor.py"),
+    ("propartes", "tools/propartes_catalog_extractor.py"),
+    ("redpuestos", "tools/redpuestos_catalog_extractor.py"),
+    ("repuestera", "tools/repuestera_catalog_extractor.py"),
+    ("totus", "tools/totus_catalog_extractor.py"),
+    ("tusautopartes", "tools/tusautopartes_catalog_extractor.py"),
+    ("universaldepartes", "tools/universaldepartes_catalog_extractor.py"),
+    ("ventarepuestosmayor", "tools/ventarepuestosmayor_catalog_extractor.py"),
+    ("yamatocolombia", "tools/yamatocolombia_catalog_extractor.py"),
+]
+CATALOG_INGEST_SCRIPT = "tools/provider_catalog_ingest.py"
 
 
 def utc_now_iso() -> str:
@@ -58,6 +90,8 @@ def build_report(*, quotes_dir: Path, limit_per_part: int, trace_dir: Path | Non
         "generated_at": utc_now_iso(),
         "limit_per_part": limit_per_part,
         "quotes_dir": str(quotes_dir),
+        "provider_extraction": {"status": "not_run", "providers": []},
+        "catalog_ingest": {"status": "not_run"},
         "matching": {"status": "not_run"},
         "agentic_review": {"status": "not_run"},
         "postgres_sync": {"enabled": bool(database_url), "status": "not_run"},
@@ -93,6 +127,52 @@ def read_summary_from_quotes(quotes_dir: Path) -> dict[str, int]:
     }
 
 
+def run_catalog_extractors() -> dict[str, Any]:
+    provider_results: list[dict[str, Any]] = []
+    failed = 0
+    for provider_id, script_path in CATALOG_EXTRACTOR_SCRIPTS:
+        command = [str(UV_BIN), "run", "--with", "playwright", "python", script_path]
+        step = run_step(
+            f"catalog_extractor:{provider_id}",
+            command,
+        )
+        step["provider_id"] = provider_id
+        provider_results.append(step)
+        if step["status"] != "completed":
+            failed += 1
+    return {
+        "status": "completed" if failed == 0 else "completed_with_failures",
+        "providers": provider_results,
+        "summary": {
+            "providers_total": len(provider_results),
+            "providers_completed": len(provider_results) - failed,
+            "providers_failed": failed,
+        },
+        "message": (
+            "Todos los extractores vivos terminaron correctamente."
+            if failed == 0
+            else "Algunos extractores vivos fallaron; el refresco continuara usando snapshots disponibles."
+        ),
+    }
+
+
+def run_catalog_ingestion(database_url: str | None) -> dict[str, Any]:
+    if not database_url:
+        return {
+            "status": "skipped",
+            "message": "No hay DATABASE_URL configurado; el catalogo no se sincronizo a PostgreSQL.",
+        }
+    command = [str(UV_BIN), "run", "python", CATALOG_INGEST_SCRIPT]
+    step = run_step("provider_catalog_ingest", command)
+    return {
+        "status": step["status"],
+        "command": step["command"],
+        "returncode": step["returncode"],
+        "stdout_tail": step["stdout_tail"],
+        "stderr_tail": step["stderr_tail"],
+    }
+
+
 def provider_refresh(
     *,
     quotes_dir: Path,
@@ -106,6 +186,9 @@ def provider_refresh(
     report_file.parent.mkdir(parents=True, exist_ok=True)
 
     try:
+        report["provider_extraction"] = run_catalog_extractors()
+        report["catalog_ingest"] = run_catalog_ingestion(database_url)
+
         matching_command = [
             str(UV_BIN),
             "run",
@@ -159,8 +242,26 @@ def provider_refresh(
             }
 
         report["summary"].update(read_summary_from_quotes(quotes_dir))
-        report["status"] = "completed"
-        report["message"] = "El refresco semanal de proveedores termino correctamente."
+        extraction_failed = (
+            report.get("provider_extraction", {})
+            .get("summary", {})
+            .get("providers_failed", 0)
+        )
+        if extraction_failed:
+            report["status"] = "completed_with_warnings"
+            report["message"] = (
+                "El matching termino usando snapshots disponibles, pero "
+                f"{extraction_failed} extractor(es) fallaron y requieren revision."
+            )
+        elif report.get("catalog_ingest", {}).get("status") != "completed":
+            report["status"] = "completed_with_warnings"
+            report["message"] = (
+                "El refresco termino correctamente, pero la sincronizacion del catalogo a PostgreSQL "
+                "presento advertencias."
+            )
+        else:
+            report["status"] = "completed"
+            report["message"] = "El refresco semanal de proveedores termino correctamente."
     except Exception as exc:  # noqa: BLE001
         report["status"] = "failed"
         report["message"] = str(exc)
@@ -168,7 +269,7 @@ def provider_refresh(
         report["generated_at"] = utc_now_iso()
         report_file.write_text(json.dumps(report, indent=2, ensure_ascii=True), encoding="utf-8")
 
-    if report["status"] != "completed":
+    if report["status"] not in {"completed", "completed_with_warnings"}:
         raise SystemExit(1)
     return report
 

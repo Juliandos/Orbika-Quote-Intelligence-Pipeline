@@ -1,0 +1,5 @@
+{ "provider_id": "ebay", "display_name": "eBay", "website": "https://www.ebay.com/",
+  "catalog_root_url": "https://www.ebay.com/b/Auto-Parts/6028", "provider_type": "marketplace",
+  "access": {"type":"api","requires_login":true,"read_only":true},
+  "data_precision": {"prices":true,"stock":true,"product_names":true,"detail_links":true,"reference_codes":false},
+  "matching": {"allowed_match_types":["category_only","manual_confirmation_required"]} }

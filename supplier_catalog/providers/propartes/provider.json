@@ -1,8 +1,8 @@
-﻿{
+{
   "provider_id": "propartes",
   "display_name": "Propartes",
   "website": "https://propartes.com/",
-  "catalog_root_url": "https://propartes.com/autos/",
+  "catalog_root_url": "https://tienda.propartes.com/filtros-automotriz",
   "access": {
     "type": "open",
     "requires_login": false,
@@ -11,7 +11,19 @@
   "selectors": {
     "autos_root": "https://propartes.com/autos/",
     "filter_root": "https://tienda.propartes.com/filtros-automotriz",
-    "query_pagination_example": "https://tienda.propartes.com/filtros-de-aire/products?pageNumber=1&productLowPrice=0&productHighPrice=0&sort=1&attributes=%5B%5D"
+    "catalog_surfaces": [
+      "https://tienda.propartes.com/filtros-de-combustible/products?pageNumber=1&productLowPrice=0&productHighPrice=10000000&sort=1&attributes=%5B%5D",
+      "https://tienda.propartes.com/filtros-de-aire-cabina/products?pageNumber=1&productLowPrice=0&productHighPrice=10000000&sort=1&attributes=%5B%5D",
+      "https://tienda.propartes.com/filtros-de-aire/products?pageNumber=1&productLowPrice=0&productHighPrice=10000000&sort=1&attributes=%5B%5D",
+      "https://tienda.propartes.com/filtros-de-aceite/products?pageNumber=1&productLowPrice=0&productHighPrice=10000000&sort=1&attributes=%5B%5D",
+      "https://tienda.propartes.com/refrigerantes-autos/products?pageNumber=1&productLowPrice=0&productHighPrice=10000000&sort=1&attributes=%5B%5D",
+      "https://tienda.propartes.com/frenos-automotriz",
+      "https://tienda.propartes.com/liquido-frenos-386/products?pageNumber=1&productLowPrice=0&productHighPrice=10000000&sort=1&attributes=%5B%5D",
+      "https://tienda.propartes.com/sensor-desgaste/products?pageNumber=1&productLowPrice=0&productHighPrice=10000000&sort=1&attributes=%5B%5D",
+      "https://tienda.propartes.com/pastilla-freno-71/products?pageNumber=1&productLowPrice=0&productHighPrice=10000000&sort=1&attributes=%5B%5D",
+      "https://tienda.propartes.com/disco-freno/products?pageNumber=1&productLowPrice=0&productHighPrice=10000000&sort=1&attributes=%5B%5D",
+      "https://tienda.propartes.com/bombillos-y-exploradoras/products"
+    ]
   },
   "data_precision": {
     "reference_codes": false,

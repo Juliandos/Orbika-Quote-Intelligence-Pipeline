@@ -19,7 +19,7 @@ from tools.local_console_launcher import status as launcher_status
 app = FastAPI(title="Orbika Console API", version="0.1.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_ORIGIN, "http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=[FRONTEND_ORIGIN, "http://localhost:3000", "http://127.0.0.1:3000", "tauri://localhost", "https://tauri.localhost", "http://tauri.localhost"],
     allow_methods=["*"],
     allow_headers=["*"],
 )

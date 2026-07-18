@@ -137,7 +137,7 @@ class RepuesteraCatalogExtractorTests(unittest.TestCase):
 
     def test_build_catalog_page_url_handles_page_one_and_pagination(self) -> None:
         self.assertEqual(build_catalog_page_url(1), "https://repuestera.com.co/shop/")
-        self.assertEqual(build_catalog_page_url(3), "https://repuestera.com.co/shop/page/3/")
+        self.assertEqual(build_catalog_page_url(3), "https://repuestera.com.co/shop/?jsf=jet-engine:productos&pagenum=3")
 
     def test_infer_match_downgrades_when_reference_is_missing(self) -> None:
         self.assertEqual(

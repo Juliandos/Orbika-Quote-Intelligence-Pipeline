@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import date
 from pathlib import Path
 import sys
@@ -42,7 +43,32 @@ from tools.seeded_catalog_support import (
     write_snapshot_bundle,
 )
 
-CONFIG = {'provider_id': 'motorpartes', 'display_name': 'Motorpartes', 'max_pages': 24, 'max_products': 80, 'category_only_mode': False, 'prefer_vehicle_match': True, 'collect_pdf_links': False, 'image_catalog_only': False, 'static_entry_urls': (), 'allow_category_records': False, 'extra_product_patterns': ('/producto/',), 'extra_category_patterns': (), 'disallowed_url_patterns': ()}
+CONFIG = {
+    'provider_id': 'motorpartes',
+    'display_name': 'Motorpartes',
+    'max_pages': 0,
+    'max_products': 0,
+    'category_only_mode': False,
+    'prefer_vehicle_match': True,
+    'collect_pdf_links': False,
+    'image_catalog_only': False,
+    'static_entry_urls': (
+        'https://www.motorpartes.co/categoria-producto/version-solas/',
+        'https://www.motorpartes.co/categoria-producto/culata-completa/',
+        'https://www.motorpartes.co/categoria-producto/ciguenales/',
+        'https://www.motorpartes.co/categoria-producto/bielas-de-motor/',
+        'https://www.motorpartes.co/categoria-producto/ejes-de-leva/',
+        'https://www.motorpartes.co/categoria-producto/valvulas/',
+        'https://www.motorpartes.co/categoria-producto/motor-completo/',
+        'https://www.motorpartes.co/categoria-producto/motores-7-8/',
+        'https://www.motorpartes.co/categoria-producto/bloques-de-motor/',
+        'https://www.motorpartes.co/categoria-producto/descuentos/',
+    ),
+    'allow_category_records': False,
+    'extra_product_patterns': ('/producto/',),
+    'extra_category_patterns': ('/categoria-producto/',),
+    'disallowed_url_patterns': (),
+}
 EXCLUDE_KEYWORDS = ('moto', 'motoc', 'camion', 'camiones', 'bus', 'buses', 'tracto', 'npr', 'diesel', 'agricola', 'industrial')
 VEHICLE_TOKENS = ('chevrolet', 'mazda', 'renault', 'kia', 'hyundai', 'nissan', 'toyota', 'ford', 'volkswagen')
 
@@ -88,6 +114,25 @@ def category_like_url(url: str) -> bool:
     return default_category_like_url(url) or url_matches_any(url, EXTRA_CATEGORY_PATTERNS)
 
 
+def extract_motorpartes_pagination_links(html: str, base_url: str) -> list[str]:
+    matches = re.findall(
+        r'<div[^>]+class="[^"]*dipl_woo_products_pagination_wrapper[^"]*"[^>]*>(.*?)</div>',
+        html,
+        re.IGNORECASE | re.DOTALL,
+    )
+    if not matches:
+        return []
+    links: list[str] = []
+    seen: set[str] = set()
+    for block in matches:
+        for link in extract_links(block, base_url):
+            normalized = canonical_url(link)
+            if normalized in seen:
+                continue
+            seen.add(normalized)
+            links.append(normalized)
+    return links
+
 def crawl_provider(metadata: dict[str, object], seed_snapshot: dict[str, object] | None) -> tuple[list[ProductRecord], list[str]]:
     host = urlparse(str(metadata.get("website") or metadata.get("catalog_root_url") or "")).netloc.lower()
     entry_urls = [str(metadata.get("catalog_root_url") or metadata.get("website") or "" )]
@@ -111,7 +156,7 @@ def crawl_provider(metadata: dict[str, object], seed_snapshot: dict[str, object]
     records: list[ProductRecord] = []
     notes = [AUTOS_ONLY_NOTE]
 
-    while queue and len(visited) < MAX_PAGES and len(records) < MAX_PRODUCTS:
+    while queue and (MAX_PAGES <= 0 or len(visited) < MAX_PAGES) and (MAX_PRODUCTS <= 0 or len(records) < MAX_PRODUCTS):
         url, source_page_url = queue.pop(0)
         if url in visited or ignored_url(url):
             continue
@@ -160,6 +205,16 @@ def crawl_provider(metadata: dict[str, object], seed_snapshot: dict[str, object]
             )
             if fallback:
                 product_records = [fallback]
+
+        if category_like_url(final_url) and not is_product_page:
+            for link in extract_motorpartes_pagination_links(html, final_url):
+                if link in visited or link in seen_queue:
+                    continue
+                if not same_host(link, host) or ignored_url(link):
+                    continue
+                if category_like_url(link):
+                    queue.append((link, final_url))
+                    seen_queue.add(link)
 
         if product_records:
             records.extend(product_records)
@@ -239,4 +294,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

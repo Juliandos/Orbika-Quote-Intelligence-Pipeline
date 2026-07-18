@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 from __future__ import annotations
 
 import argparse
@@ -30,6 +30,7 @@ WEB_LOG = RUNTIME_DIR / "web.log"
 
 UV_CANDIDATES = [REPO_ROOT / ".venv/bin/uv", Path.home() / ".local/bin/uv"]
 UV_BIN = next((candidate for candidate in UV_CANDIDATES if candidate.exists()), Path("uv"))
+VENV_PYTHON = REPO_ROOT / ".venv/bin/python"
 
 API_PORT = int(os.environ.get("ORBIKA_API_PORT", "8001"))
 WEB_PORT = int(os.environ.get("ORBIKA_WEB_PORT", "3000"))
@@ -122,6 +123,17 @@ def ps_command(pid: int) -> str:
     return raw
 
 
+def docker_bin() -> str:
+    if shutil_which("docker.exe"):
+        return "docker.exe"
+    if shutil_which("docker"):
+        return "docker"
+    raise SystemExit(
+        "Docker no esta disponible ni como docker.exe ni como docker. "
+        "Activa Docker Desktop o ajusta la integracion con WSL."
+    )
+
+
 def process_alive(pid: int, *, expected_markers: list[str] | None = None) -> bool:
     try:
         os.kill(pid, 0)
@@ -182,12 +194,20 @@ def provider_refresh_report() -> dict[str, Any]:
 
 
 def api_process_command() -> str:
+    python_cmd = shlex.quote(str(VENV_PYTHON)) if VENV_PYTHON.exists() else f"{shlex.quote(str(UV_BIN))} run python"
+    llm_base = os.environ.get("ORBIKA_LLM_BASE_URL", "http://localhost:11434/v1")
+    llm_model = os.environ.get("ORBIKA_LLM_MODEL", "qwen2.5:3b")
+    llm_key = os.environ.get("ORBIKA_LLM_API_KEY", "ollama")
     return (
         "exec env "
         f"DATABASE_URL={shlex.quote(DATABASE_URL)} "
         "ORBIKA_API_STORE=postgres "
+        'PATH="$HOME/.local/bin:$PATH" '
+        f"ORBIKA_LLM_BASE_URL={shlex.quote(llm_base)} "
+        f"ORBIKA_LLM_MODEL={shlex.quote(llm_model)} "
+        f"ORBIKA_LLM_API_KEY={shlex.quote(llm_key)} "
         "PYTHONPATH=. "
-        f"{shlex.quote(str(UV_BIN))} run uvicorn --app-dir apps/api orbika_console_api.main:app --host 0.0.0.0 --port {API_PORT}"
+        f"{python_cmd} -m uvicorn --app-dir apps/api orbika_console_api.main:app --host 0.0.0.0 --port {API_PORT}"
     )
 
 
@@ -219,7 +239,7 @@ def docker_exec_pg_isready() -> bool:
     try:
         result = run(
             [
-                "docker",
+                docker_bin(),
                 "compose",
                 "exec",
                 "-T",
@@ -237,7 +257,9 @@ def docker_exec_pg_isready() -> bool:
 
 
 def ensure_db_started() -> None:
-    run(["docker", "compose", "up", "-d", "db"])
+    if port_open(DB_PORT):
+        return
+    run([docker_bin(), "compose", "up", "-d", "db"])
     deadline = time.time() + 90
     while time.time() < deadline:
         if docker_exec_pg_isready():
@@ -246,8 +268,21 @@ def ensure_db_started() -> None:
     raise SystemExit("PostgreSQL no quedo saludable en el tiempo esperado.")
 
 
-def apply_migrations() -> None:
-    run(
+def apply_migrations() -> dict[str, Any]:
+    python_bin = VENV_PYTHON if VENV_PYTHON.exists() else None
+    if python_bin is not None:
+        try:
+            completed = run([str(python_bin), "-m", "alembic", "upgrade", "head"], check=True)
+            return {
+                "status": "applied",
+                "stdout": completed.stdout or "",
+                "stderr": completed.stderr or "",
+            }
+        except subprocess.CalledProcessError as exc:
+            message = (exc.stderr or exc.stdout or "").strip()
+            if "No module named alembic" not in message and "No module named sqlalchemy" not in message:
+                raise
+    completed = run(
         [
             str(UV_BIN),
             "run",
@@ -255,12 +290,19 @@ def apply_migrations() -> None:
             "alembic",
             "--with",
             "psycopg[binary]",
+            "python",
+            "-m",
             "alembic",
             "upgrade",
             "head",
         ],
         check=True,
     )
+    return {
+        "status": "applied",
+        "stdout": completed.stdout or "",
+        "stderr": completed.stderr or "",
+    }
 
 
 def stop_runner_if_possible() -> None:
@@ -310,7 +352,15 @@ def preflight() -> dict[str, Any]:
         checks.append({"name": name, "ok": ok, "detail": detail})
 
     add("repo", REPO_ROOT.exists(), str(REPO_ROOT))
-    add("docker", shutil_which("docker"), "docker compose disponible en WSL" if shutil_which("docker") else "docker no esta disponible")
+    docker_available = shutil_which("docker.exe") or shutil_which("docker")
+    db_bootstrap_ready = docker_available or port_open(DB_PORT)
+    add(
+        "docker",
+        db_bootstrap_ready,
+        "docker compose disponible en WSL"
+        if docker_available
+        else ("docker no esta disponible pero PostgreSQL ya responde en 5433" if port_open(DB_PORT) else "docker no esta disponible")
+    )
     add("uv", UV_BIN.exists() if UV_BIN != Path("uv") else shutil_which("uv"), f"uv disponible en {UV_BIN}" if (UV_BIN.exists() if UV_BIN != Path("uv") else shutil_which("uv")) else "uv no esta disponible")
     add("python3", shutil_which("python3"), "python3 disponible" if shutil_which("python3") else "python3 no esta disponible")
     add("npm", bool(command_available("source ~/.nvm/nvm.sh >/dev/null 2>&1 && nvm use 22 >/dev/null && command -v npm")), "npm disponible via nvm" if command_available("source ~/.nvm/nvm.sh >/dev/null 2>&1 && nvm use 22 >/dev/null && command -v npm") else "npm no esta disponible via nvm")
@@ -487,7 +537,8 @@ def start() -> dict[str, Any]:
         raise SystemExit("El puerto 3000 esta ocupado por otro proceso o un frontend no saludable.")
 
     ensure_db_started()
-    apply_migrations()
+    migrations = apply_migrations()
+
 
     state = read_state()
     api_pid = int(state.get("api_pid") or 0)
@@ -519,6 +570,7 @@ def start() -> dict[str, Any]:
         "api_url": API_BASE,
         "web_url": WEB_URL,
         "database_url": DATABASE_URL,
+        "migrations": migrations,
         "logs": {"api": str(API_LOG), "web": str(WEB_LOG)},
     }
     write_state(payload)
@@ -538,7 +590,7 @@ def stop(*, stop_db: bool = True) -> dict[str, Any]:
 
     if stop_db:
         try:
-            run(["docker", "compose", "stop", "db"], check=False)
+            run([docker_bin(), "compose", "stop", "db"], check=False)
         except Exception:
             pass
 

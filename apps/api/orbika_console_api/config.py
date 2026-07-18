@@ -28,4 +28,12 @@ DEFAULT_ORBIKA_STORAGE_STATE = str(
 
 FRONTEND_ORIGIN = os.environ.get("FRONTEND_ORIGIN", "http://localhost:3000")
 DATABASE_URL = os.environ.get("DATABASE_URL")
-API_STORE = os.environ.get("ORBIKA_API_STORE", "json").strip().lower()
+DEFAULT_API_STORE = "postgres" if DATABASE_URL else "json"
+
+
+def resolve_api_store() -> str:
+    value = os.environ.get("ORBIKA_API_STORE", DEFAULT_API_STORE)
+    return value.strip().lower()
+
+
+API_STORE = resolve_api_store()

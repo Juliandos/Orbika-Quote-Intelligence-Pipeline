@@ -2,15 +2,17 @@
   "provider_id": "motorpartes",
   "display_name": "Motorpartes",
   "website": "https://www.motorpartes.co/",
-  "catalog_root_url": "https://www.motorpartes.co/categoria-producto/bloques-de-motor/",
+  "catalog_root_url": "https://www.motorpartes.co/",
   "access": {
     "type": "open",
     "requires_login": false,
     "read_only": true
   },
   "selectors": {
-    "category_root": "https://www.motorpartes.co/categoria-producto/bloques-de-motor/",
-    "pagination_hint": "intrinsic category pagination",
+    "category_root": "https://www.motorpartes.co/",
+    "product_container": "#main-content > div > div > div.et_pb_section.et_pb_section_2_tb_body.et_pb_with_background.et_section_regular > div > div > div > div > div.dipl_woo_products_layout.layout1",
+    "pagination": "#main-content > div > div > div.et_pb_section.et_pb_section_2_tb_body.et_pb_with_background.et_section_regular > div > div > div > div > div.dipl_woo_products_pagination_wrapper > ul",
+    "pagination_type": "numeric",
     "product_detail_path_hint": "/producto/"
   },
   "data_precision": {

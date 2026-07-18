@@ -1,12 +1,13 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 from __future__ import annotations
 
 import argparse
 import json
+import re
+import sys
 from datetime import date
 from pathlib import Path
-import sys
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
@@ -17,193 +18,178 @@ from tools.seeded_catalog_support import (
     MANUAL_NOTE,
     ProductRecord,
     build_payload,
+    build_searchable_tokens,
     canonical_url,
     decode_html,
     dedupe_records,
-    default_category_like_url,
-    default_product_like_url,
-    entry_urls_from_snapshot,
-    extract_links,
-    extract_meta_content,
-    extract_page_title,
     fetch_url,
-    ignored_by_keywords,
-    iter_json_ld_nodes,
+    guess_page_number,
     latest_snapshot_json,
     load_json,
-    parse_category_record,
-    parse_json_ld_blocks,
-    parse_pdf_records,
-    parse_product_fallback,
-    product_from_json_ld,
+    normalize_text,
     provider_paths,
-    same_host,
+    slug_to_words,
     url_matches_any,
     write_snapshot_bundle,
 )
 
-CONFIG = {'provider_id': 'totus', 'display_name': 'Totus', 'max_pages': 24, 'max_products': 80, 'category_only_mode': False, 'prefer_vehicle_match': True, 'collect_pdf_links': False, 'image_catalog_only': False, 'static_entry_urls': (), 'allow_category_records': False, 'extra_product_patterns': ('/productos/',), 'extra_category_patterns': (), 'disallowed_url_patterns': ()}
-EXCLUDE_KEYWORDS = ('moto', 'motoc', 'camion', 'camiones', 'bus', 'buses', 'tracto', 'npr', 'diesel', 'agricola', 'industrial')
-VEHICLE_TOKENS = ('chevrolet', 'mazda', 'renault', 'kia', 'hyundai', 'nissan', 'toyota', 'ford', 'volkswagen')
+PROVIDER_ID = "totus"
+DISPLAY_NAME = "Totus"
+ROOT_URL = "https://www.totus.com.co/tienda/"
+MAX_PAGE_GUARD = 400
+VEHICLE_TOKENS = ("chevrolet", "mazda", "renault", "kia", "hyundai", "nissan", "toyota", "ford", "volkswagen")
+EXCLUDE_KEYWORDS: tuple[str, ...] = ()
 
-PROVIDER_ID = CONFIG["provider_id"]
-DISPLAY_NAME = CONFIG["display_name"]
-MAX_PAGES = CONFIG["max_pages"]
-MAX_PRODUCTS = CONFIG["max_products"]
-CATEGORY_ONLY_MODE = CONFIG["category_only_mode"]
-PREFER_VEHICLE_MATCH = CONFIG["prefer_vehicle_match"]
-COLLECT_PDF_LINKS = CONFIG["collect_pdf_links"]
-IMAGE_CATALOG_ONLY = CONFIG["image_catalog_only"]
-ALLOW_CATEGORY_RECORDS = CONFIG["allow_category_records"]
-STATIC_ENTRY_URLS = CONFIG["static_entry_urls"]
-EXTRA_PRODUCT_PATTERNS = CONFIG["extra_product_patterns"]
-EXTRA_CATEGORY_PATTERNS = CONFIG["extra_category_patterns"]
-DISALLOWED_URL_PATTERNS = CONFIG["disallowed_url_patterns"]
-
-
-def infer_match_type(title: str | None, category_name: str | None, description: str | None, reference: str | None) -> tuple[str, str, bool]:
-    allowed_text = " ".join(filter(None, [title, category_name, description])).lower()
-    if CATEGORY_ONLY_MODE:
-        return "category_only", "medium", True
-    if PREFER_VEHICLE_MATCH and any(token in allowed_text for token in VEHICLE_TOKENS):
-        return "vehicle_compatible", "medium", True
-    if reference and not CATEGORY_ONLY_MODE:
-        return ("vehicle_compatible" if PREFER_VEHICLE_MATCH else "category_only"), "medium", True
-    return "category_only", "medium", True
+PAGE_NUMBER_RE = re.compile(r"/tienda/page/(\d+)/", re.IGNORECASE)
+PRODUCT_BLOCK_RE = re.compile(
+    r'<li\b[^>]*class="[^"]*\bproduct\b[^"]*\btype-product\b[^"]*"[^>]*>(.*?)</li>',
+    re.IGNORECASE | re.DOTALL,
+)
+DETAIL_LINK_RE = re.compile(r'href="([^"]*?/productos/[^"]*?)"', re.IGNORECASE)
+TITLE_RE = re.compile(
+    r'<h3\b[^>]*class="[^"]*woocommerce-loop-product__title[^"]*"[^>]*>(.*?)</h3>',
+    re.IGNORECASE | re.DOTALL,
+)
+IMAGE_RE = re.compile(r'<img\b[^>]*(?:data-src|src)="([^"]+)"', re.IGNORECASE)
+TAG_RE = re.compile(r'<a\b[^>]*rel="tag"[^>]*>(.*?)</a>', re.IGNORECASE | re.DOTALL)
 
 
 def ignored_url(url: str) -> bool:
-    return url_matches_any(url, DISALLOWED_URL_PATTERNS) or ignored_by_keywords(url, EXCLUDE_KEYWORDS)
+    lowered = url.lower()
+    return any(marker in lowered for marker in ("/feed/", ".rss", ".xml"))
 
 
-def product_like_url(url: str) -> bool:
-    if ignored_url(url):
-        return False
-    return default_product_like_url(url) or url_matches_any(url, EXTRA_PRODUCT_PATTERNS)
+def infer_match_type(title: str | None, category_name: str | None, description: str | None, reference: str | None) -> tuple[str, str, bool]:
+    allowed_text = " ".join(filter(None, [title, category_name, description, reference])).lower()
+    if any(token in allowed_text for token in VEHICLE_TOKENS):
+        return "vehicle_compatible", "medium", False
+    if title or category_name:
+        return "category_only", "medium", True
+    return "manual_confirmation_required", "low", True
 
 
-def category_like_url(url: str) -> bool:
-    if ignored_url(url):
-        return False
-    return default_category_like_url(url) or url_matches_any(url, EXTRA_CATEGORY_PATTERNS)
+def discover_max_page(html: str) -> int:
+    page_numbers = [int(match) for match in PAGE_NUMBER_RE.findall(html)]
+    return max(page_numbers) if page_numbers else 1
+
+
+def page_url_for(root_url: str, page_number: int) -> str:
+    root = root_url if root_url.endswith("/") else f"{root_url}/"
+    if page_number <= 1:
+        return canonical_url(root)
+    return canonical_url(urljoin(root, f"page/{page_number}/"))
+
+
+def extract_listing_records(html: str, page_url: str) -> list[ProductRecord]:
+    records: list[ProductRecord] = []
+    page_number = guess_page_number(page_url)
+    for block in PRODUCT_BLOCK_RE.findall(html):
+        link_match = DETAIL_LINK_RE.search(block)
+        if not link_match:
+            continue
+        detail_url = canonical_url(urljoin(page_url, normalize_text(link_match.group(1))))
+        if ignored_url(detail_url):
+            continue
+
+        title_match = TITLE_RE.search(block)
+        title = normalize_text(title_match.group(1)) if title_match else None
+        if not title:
+            title = slug_to_words(urlparse(detail_url).path.rstrip("/").rsplit("/", 1)[-1]) or None
+
+        tags = [normalize_text(tag) for tag in TAG_RE.findall(block)]
+        tags = [tag for tag in tags if tag]
+        category_name = tags[0] if tags else None
+        subcategory_name = tags[1] if len(tags) > 1 else None
+        brand = tags[-1] if len(tags) > 2 else None
+        vehicle_scope = " | ".join(tags[1:]) if len(tags) > 1 else None
+
+        image_match = IMAGE_RE.search(block)
+        image_url = canonical_url(urljoin(page_url, image_match.group(1))) if image_match else None
+
+        match_type, match_confidence, requires_manual_confirmation = infer_match_type(
+            title=title,
+            category_name=category_name,
+            description=vehicle_scope,
+            reference=None,
+        )
+
+        records.append(
+            ProductRecord(
+                item_type="product",
+                provider_type="product_catalog",
+                title=title,
+                product_name=title,
+                detail_url=detail_url,
+                product_url=detail_url,
+                category_name=category_name,
+                subcategory_name=subcategory_name,
+                brand=brand,
+                description=None,
+                vehicle_scope=vehicle_scope,
+                image_url=image_url,
+                source_page_url=page_url,
+                page_number=page_number,
+                match_type=match_type,
+                match_confidence=match_confidence,
+                requires_manual_confirmation=requires_manual_confirmation,
+                searchable_tokens=build_searchable_tokens(title, category_name, subcategory_name, brand, vehicle_scope),
+            )
+        )
+    return records
 
 
 def crawl_provider(metadata: dict[str, object], seed_snapshot: dict[str, object] | None) -> tuple[list[ProductRecord], list[str]]:
-    host = urlparse(str(metadata.get("website") or metadata.get("catalog_root_url") or "")).netloc.lower()
-    entry_urls = [str(metadata.get("catalog_root_url") or metadata.get("website") or "" )]
-    entry_urls.extend(STATIC_ENTRY_URLS)
-    if seed_snapshot:
-        entry_urls.extend(entry_urls_from_snapshot(seed_snapshot))
-
-    queue: list[tuple[str, str]] = []
-    seen_queue: set[str] = set()
-    for url in entry_urls:
-        if not url or not url.startswith("http"):
-            continue
-        normalized = canonical_url(url)
-        if ignored_url(normalized):
-            continue
-        if normalized not in seen_queue and same_host(normalized, host):
-            queue.append((normalized, normalized))
-            seen_queue.add(normalized)
-
-    visited: set[str] = set()
-    records: list[ProductRecord] = []
+    root_url = canonical_url(str(metadata.get("catalog_root_url") or ROOT_URL))
     notes = [AUTOS_ONLY_NOTE]
+    if seed_snapshot:
+        notes.append("Seed snapshot was available, but the crawl now treats the live /tienda/ surface as the source of truth.")
 
-    while queue and len(visited) < MAX_PAGES and len(records) < MAX_PRODUCTS:
-        url, source_page_url = queue.pop(0)
-        if url in visited or ignored_url(url):
-            continue
-        visited.add(url)
+    discovered_pages = 1
+    records: list[ProductRecord] = []
+    seen_products: set[str] = set()
+    visited_pages: set[str] = set()
+
+    for page_number in range(1, MAX_PAGE_GUARD + 1):
+        page_url = page_url_for(root_url, page_number)
+        if page_url in visited_pages:
+            break
+        visited_pages.add(page_url)
+
         try:
-            final_url, raw, headers = fetch_url(url)
+            final_url, raw, headers = fetch_url(page_url)
         except Exception as exc:  # noqa: BLE001
-            notes.append(f"Fetch warning for {url}: {exc}")
+            notes.append(f"Fetch warning for {page_url}: {exc}")
+            if page_number == 1:
+                break
             continue
 
         if ignored_url(final_url):
             continue
 
-        content_type = headers.get("content-type", "").lower()
-        if "pdf" in content_type or final_url.lower().endswith(".pdf"):
-            if COLLECT_PDF_LINKS:
-                records.extend(parse_pdf_records(f'<a href="{final_url}">{DISPLAY_NAME}</a>', final_url, source_page_url))
-            continue
-
         html = decode_html(raw, headers)
-        if COLLECT_PDF_LINKS:
-            records.extend(parse_pdf_records(html, final_url, source_page_url))
+        if page_number == 1:
+            discovered_pages = max(discovered_pages, discover_max_page(html))
+            notes.append(f"Discovered live pagination up to page {discovered_pages} from {final_url}.")
 
-        page_title = extract_page_title(html)
-        meta_description = extract_meta_content(html, "description")
-        meta_image = extract_meta_content(html, "og:image")
-        json_ld_nodes = [node for block in parse_json_ld_blocks(html) for node in iter_json_ld_nodes(block)]
-        product_records = product_from_json_ld(
-            url=final_url,
-            page_title=page_title,
-            description=meta_description,
-            image_url=meta_image,
-            source_page_url=source_page_url,
-            json_ld_nodes=json_ld_nodes,
-            infer_match_type=infer_match_type,
-        )
+        page_records = extract_listing_records(html, final_url)
+        if not page_records:
+            notes.append(f"No product cards found on {final_url}; stopping at page {page_number}.")
+            break
 
-        is_product_page = bool(product_records) or product_like_url(final_url)
-        if is_product_page and not product_records:
-            fallback = parse_product_fallback(
-                url=final_url,
-                html=html,
-                source_page_url=source_page_url,
-                category_only_mode=CATEGORY_ONLY_MODE,
-                infer_match_type=infer_match_type,
-            )
-            if fallback:
-                product_records = [fallback]
-
-        if product_records:
-            records.extend(product_records)
-        elif ALLOW_CATEGORY_RECORDS and (category_like_url(final_url) or final_url in entry_urls):
-            category_record = parse_category_record(
-                url=final_url,
-                html=html,
-                source_page_url=source_page_url,
-                exclude_keywords=EXCLUDE_KEYWORDS,
-                match_type="category_only" if CATEGORY_ONLY_MODE else "manual_confirmation_required",
-            )
-            if category_record:
-                records.append(category_record)
-
-        for link in extract_links(html, final_url):
-            if link in visited or link in seen_queue:
+        added = 0
+        for record in page_records:
+            key = record.detail_url or record.product_url or ""
+            if not key or key in seen_products:
                 continue
-            if not same_host(link, host) or ignored_url(link):
-                continue
-            if COLLECT_PDF_LINKS and link.lower().endswith(".pdf"):
-                queue.append((link, final_url))
-                seen_queue.add(link)
-                continue
-            if product_like_url(link) or category_like_url(link):
-                queue.append((link, final_url))
-                seen_queue.add(link)
+            seen_products.add(key)
+            records.append(record)
+            added += 1
 
-    if IMAGE_CATALOG_ONLY and not records and entry_urls:
-        records.append(
-            ProductRecord(
-                item_type="category",
-                provider_type="category_only",
-                title=DISPLAY_NAME,
-                detail_url=entry_urls[0],
-                category_name=DISPLAY_NAME,
-                description="Catalogo visual publico; la extraccion viva se mantiene como verificacion manual.",
-                source_page_url=entry_urls[0],
-                match_type="manual_confirmation_required",
-                match_confidence="low",
-                requires_manual_confirmation=True,
-                searchable_tokens=[DISPLAY_NAME.lower(), "catalogo", "visual"],
-            )
-        )
+        notes.append(f"Page {page_number}: extracted {added} new product(s) from {final_url}.")
+        if page_number >= discovered_pages:
+            break
 
+    notes.append(f"Final crawl covered {len(visited_pages)} page(s) and collected {len(records)} unique product(s) before dedupe.")
     return dedupe_records(records, EXCLUDE_KEYWORDS), list(dict.fromkeys(notes + [MANUAL_NOTE]))
 
 
@@ -212,6 +198,7 @@ def run_extractor(snapshot_date: str | None = None) -> Path:
     metadata_path = provider_dir / "provider.json"
     if not metadata_path.exists():
         raise SystemExit(f"Missing provider metadata: {metadata_path}")
+
     metadata = load_json(metadata_path)
     previous_path = latest_snapshot_json(PROVIDER_ID)
     seed_snapshot = load_json(previous_path) if previous_path and previous_path.exists() else None
@@ -239,4 +226,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

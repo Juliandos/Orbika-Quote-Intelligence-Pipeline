@@ -202,6 +202,12 @@ def build_quote_output_payload(
     return payload
 
 
+def _json_default(value: Any) -> Any:
+    if isinstance(value, (date, datetime)):
+        return value.isoformat()
+    return str(value)
+
+
 def write_quote_output(
     quotes_dir: Path,
     key: str,
@@ -222,7 +228,7 @@ def write_quote_output(
         agentic_supplier_matching=agentic_supplier_matching,
     )
     compact_payload = compact_quote_payload_for_storage(payload)
-    output_path.write_text(json.dumps(compact_payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    output_path.write_text(json.dumps(compact_payload, indent=2, ensure_ascii=False, default=_json_default), encoding="utf-8")
     return output_path
 
 
@@ -375,10 +381,14 @@ def update_completed_cursor(state: dict[str, Any], gmail_id: str, internal_date_
 
 
 def process_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str, int]:
+    print("[R] process_once inicio", flush=True)
     service = get_gmail_service(args.credentials.expanduser(), args.token_cache.expanduser())
     verify_authorized_account(service)
     messages = collect_new_messages(service, state, args.max_results, args.gmail_date)
+    print(f"[R] mensajes nuevos: {len(messages)}", flush=True)
+    print("[R] cargando catalogo...", flush=True)
     provider_index = load_provider_catalog_index(args.providers_root)
+    print("[R] catalogo cargado", flush=True)
     counters = {
         "messages_seen": len(messages),
         "messages_with_quotes": 0,
@@ -450,6 +460,7 @@ def process_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str, i
             set_current(state, gmail_id, key, "fetching_orbika_quote")
             save_state(args.state_path, state)
 
+            print(f"[R] fetch SURA quote {key[:12]} ...", flush=True)
             try:
                 html, retries_used = fetch_quote_html(
                     quote_url=quote_url,
@@ -460,7 +471,9 @@ def process_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str, i
                     snapshot_dir=args.snapshot_dir / key if args.snapshot_dir else None,
                     allow_login_fallback=args.allow_login_fallback,
                 )
+                print(f"[R] SURA cargado ({len(html)} bytes, retries={retries_used})", flush=True)
             except Exception as exc:
+                print(f"[R] SURA ERROR: {str(exc)[:140]}", flush=True)
                 state["quotes"][key]["last_error"] = str(exc)
                 state["quotes"][key]["last_error_at"] = utc_now()
                 save_state(args.state_path, state)

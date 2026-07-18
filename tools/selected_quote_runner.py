@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Run existing quote processors against a selected subset of quote files."""
 
 from __future__ import annotations
@@ -11,6 +11,11 @@ import sys
 import tempfile
 from pathlib import Path
 
+from tools.local_console_launcher import DATABASE_URL as DEFAULT_DATABASE_URL
+from tools.postgres_quote_persistence import (
+    database_url_from_env,
+    persist_single_quote_file,
+)
 from tools.supplier_quote_matcher import DEFAULT_DAILY_REPORT_DIR, DEFAULT_QUOTES_DIR, rebuild_daily_reports
 
 DEFAULT_TRACE_DIR = Path("local/orbika_incremental/agentic_traces")
@@ -31,10 +36,24 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 
 def require_quote_paths(quotes_dir: Path, quote_keys: list[str]) -> list[Path]:
+    import json as _json
+    import os as _os
+    import urllib.request as _url
     paths: list[Path] = []
     missing: list[str] = []
+    api_base = _os.environ.get("ORBIKA_API_BASE", "http://127.0.0.1:8000").rstrip("/")
     for key in quote_keys:
         path = quotes_dir / f"{key}.json"
+        if not path.exists():
+            # Deployment DB-first (portátil): el archivo no existe, se exporta desde el API.
+            try:
+                with _url.urlopen(f"{api_base}/api/quotes/{key}", timeout=30) as resp:
+                    detail = _json.loads(resp.read().decode("utf-8"))
+                if detail:
+                    quotes_dir.mkdir(parents=True, exist_ok=True)
+                    path.write_text(_json.dumps(detail, ensure_ascii=False, indent=2), encoding="utf-8")
+            except Exception:
+                pass
         if path.exists():
             paths.append(path)
         else:
@@ -48,6 +67,26 @@ def copy_back(staged_dir: Path, target_dir: Path) -> None:
     target_dir.mkdir(parents=True, exist_ok=True)
     for path in staged_dir.glob("*.json"):
         shutil.copy2(path, target_dir / path.name)
+
+
+def sync_selected_quotes_to_postgres(selected_paths: list[Path]) -> None:
+    database_url = database_url_from_env() or DEFAULT_DATABASE_URL
+    if not database_url:
+        return
+    database_url = database_url.replace("postgresql+psycopg://", "postgresql://", 1)
+    total_imported = 0
+    total_updated = 0
+    total_failed = 0
+    for path in selected_paths:
+        counters = persist_single_quote_file(path, database_url=database_url)
+        total_imported += counters.imported
+        total_updated += counters.updated
+        total_failed += counters.failed
+    print(
+        f"Postgres sync (selected quote runner): imported={total_imported} updated={total_updated} failed={total_failed} files={len(selected_paths)}"
+    )
+    if total_failed:
+        raise SystemExit(f"Postgres sync failed for {total_failed} quote file(s).")
 
 
 def run_subprocess(command: list[str]) -> None:
@@ -84,6 +123,7 @@ def main(argv: list[str]) -> int:
             ]
             run_subprocess(command)
             copy_back(staged_quotes_dir, source_quotes_dir)
+            sync_selected_quotes_to_postgres(selected_paths)
             rebuild_daily_reports(source_quotes_dir, args.daily_report_dir)
             return 0
 
@@ -105,6 +145,7 @@ def main(argv: list[str]) -> int:
 
         run_subprocess(command)
         copy_back(staged_quotes_dir, source_quotes_dir)
+        sync_selected_quotes_to_postgres(selected_paths)
         if not args.disable_traces and temp_trace_dir.exists():
             args.trace_dir.mkdir(parents=True, exist_ok=True)
             for trace_path in temp_trace_dir.glob("*.json"):
@@ -114,3 +155,6 @@ def main(argv: list[str]) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
+
+
+

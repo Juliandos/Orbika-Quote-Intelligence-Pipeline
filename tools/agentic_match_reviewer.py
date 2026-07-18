@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Optional agentic review layer on top of supplier_matching."""
 
 from __future__ import annotations
@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any, Protocol, TypedDict
 
 from tools.customer_preference_store import load_customer_preferences_for_quote
+from tools.internet_quote_matcher import build_internet_search_report
 from tools.rag_knowledge_base import retrieve_candidate_evidence
 from tools.supplier_quote_matcher import (
     DEFAULT_QUOTES_DIR,
@@ -20,6 +21,8 @@ from tools.supplier_quote_matcher import (
     compatibility_state_for_match,
     compatibility_summary_for_match,
     infer_primary_part_signal,
+    infer_part_family,
+    part_family_is_compatible,
     load_json,
     normalize_reference,
     normalize_text,
@@ -50,6 +53,7 @@ except Exception:  # pragma: no cover - optional dependency
 
 
 DEFAULT_TRACE_DIR = Path("local/orbika_incremental/agentic_traces")
+MIN_AGENTIC_SCORE = 45
 
 
 class PartReviewState(TypedDict, total=False):
@@ -93,6 +97,7 @@ class HeuristicMatchReviewer:
             part.get("part_name"),
             part.get("requested_reference"),
         )
+        requested_family = infer_part_family(part.get("part_name"), part.get("requested_reference"))
         requested_tokens = token_set(
             part.get("part_name"),
             part.get("requested_reference"),
@@ -120,6 +125,18 @@ class HeuristicMatchReviewer:
                 candidate.get("subcategory_name"),
                 candidate.get("reference"),
             )
+            candidate_family = infer_part_family(
+                candidate.get("product_name"),
+                candidate.get("category_name"),
+                candidate.get("subcategory_name"),
+                candidate.get("reference"),
+            )
+
+            if requested_family and candidate_family and not part_family_is_compatible(requested_family, candidate_family):
+                adjusted_score = 0
+                rationale.append(
+                    f"Agentic review rejected family mismatch: {requested_family} vs {candidate_family}."
+                )
 
             if requested_signal and candidate_signal:
                 compatible_signals = PART_SIGNAL_COMPATIBILITY.get(
@@ -221,6 +238,8 @@ class HeuristicMatchReviewer:
             reviewed_candidate["rag_citations"] = rag_citations
             reviewed_candidate["agentic_adjusted_score"] = max(0, min(int(adjusted_score), 100))
             reviewed_candidate["agentic_reasons"] = rationale
+            if reviewed_candidate["agentic_adjusted_score"] < MIN_AGENTIC_SCORE:
+                continue
             reviewed.append(reviewed_candidate)
 
         reviewed.sort(
@@ -255,43 +274,50 @@ class LLMMatchReviewer:
         part: dict[str, Any],
         candidates: list[dict[str, Any]],
     ) -> tuple[list[dict[str, Any]], list[str], str]:
-        prompt = ChatPromptTemplate.from_messages(
-            [
-                (
-                    "system",
-                    (
-                        "You are reviewing supplier matches for an automotive quote. "
-                        "Prioritize exact part type, vehicle brand, vehicle line and version. "
-                        "Do not invent products. Return JSON only."
-                    ),
-                ),
-                (
-                    "human",
-                    json.dumps(
-                        {
-                            "vehicle": quote_context,
-                            "part": part,
-                            "candidates": candidates[: self.limit_per_part + 5],
-                            "instructions": {
-                                "max_selected": self.limit_per_part,
-                                "preserve_exact_reference_matches": True,
-                                "avoid_wrong_part_type": True,
-                                "avoid_wrong_vehicle_brand_or_line": True,
-                            },
-                        },
-                        ensure_ascii=False,
-                    ),
-                ),
-            ]
+        import re as _re
+        subset = candidates[: self.limit_per_part + 5]
+        enumerated = [
+            {
+                "index": i,
+                "product_name": c.get("product_name"),
+                "provider_name": c.get("provider_name"),
+                "reference": c.get("reference"),
+                "category_name": c.get("category_name"),
+                "match_type": c.get("match_type"),
+            }
+            for i, c in enumerate(subset)
+        ]
+        system_text = (
+            "You are reviewing supplier matches for an automotive quote. "
+            "Prioritize exact part type, vehicle brand, vehicle line and version. "
+            "Do not invent products; only choose from the given candidates by their index. "
+            "Return ONLY a JSON object of the form "
+            "{\"selected_indexes\": [int, ...], \"notes\": [string, ...]}. "
+            "Select at most %d indexes, best first; use [] if none fit."
+            % self.limit_per_part
         )
-        raw_response = self.llm.invoke(prompt.format_messages())
+        human_text = json.dumps(
+            {"vehicle": quote_context, "part": part, "candidates": enumerated},
+            ensure_ascii=False,
+        )
+        raw_response = self.llm.invoke([("system", system_text), ("human", human_text)])
         content = getattr(raw_response, "content", raw_response)
-        payload = json.loads(str(content))
+        text = str(content).strip()
+        match = _re.search(r"\{.*\}", text, _re.DOTALL)
+        payload = json.loads(match.group(0) if match else text)
         selected_indexes = payload.get("selected_indexes", [])
         selected: list[dict[str, Any]] = []
         for index in selected_indexes[: self.limit_per_part]:
             if isinstance(index, int) and 0 <= index < len(candidates):
-                selected.append(dict(candidates[index]))
+                candidate = dict(candidates[index])
+                requested_family = infer_part_family(part.get("part_name"), part.get("requested_reference"))
+                candidate_family = infer_part_family(
+                    candidate.get("product_name"), candidate.get("category_name"),
+                    candidate.get("subcategory_name"), candidate.get("reference")
+                )
+                if requested_family and candidate_family and not part_family_is_compatible(requested_family, candidate_family):
+                    continue
+                selected.append(candidate)
         return (
             dedupe_agentic_matches(selected, limit=min(self.limit_per_part, 3)),
             list(payload.get("notes", [])),
@@ -399,13 +425,16 @@ def compact_agentic_match(entry: dict[str, Any], rank: int) -> dict[str, Any]:
 
 
 def choose_reviewer(limit_per_part: int, model_name: str | None = None) -> MatchReviewer:
-    if (
-        LANGCHAIN_AVAILABLE
-        and ChatOpenAI is not None
-        and os.getenv("OPENAI_API_KEY")
-        and model_name
-    ):
-        llm = ChatOpenAI(model=model_name, temperature=0)
+    # Provider-agnostic: local Ollama (OpenAI-compatible) or Gemini via env vars.
+    base_url = os.getenv("ORBIKA_LLM_BASE_URL")
+    api_key = os.getenv("ORBIKA_LLM_API_KEY") or os.getenv("OPENAI_API_KEY")
+    model = model_name or os.getenv("ORBIKA_LLM_MODEL")
+    if LANGCHAIN_AVAILABLE and ChatOpenAI is not None and model and (api_key or base_url):
+        kwargs = {"model": model, "temperature": 0}
+        if base_url:
+            kwargs["base_url"] = base_url
+        kwargs["api_key"] = api_key or "not-needed"
+        llm = ChatOpenAI(**kwargs)
         return LLMMatchReviewer(llm=llm, limit_per_part=limit_per_part)
     return HeuristicMatchReviewer(limit_per_part=limit_per_part)
 
@@ -522,6 +551,25 @@ def build_agentic_match_report(
     model_name: str | None = None,
 ) -> dict[str, Any]:
     supplier_matching = quote_payload.get("supplier_matching") or {}
+    orbika = quote_payload.get("orbika", {}) or {}
+    explicit_empty_quote = (
+        orbika.get("repuestos_count") == 0
+        or quote_payload.get("repuestos_cotizados") == 0
+        or (not orbika.get("parts") and not supplier_matching.get("parts"))
+    )
+    # An explicitly empty quote is a valid terminal state and must never produce matches.
+    if explicit_empty_quote:
+        return {
+            "generated_at": utc_now(),
+            "base_supplier_matching_generated_at": supplier_matching.get("generated_at"),
+            "review_mode": "skipped_empty_quote",
+            "langgraph_available": LANGGRAPH_AVAILABLE,
+            "langchain_available": LANGCHAIN_AVAILABLE,
+            "langsmith_configured": False,
+            "model_name": model_name,
+            "summary": {"parts_reviewed": 0, "parts_with_agentic_matches": 0, "provider_hits": {}, "preferences_applied": []},
+            "parts": [],
+        }
     preference_bundle = load_customer_preferences_for_quote(quote_payload)
     effective_limit = min(limit_per_part, int(preference_bundle.get("max_options_per_part") or limit_per_part))
     reviewer = choose_reviewer(limit_per_part=effective_limit, model_name=model_name)
@@ -539,7 +587,37 @@ def build_agentic_match_report(
         run_part_review(quote_context=quote_context, part=part, reviewer=reviewer)
         for part in supplier_matching.get("parts", [])
     ]
+    internet_search_report = build_internet_search_report(
+        quote_payload,
+        limit_per_part=effective_limit,
+    )
+    internet_parts = {
+        (
+            normalize_text(part.get("part_name")),
+            normalize_reference(part.get("requested_reference")),
+        ): part
+        for part in internet_search_report.get("parts", [])
+        if isinstance(part, dict)
+    }
+    for part in part_reviews:
+        key = (
+            normalize_text(part.get("part_name")),
+            normalize_reference(part.get("requested_reference")),
+        )
+        internet_part = internet_parts.get(key) or {}
+        normalized_internet_matches: list[Any] = []
+        for match in internet_part.get("selected_matches") or []:
+            if isinstance(match, dict):
+                normalized_match = dict(match)
+                normalized_match.setdefault("source_type", "internet_search")
+                normalized_internet_matches.append(normalized_match)
+            else:
+                normalized_internet_matches.append(match)
+        part["internet_matches"] = normalized_internet_matches
+        part["internet_query"] = internet_part.get("query")
+        part["internet_summary_comment"] = internet_part.get("summary_comment")
     parts_with_agentic_matches = sum(1 for part in part_reviews if part["selected_count"] > 0)
+    parts_with_internet_matches = sum(1 for part in part_reviews if part.get("internet_matches"))
     provider_hits: dict[str, int] = {}
     for part in part_reviews:
         provider_id = part.get("top_provider_id")
@@ -558,10 +636,12 @@ def build_agentic_match_report(
         "summary": {
             "parts_reviewed": len(part_reviews),
             "parts_with_agentic_matches": parts_with_agentic_matches,
+            "parts_with_internet_matches": parts_with_internet_matches,
             "provider_hits": dict(sorted(provider_hits.items())),
             "preferences_applied": preference_bundle.get("applied_preferences", []),
         },
         "parts": part_reviews,
+        "internet_search": internet_search_report,
     }
 
 
@@ -604,7 +684,7 @@ def write_trace_file(trace_dir: Path, quote_payload: dict[str, Any]) -> Path:
         "generated_at": utc_now(),
         "agentic_supplier_matching": quote_payload.get("agentic_supplier_matching", {}),
     }
-    trace_path.write_text(json.dumps(trace_payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    trace_path.write_text(json.dumps(trace_payload, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
     return trace_path
 
 
@@ -664,3 +744,4 @@ def main(argv: list[str]) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
+

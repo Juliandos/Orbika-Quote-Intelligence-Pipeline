@@ -1,4 +1,4 @@
-import { DashboardPayload, LauncherStatusPayload, QuoteSummary, TaskRecord } from "./types";
+import { DashboardPayload, LauncherStatusPayload, QuoteDetailPayload, QuoteSummary, TaskRecord } from "./types";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8001";
 
@@ -14,7 +14,7 @@ export async function getQuotes(): Promise<QuoteSummary[]> {
   return response.json();
 }
 
-export async function getQuote(quoteKey: string): Promise<any> {
+export async function getQuote(quoteKey: string): Promise<QuoteDetailPayload> {
   const response = await fetch(`${API_BASE}/api/quotes/${quoteKey}`, { cache: "no-store" });
   if (!response.ok) throw new Error("No se pudo cargar la cotización");
   return response.json();

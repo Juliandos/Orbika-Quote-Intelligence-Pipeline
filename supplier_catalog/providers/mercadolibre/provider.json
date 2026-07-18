@@ -1,0 +1,5 @@
+{ "provider_id": "mercadolibre", "display_name": "MercadoLibre", "website": "https://www.mercadolibre.com.co/",
+  "catalog_root_url": "https://listado.mercadolibre.com.co/repuestos-autos", "provider_type": "marketplace",
+  "access": {"type":"api","requires_login":true,"read_only":true},
+  "data_precision": {"prices":true,"stock":true,"product_names":true,"detail_links":true,"reference_codes":false},
+  "matching": {"allowed_match_types":["category_only","manual_confirmation_required"]} }

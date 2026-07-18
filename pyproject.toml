@@ -5,6 +5,11 @@ description = "Local visual console and API for the Orbika Quote Intelligence Pi
 requires-python = ">=3.11"
 dependencies = [
   "fastapi>=0.115.0",
+  "google-api-python-client>=2.198.0",
+  "google-auth>=2.56.0",
+  "google-auth-oauthlib>=1.4.0",
+  "langchain-openai>=1.3.5",
+  "langgraph>=1.2.9",
   "psycopg[binary]>=3.2.0",
   "uvicorn[standard]>=0.30.0",
 ]

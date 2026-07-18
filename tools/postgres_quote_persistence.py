@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Shared PostgreSQL persistence for Orbika quote JSON payloads."""
 
 from __future__ import annotations
@@ -102,6 +102,14 @@ def first_text(*values: Any) -> str | None:
         if text and text.lower() not in {"no disponible", "none", "null"}:
             return text
     return None
+
+
+def normalize_internet_match(option: Any) -> Any:
+    if not isinstance(option, dict):
+        return option
+    normalized = dict(option)
+    normalized["source_type"] = "internet_search"
+    return normalized
 
 
 def as_int(value: Any) -> int | None:
@@ -604,10 +612,19 @@ def insert_agentic_review(
         warnings.append("agentic selected_matches is not a list; skipping review for one part")
         counters.warn(path, "agentic selected_matches is not a list; skipped")
         return
+    internet_matches = agentic_part.get("internet_matches") or []
+    if not isinstance(internet_matches, list):
+        warnings.append("agentic internet_matches is not a list; skipping internet matches for one part")
+        counters.warn(path, "agentic internet_matches is not a list; skipped")
+        internet_matches = []
+    normalized_internet_matches = [normalize_internet_match(item) for item in internet_matches]
+    combined_selected = list(selected)
+    combined_selected.extend(normalized_internet_matches)
     agentic_root = payload.get("agentic_supplier_matching") or {}
     top_match_id = None
-    if selected:
-        first = selected[0] if isinstance(selected[0], dict) else {}
+    top_source_candidates = selected or combined_selected
+    if top_source_candidates:
+        first = top_source_candidates[0] if isinstance(top_source_candidates[0], dict) else {}
         top_match_id = match_ids.get(match_key(first, 1))
         if top_match_id is None:
             for key, value in match_ids.items():
@@ -642,7 +659,7 @@ def insert_agentic_review(
             "reviewed" if selected else "no_selection",
             confidence,
             summary_comment,
-            jsonb(selected),
+            jsonb(combined_selected),
             jsonb(agentic_part.get("risk_notes") or []),
             jsonb(agentic_part.get("preference_notes") or []),
             str(trace_path) if trace_path else None,
@@ -731,3 +748,4 @@ def persist_quote_files(
 
 def persist_single_quote_file(path: Path, *, database_url: str) -> Counters:
     return persist_quote_files([path], database_url=database_url, dry_run=False)
+

@@ -43,3 +43,29 @@ Thumbs.db
 
 # Logs
 *.log
+/local/
+/.venv/
+target/
+/.cache/
+*.Zone.Identifier
+*Zone.Identifier
+Microsoft.PowerShell*
+*.token.json
+
+# Local assistant/runtime context
+.ai-context/
+.agents/
+.codex/
+
+# Manual backups and browser captures
+*.bak
+*.bak2
+*.bak-*
+*.bak-gap*
+*.har
+
+# Accidental shell/Windows artifacts
+Program
+plansade.md
+respuestasis.txt
+skills-folder/

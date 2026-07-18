@@ -17,6 +17,7 @@ For a fast, reliable handoff to a new chat, read these documents in this order:
 2. docs/architecture/orbika-implementation-phases.md
 3. docs/incremental-orbika-quote-runner.md
 4. docs/windows-local-operation.md
+5. docs/architecture/desktop-packaging-plan.md
 
 Supporting technical references:
 
@@ -58,7 +59,7 @@ Historical or narrower documents such as extractor-specific phase notes, executi
 | 8.2 | Controlled workshop preferences | Optional after 8.1 review | Not created yet | Add a small, auditable preference editor only if owner review proves it is worth the operational complexity. |
 | 9 | Technical RAG for part selection with local embeddings and pgvector | In progress | Manual implementation | Text RAG schema is already live; the local embedding provider is now implemented in code with `sentence-transformers`, `pgvector` migration, hybrid search scaffolding, and embedding-aware ingestion pending live validation and corpus reindex. |
 | 10 | End-to-end verification and hardening | Pending | Not created yet | Recover and prove the complete operational flow, including the waiting runner and every UI action. |
-| 11 | Simple local operation and startup | In progress | Manual implementation | Windows launcher, preflight, stop flow, maintenance/reporting, weekly maintenance scheduler, weekly provider refresh, and launcher supervision are implemented; final Windows operator rehearsal and packaging guidance remain pending. |
+| 11 | Simple local operation and startup | In progress | Manual implementation | Windows launcher, preflight, stop flow, maintenance/reporting, weekly maintenance scheduler, weekly provider refresh, launcher supervision, and desktop packaging bootstrap are implemented; final Windows operator rehearsal on a clean Windows machine remains pending. |
 
 ## Provider Extraction Learnings
 
@@ -94,6 +95,15 @@ These notes come from the live provider work and should be reused for future sup
 - Conservative keyword filtering mattered here too: broad exclusions could drop valid brand or part terms, so any negative filter had to be validated against concrete misses before keeping it.
 - In WSL, the bundled Playwright Chromium was not always reliable for this provider, so using the non-snap browser path was part of the stable extraction process.
 - The latest operator run for this provider reached 215 products, which was enough to keep the project moving while still documenting the remaining gap as a live-catalog verification issue rather than a broken extractor.
+- Repuestera reinforced the same pattern but with URL-based pagination on a single `/shop/` surface: the extractor must follow `?jsf=jet-engine:productos&pagenum=N` page by page and keep the current page state until the visible grid settles.
+- Repuestera also proved that the visible product container is the source of truth, not the raw card count in the full DOM. Hidden or duplicated nodes can inflate counts, so the extractor should only accept products from the stable visible wrapper and compare consecutive renders before advancing.
+- The registration modal on Repuestera must be dismissed by clicking the `X` and never by filling or submitting the form. If the modal is left open, pagination and product extraction stall behind the overlay.
+- Repuestera live HTML exposed JetEngine / JetSmartFilters metadata, including `found_posts=151` and `max_num_pages=8`, but the stable visible snapshot still needed a guarded crawl and ended at 135 products in the verified run. Do not hardcode a theoretical total such as 131; use the rendered pagination and the visible grid as the operational truth.
+- For Repuestera, page transitions must be delayed until the grid truly changes. Advancing too early can skip the last visible card on a page, so the extractor should finish the page, wait for a new render, then continue.
+- In WSL, Repuestera was also sensitive to browser selection. A non-snap Playwright/browser path kept the extractor stable, while the bundled Chromium path could fail to launch or behave inconsistently.
+- Totus showed that a WooCommerce archive can expose a single `/tienda/` surface with page-based URLs (`/tienda/page/N/`), where the first page can be dramatically larger than the later pages and page 2 onward default to 12 products.
+- Totus also proved that page-by-page crawls must dedupe by product URL, not by page number or category count. The live crawl reached 3214 unique products across 268 pages, so rough multiplications like `12 * 268` are only a starting estimate, not the source of truth.
+- Tus Autopartes reinforced the Shopify-header pattern: the source of truth is the direct collection links under the header menus, there was no visible pagination in the verified crawl, and deduplicating by product URL yielded 86 unique products from 91 visible cards with 3 repeated URLs across collections.
 - Importadora EuroBrasil required a provider-specific listing crawl on `https://www.importadoraeurobrasil.com/productos/` with dynamic pagination discovery from the rendered WooCommerce nav, not a fixed page limit or category crawl. The public count was `512` results across `43` pages, and the last page contained `8` products.
 - For Importadora EuroBrasil, the listing URL changes on pagination and the extractor must collect the page grilla before moving on to the next page. Capturing per-page evidence first avoided losing the last item of a page during fast pagination and produced a complete `512/512` snapshot with no missing URLs.
 - Autolatas also showed why intermediate evidence matters: the visible storefront count is around 1059, but the final normalized snapshot reached 1030 products after broader discovery, deduplication, and a small set of fetch failures. The remaining gap came from timeouts and occasional 502 responses, not from a single hard stop.
@@ -937,7 +947,7 @@ Before coding the ingestion step, pause the implementation and prepare the start
 
 Store the technical PDFs here:
 
-- `knowledge/rag_sources/` for all approved technical source documents that will feed the RAG pipeline.
+- `knowledge/rag_sources/` for all approved technical source documents that will feed the RAG pipeline. The ingestor can walk nested subfolders, so the corpus can be organized by topic or source. Optional `knowledge/rag_sources/manifest.json` keeps audit metadata per document, and `python tools/rag_knowledge_base.py audit` reports missing or orphan documents before the next ingest.
 
 If later you need to quarantine or reject files, that can be handled with metadata or a future cleanup pass, but the initial implementation should assume a single curated folder.
 
@@ -1047,7 +1057,7 @@ Purpose:
 Current state already available:
 
 - `rag_documents` and `rag_chunks` exist in PostgreSQL.
-- PDF ingestion into `knowledge/rag_sources` is already working.
+- PDF ingestion into `knowledge/rag_sources` is already working, including nested subfolders and ignoring Windows `Zone.Identifier` artifacts.
 - Text search is already returning chunked evidence from the stored corpus.
 - Agentic review can already consume compact evidence from the existing RAG layer.
 - `docker-compose.yml` now uses `pgvector/pgvector:pg16` so the local DB can host vector storage and similarity search.
@@ -1740,10 +1750,6 @@ El proyecto queda con una forma clara de delegar trabajo pesado a OpenClaw sin p
 - Autopartesercar also produced noisy false positives such as `lost-password` and other invalid product-like URLs. The extractor needs URL-level filtering before writing snapshot evidence.
 - The final fix for Autopartesercar was to preserve discovered products during the crawl, not only at the end, so a partial timeout still leaves a usable snapshot instead of an empty or stale result set.
 - Future providers with slow detail pages should follow the same pattern: capture discovery first, persist it early, then enrich details as a second phase instead of depending on a single end-of-run write.
-
-
-
-
 
 
 

@@ -43,6 +43,7 @@ def list_quotes(quotes_dir: Path = QUOTES_DIR) -> list[dict[str, Any]]:
                 "repuestos_count": orbika.get("repuestos_count", 0),
                 "parts_with_matches": matching.get("summary", {}).get("parts_with_matches", 0),
                 "exact_reference_matches": matching.get("summary", {}).get("exact_reference_matches", 0),
+                "parts_reviewed": agentic.get("summary", {}).get("parts_reviewed", 0),
                 "parts_with_agentic_matches": agentic.get("summary", {}).get(
                     "parts_with_agentic_matches", 0
                 ),

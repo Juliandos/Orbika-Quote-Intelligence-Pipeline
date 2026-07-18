@@ -1,5 +1,0 @@
-item_type,provider_type,title,product_name,detail_url,product_url,category_name,subcategory_name,brand,reference,sku,vehicle_scope,match_type,match_confidence
-category,category_only,YAMATO COLOMBIA,,https://yamatocolombia.com.co/,,YAMATO COLOMBIA,,,,,,category_only,medium
-category,category_only,Taiho,,https://yamatocolombia.com.co/taiho/,,Taiho,,,,,,category_only,medium
-category,category_only,Matsuda,,https://yamatocolombia.com.co/matsuda/,,Matsuda,,,,,,category_only,medium
-category,category_only,Productos,,https://yamatocolombia.com.co/productos/,,Productos,,,,,,category_only,medium

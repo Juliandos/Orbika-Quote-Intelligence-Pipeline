@@ -1,0 +1,19 @@
+FROM mcr.microsoft.com/playwright/python:v1.48.0-jammy
+WORKDIR /workspace
+COPY tools ./tools
+COPY apps/api ./apps/api
+COPY migrations ./migrations
+COPY pyproject.toml uv.lock alembic.ini ./
+RUN pip install --no-cache-dir \
+    "fastapi>=0.115" google-api-python-client google-auth google-auth-oauthlib \
+    langchain-openai langgraph "psycopg[binary]>=3.2" pypdf beautifulsoup4 lxml playwright==1.48.0 redis
+ENV PYTHONPATH=/workspace
+ENV PYTHONUNBUFFERED=1
+CMD ["python","tools/incremental_orbika_quote_runner.py", \
+     "--credentials","/secrets/gmail-client-secret.json", \
+     "--token-cache","/secrets/gmail-token.json", \
+     "--storage-state","/secrets/storage-state.json", \
+     "--state-path","/data/state.json", \
+     "--quotes-dir","/data/quotes", \
+     "--snapshot-dir","/data/snapshots", \
+     "--max-results","10","--poll-seconds","300"]

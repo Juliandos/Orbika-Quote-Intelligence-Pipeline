@@ -1,9 +1,14 @@
 ﻿import unittest
+import json
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from tools.rag_knowledge_base import (
     build_candidate_query,
     chunk_page_text,
+    load_source_manifest,
+    manifest_entry_for_file,
+    audit_source_manifest,
     merge_search_hits,
     retrieve_candidate_evidence,
     source_files,
@@ -20,6 +25,90 @@ class RagKnowledgeBaseTests(unittest.TestCase):
         for item in files:
             self.assertEqual(item.suffix.lower(), ".pdf")
             self.assertFalse(item.name.endswith(":Zone.Identifier"))
+
+    def test_source_files_walks_nested_folders(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            nested = root / "sub" / "deep"
+            nested.mkdir(parents=True, exist_ok=True)
+            (root / "flat.pdf").write_bytes(b"%PDF-1.4 flat")
+            (nested / "nested.pdf").write_bytes(b"%PDF-1.4 nested")
+            (nested / "nested.pdf:Zone.Identifier").write_text("ignored", encoding="utf-8")
+
+            files = source_files(root)
+
+        self.assertEqual([item.name for item in files], ["flat.pdf", "nested.pdf"])
+
+    def test_manifest_entry_for_file_resolves_nested_path(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            nested = root / "topic" / "deep"
+            nested.mkdir(parents=True, exist_ok=True)
+            pdf_path = nested / "manual.pdf"
+            pdf_path.write_bytes(b"%PDF-1.4 manual")
+            manifest_path = root / "manifest.json"
+            manifest_path.write_text(
+                json.dumps(
+                    {
+                        "documents": [
+                            {
+                                "path": "topic/deep/manual.pdf",
+                                "title": "Manual aprobado",
+                                "approved": True,
+                                "source": "curated",
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            manifest = load_source_manifest(manifest_path)
+            entry = manifest_entry_for_file(root, pdf_path, manifest)
+
+        self.assertIsNotNone(entry)
+        self.assertEqual(entry["title"], "Manual aprobado")
+        self.assertTrue(entry["approved"])
+        self.assertEqual(entry["source"], "curated")
+
+    def test_manifest_audit_detects_missing_and_orphan_documents(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            docs_dir = root / "topic"
+            docs_dir.mkdir(parents=True, exist_ok=True)
+            (docs_dir / "manual.pdf").write_bytes(b"%PDF-1.4 manual")
+            (docs_dir / "extra.pdf").write_bytes(b"%PDF-1.4 extra")
+            manifest_path = root / "manifest.json"
+            manifest_path.write_text(
+                json.dumps(
+                    {
+                        "documents": [
+                            {
+                                "path": "topic/manual.pdf",
+                                "title": "Manual aprobado",
+                                "approved": True,
+                                "source": "curated",
+                            },
+                            {
+                                "path": "topic/ghost.pdf",
+                                "title": "Fantasma",
+                                "approved": False,
+                                "source": "curated",
+                            },
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            report = audit_source_manifest(root, manifest_path)
+
+        self.assertEqual(report["pdf_count"], 2)
+        self.assertEqual(report["manifest_count"], 2)
+        self.assertEqual(report["covered_count"], 1)
+        self.assertEqual(report["status"], "attention")
+        self.assertEqual(report["missing_documents"][0]["path"], "topic/extra.pdf")
+        self.assertEqual(report["orphan_documents"][0]["path"], "topic/ghost.pdf")
 
     def test_chunk_page_text_splits_large_page(self) -> None:
         text = ("mazda cx30 guardabarro izquierdo 2021 2022 2023 " * 80).strip()
@@ -111,6 +200,12 @@ class RagKnowledgeBaseTests(unittest.TestCase):
         self.assertGreater(merged[0]["score"], merged[1]["score"])
         self.assertEqual(merged[1]["retrieval_mode"], "vector")
 
-
 if __name__ == "__main__":
     unittest.main()
+
+
+
+
+
+
+

@@ -1,16 +1,16 @@
-# Totus Extraction Notes
+﻿# Totus Extraction Notes
 
 Provider: `totus`
 
 Website: `https://www.totus.com.co/`
 
-Catalog root: `https://www.totus.com.co/productos-categoria/accesorios/`
+Catalog root: `https://www.totus.com.co/tienda/`
 
 Status: public site. Seed snapshot created from the user-provided public catalog examples; live validation is still pending.
 
 Scope: autos only. Ignore motos, carga pesada, buses and camiones.
 
-Use the category pages and paginated catalog. The site offers enough basic product information for autos-only verification.
+Use the paginated /tienda/ catalog page by page. The site exposes product cards and page navigation in the live archive, so the extractor should follow the real pagination URLs and dedupe by product URL.
 
 ## Extraction target
 
@@ -32,3 +32,4 @@ Capture only what is visible and reliable:
 - `requires_manual_confirmation`
 
 If a public reference code appears, capture it. If not, do not invent one.
+
